@@ -32,3 +32,5 @@ github.com/SAMT-BU/team-architecture v0.0.0-20260302152936-16d2998110cc h1:70uE8
 github.com/SAMT-BU/team-architecture v0.0.0-20260302152936-16d2998110cc/go.mod h1:oGjEparc9MJ4YemqqXVomLf005fiUA/GYilUgqhv2IQ=
 github.com/SAMT-BU/team-architecture v0.0.0-20260302160135-e7ed5c5be069 h1:MeXaTS+oWnyrJlRfGCg2etBPY88w2OIsFenH+Jxz1Bw=
 github.com/SAMT-BU/team-architecture v0.0.0-20260302160135-e7ed5c5be069/go.mod h1:oGjEparc9MJ4YemqqXVomLf005fiUA/GYilUgqhv2IQ=
+github.com/SAMT-BU/team-governance v0.0.0-20260302204854-ae4a2504e314 h1:W/wZPxdZUPZhE14OVfRDwtOAcq8dLi2Gua49yFR66x4=
+github.com/SAMT-BU/team-governance v0.0.0-20260302204854-ae4a2504e314/go.mod h1:2hVuqr1lATcRnxezcFTEpBGuelnDEan85ZMLJSvqft4=
