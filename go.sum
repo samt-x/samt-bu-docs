@@ -26,6 +26,8 @@ github.com/SAMT-BU/samt-bu-org-staf v0.0.0-20260223231346-9adece8f8f45 h1:4h7Uqi
 github.com/SAMT-BU/samt-bu-org-staf v0.0.0-20260223231346-9adece8f8f45/go.mod h1:koYXmzeODMhF+ISgVkkvaSth1ZDXpw6E2OmU9KkI7eI=
 github.com/SAMT-BU/samt-bu-org-udir v0.0.0-20260223231341-0ba46421f56a h1:RRXeHbR06+yEfxi83+K5CkqNv7r3wZ8/JbZvuUgjlhs=
 github.com/SAMT-BU/samt-bu-org-udir v0.0.0-20260223231341-0ba46421f56a/go.mod h1:8FRy0PZa5bssylwZTmk8FRz2ShPu1jhN0zHZHKD9zA8=
+github.com/SAMT-BU/solution-samt-bu-docs v0.0.0-20260302230205-002131e44c6d h1:JJJNeEu/71Qv9kQBSV3fAuGybN0eKbAlRpG+J81Uk1M=
+github.com/SAMT-BU/solution-samt-bu-docs v0.0.0-20260302230205-002131e44c6d/go.mod h1:ZZcZQfI96Zg9ZKqsx3MikynzmoV1F7/Er569F8eHcIc=
 github.com/SAMT-BU/team-architecture v0.0.0-20260301130129-a58641907e16 h1:y79aaB54ZE4dDs8j2YC523ZKb9aVwybQI9sCK/R1Dgg=
 github.com/SAMT-BU/team-architecture v0.0.0-20260301130129-a58641907e16/go.mod h1:oGjEparc9MJ4YemqqXVomLf005fiUA/GYilUgqhv2IQ=
 github.com/SAMT-BU/team-architecture v0.0.0-20260302152936-16d2998110cc h1:70uE8ay4XSPh/rjFhKvcA3QQZGVTp+Z3WvnrXwOrqNA=

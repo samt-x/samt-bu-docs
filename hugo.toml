@@ -116,3 +116,9 @@ enableGitInfo = true
     [[module.imports.mounts]]
       source = "content"
       target = "content/teams/team-semantics"
+
+  [[module.imports]]
+    path = "github.com/SAMT-BU/solution-samt-bu-docs"
+    [[module.imports.mounts]]
+      source = "content"
+      target = "content/loesninger/cms-loesninger/samt-bu-docs"
