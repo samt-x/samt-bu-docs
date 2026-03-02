@@ -42,7 +42,7 @@ content/                           # Alt innhold (Markdown med YAML frontmatter)
     om-dette-nettstedet/           # Om dette nettstedet (weight 2)
     hvordan-bidra/                 # Hvordan bidra (weight 3)
   behov/                           # Behov (weight 10)
-    use-cases/                     # 19 nummererte use cases (01–19)
+    use-cases/                     # 20 nummererte use cases (01–20)
     annet/                         # Annet (foreløpig)
   pilotering/                      # Piloter (weight 20)
     pilot-1-arkitektur/
@@ -92,6 +92,7 @@ static/
   workflows/hugo.yml               # CI/CD: bygg og deploy til GitHub Pages
   workflows/ensure-uuids.yml       # ⭐ UUID-workflow: sikrer id-felt i all frontmatter automatisk
   scripts/ensure-uuids.py          # Python-skript brukt av UUID-workflow
+  scripts/inject-lastmod.py        # Injiserer lastmod i modulinnhold fra git-historikk (kjøres i CI før hugo)
 cloudflare-worker/
   oauth-worker.js                  # GitHub OAuth-proxy (deployet på Cloudflare Workers)
 i18n/nb.toml, en.toml              # Oversettelser (navSwitcher-etiketter, seksjonstitler, «Sist endret»)
@@ -169,7 +170,7 @@ Redaktøren trenger kun endre `status:`-feltet:
 
 - NB-filer bruker norske verdier, EN-filer bruker engelske verdier.
 - `status-symbol.html` håndterer begge språk.
-- Kun use case-filer (01–19 under `behov/use-cases/`) har status satt; øvrige sider har blank status.
+- Kun use case-filer (01–20 under `behov/use-cases/`) har status satt; øvrige sider har blank status.
 - Alle use case-filer har en kommentarblokk i frontmatter som viser gyldige verdier.
 
 ## Arkitekturbeslutninger
@@ -239,11 +240,13 @@ Dropdown i headeren for å navigere direkte til en av de 10 seksjonene.
 - «Om» som første seksjon med tre underkapitler
 - 10 seksjoner i flat struktur direkte under `content/`
 - Hugo Module-integrasjon: team-architecture og samt-bu-drafts montert
-- 19 use cases under Behov (inkl. Kommuneforlaget brukstilfelle-analyse)
+- 20 use cases under Behov (inkl. Kommuneforlaget brukstilfelle-analyse)
 - Decap CMS med norsk og engelsk portal, tospråklig redigering bekreftet
 - «Denne siden»/«This page» deep-link i Endre-dropdown for alle sider inkl. modul-sider (teams/team-architecture, utkast)
 - UUID-workflow (`.github/workflows/ensure-uuids.yml`) i alle tre repoer – sikrer id-felt i frontmatter automatisk
 - `widget: hidden` for id-felt i alle 6 Decap-portaler – UUID er usynlig for redaktøren
+- «Sist endret»-tidsstempler for modulinnhold via `inject-lastmod.py` + `HUGO_MODULE_REPLACEMENTS` i CI
+- Sidebar-ikon fikset: aktiv seksjon viser sort-down (åpen) i stedet for caret-right (lukket)
 
 ### Hva gjenstår / pågår
 
@@ -276,6 +279,31 @@ hugo mod get github.com/SAMT-BU/team-architecture@latest
 **Repo-navnekonvensjon:**
 - `samt-bu-`-prefiks = publisert innhold/produkt (montert i nettstedet)
 - `team-`-prefiks = interne arbeidsrepoer for team
+
+## CI-workflow – hugo.yml (utover standard)
+
+`hugo.yml` gjør mer enn bare å bygge. Ekstra steg i `build`-jobben:
+
+1. **Checkout modulrepoer med full historikk:**
+   ```yaml
+   - uses: actions/checkout@v4
+     with:
+       repository: SAMT-BU/team-architecture
+       path: .hugo-modules/team-architecture
+       fetch-depth: 0
+   ```
+   (samme for `samt-bu-drafts`)
+
+2. **Inject lastmod** (`.github/scripts/inject-lastmod.py`):
+   Leser `git log -1 --format=%cI` for hver `.md`-fil i modulrepoene og skriver `lastmod: <ISO-tidsstempel>` inn i frontmatter i CI-workspace. **Ingen commit** – kun midlertidig endring før bygg.
+
+3. **`HUGO_MODULE_REPLACEMENTS`** (env-var på Build-steget):
+   ```
+   github.com/SAMT-BU/team-architecture -> ${{ github.workspace }}/.hugo-modules/team-architecture
+   ```
+   Gjør at Hugo bruker de lokale klonene (med injisert lastmod) i stedet for Go-modulcachen (zip uten historikk).
+
+**Kjent begrensning:** Lokalt (`hugo server`) vises ingen `lastmod` for modulinnhold – Hugo bruker modulcachen. Kun produksjonsbygg (CI) har korrekte tidsstempler for modul-sider.
 
 ## Verktøy
 
