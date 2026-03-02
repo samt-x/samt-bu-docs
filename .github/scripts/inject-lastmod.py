@@ -16,7 +16,7 @@ MODULE_PATHS = [
 
 def get_lastmod(module_path, rel_path):
     result = subprocess.run(
-        ['git', 'log', '-1', '--format=%cs', '--', rel_path],
+        ['git', 'log', '-1', '--format=%cI', '--', rel_path],
         capture_output=True, text=True, cwd=module_path
     )
     return result.stdout.strip()
