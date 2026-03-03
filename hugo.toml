@@ -100,11 +100,6 @@ enableGitInfo = true
       source = "content"
       target = "content/utkast"
 
-  [[module.imports]]
-    path = "github.com/SAMT-BU/team-governance"
-    [[module.imports.mounts]]
-      source = "content"
-      target = "content/teams/team-governance"
 
   [[module.imports]]
     path = "github.com/SAMT-BU/team-semantics"
