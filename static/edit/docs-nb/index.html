@@ -21,6 +21,14 @@
 </head>
 <body>
   <a id="back-to-portal" href="/samt-bu-docs/">← Tilbake til nettstedet</a>
+  <script>
+    (function() {
+      var ref = document.referrer;
+      if (ref && ref.indexOf('samt-bu-docs') !== -1 && ref.indexOf('/edit/') === -1) {
+        document.getElementById('back-to-portal').href = ref;
+      }
+    })();
+  </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
     /* Minimal norsk bokmål-lokale for Decap CMS UI-strenger.
