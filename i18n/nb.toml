@@ -7,6 +7,9 @@ other = "Endre"
 [editSwitcherPage]
 other = "Denne siden"
 
+[editSwitcherAddChild]
+other = "Legg til underkapittel"
+
 [editSwitcherOther]
 other = "Andre valg"
 
