@@ -59,6 +59,20 @@ collections:
         i18n: duplicate
         required: false
 
+      - label: Status
+        name: status
+        widget: select
+        options:
+          - { label: "◍ New", value: "New" }
+          - { label: "◔ Early draft", value: "Early draft" }
+          - { label: "◐ In progress", value: "In progress" }
+          - { label: "◕ For QA", value: "For QA" }
+          - { label: "⏺ Approved", value: "Approved" }
+          - { label: "⨂ Cancelled", value: "Cancelled" }
+        required: false
+        i18n: true
+        hint: "The symbol is generated automatically by the website"
+
       - label: Content
         name: body
         widget: markdown

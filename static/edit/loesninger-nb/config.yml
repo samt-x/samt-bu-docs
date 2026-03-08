@@ -61,6 +61,20 @@ collections:
         i18n: duplicate
         required: false
 
+      - label: Status
+        name: status
+        widget: select
+        options:
+          - { label: "◍ Ny", value: "Ny" }
+          - { label: "◔ Tidlig utkast", value: "Tidlig utkast" }
+          - { label: "◐ Pågår", value: "Pågår" }
+          - { label: "◕ Til QA", value: "Til QA" }
+          - { label: "⏺ Godkjent", value: "Godkjent" }
+          - { label: "⨂ Avbrutt", value: "Avbrutt" }
+        required: false
+        i18n: duplicate
+        hint: "Symbolet genereres automatisk av nettstedet – ikke legg det til i linkTitle"
+
       - label: Innhold
         name: body
         widget: markdown
