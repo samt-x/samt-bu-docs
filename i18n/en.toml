@@ -8,7 +8,7 @@ other = "Edit"
 other = "This page"
 
 [editSwitcherAddChild]
-other = "Add sub-chapter"
+other = "Sub-chapter"
 
 [editSwitcherOther]
 other = "Other options"
