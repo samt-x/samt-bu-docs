@@ -2,7 +2,7 @@
 id: e0d42db3-b997-4bcc-9bf5-4da622c18429
 title: 23. Analysedata fra barnehage til voksenopplæring
 linkTitle: 23. Analysedata for "hele løpet"
-weight: 20
+weight: 23
 toc: true
 status: Ny
 ---
