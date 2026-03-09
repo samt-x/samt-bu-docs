@@ -4,55 +4,130 @@ title: "22. Analysis Data from Kindergarten to Adult Education"
 linkTitle: "22. Analysis data across the full pathway"
 weight: 22
 toc: true
-status: "New"
+status: "Early draft"
+# Valid status values: New | Early draft | In progress | For QA | Approved | Cancelled
 ---
-
-*Submitted by: Vestland FK (Vestland County Municipality)*
 
 ## Brief Description
 
-There is a desire for data from the entire education sector that can say something about «how things turned out» later in the educational pathway for different students. Vestland County has established a solution for analysing data from sources including VIGO, which they share with the municipalities in the county.
+There is a need for data from the entire education sector that can say something about «how things turned out» for different pupils – from kindergarten to adult education. Data is used at an aggregate level but must be based on individual data.
 
-However, it would be desirable to have data covering the full pathway – from kindergarten to adult education – in order to assess the effect of various interventions and identify local and regional variations. Data is used at an aggregate level but must be based on individual data.
+Vestland County Municipality has established a solution for analysing data from sources including VIGO, which they share with the municipalities in the county. This case builds on what Vestland FK has already achieved and points to the need to extend this to cover the full educational pathway – and make equivalent solutions available to more actors.
 
-## Problem – What Is Not Working Today?
+### Who submitted this case?
 
-Social background, results and effort from kindergarten through to higher education and employment are interconnected. To understand the bigger picture, it would be valuable to see the full pathway and thereby be able to intervene where «problems arise».
+Vestland FK (Vestland County Municipality).
 
-## Breaks in Information Flow
+## The Problem Today
 
-Little or no data flow between kindergarten, primary school, upper secondary school, higher education and employment.
+Social background, results and effort are interconnected throughout the entire educational pathway – from kindergarten to higher education and working life. To understand the full picture and intervene where «problems arise», data covering the full pathway at individual level (aggregated for analysis) is needed. Today, this does not exist.
 
-## Primary Actors
+### Where do breaks in information flow or responsibility occur?
 
-- Municipalities
-- County municipalities
-- Various political levels
+Breaks occur particularly:
+
+* between kindergarten and primary school – different systems, different owners, no shared data flow
+* between primary school and upper secondary – municipal and county responsibility divides here
+* between upper secondary and higher education – county and state responsibility
+* between education and working life – very limited connection
+
+## Actors
+
+### End users (of analysis data)
+
+* Municipalities – to assess the effect of interventions and plan resource use
+* County municipalities – to follow student flow and educational outcomes over time
+* Political leadership at various levels – for evidence-based decision-making
+* Children, young people and guardians – indirectly, through better adapted services
+
+### Service staff
+
+* Analysts and planners in municipalities and county municipalities
+* School leadership and advisors
+
+### System vendors
+
+* Vendors of kindergarten and school administration systems (VIGO, IST, Visma, etc.)
+* Vendors of analytics platforms and data sharing services
+
+### Stakeholders
+
+#### Directorates
+
+* **Utdanningsdirektoratet** – professional directorate for primary and secondary education; manages central educational data
+* **Statistics Norway (SSB)** – manages population and education statistics at individual level
+* **Digitaliseringsdirektoratet** – cross-sectoral stakeholder for data sharing and interaction
+
+#### Ministries
+
+* **Ministry of Education and Research** – overall responsibility for the education sector
+* **Ministry of Digitalisation and Public Administration** – overall responsibility for data sharing and cross-sectoral initiatives
+
+### Service providers
+
+* **Municipalities** – own and manage data from kindergarten and primary school
+* **County municipalities** – own and manage data from upper secondary education
+
+### Coordinating and supporting actors
+
+* **KS and KS Digital** – coordinate the municipal sector and deliver shared digital solutions
+* **Sikt** – delivers and manages shared services in the education sector
 
 ## Consequences of the Current Situation
 
-**End users:**
-- Children, young people and guardians
-- Employees in «the services»
-- Political leadership at various levels
+### For end users (municipalities, county municipalities and political leadership)
 
-**Other actors:**
-- System vendors
-- Stakeholders: interest organisations, directorates, ministries
+* Poor overview of the connections between different phases of life
+* Difficult to identify patterns and assess the effect of interventions across education levels
+* Decisions must be made on a weaker evidence base than necessary
 
-The consequence is a poor overview of the connections between different phases of life – it is difficult to identify patterns and assess the effect of interventions across education levels.
+### For service staff
+
+* Analyses must be built manually across systems without shared infrastructure
+* Much time is spent on data collection and consolidation rather than analysis
+
+### For organisations
+
+* Inefficient use of resources – the same work is done in parallel across many municipalities and county municipalities
+* Harder to collaborate on shared insights across municipalities and levels of government
+
+### At system level
+
+Without data covering the full educational pathway, it is difficult to measure the effect of long-term interventions, identify risk groups early enough, or plan targeted support for an entire population cohort from kindergarten to working life.
 
 ## Desired Situation
 
-One example is the student flow in upper secondary education in Vestland, where year by year one can see the status for students: who starts what, how many progress, who makes alternative choices, who drops out, and final competence outcomes. This can be filtered by sending municipality, sending lower secondary school, lower secondary grades, absence levels, gender, etc.
+In a desired situation, municipalities and county municipalities can easily access coherent data from kindergarten, primary school, upper secondary and beyond – at an aggregate level that respects privacy, but based on individual data. This provides a real basis for assessing the effect of interventions over time, identifying patterns across education levels and planning resource use in a targeted way.
 
-In a desired situation, similar data from kindergarten and primary school would be placed to the left of this picture, and higher education/employment status to the right – making the entire life course visible in one coherent analysis.
+Analytical capacity that today exists only in well-resourced county municipalities (such as Vestland FK) should be made available to all municipalities – regardless of size or their own technical resources.
 
-## SAMT-BU Objectives Addressed by This Case
+## Input on Solution Choices
 
-- Common information models and standardised interfaces that over time cover «all» areas and sectors
-- Reusable solutions and common solutions
-- Simpler user journeys for employees, guardians, students and pupils throughout the learning pathway – from kindergarten to primary school, upper secondary and higher education
-- Collaboration and innovation across public and private actors in the ecosystem, and increased market competition
-- Long-term goals of lifelong learning
-- Scaling and transfer of the project's learning and products to other areas and sectors, following piloting in this project
+### Vestland FK's existing solution as a starting point
+
+Vestland FK has established a solution in which data from sources including VIGO is analysed and shared with municipalities in the county. One example is the student flow in upper secondary education, where year by year one can see the status for students: who starts what, how many progress, who makes alternative choices, who drops out, and final competence outcomes. This can be filtered by sending municipality, sending lower secondary school, lower secondary grades, absence levels, gender, etc.
+
+In an extended solution, equivalent data from kindergarten and primary school could be placed to the left of this picture, and higher education/employment status to the right – making the entire life course visible in one coherent analysis.
+
+![Example of student flow in upper secondary education in Vestland FK](elevflyt-vestland.png)
+
+### Shared municipal data platform – KS Digital / Azure Databricks
+
+KS Digital is working on a shared municipal data platform based on Azure Databricks. Such a platform could give municipalities and county municipalities access to a shared infrastructure for storing, processing and analysing data across services and sectors – without each municipality having to build and operate this independently.
+
+> **⚠ Note:** The details of KS Digital's specific plans, progress and scope for this platform have not been verified in this document. This section should be updated with references to official sources and clarification of what is planned versus decided.
+
+If such a platform is realised, it would be a natural foundation for this case on analysis data across the full pathway – allowing data from kindergarten, primary school, upper secondary and beyond to be consolidated in a shared infrastructure with common access control and privacy mechanisms.
+
+## Insight Work
+
+The case builds on input from Vestland FK, which has practical experience with analysing VIGO data shared with municipalities. These experiences are relevant as a model for what is possible, and what data infrastructure and agreements are required.
+
+## Relevant Project Goals
+
+* Common information models and standardised interfaces that over time cover «all» areas and sectors
+* Reusable and shared solutions – analytical capacity available to all municipalities
+* Simpler user journeys for employees, guardians, students and pupils throughout the learning pathway
+* Collaboration and innovation across public actors in the ecosystem
+* Long-term goals of lifelong learning
+* Scaling and transfer of the project's learning and products to other areas and sectors
