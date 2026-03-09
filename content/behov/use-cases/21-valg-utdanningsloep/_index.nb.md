@@ -7,10 +7,9 @@ toc: true
 status: Tidlig utkast
 draft: false
 ---
-
 ## Kort beskrivelse
 
-Dette caset tar for seg utfordringen med at det finnes flere separate offentlige digitale tjenester for utdannings- og yrkesvalg – utdanning.no og karriereveiledning.no (HK-dir) og vilbli.no (fylkeskommunene ved Novari). Brukere – elever, studenter, foresatte, karriereveiledere og arbeidssøkere – møter et fragmentert informasjonslandskap der overlappende innhold og lenking mellom tjenestene skaper usikkerhet om hvilken tjeneste man skal bruke.
+Dette caset tar for seg utfordringen med at det finnes flere separate offentlige digitale tjenester for utdannings- og yrkesvalg – utdanning.no og karriereveiledning.no (HK-dir) og vilbli.no (fylkeskommunene ved Novari). Brukere – elever, studenter, foresatte, karriereveiledere og arbeidssøkere – møter et fragmentert informasjonslandskap der overlappende innhold og lenking mellom tjenestene skaper usikkerhet om hvilken tjeneste man skal bruke..
 
 Caset belyser behovet for én helhetlig kanal for utdannings- og karriereinformasjon som gir en enkel, trygg og nøytral vei til hjelp for valg av utdanningsløp videre.
 
@@ -115,6 +114,7 @@ Prosjektforslaget fra Novari og HK-dir peker på følgende løsningsretninger:
 **Datatilrettelegging som pilot i SAMT-BU** – i første omgang fokus på tilrettelegging for deling av data fra fylkeskommunenes løsninger (VIGO) og HK-dirs løsninger, slik at brukere som søker informasjon om videregående opplæring finner dette på ett nettsted.
 
 **Felles utredningsprosjekt** – det foreslås et prosjekt mellom Novari og HK-dir for å utrede:
+
 * effekter av en mulig sammenslåing
 * administrative og økonomiske konsekvenser
 * plan for gjennomføring
