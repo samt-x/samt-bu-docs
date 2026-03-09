@@ -1,8 +1,8 @@
 ---
 id: e0d42db3-b997-4bcc-9bf5-4da622c18429
-title: "20. Analysis Case from Vestland County"
-linkTitle: "20. Analysis Case Vestland"
-weight: 20
+title: "22. Analysis Data from Kindergarten to Adult Education"
+linkTitle: "22. Analysis data across the full pathway"
+weight: 22
 toc: true
 status: "New"
 ---
