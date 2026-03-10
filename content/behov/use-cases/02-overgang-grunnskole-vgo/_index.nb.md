@@ -2,7 +2,7 @@
 id: "0df0d0f4-91a4-4886-b43a-d8ce12f1b3be"
 title: 2. Sømløs overgang fra grunnskole til videregående opplæring
 linkTitle: 2. Overgang grunnskole–VGO
-weight: 2
+weight: 3
 toc: true
 status: Ny
 ---

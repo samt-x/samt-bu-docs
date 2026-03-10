@@ -2,7 +2,7 @@
 id: e0d42db3-b997-4bcc-9bf5-4da622c18429
 title: "22. Analysis Data from Kindergarten to Adult Education"
 linkTitle: "22. Analysis data across the full pathway"
-weight: 22
+weight: 23
 toc: true
 status: "Early draft"
 # Valid status values: New | Early draft | In progress | For QA | Approved | Cancelled

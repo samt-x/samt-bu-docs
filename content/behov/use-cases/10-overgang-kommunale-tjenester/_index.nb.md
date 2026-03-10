@@ -2,7 +2,7 @@
 id: "ab791c79-29ff-4f84-9828-3696cda9c3b4"
 title: "10. Overgang til andre kommunale tjenester"
 linkTitle: "10. Kommunale tjenester"
-weight: 10
+weight: 11
 toc: true
 # Gyldige statusverdier:
 # ◍ Ny

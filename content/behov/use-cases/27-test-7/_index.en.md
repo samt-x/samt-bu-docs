@@ -2,7 +2,7 @@
 id: 9c5aac15-0bbf-4f35-be94-02d1a998d9d7
 title: 27. Test 7
 linkTitle: "27, Test 7"
-weight: 28
+weight: 29
 status: New
 # Valid values: New | Early draft | In progress | For QA | Approved | Cancelled
 ---

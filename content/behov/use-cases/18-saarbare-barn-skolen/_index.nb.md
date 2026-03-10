@@ -2,7 +2,7 @@
 id: "dce94c9d-bb6b-4b3d-b307-fe30880632ad"
 title: "18. Innspill fra Utdanningsetaten i Oslo kommune"
 linkTitle: "18. UDE Oslo"
-weight: 18
+weight: 19
 toc: true
 # Gyldige statusverdier:
 # ◍ Ny

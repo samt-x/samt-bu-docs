@@ -2,7 +2,7 @@
 id: "2b8da72c-5f54-40b1-a3f3-cb776e1c92a9"
 title: "15. Procurement of Domain and Support Systems"
 linkTitle: "15. System Procurement"
-weight: 15
+weight: 16
 toc: true
 # Valid status values:
 # ◍ New

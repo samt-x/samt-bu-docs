@@ -2,7 +2,7 @@
 id: ff2fd115-ae18-4459-9af6-1ea2a9d4041b
 title: 21. Valg av utdanningsløp
 linkTitle: 21. Valg av utdanningsløp
-weight: 21
+weight: 22
 toc: true
 status: Tidlig utkast
 draft: false

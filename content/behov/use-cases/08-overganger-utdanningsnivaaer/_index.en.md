@@ -2,7 +2,7 @@
 id: "8f30b4d8-ddc6-427f-8682-9451db93d72f"
 title: "8. Transitions Between Education Levels"
 linkTitle: "8. Education Level Transitions"
-weight: 8
+weight: 9
 toc: true
 status: "New"
 ---

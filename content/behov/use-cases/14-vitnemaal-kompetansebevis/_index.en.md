@@ -2,7 +2,7 @@
 id: "bd1775be-dc58-4d0c-8d50-197b750d8295"
 title: "14. Documentation and Sharing of Diplomas and Certificates of Competence"
 linkTitle: "14. Diplomas and Certificates"
-weight: 14
+weight: 15
 toc: true
 # Valid status values:
 # ◍ New

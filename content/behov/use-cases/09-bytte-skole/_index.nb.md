@@ -2,7 +2,7 @@
 id: "e1e9b02b-5967-41b4-b7e0-a10e557f75d8"
 title: "9. Bytte av skole eller studiested"
 linkTitle: "9. Bytte skole/studiested"
-weight: 9
+weight: 10
 toc: true
 # Gyldige statusverdier:
 # ◍ Ny

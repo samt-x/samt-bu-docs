@@ -2,7 +2,7 @@
 id: "2b6eecb1-a2e5-4eef-a1c3-a658989ca20a"
 title: "19. StatPed – søknader fra PP-tjenesten"
 linkTitle: "19. StatPed-søknader"
-weight: 19
+weight: 20
 toc: true
 # Gyldige statusverdier:
 # ◍ Ny

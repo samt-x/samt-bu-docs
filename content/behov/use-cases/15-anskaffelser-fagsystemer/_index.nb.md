@@ -2,7 +2,7 @@
 id: "2b8da72c-5f54-40b1-a3f3-cb776e1c92a9"
 title: "15. Anskaffelser av fag- og støttesystemer"
 linkTitle: "15. Anskaffelser fagsystemer"
-weight: 15
+weight: 16
 toc: true
 # Gyldige statusverdier:
 # ◍ Ny

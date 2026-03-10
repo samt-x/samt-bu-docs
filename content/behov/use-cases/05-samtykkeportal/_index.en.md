@@ -2,7 +2,7 @@
 id: "6d3f8395-0b35-43b7-9141-a069bbbc8506"
 title: 5. Consent Portal
 linkTitle: 5. Consent Portal
-weight: 5
+weight: 6
 toc: true
 status: New
 ---

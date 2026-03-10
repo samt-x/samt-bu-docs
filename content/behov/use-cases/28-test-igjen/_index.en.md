@@ -2,7 +2,7 @@
 id: 72a5e71b-826b-4e3d-8d4f-2f86f4585a4f
 title: 28. test igjen
 linkTitle: 28. test igjen
-weight: 29
+weight: 30
 status: New
 # Valid values: New | Early draft | In progress | For QA | Approved | Cancelled
 ---

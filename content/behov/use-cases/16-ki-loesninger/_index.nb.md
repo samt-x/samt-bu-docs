@@ -2,7 +2,7 @@
 id: "f21aa7c3-18d3-4b61-b62b-380ed2043296"
 title: "16. KI-løsninger basert på felles informasjonsmodeller"
 linkTitle: "16. KI-løsninger"
-weight: 16
+weight: 17
 toc: true
 # Gyldige statusverdier:
 # ◍ Ny

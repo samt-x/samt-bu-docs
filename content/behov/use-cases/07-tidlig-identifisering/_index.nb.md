@@ -2,7 +2,7 @@
 id: "c9990051-d06a-479e-b219-a6cb72d07c96"
 title: "7. Tidlig identifisering av elever i faresonen"
 linkTitle: "7. Tidlig identifisering"
-weight: 7
+weight: 8
 toc: true
 # Gyldige statusverdier:
 # ◍ Ny
