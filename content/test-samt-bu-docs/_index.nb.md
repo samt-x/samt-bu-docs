@@ -5,4 +5,4 @@ weight: 900
 # Gyldige verdier: Ny | Tidlig utkast | Pågår | Til QA | Godkjent | Avbrutt
 last_editor: erikhag1git
 ---
-Foreløpig mappe for test av av denne CMS-løsningen.
+Foreløpig mappe for test av av denne CMS-løsningen...
