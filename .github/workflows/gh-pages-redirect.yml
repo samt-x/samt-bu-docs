@@ -1,0 +1,77 @@
+name: GitHub Pages – omdirigeringsside
+
+# Deployer en enkel omdirigeringsside til GitHub Pages som sender
+# alle besøkende fra det gamle nettstedet (samt-x.github.io/samt-bu-docs/)
+# til det nye (samt-bu-docs.pages.dev/) – med stipreservering.
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "gh-pages-redirect"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Bygg omdirigeringsside
+        run: |
+          mkdir -p ./redirect-site
+          python3 - <<'PYEOF'
+          html = """<!DOCTYPE html>
+          <html lang="nb">
+          <head>
+            <meta charset="utf-8">
+            <title>SAMT-BU Docs – ny adresse</title>
+            <script>
+              (function () {
+                var prefix = '/samt-bu-docs';
+                var path = window.location.pathname;
+                if (path.startsWith(prefix)) {
+                  path = path.slice(prefix.length) || '/';
+                }
+                var target = 'https://samt-bu-docs.pages.dev' + path
+                  + window.location.search + window.location.hash;
+                window.location.replace(target);
+              })();
+            </script>
+            <meta http-equiv="refresh" content="0; url=https://samt-bu-docs.pages.dev/">
+          </head>
+          <body>
+            <p>
+              SAMT-BU Docs har byttet adresse.<br>
+              Klikk <a href="https://samt-bu-docs.pages.dev/">her</a>
+              om du ikke videresendes automatisk.
+            </p>
+          </body>
+          </html>"""
+          with open('./redirect-site/index.html', 'w', encoding='utf-8') as f:
+              f.write(html)
+          import shutil
+          shutil.copy('./redirect-site/index.html', './redirect-site/404.html')
+          print('Redirect-sider opprettet: index.html + 404.html')
+          PYEOF
+
+      - name: Konfigurer GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Last opp til Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./redirect-site
+
+      - name: Deploy til GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
