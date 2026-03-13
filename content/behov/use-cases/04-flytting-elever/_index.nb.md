@@ -11,7 +11,7 @@ toc: true
 # ◕ Til QA
 # ⏺ Godkjent
 # ⨂ Avbrutt
-status: Ny
+status: Tidlig utkast
 last_editor: erikhag1git
 ---
 ## 1. Mål
