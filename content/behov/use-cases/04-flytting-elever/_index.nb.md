@@ -12,23 +12,23 @@ toc: true
 # ⏺ Godkjent
 # ⨂ Avbrutt
 status: Tidlig utkast
-last_editor: erikhag1git
+last_editor: 2benMoen
 ---
 ## 1. Mål
 
-Målet er å sikre at nødvendig informasjon om en elev følger eleven digitalt og automatisk ved flytting mellom kommuner. Dette skal sikre kontinuitet i opplæringen, spesielt for sårbare barn, og redusere tiden fra innflytting til barnet får et tilrettelagt tilbud i den nye skolen.
+Målet er å sikre at nødvendig informasjon om en elev følger eleven digitalt og automatisk ved flytting mellom kommuner og fylkeskommuner i løpet av skoleåret. Dette skal sikre kontinuitet i opplæringen, spesielt for sårbare barn, og redusere tiden fra innflytting til barnet får et tilrettelagt tilbud i den nye skolen.
 
 ## 2. Aktører
 
-- **Elev/Foreldre:** Flytter og melder innflytting i ny kommune.
-- **Skoleadministrativt ansvarlig (Fraflyttingskommune):** Ansvarlig for å avslutte elevforholdet og tilgjengeliggjøre dokumentasjon.
-- **Skoleleder/Lærer (Tilflyttingskommune):** Mottaker av eleven som trenger rask innsikt i elevens historikk og behov.
+- **Elev/Foreldre:** Flytter og melder innflytting i ny kommune/fylkeskommune.
+- **Skoleadministrativt ansvarlig (Fraflyttingskommune/fylke):** Ansvarlig for å avslutte elevforholdet og tilgjengeliggjøre dokumentasjon.
+- **Skoleleder/Lærer (Tilflyttingskommune/fylke):** Mottaker av eleven som trenger rask innsikt i elevens historikk og behov.
 - **Fagsystemer (f.eks. Vigilo, Visma Flyt Skole, IST):** Systemene som skal utveksle dataene.
 - **Folkeregisteret (FREG):** Kilden som trigger flyttehendelsen.
 
 ## 3. Forutsetninger
 
-- Eleven er registrert med flytting i Folkeregisteret eller foreldrene har takket ja til skoleplass i ny kommune.
+- Eleven er registrert med flytting i Folkeregisteret eller foreldrene har takket ja til skoleplass i ny kommune/nytt fylke.
 - Det foreligger lovhjemmel for deling av taushetsbelagt informasjon (eller samtykke fra foreldre der det kreves).
 - Felles standarder for utveksling av elevmapper (f.eks. etter SIKT- eller KS-standarder).
 
