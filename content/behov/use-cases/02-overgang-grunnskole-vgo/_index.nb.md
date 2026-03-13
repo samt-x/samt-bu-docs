@@ -4,9 +4,9 @@ title: 2. Sømløs overgang fra grunnskole til videregående opplæring
 linkTitle: 2. Overgang grunnskole–VGO
 weight: 3
 toc: true
-status: Ny
+status: Tidlig utkast
+last_editor: erikhag1git
 ---
-
 ## Kort beskrivelse
 
 Dette caset tar for seg overgangen fra ungdomsskole til videregående opplæring -- en av de mest sentrale overgangene i barn og unges livsløp. Overgangen innebærer både et skifte i skolehverdag og et formelt ansvarsskifte fra kommune til fylkeskommune, og berører mange aktører, tjenester og systemer.
@@ -29,72 +29,72 @@ Dette fører til at informasjon må gjeninnhentes eller vurderes på nytt, og at
 
 Brudd oppstår særlig:
 
-* når ansvaret flyttes fra kommune til fylkeskommune
-* når ulike tjenester og forvaltningsnivåer har ulike forståelser av begreper, roller og ansvar
-* når fagsystemer og arbeidsprosesser ikke er tilpasset samhandling på tvers
-* når det er usikkerhet rundt hva som kan, bør og skal deles av informasjon
+- når ansvaret flyttes fra kommune til fylkeskommune
+- når ulike tjenester og forvaltningsnivåer har ulike forståelser av begreper, roller og ansvar
+- når fagsystemer og arbeidsprosesser ikke er tilpasset samhandling på tvers
+- når det er usikkerhet rundt hva som kan, bør og skal deles av informasjon
 
 ## Aktører
 
 ### Sluttbrukere
 
-* Ungdom som går fra ungdomsskole til videregående opplæring
-* Foresatte
+- Ungdom som går fra ungdomsskole til videregående opplæring
+- Foresatte
 
 ### Ansatte i tjenestene
 
-* Lærere, rådgivere og skoleledelse i ungdomsskole og videregående skole
-* Støttetjenester som PPT og oppfølgingstjenesten (OT)
+- Lærere, rådgivere og skoleledelse i ungdomsskole og videregående skole
+- Støttetjenester som PPT og oppfølgingstjenesten (OT)
 
 ### Fagsystemleverandører
 
-* Leverandører av skoleadministrative systemer og tilgrensende støttesystemer i grunnskole og videregående opplæring
+- Leverandører av skoleadministrative systemer og tilgrensende støttesystemer i grunnskole og videregående opplæring
 
 ### Premissgivere
 
 #### Direktorater (faglige og operasjonelle premissgivere)
 
-* **Utdanningsdirektoratet** -- Fagdirektorat for grunnopplæringen. Setter føringer for læreplaner, vurdering, begreper, rapportering og bruk av utdanningsdata.
-* **Digitaliseringsdirektoratet** -- Tverrsektoriell premissgiver for digital samhandling, datadeling, arkitektur og sammenhengende tjenester.
-* **Bufdir** -- Premissgiver for helhetlig oppfølging av barn og unge, særlig i grenseflater mot barnevern og familie.
-* **Helsedirektoratet** (der relevant) -- Premissgiver for regelverk og praksis knyttet til helse og samhandling rundt barn og unge.
+- **Utdanningsdirektoratet** -- Fagdirektorat for grunnopplæringen. Setter føringer for læreplaner, vurdering, begreper, rapportering og bruk av utdanningsdata.
+- **Digitaliseringsdirektoratet** -- Tverrsektoriell premissgiver for digital samhandling, datadeling, arkitektur og sammenhengende tjenester.
+- **Bufdir** -- Premissgiver for helhetlig oppfølging av barn og unge, særlig i grenseflater mot barnevern og familie.
+- **Helsedirektoratet** (der relevant) -- Premissgiver for regelverk og praksis knyttet til helse og samhandling rundt barn og unge.
 
 #### Departementer (politiske og styringsmessige premissgivere)
 
-* **Kunnskapsdepartementet** -- Overordnet ansvar for utdanningssektoren og styringssignaler til underliggende etater.
-* **Digitaliserings- og forvaltningsdepartementet** -- Overordnet ansvar for digitalisering, datadeling og tverrsektorielle initiativ.
-* **Barne- og familiedepartementet** (der relevant) -- Premissgiver for politikk knyttet til barn, unge og familier.
+- **Kunnskapsdepartementet** -- Overordnet ansvar for utdanningssektoren og styringssignaler til underliggende etater.
+- **Digitaliserings- og forvaltningsdepartementet** -- Overordnet ansvar for digitalisering, datadeling og tverrsektorielle initiativ.
+- **Barne- og familiedepartementet** (der relevant) -- Premissgiver for politikk knyttet til barn, unge og familier.
 
 ### Tjenesteleverandører
 
-* **Kommuner** -- Ansvar for grunnskole, PPT og flere støttefunksjoner. Nærmest brukerne i praksis.
-* **Fylkeskommuner** -- Ansvar for videregående opplæring, oppfølgingstjeneste og overgang videre i utdanningsløpet.
+- **Kommuner** -- Ansvar for grunnskole, PPT og flere støttefunksjoner. Nærmest brukerne i praksis.
+- **Fylkeskommuner** -- Ansvar for videregående opplæring, oppfølgingstjeneste og overgang videre i utdanningsløpet.
 
 ### Samordnende og støttende aktører
 
-* **KS** -- Interesseorganisasjon for kommunesektoren og viktig brobygger mellom stat og kommune.
-* **KS Digital** -- Operativ aktør for felles kommunale digitale løsninger og samhandling.
-* **Sikt** -- Leverer og forvalter fellestjenester i utdanningssektoren, særlig i grenseflater mot videre utdanning.
-* **SSB** -- Bruker utdanningsdata til statistikk, analyse og innsikt.
+- **KS** -- Interesseorganisasjon for kommunesektoren og viktig brobygger mellom stat og kommune.
+- **KS Digital** -- Operativ aktør for felles kommunale digitale løsninger og samhandling.
+- **Sikt** -- Leverer og forvalter fellestjenester i utdanningssektoren, særlig i grenseflater mot videre utdanning.
+- **SSB** -- Bruker utdanningsdata til statistikk, analyse og innsikt.
 
 ## Konsekvenser av dagens situasjon
 
 ### For sluttbrukere (ungdom og foresatte)
 
-* Utrygghet i en allerede krevende overgang
-* Behov for å forklare situasjon og behov flere ganger
-* Risiko for forsinket eller mangelfull oppfølging
+- Utrygghet i en allerede krevende overgang
+- Behov for å forklare situasjon og behov flere ganger
+- Risiko for forsinket eller mangelfull oppfølging
 
 ### For ansatte i tjenestene
 
-* Merarbeid knyttet til manuell koordinering
-* Manglende helhetsoversikt og usikkerhet i beslutninger
-* Risiko for at tiltak ikke videreføres eller kommer for sent
+- Merarbeid knyttet til manuell koordinering
+- Manglende helhetsoversikt og usikkerhet i beslutninger
+- Risiko for at tiltak ikke videreføres eller kommer for sent
 
 ### For organisasjonene
 
-* Ineffektiv bruk av tid og ressurser
-* Økt risiko for feil, forsinkelser og frafall
+- Ineffektiv bruk av tid og ressurser
+- Økt risiko for feil, forsinkelser og frafall
 
 ### På systemnivå
 
@@ -112,7 +112,7 @@ Caset bygger på tidligere innsikt fra arbeid med sammenhengende tjenester for b
 
 Caset berører særlig følgende målsetninger:
 
-* Enklere og mer sammenhengende brukerreiser for elever, foresatte og ansatte gjennom utdanningsløpet
-* Bedre samhandling og informasjonsflyt på tvers av forvaltningsnivå og sektorer
-* Et bedre utgangspunkt for utvikling av felles informasjonsmodeller og gjenbrukbare løsninger
-* Læring og erfaringer som kan overføres til andre overganger i barn og unges livsløp og til andre sektorer
+- Enklere og mer sammenhengende brukerreiser for elever, foresatte og ansatte gjennom utdanningsløpet
+- Bedre samhandling og informasjonsflyt på tvers av forvaltningsnivå og sektorer
+- Et bedre utgangspunkt for utvikling av felles informasjonsmodeller og gjenbrukbare løsninger
+- Læring og erfaringer som kan overføres til andre overganger i barn og unges livsløp og til andre sektorer
