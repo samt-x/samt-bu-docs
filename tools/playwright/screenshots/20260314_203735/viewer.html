@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAMT-BU Docs – demo</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: system-ui, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 24px 16px;
+  }
+
+  h1 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #8b949e;
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
+  }
+
+  /* Video-wrapper: viser bare innholdsområdet (svarte soner croppes bort) */
+  #video-wrap {
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    background: #000;
+    /* aspect-ratio settes av JS etter at videodimensjoner er kjent */
+  }
+
+  video {
+    width: 100%;
+    display: block;
+    /* margin-top settes av JS for å croppe topp-padding */
+  }
+
+  /* Kontrollpanel – UNDER videoen, aldri overlaid */
+  #controls {
+    width: 100%;
+    max-width: 1200px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-top: none;
+    padding: 10px 14px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #seekbar {
+    width: 100%;
+    accent-color: #388bfd;
+    cursor: pointer;
+    height: 4px;
+  }
+
+  #bottom-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  button {
+    background: none;
+    border: 1px solid #30363d;
+    color: #e6edf3;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 13px;
+    cursor: pointer;
+    line-height: 1.4;
+  }
+  button:hover { background: #21262d; }
+
+  #time {
+    font-size: 13px;
+    color: #8b949e;
+    font-variant-numeric: tabular-nums;
+    flex: 1;
+  }
+
+  #hint {
+    font-size: 12px;
+    color: #484f58;
+    margin-left: auto;
+  }
+
+  #file-row {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #484f58;
+  }
+  #file-row input { display: none; }
+  #file-row label {
+    color: #388bfd;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<h1>SAMT-BU Docs – demovideo</h1>
+
+<div id="video-wrap">
+  <video id="v" preload="metadata"></video>
+</div>
+
+<div id="controls">
+  <input type="range" id="seekbar" min="0" step="0.01" value="0">
+  <div id="bottom-row">
+    <button id="btn-play">▶ Spill av</button>
+    <button id="btn-minus">−10s</button>
+    <button id="btn-plus">+10s</button>
+    <span id="time">0:00 / 0:00</span>
+    <button id="btn-fs" title="Fullskjerm">⛶</button>
+    <span id="hint">Mellomrom = pause/play &nbsp;·&nbsp; ← → = ±5s</span>
+  </div>
+</div>
+
+<div id="file-row">
+  Ingen video lastet – <label for="file-input">åpne demo.mp4</label> eller dra filen hit
+  <input type="file" id="file-input" accept="video/*">
+</div>
+
+<script>
+const v         = document.getElementById('v');
+const videoWrap = document.getElementById('video-wrap');
+const seekbar   = document.getElementById('seekbar');
+const btnPlay   = document.getElementById('btn-play');
+const btnFs     = document.getElementById('btn-fs');
+const timeEl    = document.getElementById('time');
+const fileRow   = document.getElementById('file-row');
+const fileInput = document.getElementById('file-input');
+
+// Svarte soner lagt til av test_pending_indicator.py (VIDEO_PAD_TOP / VIDEO_PAD_BOT).
+// Disse croppes bort slik at spilleren viser bare innholdsområdet (16:9).
+const PAD_TOP = 100;
+const PAD_BOT = 200;
+
+let cropEnabled = false;
+
+function applyCrop() {
+  if (!cropEnabled) return;
+  const scale = videoWrap.clientWidth / v.videoWidth;
+  v.style.marginTop = -(PAD_TOP * scale) + 'px';
+}
+
+function setupCrop() {
+  const vw = v.videoWidth;
+  const vh = v.videoHeight;
+  const expectedH = Math.round(vw * 9 / 16);   // 1080 for 1920-bred video
+
+  if (vh <= expectedH + 2) {
+    // Ingen padding – vis videoen som den er
+    videoWrap.style.aspectRatio = '';
+    return;
+  }
+
+  // Video har padding – crop til innholdsområdet
+  cropEnabled = true;
+  videoWrap.style.aspectRatio = `${vw} / ${expectedH}`;
+  applyCrop();
+  window.addEventListener('resize', applyCrop);
+}
+
+// --- last demo.mp4 fra samme mappe ---
+v.src = 'demo.mp4';
+v.load();
+
+v.addEventListener('loadedmetadata', () => {
+  fileRow.style.display = 'none';
+  seekbar.max = v.duration;
+  updateTime();
+  setupCrop();
+});
+v.addEventListener('error', () => {
+  // demo.mp4 ikke funnet – vis fil-velger
+});
+
+// --- fil-velger / drag-and-drop ---
+fileInput.addEventListener('change', loadFile);
+document.addEventListener('dragover', e => e.preventDefault());
+document.addEventListener('drop', e => {
+  e.preventDefault();
+  const f = e.dataTransfer.files[0];
+  if (f && f.type.startsWith('video/')) loadFile(null, f);
+});
+function loadFile(e, file) {
+  const f = file || fileInput.files[0];
+  if (!f) return;
+  cropEnabled = false;
+  v.style.marginTop = '';
+  videoWrap.style.aspectRatio = '';
+  v.src = URL.createObjectURL(f);
+  v.load();
+  fileRow.style.display = 'none';
+}
+
+// --- kontroller ---
+btnPlay.addEventListener('click', togglePlay);
+document.getElementById('btn-minus').addEventListener('click', () => v.currentTime -= 10);
+document.getElementById('btn-plus').addEventListener('click',  () => v.currentTime += 10);
+
+function togglePlay() {
+  if (v.paused) v.play(); else v.pause();
+}
+
+v.addEventListener('play',  () => btnPlay.textContent = '⏸ Pause');
+v.addEventListener('pause', () => btnPlay.textContent = '▶ Spill av');
+v.addEventListener('ended', () => btnPlay.textContent = '↺ Start igjen');
+
+v.addEventListener('timeupdate', () => {
+  if (!isNaN(v.duration)) seekbar.value = v.currentTime;
+  updateTime();
+});
+
+seekbar.addEventListener('input', () => v.currentTime = seekbar.value);
+
+function updateTime() {
+  timeEl.textContent = fmt(v.currentTime) + ' / ' + fmt(v.duration || 0);
+}
+function fmt(s) {
+  if (isNaN(s)) return '0:00';
+  const m = Math.floor(s / 60), sec = Math.floor(s % 60);
+  return m + ':' + String(sec).padStart(2, '0');
+}
+
+// --- fullskjerm (kun innholdsområdet) ---
+btnFs.addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    videoWrap.requestFullscreen().catch(() => {});
+  } else {
+    document.exitFullscreen();
+  }
+});
+
+// --- tastatursnarveier ---
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space')      { e.preventDefault(); togglePlay(); }
+  if (e.code === 'ArrowLeft')  { e.preventDefault(); v.currentTime -= 5; }
+  if (e.code === 'ArrowRight') { e.preventDefault(); v.currentTime += 5; }
+});
+</script>
+</body>
+</html>

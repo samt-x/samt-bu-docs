@@ -463,17 +463,17 @@ async def step_07_navigate_away(page: Page):
         print("  ⚠ Indikator IKKE gjenopprettet etter navigering – feil!")
         await screenshot(page, "07-indikator-mangler-etter-navigering")
 
-    # Forklarende boble – blir stående til siden lastes automatisk på nytt (bygg ferdig)
-    await show_bubble(page,
-        "Vi kan nå jobbe videre på andre sider mens nettstedet oppdateres i bakgrunnen."
-        "<br><br>"
-        "Hver oppdateringsjobb tar typisk rundt <strong>ett minutt</strong>. "
-        "Indikatoren nederst til venstre holder oss oppdatert."
-        "<br><br>"
-        "I denne testen venter vi til jobben er ferdig for å demonstrere "
-        "hvordan tittelen på «Test 1» oppdateres i venstremenyen.",
-        duration_ms=None    # ingen timeout – forsvinner ved automatisk sideoppdatering
-    )
+    # Forklarende boble – midlertidig deaktivert, tas inn igjen på kontrollert måte
+    # await show_bubble(page,
+    #     "Vi kan nå jobbe videre på andre sider mens nettstedet oppdateres i bakgrunnen."
+    #     "<br><br>"
+    #     "Hver oppdateringsjobb tar typisk rundt <strong>ett minutt</strong>. "
+    #     "Indikatoren nederst til venstre holder oss oppdatert."
+    #     "<br><br>"
+    #     "I denne testen venter vi til jobben er ferdig for å demonstrere "
+    #     "hvordan tittelen på «Test 1» oppdateres i venstremenyen.",
+    #     duration_ms=None
+    # )
 
 
 async def step_08_wait_for_build_and_countdown(page: Page):
