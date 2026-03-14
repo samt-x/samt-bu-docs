@@ -102,6 +102,37 @@ async def inject_indicator_pulse(page: Page):
     """Gjør #qe-job-indicator pulsere gult – synlig i video."""
     await page.evaluate(INDICATOR_PULSE_JS)
 
+async def show_bubble(page: Page, text: str, duration_ms: int = 7000):
+    """Vis en forklarende kommentarboble midt på skjermen, forsvinner etter duration_ms."""
+    await page.evaluate("""
+        ([text, duration]) => {
+            const existing = document.getElementById('pw-bubble');
+            if (existing) existing.remove();
+            const b = document.createElement('div');
+            b.id = 'pw-bubble';
+            b.innerHTML = text;
+            b.style.cssText = [
+                'position:fixed', 'bottom:70px', 'left:50%',
+                'transform:translateX(-50%)',
+                'background:rgba(15,25,50,0.93)',
+                'color:#fff', 'padding:18px 28px',
+                'border-radius:14px', 'font-size:15px',
+                'max-width:620px', 'text-align:center',
+                'z-index:2147483640',
+                'box-shadow:0 6px 24px rgba(0,0,0,0.6)',
+                'border:1px solid rgba(255,255,255,0.18)',
+                'line-height:1.6', 'opacity:0',
+                'transition:opacity 0.4s ease'
+            ].join(';');
+            document.body.appendChild(b);
+            requestAnimationFrame(() => { b.style.opacity = '1'; });
+            setTimeout(() => {
+                b.style.opacity = '0';
+                setTimeout(() => b.remove(), 450);
+            }, duration);
+        }
+    """, [text, duration_ms])
+
 async def click_flash(page: Page, x: float, y: float):
     """Tegn en gul ripple-animasjon ved klikk-koordinater."""
     await page.evaluate("""
@@ -288,8 +319,12 @@ async def step_05_make_change(page: Page):
     base_title = re.sub(r'\s*\(testet \d{2}:\d{2}:\d{2}\)$', '', current_title).strip()
     ts = datetime.now().strftime("%H:%M:%S")
     new_title = f"{base_title} (testet {ts})"
+    # Marker hele feltet og slett eksisterende tekst
     await move_and_click(page, title_input, click_count=3)
-    await title_input.fill(new_title)
+    await page.keyboard.press("Backspace")
+    await page.wait_for_timeout(300)
+    # Skriv ny tittel tegn for tegn – simulerer manuell inntasting
+    await page.keyboard.type(new_title, delay=70)
     await screenshot(page, "05-tittel-endret", "#qe-meta-panel")
     print(f"  ✓ Tittel endret: «{current_title}» → «{new_title}»")
 
@@ -349,6 +384,19 @@ async def step_07_navigate_away(page: Page):
     else:
         print("  ⚠ Indikator IKKE gjenopprettet etter navigering – feil!")
         await screenshot(page, "07-indikator-mangler-etter-navigering")
+
+    # Forklarende boble – vises mens vi «jobber videre» på en annen side
+    await show_bubble(page,
+        "Vi kan nå jobbe videre på andre sider mens nettstedet oppdateres i bakgrunnen."
+        "<br><br>"
+        "Hver oppdateringsjobb tar typisk rundt <strong>ett minutt</strong>. "
+        "Indikatoren nederst til venstre holder oss oppdatert."
+        "<br><br>"
+        "I denne testen venter vi til jobben er ferdig for å demonstrere "
+        "hvordan tittelen på «Test 1» oppdateres i venstremenyen.",
+        duration_ms=9000
+    )
+    await page.wait_for_timeout(9500)   # Vent til boblen er ferdig
 
 
 async def step_08_wait_for_build_and_countdown(page: Page):
