@@ -17,9 +17,8 @@ Thumbs.db
 .claude/
 assets/
 
-# Playwright – aldri commit token eller screenshots
+# Playwright – token er hemmelig, screenshots versjonskontrolleres
 tools/playwright/.env
-tools/playwright/screenshots/
 
 # Editor files
 *.swp
