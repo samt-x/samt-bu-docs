@@ -358,7 +358,7 @@ async def step_05_make_change(page: Page):
     title_input = page.locator("#qe-field-title")
     await title_input.wait_for(state="visible", timeout=10000)
     current_title = await title_input.input_value()
-    base_title = re.sub(r'\s*\(testet \d{2}:\d{2}:\d{2}\)$', '', current_title).strip()
+    base_title = re.sub(r'\s*\(testet.*', '', current_title).strip()  # fjern alt fra første «(testet»
     ts = datetime.now().strftime("%H:%M:%S")
     new_title = f"{base_title} (testet {ts})"
     # Klikk for å fokusere feltet
@@ -367,8 +367,9 @@ async def step_05_make_change(page: Page):
     # Marker all eksisterende tekst (Ctrl+A) – synlig i video
     await page.keyboard.press("Control+a")
     await page.wait_for_timeout(600)      # pause – viser markeringen
-    # Slett markert tekst
+    # Slett markert tekst (visuell animasjon + faktisk tømming)
     await page.keyboard.press("Backspace")
+    await title_input.fill("")            # sikrer at feltet er faktisk tomt
     await page.wait_for_timeout(400)      # pause – viser tomt felt
     # Skriv ny tittel tegn for tegn – simulerer manuell inntasting
     await page.keyboard.type(new_title, delay=70)
