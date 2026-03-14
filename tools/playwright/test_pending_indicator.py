@@ -266,8 +266,8 @@ async def step_06_save_and_observe_indicator(page: Page):
 
 async def step_07_navigate_away(page: Page):
     print("\n[7/9] Navigerer til annen side og sjekker at indikator gjenopprettes…")
-    # Naviger direkte til en annen side (unngår skjulte sidebar-lenker)
-    await page.goto(BASE_URL + "/om/om-samt-bu/", wait_until="networkidle")
+    # Naviger til Test 2 – holder Test-kapitlet ekspandert i sidebar
+    await page.goto(BASE_URL + "/test-samt-bu-docs/test-2/", wait_until="networkidle")
     await page.wait_for_timeout(800)  # Resume-kode kjøres etter 200ms
 
     current_url = page.url
@@ -359,10 +359,10 @@ async def main():
         browser = await pw.chromium.launch(
             headless=HEADLESS,
             slow_mo=SLOW_MO,
-            args=["--window-size=1400,900"]
+            args=["--start-maximized"]
         )
         context: BrowserContext = await browser.new_context(
-            viewport={"width": 1400, "height": 900},
+            no_viewport=True,  # Respekter --start-maximized
             record_video_dir=str(SCREENSHOTS / "video") if not HEADLESS else None
         )
         page = await context.new_page()
