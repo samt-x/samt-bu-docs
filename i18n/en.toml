@@ -1,6 +1,9 @@
 [Last-modified]
 other = "Last modified"
 
+[sectionChildrenLabel]
+other = "Section contents:"
+
 [editSwitcherLabel]
 other = "Edit"
 

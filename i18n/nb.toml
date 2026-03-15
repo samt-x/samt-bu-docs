@@ -1,6 +1,9 @@
 [Last-modified]
 other = "Sist endret"
 
+[sectionChildrenLabel]
+other = "Seksjonsinnhold:"
+
 [editSwitcherLabel]
 other = "Endre"
 
