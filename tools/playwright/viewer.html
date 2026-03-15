@@ -36,6 +36,7 @@
   video {
     width: 100%;
     display: block;
+    cursor: pointer;
   }
 
   /* Kontrollpanel – UNDER videoen, aldri overlaid */
@@ -118,7 +119,7 @@
     <button id="btn-plus">+10s</button>
     <span id="time">0:00 / 0:00</span>
     <button id="btn-fs" title="Fullskjerm">⛶</button>
-    <span id="hint">Mellomrom = pause/play &nbsp;·&nbsp; ← → = ±5s</span>
+    <span id="hint">Klikk på video / mellomrom = pause/play &nbsp;·&nbsp; ← → = ±5s</span>
   </div>
 </div>
 
@@ -166,6 +167,7 @@ function loadFile(e, file) {
 }
 
 // --- kontroller ---
+v.addEventListener('click', togglePlay);
 btnPlay.addEventListener('click', togglePlay);
 document.getElementById('btn-minus').addEventListener('click', () => v.currentTime -= 10);
 document.getElementById('btn-plus').addEventListener('click',  () => v.currentTime += 10);
