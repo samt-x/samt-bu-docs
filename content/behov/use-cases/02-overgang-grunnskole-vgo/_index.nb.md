@@ -5,7 +5,7 @@ linkTitle: 2. Overgang grunnskole–VGO
 weight: 20
 toc: true
 status: Tidlig utkast
-last_editor: erikhag1git
+last_editor: erikhag1git (Erik Hagen)
 ---
 ## Kort beskrivelse
 

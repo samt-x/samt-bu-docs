@@ -3,7 +3,7 @@ id: 364728ba-fc9d-4605-9511-57acdbb7f9f3
 title: Om prosjektet SAMT-BU
 linkTitle: Om prosjektet SAMT-BU
 weight: 10
-last_editor: erikhag1git
+last_editor: erikhag1git (Erik Hagen)
 ---
 SAMT-BU er et samarbeidsprosjekt om *datasentrisk tjenesteutvikling* og sammenhengende tjenester for barn og unge – fra barnehage til høyere utdanning.
 

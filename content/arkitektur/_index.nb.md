@@ -4,7 +4,7 @@ title: Arkitektur
 linkTitle: Arkitektur
 weight: 40
 toc: true
-last_editor: Erik Hagen
+last_editor: erikhag1git (Erik Hagen)
 
 ---
 Arkitektur...

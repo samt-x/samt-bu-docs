@@ -5,7 +5,7 @@ linkTitle: 5. Samtykkeportal
 weight: 50
 toc: true
 status: Ny
-last_editor: Erik Hagen
+last_editor: erikhag1git (Erik Hagen)
 
 ---
 

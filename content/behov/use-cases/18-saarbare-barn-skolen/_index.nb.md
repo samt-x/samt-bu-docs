@@ -12,7 +12,7 @@ toc: true
 # ⏺ Godkjent
 # ⨂ Avbrutt
 status: "Tidlig utkast"
-last_editor: Erik Hagen
+last_editor: erikhag1git (Erik Hagen)
 
 ---
 

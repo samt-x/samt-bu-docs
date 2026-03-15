@@ -5,7 +5,7 @@ linkTitle: 1. Results from Upper Secondary
 weight: 10
 toc: true
 status: In progress
-last_editor: Erik Hagen
+last_editor: erikhag1git (Erik Hagen)
 
 ---
 ## Who submitted this as a case the SAMT-BU project should address

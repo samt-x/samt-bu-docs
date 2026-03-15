@@ -12,7 +12,7 @@ toc: true
 # ⏺ Approved
 # ⨂ Cancelled
 status: "Early draft"
-last_editor: Erik Hagen
+last_editor: erikhag1git (Erik Hagen)
 
 ---
 

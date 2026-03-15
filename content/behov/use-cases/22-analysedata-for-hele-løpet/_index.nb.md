@@ -6,7 +6,7 @@ weight: 220
 toc: true
 status: Tidlig utkast
 # Gyldige statusverdier: Ny | Tidlig utkast | Pågår | Til QA | Godkjent | Avbrutt
-last_editor: erikhag1git
+last_editor: erikhag1git (Erik Hagen)
 ---
 ## Kort beskrivelse
 

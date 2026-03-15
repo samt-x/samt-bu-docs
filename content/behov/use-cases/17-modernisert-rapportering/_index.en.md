@@ -5,7 +5,7 @@ linkTitle: "17. Automated Reporting"
 weight: 170
 toc: true
 status: "New"
-last_editor: Erik Hagen
+last_editor: erikhag1git (Erik Hagen)
 
 ---
 

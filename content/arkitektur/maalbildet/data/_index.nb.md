@@ -3,6 +3,6 @@ id: "84557f7a-b5c2-4a46-acf3-501fb83fb70d"
 title: "Data"
 weight: 60
 toc: true
-last_editor: Erik Hagen
+last_editor: erikhag1git (Erik Hagen)
 
 ---

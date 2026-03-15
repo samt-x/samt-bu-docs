@@ -3,7 +3,7 @@ id: "c565217f-afc6-49ed-bc21-9b3b23f918fc"
 title: "Case descriptions"
 linkTitle: "Case descriptions"
 weight: 10
-last_editor: Erik Hagen
+last_editor: erikhag1git (Erik Hagen)
 
 ---
 
