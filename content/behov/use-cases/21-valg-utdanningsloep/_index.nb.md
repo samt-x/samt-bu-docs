@@ -6,6 +6,8 @@ weight: 210
 toc: true
 status: Tidlig utkast
 draft: false
+last_editor: Erik Hagen
+
 ---
 ## Kort beskrivelse
 

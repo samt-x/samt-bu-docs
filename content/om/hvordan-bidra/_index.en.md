@@ -3,6 +3,8 @@ id: "1e0d2050-f885-496d-8ab4-8bdc287697e8"
 title: "How to Contribute"
 linkTitle: "How to Contribute"
 weight: 30
+last_editor: Erik Hagen
+
 ---
 
 This website is open to contributions from all partners in the SAMT-BU project. There are three ways to contribute, depending on the type of changes you want to make and your technical background:

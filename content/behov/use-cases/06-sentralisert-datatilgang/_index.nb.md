@@ -12,6 +12,8 @@ toc: true
 # ⏺ Godkjent
 # ⨂ Avbrutt
 status: "Ny"
+last_editor: Erik Hagen
+
 ---
 
 

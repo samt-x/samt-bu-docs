@@ -5,6 +5,8 @@ linkTitle: 5. Samtykkeportal
 weight: 50
 toc: true
 status: Ny
+last_editor: Erik Hagen
+
 ---
 
 ## Foreløpig beskrivelse

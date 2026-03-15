@@ -3,6 +3,8 @@ id: "43b084cb-6951-4529-86f4-3d56f939a51e"
 title: "Pilot 1 – architecture"
 linkTitle: "Pilot 1 – architecture"
 weight: 10
+last_editor: Erik Hagen
+
 ---
 
 *Working document – Architecture and target picture, SAMT-BU*

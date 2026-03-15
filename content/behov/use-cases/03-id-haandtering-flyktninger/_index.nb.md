@@ -12,6 +12,8 @@ toc: true
 # ⏺ Godkjent
 # ⨂ Avbrutt
 status: "Tidlig utkast"
+last_editor: Erik Hagen
+
 ---
 
 ## Kort beskrivelse

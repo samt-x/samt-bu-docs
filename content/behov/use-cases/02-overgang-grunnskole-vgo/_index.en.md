@@ -5,6 +5,8 @@ linkTitle: 2. Primary to Upper Secondary
 weight: 20
 toc: true
 status: New
+last_editor: Erik Hagen
+
 ---
 
 ## Brief description

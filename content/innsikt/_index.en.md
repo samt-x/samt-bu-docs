@@ -4,6 +4,8 @@ title: Shared insights
 linkTitle: Shared insights
 weight: 70
 toc: true
+last_editor: Erik Hagen
+
 ---
 
 Shared insights from the SAMT-BU project. Content coming soon.

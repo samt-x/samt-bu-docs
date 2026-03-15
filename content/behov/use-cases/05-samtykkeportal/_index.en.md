@@ -5,6 +5,8 @@ linkTitle: 5. Consent Portal
 weight: 50
 toc: true
 status: New
+last_editor: Erik Hagen
+
 ---
 
 ## Preliminary description

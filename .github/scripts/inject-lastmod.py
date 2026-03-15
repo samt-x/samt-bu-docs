@@ -25,12 +25,23 @@ def get_lastmod(module_path, rel_path):
     return result.stdout.strip()
 
 
-def get_author(module_path, rel_path):
+def get_last_human_author(module_path, rel_path):
+    """Finn siste ikke-bot-commit-autor for filen. Returnerer 'login (navn)' eller 'navn'."""
     result = subprocess.run(
-        ['git', 'log', '-1', '--format=%aN', '--', rel_path],
+        ['git', 'log', '--format=%aN|%aE', '--', rel_path],
         capture_output=True, text=True, cwd=module_path
     )
-    return result.stdout.strip()
+    for line in result.stdout.strip().splitlines():
+        if not line:
+            continue
+        name, _, email = line.partition('|')
+        if '[bot]' in name or '[bot]' in email:
+            continue
+        m = re.match(r'^\d+\+(.+)@users\.noreply\.github\.com$', email.strip())
+        if m:
+            return f'{m.group(1)} ({name.strip()})'
+        return name.strip()
+    return None
 
 
 def inject_lastmod(filepath, lastmod, author):
@@ -53,7 +64,10 @@ def inject_lastmod(filepath, lastmod, author):
         frontmatter = frontmatter.rstrip('\n') + f'\nlastmod: {lastmod}\n'
 
     if author:
-        if re.search(r'^last_editor:', frontmatter, re.MULTILINE):
+        existing = re.search(r'^last_editor:\s*(.*)$', frontmatter, re.MULTILINE)
+        if existing and '[bot]' not in existing.group(1):
+            pass  # behold eksisterende menneskelig verdi
+        elif existing:
             frontmatter = re.sub(r'^last_editor:.*$', f'last_editor: {author}', frontmatter, flags=re.MULTILINE)
         else:
             frontmatter = frontmatter.rstrip('\n') + f'\nlast_editor: {author}\n'
@@ -80,7 +94,7 @@ for module_path in MODULE_PATHS:
             rel_path = os.path.relpath(filepath, module_path)
 
             lastmod = get_lastmod(module_path, rel_path)
-            author = get_author(module_path, rel_path)
+            author = get_last_human_author(module_path, rel_path)
             if lastmod:
                 if inject_lastmod(filepath, lastmod, author):
                     print(f'  {rel_path}: lastmod: {lastmod}, last_editor: {author}')

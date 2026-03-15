@@ -4,6 +4,8 @@ title: Test 3.1
 weight: 10
 status: New
 # Valid values: New | Early draft | In progress | For QA | Approved | Cancelled
+last_editor: erikhag1git
+
 ---
 
 *English translation TBD.*

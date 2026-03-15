@@ -3,6 +3,8 @@ id: "1e0d2050-f885-496d-8ab4-8bdc287697e8"
 title: "Hvordan bidra"
 linkTitle: "Hvordan bidra"
 weight: 30
+last_editor: Erik Hagen
+
 ---
 
 Dette nettstedet er åpent for bidrag fra alle samarbeidspartnere i SAMT-BU-prosjektet. Det finnes tre måter å bidra på, avhengig av hva slags endringer du skal gjøre og din tekniske bakgrunn:

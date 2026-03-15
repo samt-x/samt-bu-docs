@@ -3,6 +3,8 @@ id: "23a6ec0b-a515-4db0-907c-7d96836d3dfd"
 title: "About this website"
 linkTitle: "About this website"
 weight: 20
+last_editor: Erik Hagen
+
 ---
 
 SAMT-BU Docs is a static documentation website developed as part of the project SAMT-BU (Joined-up services for children and young people). The site is one of several documentation channels in the project and brings together professional content accessible to all project partners. The site collects professional documentation, architecture descriptions, use cases, and guides in one place – accessible to all project partners.

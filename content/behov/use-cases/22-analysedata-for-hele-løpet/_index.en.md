@@ -6,6 +6,8 @@ weight: 220
 toc: true
 status: "Early draft"
 # Valid status values: New | Early draft | In progress | For QA | Approved | Cancelled
+last_editor: Erik Hagen
+
 ---
 
 ## Brief Description

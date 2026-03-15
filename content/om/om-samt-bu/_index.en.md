@@ -3,6 +3,8 @@ id: "364728ba-fc9d-4605-9511-57acdbb7f9f3"
 title: "About the SAMT-BU project"
 linkTitle: "About the SAMT-BU project"
 weight: 10
+last_editor: Erik Hagen
+
 ---
 
 SAMT-BU is a collaborative project on data-driven service development and joined-up services for children and young people – from kindergarten to higher education.

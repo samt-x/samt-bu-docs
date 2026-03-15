@@ -5,6 +5,8 @@ linkTitle: "18. UDE Oslo"
 weight: 180
 toc: true
 status: "Early draft"
+last_editor: Erik Hagen
+
 ---
 
 ## Brief Description
