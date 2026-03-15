@@ -4,7 +4,7 @@ title: Test SAMT-BU Docs
 weight: 90
 status: New
 # Valid values: New | Early draft | In progress | For QA | Approved | Cancelled
-last_editor: erikhag1git (Erik Hagen)
+last_editor: erikhag1git (ukjent navn)
 
 ---
 

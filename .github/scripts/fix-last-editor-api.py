@@ -2,11 +2,9 @@
 """
 Batch-opprydding av last_editor via GitHub API.
 
-For hver .md-fil i alle repoer:
-  - Kaller GitHub API for å hente siste ikke-bot-commit for filen
-  - Henter author.login og commit.author.name
-  - Skriver last_editor: login (navn) til frontmatter
-  - Overskriver alltid eksisterende verdi
+For hver .md-fil hentes commit-historikken fra GitHub API.
+Commits som er batch-/metadata-operasjoner hoppes over slik at
+den siste EKTE innholdsendringen vises.
 
 Kjør fra rot av samt-bu-docs:
   py .github/scripts/fix-last-editor-api.py
@@ -40,6 +38,34 @@ REPOS = [
 
 BOT_LOGINS = {'github-actions[bot]', 'dependabot[bot]'}
 
+_user_name_cache = {}
+
+def get_display_name(login):
+    """Hent display-navn for en GitHub-bruker (cachet)."""
+    if login in _user_name_cache:
+        return _user_name_cache[login]
+    data = gh_api(f'https://api.github.com/users/{login}')
+    name = (data.get('name') or '').strip() if data else ''
+    _user_name_cache[login] = name
+    time.sleep(0.05)
+    return name
+
+# Commit-meldinger som skal hoppes over (batch/metadata-operasjoner)
+SKIP_MSG_PATTERNS = [
+    'Metadata: last_editor',
+    'batch-opprydding',
+    'last_editor satt for alle',
+    'last_editor oppdatert via GitHub API',
+    'Vekter: 10-inkrement',
+    'Legg til UUID-identifikator i frontmatter',
+    'inject-lastmod med last_editor',
+]
+
+
+def is_batch_commit(message):
+    msg = message or ''
+    return any(p.lower() in msg.lower() for p in SKIP_MSG_PATTERNS)
+
 
 def gh_api(url):
     req = urllib.request.Request(
@@ -58,21 +84,33 @@ def gh_api(url):
         return None
 
 
-def get_last_human_commit(github_repo, file_path):
-    """Hent siste ikke-bot GitHub-bruker for filen via API."""
-    url = f'https://api.github.com/repos/{github_repo}/commits?path={urllib.parse.quote(file_path)}&per_page=20'
-    commits = gh_api(url)
-    if not commits:
-        return None, None
-    for commit in commits:
-        author = commit.get('author')
-        if not author:
-            continue
-        login = author.get('login', '')
-        if login in BOT_LOGINS or '[bot]' in login:
-            continue
-        name = commit.get('commit', {}).get('author', {}).get('name', '').strip()
-        return login, name
+def get_last_real_editor(github_repo, file_path):
+    """Hent siste ikke-batch, ikke-bot GitHub-bruker for filen."""
+    page = 1
+    while page <= 5:  # maks 5 sider = 100 commits
+        url = (f'https://api.github.com/repos/{github_repo}/commits'
+               f'?path={urllib.parse.quote(file_path)}&per_page=20&page={page}')
+        commits = gh_api(url)
+        if not commits:
+            break
+        for commit in commits:
+            msg = commit.get('commit', {}).get('message', '')
+            if is_batch_commit(msg):
+                continue
+            author = commit.get('author')
+            if not author:
+                continue
+            login = author.get('login', '')
+            if login in BOT_LOGINS or '[bot]' in login:
+                continue
+            # Prøv profil-navn fra Users API, fall tilbake til commit-metadata-navn
+            profile_name = get_display_name(login)
+            commit_name = commit.get('commit', {}).get('author', {}).get('name', '').strip()
+            name = profile_name or commit_name
+            return login, name
+        if len(commits) < 20:
+            break  # ingen flere sider
+        page += 1
     return None, None
 
 
@@ -117,11 +155,11 @@ for repo_path, content_dir, github_repo in REPOS:
             filepath = os.path.join(root, filename)
             rel_path = os.path.relpath(filepath, repo_path).replace('\\', '/')
 
-            login, name = get_last_human_commit(github_repo, rel_path)
-            time.sleep(0.1)  # unnga rate-limiting
+            login, name = get_last_real_editor(github_repo, rel_path)
+            time.sleep(0.1)
 
             if not login:
-                print(f'  [ingen GitHub-bruker] {rel_path}')
+                print(f'  [ingen ekte editor funnet] {rel_path}')
                 continue
 
             value = f'{login} ({name})' if name and name != login else f'{login} (ukjent navn)'

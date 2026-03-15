@@ -4,7 +4,7 @@ title: Shared insights
 linkTitle: Shared insights
 weight: 70
 toc: true
-last_editor: erikhag1git (Erik Hagen)
+last_editor: erikhag1git (ukjent navn)
 
 ---
 

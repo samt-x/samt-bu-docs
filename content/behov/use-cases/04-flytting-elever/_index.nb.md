@@ -12,7 +12,7 @@ toc: true
 # ⏺ Godkjent
 # ⨂ Avbrutt
 status: Tidlig utkast
-last_editor: erikhag1git (Erik Hagen)
+last_editor: 2benMoen (ukjent navn)
 ---
 ## 1. Mål
 

@@ -5,7 +5,7 @@ linkTitle: 1. Resultater fra opplæring
 weight: 10
 toc: true
 status: Pågår
-last_editor: erikhag1git (Erik Hagen)
+last_editor: 2benMoen (ukjent navn)
 ---
 ## Hvem har spilt inn dette som en case prosjektet SAMT–BU bør jobbe med
 

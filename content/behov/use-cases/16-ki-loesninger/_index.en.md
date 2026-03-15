@@ -5,7 +5,7 @@ linkTitle: "16. AI Solutions"
 weight: 160
 toc: true
 status: "New"
-last_editor: erikhag1git (Erik Hagen)
+last_editor: erikhag1git (ukjent navn)
 
 ---
 
