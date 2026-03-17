@@ -37,7 +37,32 @@ Du redigerer innhold direkte i nettleseren i et visuelt tekstverktøy – ingen 
 
 **Tips:** Bilder kan limes direkte inn i tekstfeltet (Ctrl+V eller høyreklikk → Lim inn) – det finnes foreløpig ingen egen bildeknapp i verktøylinjen.
 
-Nettstedet oppdateres automatisk innen ca. 1 minutt. En statusindikator nede til venstre i skjermen viser at oppdateringen er i gang.
+Nettstedet oppdateres automatisk etter lagring. En statusindikator nede til venstre i skjermen holder deg oppdatert underveis.
+
+### Statusindikator og jobbhistorikk
+
+**Indikatoren nede til venstre** er alltid synlig og viser gjeldende tilstand:
+
+| Tilstand | Tekst | Betyr |
+|----------|-------|-------|
+| Ingen pågående jobb | «Byggehistorikk» | Klikk for å se tidligere byggejobber |
+| Lagret, venter på bygg | «N endringer bygges…» | Endringen er sendt – bygg er i gang eller i kø |
+| Ferdig | «Endringer publisert – klikk for å laste inn» | Klikk for å se den oppdaterte siden |
+
+Klikker du på indikatoren åpnes en **jobbhistorikk-dialog** som viser de siste byggejobber med status, tidspunkt og lenke til GitHub Actions. Her kan du se:
+- 🔄 Kjørende jobb – med antall sekunder siden den startet
+- 🕐 Jobb i kø – venter på tur
+- ✅ Fullført
+- ✅ (grå) Avløst av nyere bygg – se forklaring under
+
+#### Om byggetid og køer
+
+Nettstedet bygges av GitHub Actions. Normalt tar et bygg **ca. 1 minutt**. Hvis du eller andre lagrer flere sider raskt etter hverandre, kan ventetiden bli lengre fordi byggejobber kjøres én om gangen:
+
+- **2 lagringer etter hverandre:** andre jobb venter til første er ferdig – totaltid ca. 2 min
+- **3 eller flere raske lagringer:** GitHub kan *avløse* eldre jobber i kø med den nyeste. Det betyr at en jobb i historikken kan vises som «Avløst» i stedet for fullført – dette er normalt og betyr ikke at noe gikk galt. Alle lagrede endringer er registrert i Git og vil bli publisert av den siste jobben som kjøres.
+
+> **Kort sagt:** Ser du grå hake og teksten «Avløst» i jobbhistorikken, er ikke endringen tapt – den ble publisert av en nyere jobb.
 
 ### Opprette en ny side
 
@@ -47,8 +72,6 @@ Nettstedet oppdateres automatisk innen ca. 1 minutt. En statusindikator nede til
    - **«Nytt underkapittel»** – ny side ett nivå ned
 3. Fyll inn tittel og eventuelt innhold i dialogen
 4. Klikk **«Lagre»**
-
-> **Merknad:** Det arbeides med å gi bedre oversikt over pågående redigeringsarbeid på tvers av brukere. Løsningen er fullt brukbar slik den er i dag, men du kan oppleve at siden tar ca. 1 minutt å oppdatere etter lagring, og at det ikke alltid er synlig om andre redigerer samme side samtidig.
 
 ---
 
