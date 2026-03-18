@@ -2,8 +2,9 @@
 id: 7d3baa59-daab-4f23-830e-5c2811bb2404
 title: 2026-03-18 Nav får sterk krikk for manglende digital tilgang for foreldre
 weight: 10
+hide_toc: true
+last_editor: erikhag1git
 ---
-
 [Lenke til arikkel](https://www.aftenposten.no/norge/i/7p3AMK/nav-faar-sterk-krikk-for-manglende-digital-tilgang-for-foreldre?utm_source=iosapp&utm_medium=share)
 
 Publisert: 18.03.2026 09:43 | Oppdatert: 18.03.2026 10:48
