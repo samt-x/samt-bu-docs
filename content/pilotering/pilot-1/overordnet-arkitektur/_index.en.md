@@ -2,7 +2,7 @@
 id: b90412e8-ca33-41f4-bc57-17b4b44495e5
 title: "Overall architecture"
 linkTitle: "Overall architecture"
-weight: 10
+weight: 20
 last_editor: erikhag1git (Erik Hagen)
 
 ---

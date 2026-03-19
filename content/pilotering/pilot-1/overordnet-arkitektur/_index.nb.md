@@ -2,7 +2,7 @@
 id: b90412e8-ca33-41f4-bc57-17b4b44495e5
 title: Overordnet arkitektur
 linkTitle: Overordnet arkitektur
-weight: 11
+weight: 21
 last_editor: erikhag1git
 
 ---
