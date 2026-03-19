@@ -32,7 +32,7 @@ Gjennomgangen av de nyeste rapportene fra Helsetilsynet og medieoppslag viser at
 
 3. **Oppfølging av "glemsel":** Enheten undersøker saker der barn "faller mellom stoler" i overganger mellom kommunale og statlige tjenester.
 
-## Oppsummering: Hvorfor er NUBA kritisk for SAMT-BU?
+## Oppsummering: Hvorfor er NUBA viktig for SAMT-BU?
 
 På tvers av referansene ser vi en tydelig rød tråd: **Svikt skjer sjelden i én enkelt tjeneste, men i glippsonene mellom dem.** NUBAs funn gir det nødvendige innsiktsgrunnlaget for å bygge sammenhengende tjenester. Mens SAMT-BU jobber med de tekniske og juridiske løsningene for samhandling, leverer NUBA "bevisene" på hvorfor disse løsningene er livsviktige. Ved å systematisere læring fra de mørkeste sakene, bidrar NUBA til at prosjekter som SAMT-BU kan prioritere de riktige tiltakene for å sikre at informasjon følger barnet, og at ingen varsellamper slukkes uten handling.
 
