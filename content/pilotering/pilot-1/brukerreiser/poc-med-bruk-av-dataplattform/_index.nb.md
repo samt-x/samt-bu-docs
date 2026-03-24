@@ -12,3 +12,7 @@ Gevinstene er strukturert i to kategorier:
 
 1. Operative gevinster – knyttet til forbedring av prosessen for overføring av elevdata
 2. Strategiske gevinster – knyttet til etablering og bruk av dataplattform som mellomlag
+
+**Operative gevinster – knyttet til forbedring av prosessen for overføring av elevdata**
+
+[table]
