@@ -3,7 +3,7 @@ id: c3642c32-45ac-4d09-9640-e4f8cb6971ae
 title: Brukerreiser
 linkTitle: Brukerreiser
 weight: 20
-last_editor: erikhag1git (Erik Hagen)
+last_editor: Anamarija-Carotta
 
 ---
 ## Nåværende situasjon (AS-IS prosess): Overføring av elevliste fra grunnskole til vidergående skole
@@ -13,7 +13,3 @@ Prosessen handler om overføring av elevdata fra grunnskole til videregående sk
 Hovedutfordringene i dagens prosess er knyttet til at den i stor grad er manuell på kommunenes side. Skoleadministrasjonen i grunnskoler må laste ned filer fra fagsystemer (f. eks. Vigilo), mellomlagre og redigere filene lokalt på PC, før redigerte filer lastes opp i fylkeskommunens fagsystem (Vigo). Prosessen er relativt enkel, men oppleves som unødvendig, da den i stor grad burde vært automatisert. I tillegg innebærer mellomlagring av filer lokalt en sikkerhetsrisiko, ettersom data kan komme på avveie fra filene som er lagret (og ikke slettet) lokalt.
 
 ![](bilde-1773830724401.png)
-
-## Nytt kap. ? her
-
-ghghg
