@@ -1,4 +1,5 @@
 ---
+# id: auto-generert – kopierte verdier overskrives automatisk ved push
 id: c565217f-afc6-49ed-bc21-9b3b23f918fc
 title: Case-beskrivelser
 linkTitle: Case-beskrivelser

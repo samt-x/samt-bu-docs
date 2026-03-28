@@ -1,4 +1,5 @@
 ---
+# id: auto-generert – kopierte verdier overskrives automatisk ved push
 id: "7f4fa7c1-c0f4-43da-a053-b0d38bff43e8"
 title: 1. Tilgjengeliggjøring av resultater fra opplæring
 linkTitle: 1. Resultater fra opplæring

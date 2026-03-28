@@ -1,4 +1,5 @@
 ---
+# id: auto-generert – kopierte verdier overskrives automatisk ved push
 id: 364728ba-fc9d-4605-9511-57acdbb7f9f3
 title: Om prosjektet SAMT-BU
 linkTitle: Om prosjektet SAMT-BU

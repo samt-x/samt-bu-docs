@@ -1,4 +1,5 @@
 ---
+# id: auto-generert – kopierte verdier overskrives automatisk ved push
 id: e0d42db3-b997-4bcc-9bf5-4da622c18429
 title: "22. Analysis Data from Kindergarten to Adult Education"
 linkTitle: "22. Analysis data across the full pathway"

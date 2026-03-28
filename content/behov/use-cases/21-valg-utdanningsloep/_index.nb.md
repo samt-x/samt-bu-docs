@@ -1,4 +1,5 @@
 ---
+# id: auto-generert – kopierte verdier overskrives automatisk ved push
 id: ff2fd115-ae18-4459-9af6-1ea2a9d4041b
 title: 21. Valg av utdanningsløp
 linkTitle: 21. Valg av utdanningsløp

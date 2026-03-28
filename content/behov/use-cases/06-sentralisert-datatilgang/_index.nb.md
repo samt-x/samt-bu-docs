@@ -1,4 +1,5 @@
 ---
+# id: auto-generert – kopierte verdier overskrives automatisk ved push
 id: "f6cd9324-d22e-4dee-ae49-f9e026e9bcb3"
 title: "6. Sentralisert tilgang til data foreldrene trenger"
 linkTitle: "6. Datatilgang for foreldre"

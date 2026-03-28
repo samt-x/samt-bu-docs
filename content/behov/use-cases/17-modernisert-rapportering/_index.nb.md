@@ -1,4 +1,5 @@
 ---
+# id: auto-generert – kopierte verdier overskrives automatisk ved push
 id: "f3c85e96-d5c9-4cd7-b29b-f05bda058448"
 title: 17. Modernisert rapportering kommune-stat
 linkTitle: 17. Modernisert rapportering
