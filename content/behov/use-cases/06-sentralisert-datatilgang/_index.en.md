@@ -1,5 +1,5 @@
 ---
-# id: auto-generert – kopierte verdier overskrives automatisk ved push
+# id: auto-generated – copied values are overwritten automatically on push
 id: "f6cd9324-d22e-4dee-ae49-f9e026e9bcb3"
 title: "6. Centralised Access to Data Parents Need"
 linkTitle: "6. Data Access for Parents"

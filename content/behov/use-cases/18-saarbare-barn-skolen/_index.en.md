@@ -1,5 +1,5 @@
 ---
-# id: auto-generert – kopierte verdier overskrives automatisk ved push
+# id: auto-generated – copied values are overwritten automatically on push
 id: "dce94c9d-bb6b-4b3d-b307-fe30880632ad"
 title: "18. Input from the City of Oslo Education Agency"
 linkTitle: "18. UDE Oslo"

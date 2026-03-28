@@ -1,5 +1,5 @@
 ---
-# id: auto-generert – kopierte verdier overskrives automatisk ved push
+# id: auto-generated – copied values are overwritten automatically on push
 id: "f21aa7c3-18d3-4b61-b62b-380ed2043296"
 title: "16. AI Solutions Based on Common Information Models"
 linkTitle: "16. AI Solutions"

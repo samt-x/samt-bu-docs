@@ -1,5 +1,5 @@
 ---
-# id: auto-generert – kopierte verdier overskrives automatisk ved push
+# id: auto-generated – copied values are overwritten automatically on push
 id: "bd1775be-dc58-4d0c-8d50-197b750d8295"
 title: "14. Documentation and Sharing of Diplomas and Certificates of Competence"
 linkTitle: "14. Diplomas and Certificates"

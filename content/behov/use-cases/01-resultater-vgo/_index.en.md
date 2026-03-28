@@ -1,5 +1,5 @@
 ---
-# id: auto-generert – kopierte verdier overskrives automatisk ved push
+# id: auto-generated – copied values are overwritten automatically on push
 id: "7f4fa7c1-c0f4-43da-a053-b0d38bff43e8"
 title: 1. Making Results from Upper Secondary Education Accessible
 linkTitle: 1. Results from Upper Secondary

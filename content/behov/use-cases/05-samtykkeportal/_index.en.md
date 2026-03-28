@@ -1,5 +1,5 @@
 ---
-# id: auto-generert – kopierte verdier overskrives automatisk ved push
+# id: auto-generated – copied values are overwritten automatically on push
 id: "6d3f8395-0b35-43b7-9141-a069bbbc8506"
 title: 5. Consent Portal
 linkTitle: 5. Consent Portal

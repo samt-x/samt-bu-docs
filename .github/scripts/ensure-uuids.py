@@ -56,22 +56,28 @@ def get_uuid(content):
     return m.group(1).lower() if m else None
 
 
-_ID_COMMENT = "# id: auto-generert – kopierte verdier overskrives automatisk ved push"
+_ID_COMMENT_NB = "# id: auto-generert – kopierte verdier overskrives automatisk ved push"
+_ID_COMMENT_EN = "# id: auto-generated – copied values are overwritten automatically on push"
+
+
+def _id_comment(path):
+    return _ID_COMMENT_EN if str(path).endswith('.en.md') else _ID_COMMENT_NB
 
 
 def set_uuid(path, uid, content):
     """Skriver UUID til frontmatter og lagrer filen."""
+    comment = _id_comment(path)
     fm, body = _split(content)
     if fm is None:
         # Ingen frontmatter – legg til med kommentar
-        new_content = f"---\n{_ID_COMMENT}\nid: {uid}\n---\n{content}"
+        new_content = f"---\n{comment}\nid: {uid}\n---\n{content}"
     elif _ID_LINE_RE.search(fm):
         # Erstatt eksisterende id:-linje (behold ev. kommentar over den)
         new_fm = _ID_LINE_RE.sub(f"id: {uid}", fm, count=1)
         new_content = f"---\n{new_fm}\n---\n{body}"
     else:
         # Sett inn id som første felt i frontmatter med kommentar
-        new_content = f"---\n{_ID_COMMENT}\nid: {uid}\n{fm}\n---\n{body}"
+        new_content = f"---\n{comment}\nid: {uid}\n{fm}\n---\n{body}"
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write(new_content)
 

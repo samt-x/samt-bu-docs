@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Legg til forklaringskommentar over id:-feltet i alle frontmatter-filer.
+Legg til/oppdater forklaringskommentar over id:-feltet i alle frontmatter-filer.
+Bruker norsk kommentar for .nb.md og engelsk for .en.md.
 Kjøres én gang – ensure-uuids.py håndterer nye filer fremover.
 
 Kjør fra rot av samt-bu-docs:
@@ -18,7 +19,15 @@ REPOS = [
     'S:/app-data/github/samt-x-repos/team-pilot-1/content',
 ]
 
-ID_COMMENT = "# id: auto-generert – kopierte verdier overskrives automatisk ved push"
+ID_COMMENT_NB = "# id: auto-generert – kopierte verdier overskrives automatisk ved push"
+ID_COMMENT_EN = "# id: auto-generated – copied values are overwritten automatically on push"
+
+# Matcher enhver id-kommentarlinje (begge språk)
+_ANY_ID_COMMENT_RE = re.compile(r'^# id: auto-gen\w.*\n', re.MULTILINE)
+
+
+def get_comment(filepath):
+    return ID_COMMENT_EN if filepath.endswith('.en.md') else ID_COMMENT_NB
 
 
 def add_id_comment(filepath):
@@ -36,13 +45,17 @@ def add_id_comment(filepath):
     if not re.search(r'^id:', frontmatter, re.MULTILINE):
         return False  # ingen id-felt
 
-    if ID_COMMENT in frontmatter:
-        return False  # kommentar finnes allerede
+    correct_comment = get_comment(filepath)
 
+    if correct_comment in frontmatter:
+        return False  # riktig kommentar finnes allerede
+
+    # Fjern evt. feil-språklig kommentar, legg til riktig
+    new_fm = _ANY_ID_COMMENT_RE.sub('', frontmatter)
     new_fm = re.sub(
         r'^(id:)',
-        f'{ID_COMMENT}\n\\1',
-        frontmatter,
+        f'{correct_comment}\n\\1',
+        new_fm,
         flags=re.MULTILINE,
         count=1
     )

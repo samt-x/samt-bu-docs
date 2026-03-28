@@ -1,5 +1,5 @@
 ---
-# id: auto-generert – kopierte verdier overskrives automatisk ved push
+# id: auto-generated – copied values are overwritten automatically on push
 id: "682c6c84-e8ef-4dd4-9004-66a124576a5e"
 title: "11. Digital Dialogue Between Kindergarten/School and Home"
 linkTitle: "11. Digital Home Dialogue"

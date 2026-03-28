@@ -1,5 +1,5 @@
 ---
-# id: auto-generert – kopierte verdier overskrives automatisk ved push
+# id: auto-generated – copied values are overwritten automatically on push
 id: "0df0d0f4-91a4-4886-b43a-d8ce12f1b3be"
 title: 2. Seamless Transition from Primary to Upper Secondary Education
 linkTitle: 2. Primary to Upper Secondary
