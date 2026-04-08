@@ -1,7 +1,7 @@
 ---
 id: 77eb6d5c-a234-48c0-9beb-280315667048
 title: 23. Manglende tilgang for foreldre og foresatte til digitale tjenester
-weight: 23
+weight: 250
 status: Ny
 # Gyldige verdier: Ny | Tidlig utkast | Pågår | Til QA | Godkjent | Avbrutt
 ---
