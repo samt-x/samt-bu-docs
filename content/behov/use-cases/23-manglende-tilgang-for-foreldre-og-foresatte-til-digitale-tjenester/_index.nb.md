@@ -5,4 +5,4 @@ weight: 250
 status: Ny
 # Gyldige verdier: Ny | Tidlig utkast | Pågår | Til QA | Godkjent | Avbrutt
 ---
-Foreløpig beskrivelse: Se [omtale av artikkel i Aftenposten 2026-03-18: Nav får sterk kritikk for manglende digital tilgang for foreldre](https://samt-bu-docs.pages.dev/innsikt/aktuelle-medieoppslag/2026-03-18-nav-faar-sterk-krikk-for-manglende-digital-tilgang-for-foreldre/).
+Foreløpig beskrivelse (Torbjørn/Erik): Se [omtale av artikkel i Aftenposten 2026-03-18: Nav får sterk kritikk for manglende digital tilgang for foreldre](https://samt-bu-docs.pages.dev/innsikt/aktuelle-medieoppslag/2026-03-18-nav-faar-sterk-krikk-for-manglende-digital-tilgang-for-foreldre/).
