@@ -5,4 +5,4 @@ weight: 250
 status: Ny
 # Gyldige verdier: Ny | Tidlig utkast | Pågår | Til QA | Godkjent | Avbrutt
 ---
-Se artikkel i Aftenposten
+Se artikkel i Aftenposten, ref. https://samt-bu-docs.pages.dev/innsikt/aktuelle-medieoppslag/2026-03-18-nav-faar-sterk-krikk-for-manglende-digital-tilgang-for-foreldre/
