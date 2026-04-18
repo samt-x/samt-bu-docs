@@ -6,4 +6,4 @@ weight: 30
 # Gyldige verdier: Ny | Tidlig utkast | Pågår | Til QA | Godkjent | Avbrutt
 
 ---
-Test 3!
+Test 3
