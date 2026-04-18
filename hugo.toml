@@ -1,4 +1,4 @@
-baseURL = "https://samt-bu-docs.pages.dev/"
+baseURL = "https://samt-bu-docs-git.pages.dev/"
 title = "SAMT-BU Docs"
 theme = "hugo-theme-samt-bu"
 defaultContentLanguage = "nb"
