@@ -5,4 +5,4 @@ title: Test 1
 weight: 10
 
 ---
-Test 1!!!
+Test 1!
