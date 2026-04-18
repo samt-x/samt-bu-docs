@@ -19,21 +19,11 @@ defaults:
     shell: bash
 
 jobs:
-  build:
-    if: github.actor != 'github-actions[bot]'
+  uuid-check:
+    # CF Pages bygger automatisk ved push via Git-integrasjon – kun UUID-sjekk trengs her
+    if: github.event_name == 'push' && github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.155.3
     steps:
-      - name: Install Hugo CLI
-        run: |
-          for i in 1 2 3; do
-            wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb && break
-            echo "Attempt $i failed, retrying in $((i * 5)) seconds..."
-            sleep $((i * 5))
-          done
-          sudo dpkg -i ${{ runner.temp }}/hugo.deb
-
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -41,7 +31,6 @@ jobs:
           submodules: recursive
 
       - name: Sikre UUID-er i frontmatter
-        if: github.event_name == 'push'
         run: |
           python3 .github/scripts/ensure-uuids.py
           git config user.name "github-actions[bot]"
@@ -58,43 +47,13 @@ jobs:
             done
           fi
 
-      - name: Setup Go
-        uses: actions/setup-go@v5
-        with:
-          go-version-file: go.mod
-
-      - name: Konfigurer git for UTF-8-stier
-        run: git config --global core.quotepath false
-
-      - name: Hent siste modulversjoner (inkl. lastmod injisert i modulrepoer)
-        env:
-          GONOSUMDB: "*"
-          GOPROXY: "direct"
+  trigger-cf-build:
+    # Moduloppdateringer og manuell kjøring – trigger CF Pages deploy hook
+    if: github.event_name == 'repository_dispatch' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare Pages deploy
         run: |
-          hugo mod get github.com/SAMT-X/team-architecture@latest
-          hugo mod get github.com/SAMT-X/samt-bu-drafts@latest
-          hugo mod get github.com/SAMT-X/solution-samt-bu-docs@latest
-          hugo mod get github.com/SAMT-X/team-pilot-1@latest
-          hugo mod tidy
-
-      - name: Build with Hugo
-        env:
-          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
-          HUGO_ENVIRONMENT: production
-          TZ: Europe/Oslo
-        run: |
-          hugo \
-            --gc \
-            --minify \
-            --baseURL "https://samt-bu-docs.pages.dev/"
-
-      - name: Deploy to Cloudflare Pages
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-        run: |
-          for i in 1 2 3; do
-            npx wrangler pages deploy ./public --project-name samt-bu-docs --branch main && break
-            echo "Deploy-forsøk $i feilet, prøver igjen om 15 sek..."
-            sleep 15
-          done
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" -d "" "${{ secrets.CF_PAGES_DEPLOY_HOOK }}")
+          echo "HTTP status: $STATUS"
+          [ "$STATUS" = "200" ] || exit 1
