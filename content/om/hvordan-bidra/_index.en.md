@@ -11,7 +11,8 @@ This website is open to contributions from all partners in the SAMT-BU project. 
 
 | Method | Suitable for | Requires |
 |--------|-------------|---------|
-| [Built-in editor](#recommended-built-in-editing-in-the-browser) | Subject-matter experts and editors | GitHub account + write access |
+| [Built-in editor](#recommended-built-in-editing-in-the-browser) | Subject-matter experts and editors | GitHub account (write access optional) |
+| [Give feedback](#give-feedback) | Anyone with comments or questions | GitHub account |
 | [GitHub editing](#alternative-editing-directly-on-github) | Minor changes, technical users | GitHub account + Markdown |
 | [Local setup](#alternative-local-setup-for-developers) | Structural changes, developers | Hugo + Git installed |
 
@@ -24,18 +25,20 @@ You edit content directly in the browser using a visual text editor – no knowl
 ### What You Need
 
 - A **GitHub account** (create one for free at [github.com](https://github.com))
-- **Write access** to the correct repository – contact an administrator to obtain this the first time
+- **Write access** is not required – without it, your change is automatically submitted as a pull request for an administrator to approve
 
 ### Editing an Existing Page
 
 1. Go to the page you wish to edit
 2. Click the **"Edit"** menu in the top-right corner of the header
-3. Select **"Edit this chapter"**
+3. Select **"Edit this page"**
 4. Log in with your GitHub account if you are not already logged in (pop-up window)
-5. Make your changes in the text field
+5. Make your changes in the visual editor
 6. Click **"Save"**
 
-**Tip:** Images can be pasted directly into the text field (Ctrl+V or right-click → Paste) – there is currently no dedicated image button in the toolbar.
+**Tip:** Images can be pasted directly into the editor (Ctrl+V or right-click → Paste).
+
+If you have write access, the change is published directly. Without write access, a pull request is created automatically – you will receive a link to it after saving.
 
 The website updates automatically after saving. A status indicator at the bottom left of the screen keeps you informed throughout.
 
@@ -64,6 +67,21 @@ The site is built by GitHub Actions. A build normally takes **about 1 minute**. 
 
 > **In short:** If you see a grey tick and the text «Superseded» in the build history, your change has not been lost – it was published by a newer job.
 
+### Give Feedback
+
+If you have a comment, a correction to report, or a question about a page's content – without wanting to edit directly – you can use the **"Give feedback"** feature:
+
+1. Go to the page in question
+2. Click the **"Edit"** menu and select **"Give feedback"**
+3. Log in with your GitHub account if you are not already logged in
+4. Fill in the title (pre-filled with the page name) and write your comment
+5. Optionally add a link to a specific section in the "Specific section" field
+6. Click **"Send"**
+
+Your comment is registered as a GitHub Issue linked to the page. You will receive a link to the issue after submitting, and can follow it there.
+
+**Alternatively**, use the **"Comments"** button in the bottom bar to view existing comments on the page and open a new comment dialog from there.
+
 ### Creating a New Page
 
 1. Navigate to the page you want to place the new page next to (sibling) or beneath (sub-chapter)
@@ -83,9 +101,9 @@ Suitable for individual changes and minor corrections without a local installati
 
 **How to do it:**
 
-1. Go to the page you wish to edit at [samt-x.github.io/samt-bu-docs](https://samt-x.github.io/samt-bu-docs/)
-2. Click the **"Edit on GitHub"** link at the bottom of the page
-3. Make your changes in the Markdown field
+1. Go to the page you wish to edit
+2. Click the **"Edit"** menu in the top-right corner and select **"Edit in GitHub"** (at the bottom of the menu, in italics)
+3. Make your changes in the Markdown field on GitHub
 4. Scroll down to **"Commit changes"**
 5. Write a brief description of what you changed
 6. Select **"Create a new branch and start a pull request"** (recommended), or commit directly to `main` if you have the necessary permissions
@@ -168,7 +186,7 @@ content/
   behov/                 ← Needs (use cases)
   pilotering/            ← Pilots
   arkitektur/            ← Architecture
-  loesning/              ← Solutions
+  loesninger/            ← Solutions
   rammeverk/             ← Framework
   informasjonsmodeller/  ← Information Models
   innsikt/               ← Shared Insight
