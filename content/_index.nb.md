@@ -6,7 +6,7 @@ draft: false
 
 ---
 
-Velkommen til SAMT-BU Docs – dokumentasjonsplattformen for prosjektet [Sammenhengende tjenester for barn og unge (SAMT-BU)](https://samt-bu-docs.pages.dev/om/om-samt-bu/).
+Velkommen til SAMT-BU Docs – en dokumentasjonsløsning utviklet for prosjektet [Sammenhengende tjenester for barn og unge (SAMT-BU)](https://samt-bu-docs.pages.dev/om/om-samt-bu/) - åpent for lesing av alle og åpning for alle til å bidra med innhold i.
 
 ## Datasentrisk dokumentasjon
 
