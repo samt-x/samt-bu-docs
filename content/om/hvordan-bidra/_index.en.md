@@ -11,8 +11,7 @@ This website is open to contributions from all partners in the SAMT-BU project. 
 
 | Method | Suitable for | Requires |
 |--------|-------------|---------|
-| [Built-in editor](#recommended-built-in-editing-in-the-browser) | Subject-matter experts and editors | GitHub account (write access optional) |
-| [Give feedback](#give-feedback) | Anyone with comments or questions | GitHub account |
+| [Built-in editor](#recommended-built-in-editing-in-the-browser) | Subject-matter experts, editors and anyone with comments | GitHub account (write access optional) |
 | [GitHub editing](#alternative-editing-directly-on-github) | Minor changes, technical users | GitHub account + Markdown |
 | [Local setup](#alternative-local-setup-for-developers) | Structural changes, developers | Hugo + Git installed |
 
@@ -20,7 +19,7 @@ This website is open to contributions from all partners in the SAMT-BU project. 
 
 ## Recommended: Built-in Editing in the Browser
 
-You edit content directly in the browser using a visual text editor – no knowledge of Markdown or Git required.
+You edit content directly in the browser using a visual text editor – no knowledge of Markdown or Git required. All common editorial tasks are available from the **"Edit"** menu in the top-right corner of the header.
 
 ### What You Need
 
@@ -42,30 +41,35 @@ If you have write access, the change is published directly. Without write access
 
 The website updates automatically after saving. A status indicator at the bottom left of the screen keeps you informed throughout.
 
-### Status indicator and build history
+### Creating a New Page
 
-**The indicator at the bottom left** is always visible and shows the current state:
+1. Navigate to the page you want to place the new page next to (sibling) or beneath (sub-chapter)
+2. Click **"Edit"** and select:
+   - **"New chapter after this"** – new page at the same level as the current one
+   - **"New sub-chapter"** – new page one level down beneath the current one
+3. Fill in the title and any content in the dialog
+4. Click **"Save"**
 
-| State | Text | Meaning |
-|-------|------|---------|
-| No active job | «Build history» | Click to see previous build jobs |
-| Saved, waiting for build | «N changes being built…» | Change sent – build is running or queued |
-| Done | «Changes published – click to reload» | Click to view the updated page |
+### Moving a Chapter
 
-Clicking the indicator opens a **build history dialog** showing recent build jobs with status, timestamp, and a link to GitHub Actions. Here you can see:
-- 🔄 Running job – with the number of seconds since it started
-- 🕐 Job in queue – waiting its turn
-- ✅ Completed
-- ✅ (grey) Superseded by a newer build – see explanation below
+1. Go to the page you want to move
+2. Click the **"Edit"** menu in the top-right corner
+3. Select **"Move this chapter"** – a dialog opens and the Edit menu is greyed out
+4. Navigate in the menu to the desired location
+5. Click **"Move here (before)"** to place it before the selected page, or **"Move here (after)"** to place it after
 
-#### About build times and queues
+Click **"Cancel"** in the dialog to abort without making changes. The website updates automatically once the move is complete.
 
-The site is built by GitHub Actions. A build normally takes **about 1 minute**. If you or others save several pages in quick succession, the wait time may be longer because build jobs run one at a time:
+### Deleting a Page
 
-- **2 saves in a row:** the second job waits until the first is done – total time approx. 2 min
-- **3 or more rapid saves:** GitHub may *supersede* older queued jobs with the newest one. This means a job in the history may appear as «Superseded» rather than completed – this is normal and does not mean anything went wrong. All saved changes are recorded in Git and will be published by the last job that runs.
+1. Go to the page you want to delete
+2. Click the **"Edit"** menu in the top-right corner
+3. Select **"Delete this page"**
+4. Confirm in the dialog
 
-> **In short:** If you see a grey tick and the text «Superseded» in the build history, your change has not been lost – it was published by a newer job.
+Both language versions of the page (Norwegian and English) are deleted in a single step. The website updates automatically after deletion.
+
+> **Note:** Deletion cannot be immediately reversed through the interface. Contact an administrator if you have accidentally deleted a page.
 
 ### Give Feedback
 
@@ -82,16 +86,30 @@ Your comment is registered as a GitHub Issue linked to the page. You will receiv
 
 **Alternatively**, use the **"Comments"** button in the bottom bar to view existing comments on the page and open a new comment dialog from there.
 
-### Creating a New Page
+### Status Indicator and Build History
 
-1. Navigate to the page you want to place the new page next to (sibling) or beneath (sub-chapter)
-2. Click **"Edit"** and select:
-   - **"New chapter after this"** – new page at the same level
-   - **"New sub-chapter"** – new page one level down
-3. Fill in the title and any content in the dialog
-4. Click **"Save"**
+**The indicator at the bottom left** is always visible and shows the current state:
 
-> **Note:** Work is ongoing to provide a better overview of active editing across users. The solution is fully usable as it stands today, but pages may take approximately 1 minute to update after saving, and it may not always be visible whether others are editing the same page at the same time.
+| State | Text | Meaning |
+|-------|------|---------|
+| No active job | «Build history» | Click to see previous build jobs |
+| Saved, waiting for build | «N changes being built…» | Change sent – build is running or queued |
+| Done | «Changes published – click to reload» | Click to view the updated page |
+
+Clicking the indicator opens a **build history dialog** showing recent build jobs with status, timestamp, and a link to GitHub Actions. Here you can see:
+- 🔄 Running job – with the number of seconds since it started
+- 🕐 Job in queue – waiting its turn
+- ✅ Completed
+- ✅ (grey) Superseded by a newer build – see explanation below
+
+#### About Build Times and Queues
+
+The site is built by GitHub Actions. A build normally takes **about 1 minute**. If you or others save several pages in quick succession, the wait time may be longer because build jobs run one at a time:
+
+- **2 saves in a row:** the second job waits until the first is done – total time approx. 2 min
+- **3 or more rapid saves:** GitHub may *supersede* older queued jobs with the newest one. This means a job in the history may appear as «Superseded» rather than completed – this is normal and does not mean anything went wrong. All saved changes are recorded in Git and will be published by the last job that runs.
+
+> **In short:** If you see a grey tick and the text «Superseded» in the build history, your change has not been lost – it was published by a newer job.
 
 ---
 
@@ -248,7 +266,7 @@ GitHub Actions builds and publishes automatically after 1–2 minutes.
 
 ---
 
-## More detailed user guide
+## More Detailed User Guide
 
 A more comprehensive user guide – including tips for editors, advanced editing, and site administration – is available in the solution documentation:
 

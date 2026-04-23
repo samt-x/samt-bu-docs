@@ -11,8 +11,7 @@ Dette nettstedet er åpent for bidrag fra alle samarbeidspartnere i SAMT-BU-pros
 
 | Metode | Passer for | Krever |
 |--------|-----------|--------|
-| [Innebygd editor](#anbefalt-innebygd-redigering-i-nettleseren) | Fagpersoner og redaktører | GitHub-konto (skrivetilgang valgfritt) |
-| [Gi tilbakemelding](#gi-tilbakemelding) | Alle med innspill eller spørsmål | GitHub-konto |
+| [Innebygd editor](#anbefalt-innebygd-redigering-i-nettleseren) | Fagpersoner, redaktører og andre med innspill | GitHub-konto (skrivetilgang valgfritt) |
 | [GitHub-redigering](#alternativ-redigering-direkte-p-github) | Enkeltendringer, tekniske brukere | GitHub-konto + Markdown |
 | [Lokal oppsett](#alternativ-lokal-oppsett-for-utviklere) | Strukturelle endringer, utviklere | Hugo + Git installert |
 
@@ -20,7 +19,7 @@ Dette nettstedet er åpent for bidrag fra alle samarbeidspartnere i SAMT-BU-pros
 
 ## Anbefalt: Innebygd redigering i nettleseren
 
-Du redigerer innhold direkte i nettleseren i et visuelt tekstverktøy – ingen Markdown- eller Git-kunnskap nødvendig.
+Du redigerer innhold direkte i nettleseren i et visuelt tekstverktøy – ingen Markdown- eller Git-kunnskap nødvendig. Alle vanlige redaktøroppgaver er tilgjengelige fra **«Endre»**-menyen øverst til høyre i headeren.
 
 ### Hva du trenger
 
@@ -41,6 +40,51 @@ Du redigerer innhold direkte i nettleseren i et visuelt tekstverktøy – ingen 
 Har du skrivetilgang publiseres endringen direkte. Har du ikke skrivetilgang, opprettes det automatisk et endringsforslag (pull request) som en administrator ser over og godkjenner. Du får en lenke til forslaget etter lagring.
 
 Nettstedet oppdateres automatisk etter lagring. En statusindikator nede til venstre i skjermen holder deg oppdatert underveis.
+
+### Opprette en ny side
+
+1. Gå til siden du vil plassere den nye siden ved siden av (søsken) eller under (underkapittel)
+2. Klikk **«Endre»** og velg:
+   - **«Nytt kapittel etter dette»** – ny side på samme nivå som den du er på
+   - **«Nytt underkapittel»** – ny side ett nivå ned under den du er på
+3. Fyll inn tittel og eventuelt innhold i dialogen
+4. Klikk **«Lagre»**
+
+### Flytte et kapittel
+
+1. Gå til siden du vil flytte
+2. Klikk **«Endre»**-menyen øverst til høyre
+3. Velg **«Flytt dette kapitlet»** – en dialog åpnes og Endre-menyen grås ut
+4. Naviger i menyen til stedet du ønsker
+5. Klikk **«Flytt hit (før)»** for å plassere det før valgt side, eller **«Flytt hit (etter)»** for å plassere det etter
+
+Klikk **«Avbryt»** i dialogen for å avbryte uten å gjøre endringer. Nettstedet oppdateres automatisk etter at flyttingen er fullført.
+
+### Slette en side
+
+1. Gå til siden du vil slette
+2. Klikk **«Endre»**-menyen øverst til høyre
+3. Velg **«Slett denne siden»**
+4. Bekreft i dialogen
+
+Siden og begge språkversjoner (norsk og engelsk) slettes i ett og samme trinn. Nettstedet oppdateres automatisk etter sletting.
+
+> **Merk:** Sletting er ikke umiddelbart reverserbart via grensesnittet. Kontakt en administrator dersom du har slettet en side ved en feil.
+
+### Gi tilbakemelding
+
+Har du et innspill, en feil å melde eller et spørsmål til innholdet på en side – uten at du vil redigere direkte – kan du bruke **«Gi kommentar»**-funksjonen:
+
+1. Gå til siden det gjelder
+2. Klikk **«Endre»**-menyen og velg **«Gi kommentar»**
+3. Logg inn med GitHub-kontoen din hvis du ikke allerede er innlogget
+4. Fyll inn tittel (forhåndsutfylt med sidenavn) og skriv kommentaren din
+5. Legg eventuelt til lenke til et spesifikt avsnitt i feltet «Spesifikk del av siden»
+6. Klikk **«Send»**
+
+Kommentaren registreres som en GitHub Issue knyttet til siden. Du får en lenke til issuen etter innsending, og kan følge den videre der.
+
+**Alternativt** kan du bruke **«Kommentarer»**-knappen i bunnlinjen for å se eksisterende kommentarer på siden og åpne en ny kommentardialog derfra.
 
 ### Statusindikator og jobbhistorikk
 
@@ -66,30 +110,6 @@ Nettstedet bygges av GitHub Actions. Normalt tar et bygg **ca. 1 minutt**. Hvis 
 - **3 eller flere raske lagringer:** GitHub kan *avløse* eldre jobber i kø med den nyeste. Det betyr at en jobb i historikken kan vises som «Avløst» i stedet for fullført – dette er normalt og betyr ikke at noe gikk galt. Alle lagrede endringer er registrert i Git og vil bli publisert av den siste jobben som kjøres.
 
 > **Kort sagt:** Ser du grå hake og teksten «Avløst» i jobbhistorikken, er ikke endringen tapt – den ble publisert av en nyere jobb.
-
-### Gi tilbakemelding
-
-Har du et innspill, en feil å melde eller et spørsmål til innholdet på en side – uten at du vil redigere direkte – kan du bruke **«Gi kommentar»**-funksjonen:
-
-1. Gå til siden det gjelder
-2. Klikk **«Endre»**-menyen og velg **«Gi kommentar»**
-3. Logg inn med GitHub-kontoen din hvis du ikke allerede er innlogget
-4. Fyll inn tittel (forhåndsutfylt med sidenavn) og skriv kommentaren din
-5. Legg eventuelt til lenke til et spesifikt avsnitt i feltet «Spesifikk del av siden»
-6. Klikk **«Send»**
-
-Kommentaren registreres som en GitHub Issue knyttet til siden. Du får en lenke til issuen etter innsending, og kan følge den videre der.
-
-**Alternativt** kan du bruke **«Kommentarer»**-knappen i bunnlinjen for å se eksisterende kommentarer på siden og åpne en ny kommentardialog derfra.
-
-### Opprette en ny side
-
-1. Gå til siden du vil plassere den nye siden ved siden av (søsken) eller under (underkapittel)
-2. Klikk **«Endre»** og velg:
-   - **«Nytt kapittel etter dette»** – ny side på samme nivå
-   - **«Nytt underkapittel»** – ny side ett nivå ned
-3. Fyll inn tittel og eventuelt innhold i dialogen
-4. Klikk **«Lagre»**
 
 ---
 
