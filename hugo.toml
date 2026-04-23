@@ -75,11 +75,6 @@ enableGitInfo = true
   url = "innsikt/"
   icon = "fa-bar-chart"
 
-[[params.navSwitcher]]
-  id = "teams"
-  title = "Teams"
-  url = "teams/"
-  icon = "fa-users"
 
 [[params.navSwitcher]]
   id = "utkast"
