@@ -92,7 +92,7 @@ enableGitInfo = true
     path = "github.com/SAMT-X/team-architecture"
     [[module.imports.mounts]]
       source = "content"
-      target = "content/teams/team-architecture"
+      target = "content/arkitektur/overordnet-arkitektur"
 
   [[module.imports]]
     path = "github.com/SAMT-X/samt-bu-drafts"
