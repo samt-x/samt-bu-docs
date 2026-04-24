@@ -85,7 +85,7 @@ function handleAuth(url, env) {
 
   const githubUrl = new URL("https://github.com/login/oauth/authorize");
   githubUrl.searchParams.set("client_id", env.CLIENT_ID);
-  githubUrl.searchParams.set("scope", "repo,user");
+  githubUrl.searchParams.set("scope", "public_repo,read:user");
   githubUrl.searchParams.set("state", url.searchParams.get("site_id") ?? "");
 
   return Response.redirect(githubUrl.toString(), 302);
