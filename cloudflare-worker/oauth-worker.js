@@ -40,7 +40,7 @@ async function handleBuildStatus(url) {
   const cors = buildStatusCors();
   const pageUrl = url.searchParams.get("url");
 
-  if (!pageUrl || !pageUrl.startsWith("https://samt-bu-docs-git.pages.dev/")) {
+  if (!pageUrl || !pageUrl.startsWith("https://docs.samt-bu.no/")) {
     return new Response(JSON.stringify({ error: "ugyldig url" }), {
       status: 400,
       headers: { "Content-Type": "application/json", ...cors },
