@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **SAMT-BU Docs** – et statisk Hugo-basert dokumentasjonsnettsted for prosjektet SAMT-BU
 (Sammenhengende tjenester for barn og unge). Én av flere dokumentasjonskanaler i prosjektet.
-Publiseres til GitHub Pages på `https://samt-x.github.io/samt-bu-docs/`.
+Publiseres til Cloudflare Pages på `https://docs.samt-bu.no/`.
 
 ## Teknisk oppsett
 
@@ -27,7 +27,7 @@ hugo          # Bygg til public/
 hugo -D       # Bygg inkludert utkast (draft: true)
 
 # Produksjonsbygg (brukes av CI)
-hugo --gc --minify --baseURL "https://samt-x.github.io/samt-bu-docs/"
+hugo --gc --minify --baseURL "https://docs.samt-bu.no/"
 ```
 
 CI/CD: GitHub Actions (`.github/workflows/hugo.yml`) bygger og deployer automatisk ved push til `main`. Hugo-versjon i CI: **0.155.3 extended**.
@@ -101,11 +101,7 @@ i18n/nb.toml, en.toml              # Oversettelser (navSwitcher-etiketter, seksj
 
 ## Decap CMS – innholdsredigering
 
-- **Norsk portal:** `https://samt-x.github.io/samt-bu-docs/edit/`
-- **Engelsk portal:** `https://samt-x.github.io/samt-bu-docs/edit/en/`
-- **OAuth-proxy:** Cloudflare Worker `https://samt-bu-cms-auth.erik-hag1.workers.dev`
-- **Lokal testing:** `hugo server` + åpne portalen i nettleser → «Work with Local Repository» (`local_backend: true` i config.yml)
-- **config.yml-mal:** `backend.name: github`, `repo: SAMT-X/<repo>`, `branch: main`, `base_url: https://samt-bu-cms-auth.erik-hag1.workers.dev`, `local_backend: true`, `i18n.structure: multiple_files`
+- **OAuth-proxy:** Cloudflare Worker `https://auth.samt-bu.no`
 - **Header-dropdown («Endre»/«Edit»):** Erstatter gammel statisk knapp. Implementert i `edit-switcher.html`.
   - «Denne siden»/«This page» → deep-link til gjeldende side i riktig portal
   - «Andre valg»/«Other options» → CMS-oversikt (`/edit/` eller `/edit/en/`)
