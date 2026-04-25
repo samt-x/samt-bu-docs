@@ -68,7 +68,7 @@ async function handleBuildStatus(url) {
 
 function buildStatusCors() {
   return {
-    "Access-Control-Allow-Origin": "https://samt-bu-docs-git.pages.dev",
+    "Access-Control-Allow-Origin": "https://docs.samt-bu.no",
     "Access-Control-Allow-Methods": "GET, OPTIONS",
     "Access-Control-Max-Age": "86400",
     "Cache-Control": "no-store",
