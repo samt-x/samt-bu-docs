@@ -5,7 +5,7 @@ title: Om pilot 1
 weight: 10
 
 ---
-Pilot 1 tar utgangspunkt i case 1 og TBD.
+Pilot 1 tar utgangspunkt i case 1 og TBD..
 
 ## Avgrensing
 
