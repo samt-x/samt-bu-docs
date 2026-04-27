@@ -2,8 +2,8 @@
  * Cloudflare Worker – GitHub OAuth-proxy + CF Pages build-status proxy
  *
  * Miljøvariabler som må settes i Cloudflare-dashboardet:
- *   CLIENT_ID     – GitHub OAuth App Client ID
- *   CLIENT_SECRET – GitHub OAuth App Client Secret (kryptert)
+ *   CLIENT_ID     – GitHub App Client ID
+ *   CLIENT_SECRET – GitHub App Client Secret (kryptert)
  *
  * Endepunkter:
  *   GET /auth?provider=github&site_id=...  → redirect til GitHub OAuth
@@ -85,7 +85,6 @@ function handleAuth(url, env) {
 
   const githubUrl = new URL("https://github.com/login/oauth/authorize");
   githubUrl.searchParams.set("client_id", env.CLIENT_ID);
-  githubUrl.searchParams.set("scope", "public_repo,read:user");
   githubUrl.searchParams.set("state", url.searchParams.get("site_id") ?? "");
 
   return Response.redirect(githubUrl.toString(), 302);
