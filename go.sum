@@ -32,6 +32,8 @@ github.com/SAMT-X/team-pilot-1 v0.0.0-20260423152807-cb3ad57d1fc1 h1:DLY3/QsfPps
 github.com/SAMT-X/team-pilot-1 v0.0.0-20260423152807-cb3ad57d1fc1/go.mod h1:LluCyHxomEPUcYQGCLOx3l+5zEwCMiHvy8LktjLgBjE=
 github.com/SAMT-X/team-pilot-1 v0.0.0-20260426213738-d5a23e8039b7 h1:oSNHP5YiBx/hlUNMe9naCx0XEvBC+5nSqxbNrzj+mYI=
 github.com/SAMT-X/team-pilot-1 v0.0.0-20260426213738-d5a23e8039b7/go.mod h1:LluCyHxomEPUcYQGCLOx3l+5zEwCMiHvy8LktjLgBjE=
+github.com/SAMT-X/team-pilot-1 v0.0.0-20260428231518-d5202883565b h1:xIW2uxJvLMgeKKykUd+uj/c/5u2UECZtWIuP0HQ9sFU=
+github.com/SAMT-X/team-pilot-1 v0.0.0-20260428231518-d5202883565b/go.mod h1:LluCyHxomEPUcYQGCLOx3l+5zEwCMiHvy8LktjLgBjE=
 github.com/SAMT-X/team-semantics v0.0.0-20260303201125-e3c90581dbf4 h1:ef8egTSiXH+eGM+O5Nwy6wiVLXN4tKR6VpXHVfFFSD8=
 github.com/SAMT-X/team-semantics v0.0.0-20260303201125-e3c90581dbf4/go.mod h1:+zrKTxt3zFZwqeB1ItyBB7Yw2XcFhL32m4MDqVk5GLw=
 github.com/SAMT-X/team-semantics v0.0.0-20260423155808-7607ed08de8b h1:Hko33RGKMYOHbYrczLhsZEI544qRdQ26QeO3wbmVS3s=
