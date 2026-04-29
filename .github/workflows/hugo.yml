@@ -74,7 +74,7 @@ jobs:
           hugo mod get github.com/SAMT-X/team-architecture@latest
           hugo mod get github.com/SAMT-X/samt-bu-drafts@latest
           hugo mod get github.com/SAMT-X/solution-samt-bu-docs@latest
-          hugo mod get github.com/SAMT-X/team-pilot-1@latest
+          hugo mod get github.com/SAMT-X/samt-bu-pilot-1@latest
           hugo mod tidy
 
       - name: Build with Hugo
