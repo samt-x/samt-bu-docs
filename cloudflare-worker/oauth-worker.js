@@ -102,6 +102,17 @@ function handleAuth(url, env) {
 }
 
 async function handleCallback(url, env) {
+  // Bruker klikket «Cancel» i GitHub-autorisasjonsdialogen
+  if (url.searchParams.get("error")) {
+    return new Response(
+      `<!DOCTYPE html><html lang="nb"><head><meta charset="utf-8"><title>Avbrutt</title></head>
+<body><p>Innlogging avbrutt.</p>
+<script>(function(){if(window.opener)window.opener.postMessage('authorization:github:cancelled','*');window.close();}());</script>
+</body></html>`,
+      { headers: { "Content-Type": "text/html;charset=UTF-8" } }
+    );
+  }
+
   const code = url.searchParams.get("code");
   if (!code) {
     return errorPage("Manglende 'code'-parameter fra GitHub.");
