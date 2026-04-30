@@ -87,6 +87,14 @@ function handleAuth(url, env) {
   githubUrl.searchParams.set("client_id", env.CLIENT_ID);
   githubUrl.searchParams.set("state", url.searchParams.get("site_id") ?? "");
 
+  // force=true: rut via github.com/login slik at GitHub viser innloggingsskjemaet
+  // selv om brukeren allerede er innlogget – nødvendig for brukerbytting etter «Logg av»
+  if (url.searchParams.get("force") === "true") {
+    const loginUrl = new URL("https://github.com/login");
+    loginUrl.searchParams.set("return_to", githubUrl.toString());
+    return Response.redirect(loginUrl.toString(), 302);
+  }
+
   return Response.redirect(githubUrl.toString(), 302);
 }
 
