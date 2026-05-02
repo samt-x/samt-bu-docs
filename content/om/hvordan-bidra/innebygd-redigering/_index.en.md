@@ -11,8 +11,25 @@ You edit content directly in the browser using a visual text editor – no knowl
 
 ## What You Need
 
-- A **GitHub account** (create one for free at [github.com](https://github.com))
-- **Write access** is not required – without it, your change is automatically submitted as a pull request for an administrator to approve
+- A **GitHub account** (create one for free at [github.com](https://github.com)) – that is all you need
+
+**Write access is not required.** Without it, your changes are automatically submitted as a *suggestion* (pull request) for an editor to review and approve. With write access, changes are published directly. Either way, the same interface is used – menu labels adjust automatically.
+
+### About GitHub authorisation
+
+The first time you use the editing features, SAMT-BU Docs will request access to your GitHub account via a login popup. SAMT-BU Docs uses a **GitHub App** that only has access to the specific repositories the app is installed on – not other repositories on your account.
+
+#### Revoking authorisation
+
+You can revoke access at any time:
+
+1. Log in to [github.com](https://github.com)
+2. Go to **Settings** (click your profile picture in the top right → *Settings*)
+3. Select **Applications** in the left menu
+4. Click the **Authorized GitHub Apps** tab
+5. Find **SAMT-BU Docs** in the list and click **Revoke**
+
+After revoking, you will be asked to log in again the next time you use the editing features.
 
 ## Editing an Existing Page
 

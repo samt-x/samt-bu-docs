@@ -17,11 +17,7 @@ Du redigerer innhold direkte i nettleseren i et visuelt tekstverktøy – ingen 
 
 ### Om GitHub-autorisasjonen
 
-Første gang du bruker redigeringsfunksjonene, ber SAMT-BU Docs om tilgang til GitHub-kontoen din via en innloggingspopup. Du vil se at appen ber om tilgang til **offentlige repositorier** («public repositories») som du har rettigheter til.
-
-Det betyr at SAMT-BU Docs teknisk sett kan lese og skrive til alle offentlige GitHub-repositorier kontoen din har tilgang til – ikke bare de repoene SAMT-BU Docs faktisk bruker. Tilgangen brukes utelukkende til å lagre innhold i SAMT-BU-repoene.
-
-> **Under arbeid:** Vi jobber med å sette opp en GitHub App som begrenser autorisasjonen til kun de spesifikke repoene SAMT-BU Docs bruker. Inntil videre gjelder den bredere tilgangen beskrevet over.
+Første gang du bruker redigeringsfunksjonene, ber SAMT-BU Docs om tilgang til GitHub-kontoen din via en innloggingspopup. SAMT-BU Docs bruker en **GitHub App** som kun har tilgang til de spesifikke repoene appen er installert på – ikke andre repositorier på kontoen din.
 
 #### Trekke tilbake autorisasjonen
 
@@ -30,7 +26,7 @@ Du kan når som helst trekke tilbake tilgangen:
 1. Logg inn på [github.com](https://github.com)
 2. Gå til **Innstillinger** (klikk på profilbildet øverst til høyre → *Settings*)
 3. Velg **Applications** i venstremenyen
-4. Klikk på fanen **Authorized OAuth Apps**
+4. Klikk på fanen **Authorized GitHub Apps**
 5. Finn **SAMT-BU Docs** i listen og klikk **Revoke**
 
 Etter at du har tilbakekalt tilgangen, vil du bli bedt om å logge inn på nytt neste gang du bruker redigeringsfunksjonene.
