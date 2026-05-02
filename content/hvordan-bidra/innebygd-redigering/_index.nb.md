@@ -1,3 +1,7 @@
+---
+# id: auto-generert – kopierte verdier overskrives automatisk ved push
+id: 812e2120-0c27-4904-8b31-1ae3c1ad3afa
+---
 ﻿---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
 id: "c95d738e-1fe5-43ac-94a8-80202e0a2faa"
