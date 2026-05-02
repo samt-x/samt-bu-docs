@@ -6,17 +6,13 @@ draft: false
 
 ---
 
-Welcome to SAMT-BU Docs – the documentation platform for the [Connected Services for Children and Young People (SAMT-BU)](/samt-bu-docs/om/om-samt-bu/) project.
+SAMT-BU Docs brings together professional and technical documentation for the project **Connected Services for Children and Young People (SAMT-BU)**.
 
-## Data-Centric Documentation
+The project is about seamless, connected services centred on children and young people – from kindergarten through school and into working life. The services cross organisational and sectoral boundaries, involving both public and private actors – from municipal schools and child welfare services to private healthcare providers and the banking and finance sector.
 
-All content in this solution is stored as plain text files ([Markdown](https://www.markdownguide.org/)) in an open Git repository. This means the documentation is not locked to this platform or the solutions we currently use (such as GitHub or Hugo) – it can be taken forward in its entirety, fully independent of SAMT-BU Docs as a solution.
+This site is open to everyone. Professionals, architects, developers and project partners will find use cases, architecture, frameworks and technical documentation here. Anyone can contribute content.
 
-In practice, this means:
+**Navigate using the menu** on the left, or go directly to:
 
-- Content can be read as plain text without any specialised software
-- It can be migrated to another platform or site generator without conversion or data loss
-- Standard Git functionality – on GitHub, GitLab, or any other Git-based solution – is sufficient to export, archive, or build upon everything produced here
-- Version history, authors, and change logs are preserved automatically, regardless of tooling
-
-> The documentation belongs to the project – not the platform.
+- [About SAMT-BU](/om/) – the project, background and this website
+- [Contribute to the content](/hvordan-bidra/) – how to edit and contribute

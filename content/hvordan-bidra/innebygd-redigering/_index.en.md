@@ -1,9 +1,11 @@
----
+﻿---
 # id: auto-generated – copied values are overwritten automatically on push
 id: "c95d738e-1fe5-43ac-94a8-80202e0a2faa"
 title: "Built-in Editing in the Browser"
 linkTitle: "Built-in editing"
 weight: 10
+aliases:
+  - /en/om/hvordan-bidra/innebygd-redigering/
 
 ---
 

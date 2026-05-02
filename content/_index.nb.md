@@ -6,17 +6,13 @@ draft: false
 
 ---
 
-Velkommen til SAMT-BU Docs – en dokumentasjonsløsning utviklet for prosjektet [Sammenhengende tjenester for barn og unge (SAMT-BU)](https://docs.samt-bu.no/om/om-samt-bu/) - åpent for lesing av alle og åpning for alle til å bidra med innhold i.
+SAMT-BU Docs samler faglig og teknisk dokumentasjon for prosjektet **Sammenhengende tjenester for barn og unge (SAMT-BU)**.
 
-## Datasentrisk dokumentasjon
+Prosjektet handler om sømløse, sammenhengende tjenester der barn og unge er i sentrum – fra barnehage og gjennom skoleløpet og inn i arbeidslivet. Tjenestene krysser organisasjons- og sektorgrenser, og involverer både offentlig og privat sektor – fra kommunal skole og barnevern til private helseaktører og bank- og finanssektoren.
 
-Alt innhold i denne løsningen lagres som vanlige tekstfiler ([Markdown](https://www.markdownguide.org/)) i et åpent Git-repo. Det betyr at dokumentasjonen ikke er låst til denne plattformen eller løsninger vi akkurat nå bruker (slik som f.eks. GitHub eller Hugo) – den kan tas videre helt og holdent, uavhengig av SAMT-BU Docs som løsning.
+Nettstedet er åpent for alle. Fagpersoner, arkitekter, utviklere og samarbeidspartnere finner her behovsbeskrivelser, arkitektur, rammeverk og teknisk dokumentasjon. Alle kan bidra med innhold.
 
-Konkret innebærer det at:
+**Navigér via menyen** til venstre, eller gå direkte til:
 
-- Innholdet kan leses som ren tekst uten noen form for spesialprogramvare
-- Det kan migreres til en annen plattform eller nettstedsgenerator uten konvertering eller tap
-- Standard Git-funksjonalitet – på GitHub, GitLab eller en hvilken som helst annen Git-løsning – er tilstrekkelig for å eksportere, arkivere eller videreforedle alt som er produsert her
-- Versjonshistorikk, forfattere og endringslogg følger med automatisk, uavhengig av verktøy
-
-> Dokumentasjonen tilhører prosjektet – ikke plattformen.
+- [Om SAMT-BU](/om/) – prosjektet, bakgrunn og dette nettstedet
+- [Bidra til innholdet](/hvordan-bidra/) – slik redigerer og bidrar du

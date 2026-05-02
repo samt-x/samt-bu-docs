@@ -3,7 +3,9 @@
 id: "1e0d2050-f885-496d-8ab4-8bdc287697e8"
 title: "How to Contribute"
 linkTitle: "How to Contribute"
-weight: 30
+weight: 5
+aliases:
+  - /en/om/hvordan-bidra/
 
 ---
 
