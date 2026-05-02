@@ -24,6 +24,16 @@ The site is built with [Hugo](https://gohugo.io/) (a static site generator) and 
 
 Content from team repositories is automatically mounted into the site via Hugo Modules, and CMS editing is available directly in the browser via a built-in solution – without any technical knowledge of Git or Markdown.
 
+## Login and access
+
+To edit content, you log in with a GitHub account. SAMT-BU Docs uses a **GitHub App** – not a broad OAuth permission. This means the app only gains access to the specific repositories in the SAMT-X organisation where the app is installed, not to other repositories on your account.
+
+If you submit a suggestion (as a user without write access), a dedicated bot account (`samt-x-bot`) performs the technical GitHub operations on your behalf. Your suggestion is recorded as a pull request with your GitHub username, but the bot handles the actual writing to the repository.
+
+You can revoke access at any time via your GitHub settings (Settings → Applications → Authorized GitHub Apps).
+
+A full risk assessment with details on architecture and compensating controls is available in [Technical documentation → Risk assessment](/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/teknisk-dokumentasjon/risikovurdering/).
+
 ## See also
 
 - [How to Contribute](/samt-bu-docs/om/hvordan-bidra/) – get started with editing and contributions
