@@ -17,10 +17,9 @@ Thumbs.db
 .claude/
 assets/
 
-# Playwright – token er hemmelig, videofiler genereres lokalt ved kjøring
+# Playwright – token er hemmelig, skjermbilder og videoer genereres lokalt
 tools/playwright/.env
-tools/playwright/screenshots/**/*.webm
-tools/playwright/screenshots/**/*.mp4
+tools/playwright/screenshots/
 
 # Editor files
 *.swp
