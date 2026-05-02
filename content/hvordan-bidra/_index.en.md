@@ -9,12 +9,12 @@ aliases:
 
 ---
 
-This website is open to contributions from all partners in the SAMT-BU project. There are several ways to contribute – see the overview below. For most subject-matter experts and editors, the **built-in browser editor** is the recommended starting point.
+SAMT-BU Docs is open for contributions from everyone – subject-matter experts, editors, architects and developers. There are three ways to contribute content:
 
-| Method | Suitable for | Requires |
-|--------|-------------|---------|
-| [Built-in editing](innebygd-redigering/) | Subject-matter experts, editors and anyone with comments | GitHub account (write access optional) |
-| [GitHub editing](github-redigering/) | Minor changes, technical users | GitHub account + Markdown |
-| [Local setup](lokal-oppsett/) | Structural changes, developers | Hugo + Git installed |
+**Built-in browser editing** is the recommended approach for most people. All you need is a GitHub account – no technical knowledge required. Without write access, your suggestion is automatically submitted for approval.
 
-→ [More detailed user guide](/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/brukerveiledning/)
+**Editing directly on GitHub** suits minor changes and small corrections, and requires some familiarity with Markdown.
+
+**Local setup** provides a full working environment with live preview, and is recommended for structural changes and technical development.
+
+→ [Detailed user guide for all three methods](/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/brukerveiledning/)

@@ -9,12 +9,12 @@ aliases:
 
 ---
 
-Dette nettstedet er åpent for bidrag fra alle samarbeidspartnere i SAMT-BU-prosjektet. Det finnes flere måter å bidra på – se oversikten under. For de fleste fagpersoner og redaktører er **innebygd redigering i nettleseren** den anbefalte veien inn.
+SAMT-BU Docs er åpent for bidrag fra alle – fagpersoner, redaktører, arkitekter og utviklere. Det finnes tre måter å bidra med innhold på:
 
-| Metode | Passer for | Krever |
-|--------|-----------|--------|
-| [Innebygd redigering](innebygd-redigering/) | Fagpersoner, redaktører og andre med innspill | GitHub-konto (skrivetilgang valgfritt) |
-| [Redigering på GitHub](github-redigering/) | Enkeltendringer, tekniske brukere | GitHub-konto + Markdown |
-| [Lokal oppsett](lokal-oppsett/) | Strukturelle endringer, utviklere | Hugo + Git installert |
+**Innebygd redigering i nettleseren** er den anbefalte veien for de fleste. Du trenger bare en GitHub-konto – ingen teknisk kunnskap kreves. Uten skrivetilgang sendes forslaget ditt automatisk til godkjenning.
 
-→ [Mer detaljert brukerveiledning](/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/brukerveiledning/)
+**Redigering direkte på GitHub** passer for enkeltendringer og mindre rettelser, og krever kjennskap til Markdown.
+
+**Lokalt oppsett** gir et fullt arbeidsmiljø med forhåndsvisning, og er anbefalt for strukturelle endringer og teknisk utvikling.
+
+→ [Detaljert brukerveiledning for alle tre metoder](/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/brukerveiledning/)
