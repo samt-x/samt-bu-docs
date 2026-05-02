@@ -225,6 +225,7 @@ async function handleSuggest(request, env) {
         "Accept": "application/vnd.github+json",
         "Content-Type": "application/json",
         "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "samt-bu-docs-worker/1.0",
       },
       cache: "no-store",
     }
