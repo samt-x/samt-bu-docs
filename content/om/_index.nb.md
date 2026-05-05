@@ -9,14 +9,11 @@ aliases:
   - /om/om-dette-nettstedet/
 
 ---
-
 SAMT-BU er et samarbeidsprosjekt om *datasentrisk tjenesteutvikling* og sammenhengende tjenester for barn og unge – fra barnehage til høyere utdanning.
 
 Prosjektets fulle tittel er *Felles løft: Sammenhengende tjenester for barn og unge*, og løper fra oktober 2025 til desember 2027.
 
-![Illustrasjon: SAMT-BU – fra barnehage til høyere utdanning](/images/samt-bu-fra-barnehage-til-hoyere-utdanning.png)
-
-## Bakgrunn
+![Illustrasjon: SAMT-BU – fra barnehage til høyere utdanning](/images/samt-bu-fra-barnehage-til-hoyere-utdanning.png)## Bakgrunn
 
 En rotårsak til manglende samhandlingsevne på tvers av offentlig sektor er fragmentert datainfrastruktur, manglende samordning og liten grad av systematisk gjenbruk av data og løsninger. Dette gjelder særlig innen oppvekst og utdanning, der informasjon om elever, foresatte, ansatte, institusjoner og fag er spredt på mange fagsystemer.
 
@@ -26,7 +23,7 @@ Prosjektet er et direkte svar på Digitaliseringsstrategien 2024–2030, som pek
 
 ## Formål og ambisjon
 
-Formålet er å etablere et **felles fundament for samarbeid og kunnskap om datasentrisk tjenesteutvikling og sømløse brukerreiser** på tvers av forvaltningsnivåer og sektorer, med pilotering ut fra området barn og unge.
+Formålet er å etablere et **felles fundament for samarbeid og kunnskap om datadrevet tjenesteutvikling og sømløse brukerreiser** på tvers av forvaltningsnivåer og sektorer, med pilotering ut fra området barn og unge.
 
 Ambisjonen er bred systematisk anvendelse og videreutvikling av prosjektets produkter for alle tjenester som det offentlige har ansvar for – ikke bare innen oppvekst og utdanning, men på sikt også andre sektorer.
 
@@ -55,7 +52,7 @@ Prosjektet skal levere sju hovedprodukter, utviklet iterativt gjennom prosjektl�
 ## Partnere
 
 | Partner | Rolle |
-|---------|-------|
+| --- | --- |
 | **Digdir** | Hovedsøker og premissgiver. Ansvarlig for samordning, katalogløsninger og erfaringsdeling. |
 | **KS / KS Digital** | Samarbeidspart og gevinsteier. Fremmer kommunesektorens behov og bidrar til felles arkitektur. |
 | **STAF** | Samarbeidspart og behovsstiller. Får bedre forutsetninger for veiledning, tilsyn og klagebehandling. |
