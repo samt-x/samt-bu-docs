@@ -8,7 +8,9 @@ toc: true
 status: Ny
 
 ---
-
 ## Foreløpig beskrivelse
 
 Samtykkeportal – sentralisert oversikt over samtykker. Videreutvikling av FIKS samtykke?
+
+(språklig kommentar: En slik tjeneste er ikke en portal i teknisk forstand, så det bør ha annet navn? \
+jfr [Forklaring på portalbegrepet](https://no.wikipedia.org/wiki/Nettportal))
