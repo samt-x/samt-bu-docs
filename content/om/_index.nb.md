@@ -9,13 +9,11 @@ aliases:
   - /om/om-dette-nettstedet/
 
 ---
-SAMT-BU er et samarbeidsprosjekt om *datasentrisk tjenesteutvikling* og sammenhengende tjenester for barn og unge – fra barnehage til høyere utdanning.
+SAMT-BU er et samarbeidsprosjekt om *datadrevet tjenesteutvikling* og sammenhengende tjenester for barn og unge – fra barnehage til høyere utdanning.
 
 Prosjektets fulle tittel er *Felles løft: Sammenhengende tjenester for barn og unge*, og løper fra oktober 2025 til desember 2027.
 
-![Illustrasjon: SAMT-BU – fra barnehage til høyere utdanning](/images/samt-bu-fra-barnehage-til-hoyere-utdanning.png)
-
-## Bakgrunn
+![Illustrasjon: SAMT-BU – fra barnehage til høyere utdanning](/images/samt-bu-fra-barnehage-til-hoyere-utdanning.png)## Bakgrunn
 
 En rotårsak til manglende samhandlingsevne på tvers av offentlig sektor er fragmentert datainfrastruktur, manglende samordning og liten grad av systematisk gjenbruk av data og løsninger. Dette gjelder særlig innen oppvekst og utdanning, der informasjon om elever, foresatte, ansatte, institusjoner og fag er spredt på mange fagsystemer.
 
