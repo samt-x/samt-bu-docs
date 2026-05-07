@@ -7,6 +7,12 @@ Does not commit anything – modifies files only in the CI workspace.
 import subprocess
 import os
 import re
+from datetime import datetime
+try:
+    from zoneinfo import ZoneInfo
+    _OSLO_TZ = ZoneInfo("Europe/Oslo")
+except ImportError:
+    _OSLO_TZ = None
 
 MODULE_PATHS = [
     # Hoved-repoet – git-historikk er allerede tilgjengelig (fetch-depth: 0).
@@ -34,7 +40,13 @@ def get_lastmod(module_path, rel_path):
             continue
         timestamp, _, email = line.partition('|')
         if '[bot]' not in email:
-            return timestamp.strip()
+            ts = timestamp.strip()
+            if _OSLO_TZ:
+                try:
+                    return datetime.fromisoformat(ts).astimezone(_OSLO_TZ).isoformat()
+                except Exception:
+                    pass
+            return ts
     return ''
 
 
