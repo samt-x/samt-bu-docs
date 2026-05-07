@@ -231,6 +231,8 @@ async function handleSuggest(request, env) {
     }
   );
 
+  const userInfo = await fetchGitHubUser(userToken);
+
   try {
     // 1. Hent HEAD commit SHA
     const refRes = await gh("/git/ref/heads/main");
@@ -270,9 +272,11 @@ async function handleSuggest(request, env) {
     const { sha: newTreeSha } = await newTreeRes.json();
 
     // 5. Opprett commit
+    const commitPayload = { message: commitMessage, tree: newTreeSha, parents: [headSha] };
+    if (userInfo) commitPayload.author = { ...userInfo, date: new Date().toISOString() };
     const newCommitRes = await gh("/git/commits", {
       method: "POST",
-      body: JSON.stringify({ message: commitMessage, tree: newTreeSha, parents: [headSha] }),
+      body: JSON.stringify(commitPayload),
     });
     if (!newCommitRes.ok) {
       const e = await newCommitRes.json();
@@ -307,6 +311,28 @@ async function handleSuggest(request, env) {
 
   } catch (e) {
     return suggestError(500, e.message);
+  }
+}
+
+async function fetchGitHubUser(token) {
+  try {
+    const res = await fetch("https://api.github.com/user", {
+      headers: {
+        "Authorization": `Bearer ${token}`,
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "samt-bu-docs-worker/1.0",
+      },
+      cache: "no-store",
+    });
+    if (!res.ok) return null;
+    const u = await res.json();
+    return {
+      name: u.name || u.login,
+      email: u.email || `${u.id}+${u.login}@users.noreply.github.com`,
+    };
+  } catch {
+    return null;
   }
 }
 
