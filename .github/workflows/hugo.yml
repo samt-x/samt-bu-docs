@@ -1,5 +1,8 @@
 name: Bygg og deploy til Cloudflare Pages
 
+run-name: >-
+  ${{ github.event_name == 'repository_dispatch' && format('{0} ({1})', github.event.client_payload.message || 'oppdatert', github.event.client_payload.source) || github.event.head_commit.message || 'Manuell kjøring' }}
+
 on:
   push:
     branches: ["main"]
