@@ -13,7 +13,7 @@ SAMT-BU er et samarbeidsprosjekt om *datadrevet tjenesteutvikling* og sammenheng
 
 Prosjektets fulle tittel er *Felles løft: Sammenhengende tjenester for barn og unge*, og løper fra oktober 2025 til desember 2027.
 
-![Illustrasjon: SAMT-BU – fra barnehage til høyere utdanning](/images/samt-bu-fra-barnehage-til-hoyere-utdanning.png)## Bakgrunn
+![Illustrasjon: SAMT-BU – fra barnehage til høyere utdanning](/images/samt-bu-fra-barnehage-til-hoyere-utdanning.png)\## Bakgrunn
 
 En rotårsak til manglende samhandlingsevne på tvers av offentlig sektor er fragmentert datainfrastruktur, manglende samordning og liten grad av systematisk gjenbruk av data og løsninger. Dette gjelder særlig innen oppvekst og utdanning, der informasjon om elever, foresatte, ansatte, institusjoner og fag er spredt på mange fagsystemer.
 
@@ -57,7 +57,7 @@ Prosjektet skal levere sju hovedprodukter, utviklet iterativt gjennom prosjektl�
 | **KS / KS Digital** | Samarbeidspart og gevinsteier. Fremmer kommunesektorens behov og bidrar til felles arkitektur. |
 | **STAF** | Samarbeidspart og behovsstiller. Får bedre forutsetninger for veiledning, tilsyn og klagebehandling. |
 | **Udir** | Premissgiver. Bidrar til standardisert rapportering og datadeling mellom forvaltningsnivåer. |
-| **HK-dir** | Premissgiver. Bedre oversikt over sammenhenger mellom grunnopplæring, høyere utdanning og arbeidsmarked. |
+| **HK-dir** | Premissgiver. Utvikler nettstedet [Utdanning.no](http://Utdanning.no) som gir alle oversikt over utdanningstilbudet og overgang mellom grunnopplæring, høyere utdanning og arbeidsmarked. |
 | **Sikt** | Samarbeidspart. Bidrar med Feide, nasjonale registre og dataorienterte tjenester for kunnskapssektoren. |
 | **SSB** | Samarbeidspart. Bidrar til effektiv innsamling av statistikkdata og utdanningsstatistikk. |
 | **Novari IKS** | Samarbeidspart. Ivaretar fylkeskommunenes behov og bidrar med erfaring fra FINT. |
