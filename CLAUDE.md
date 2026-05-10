@@ -50,9 +50,10 @@ content/                           # Alt innhold (Markdown med YAML frontmatter)
     maalbildet/                    # Målbilde (weight 1)
     veikart/                       # Veikart (weight 2)
     informasjonsarkitektur/        # Informasjonsarkitektur (weight 30, tidligere egen toppnivå-seksjon)
-  loesninger/                      # Løsninger (weight 40)
-    cms-loesninger/                # CMS-løsninger (weight 10)
-      samt-bu-docs/                # SAMT-BU Docs – teknisk dokumentasjon og administrasjonsveiledning
+  prosjektleveranser/              # Prosjektleveranser (weight 40)
+    loesninger/                    # Løsninger
+      cms-loesninger/              # CMS-løsninger
+        samt-bu-docs/              # ← montert fra Hugo Module solution-samt-bu-docs
   rammeverk/                       # Rammeverk (weight 50)
     metodikk/                      # Metodikk (weight 30)
     juss/                          # Juss (weight 40)
@@ -108,7 +109,7 @@ i18n/nb.toml, en.toml              # Oversettelser (navSwitcher-etiketter, seksj
   - **Rutinglogikk (tre grener)** basert på `$dir = path.Dir .File.Path`:
     - `hasPrefix $dir "teams/"` → arkitektur-portal, collection `arkitektur`
     - `eq/hasPrefix $dir "utkast"` → utkast-portal, collection `utkast`
-    - `eq/hasPrefix $dir "loesninger/cms-loesninger/samt-bu-docs"` → loesninger-portal, collection `loesninger`
+    - `eq/hasPrefix $dir "prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs"` → loesninger-portal, collection `loesninger`
     - alt annet → docs-portal, collection `docs`
   - **Entry-slug:** Full relativ sti inkl. `/_index` (f.eks. `kommuneforlaget/_index`). Rot-sider i moduler bruker `_index` alene. Docs-rot forblir deaktivert (tom slug). URL: `<portal>#/collections/<collection>/entries/<slug>`
   - **Windows-fallgruve:** `.File.Path` bruker backslash – bruk alltid `path.Dir .File.Path` (normaliserer) fremfor rå `.File.Path` for hasPrefix-sjekker
@@ -245,7 +246,7 @@ Dropdown i headeren for å navigere direkte til en av de 10 seksjonene.
 - 10 seksjoner i flat struktur direkte under `content/`
 - Hugo Module-integrasjon: team-architecture, team-semantics og samt-bu-drafts montert
 - Nettsted omdøpt til «SAMT-BU Docs», `loesning/` omdøpt til `loesninger/`
-- Ny dokumentasjonsstruktur: `loesninger/cms-loesninger/samt-bu-docs/` (teknisk dok. + administrasjonsveiledning)
+- Ny dokumentasjonsstruktur: `prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/` (teknisk dok. + administrasjonsveiledning)
 - 20 use cases under Behov (inkl. Kommuneforlaget brukstilfelle-analyse)
 - Decap CMS med norsk og engelsk portal, tospråklig redigering bekreftet
 - «Denne siden»/«This page» deep-link i Endre-dropdown for alle sider inkl. modul-sider (teams/team-architecture, utkast)
@@ -268,7 +269,7 @@ Innhold fra eksterne repoer monteres inn via Hugo Module-systemet (`go.mod` + `h
 | `github.com/SAMT-X/team-architecture` | [team-architecture](https://github.com/SAMT-X/team-architecture) | `content/teams/team-architecture/` | Team arkitektur |
 | `github.com/SAMT-X/team-semantics` | [team-semantics](https://github.com/SAMT-X/team-semantics) | `content/teams/team-semantics/` | Team semantikk |
 | `github.com/SAMT-X/samt-bu-drafts` | [samt-bu-drafts](https://github.com/SAMT-X/samt-bu-drafts) | `content/utkast/` | Utkast og innspill |
-| `github.com/SAMT-X/solution-samt-bu-docs` | [solution-samt-bu-docs](https://github.com/SAMT-X/solution-samt-bu-docs) | `content/loesninger/cms-loesninger/samt-bu-docs/` | SAMT-BU Docs (teknisk dok.) |
+| `github.com/SAMT-X/solution-samt-bu-docs` | [solution-samt-bu-docs](https://github.com/SAMT-X/solution-samt-bu-docs) | `content/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/` | SAMT-BU Docs (teknisk dok.) |
 
 **Konfigurert i `hugo.toml`** under `[module] [[module.imports]]` med `source = "content"` og `target = "content/<sti>/"`.
 
