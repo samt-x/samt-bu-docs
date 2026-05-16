@@ -2,5 +2,5 @@
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
 id: 53cea56f-feed-4213-9f81-9c86e950bbd0
 title: 1.1
-weight: 10
+weight: 20
 ---
