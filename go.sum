@@ -1,5 +1,7 @@
 github.com/SAMT-X/samt-bu-drafts v0.0.0-20260305124447-1b3b16686b14 h1:b5NpMA3C3w3w4pCBcXrbOHAtR/8HpfWiMPYhc9YErLE=
 github.com/SAMT-X/samt-bu-drafts v0.0.0-20260305124447-1b3b16686b14/go.mod h1:DSWTYGYc0Gdp9/uUD33suYZHwaCzxtWsXX9loG2ohyE=
+github.com/SAMT-X/samt-bu-market-engagement v0.0.0-20260517212721-bd1ecae97cae h1:WA805hXk6iAdF5giaF5h5lkvLNP174asnKo6r6cadcE=
+github.com/SAMT-X/samt-bu-market-engagement v0.0.0-20260517212721-bd1ecae97cae/go.mod h1:HUhSAhNNxS/kl5+tT4n/E2HZq8gi62RsrfYY57G2xrk=
 github.com/SAMT-X/samt-bu-pilot-1 v0.0.0-20260428234552-fb8f3a903d17 h1:rCLNYeQfPCU+wztx1Lf+OMFlj3XdtKuWgzIXn2+PLVs=
 github.com/SAMT-X/samt-bu-pilot-1 v0.0.0-20260428234552-fb8f3a903d17/go.mod h1:7cPGceD7eGhlqdSk4Jq2ZzfC8rv4guziKQjA5m2DcUM=
 github.com/SAMT-X/samt-bu-pilot-2 v0.0.0-20260429113412-121a30a506c6 h1:xUxmtnbitlADsUofkj2TLqU58qNIq+3vUO5vxObFIWg=

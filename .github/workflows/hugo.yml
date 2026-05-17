@@ -81,6 +81,7 @@ jobs:
           hugo mod get github.com/SAMT-X/samt-bu-pilot-2@latest
           hugo mod get github.com/SAMT-X/samt-bu-pilot-3@latest
           hugo mod get github.com/SAMT-X/samt-bu-pilot-4@latest
+          hugo mod get github.com/SAMT-X/samt-bu-market-engagement@latest
           hugo mod tidy
 
       - name: Build with Hugo

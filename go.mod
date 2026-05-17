@@ -4,6 +4,7 @@ go 1.25.6
 
 require (
 	github.com/SAMT-X/samt-bu-drafts v0.0.0-20260305124447-1b3b16686b14 // indirect
+	github.com/SAMT-X/samt-bu-market-engagement v0.0.0-20260517212721-bd1ecae97cae // indirect
 	github.com/SAMT-X/samt-bu-pilot-1 v0.0.0-20260428234552-fb8f3a903d17 // indirect
 	github.com/SAMT-X/samt-bu-pilot-2 v0.0.0-20260429113412-121a30a506c6 // indirect
 	github.com/SAMT-X/samt-bu-pilot-3 v0.0.0-20260429113408-f44d2ce12c91 // indirect

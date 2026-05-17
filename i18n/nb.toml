@@ -41,6 +41,9 @@ other = "Prosjektleveranser"
 [innsikt]
 other = "Felles innsikt"
 
+[ekstern-markedsdialog]
+other = "Ekstern markedsdialog"
+
 [teams]
 other = "Teams"
 

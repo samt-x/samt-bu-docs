@@ -69,6 +69,11 @@ enableGitInfo = true
   url = "innsikt/"
   icon = "fa-bar-chart"
 
+[[params.navSwitcher]]
+  id = "ekstern-markedsdialog"
+  title = "Ekstern markedsdialog"
+  url = "ekstern-markedsdialog/"
+  icon = "fa-comments"
 
 [[params.navSwitcher]]
   id = "utkast"
@@ -125,3 +130,9 @@ enableGitInfo = true
     [[module.imports.mounts]]
       source = "content"
       target = "content/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs"
+
+  [[module.imports]]
+    path = "github.com/SAMT-X/samt-bu-market-engagement"
+    [[module.imports.mounts]]
+      source = "content"
+      target = "content/ekstern-markedsdialog"
