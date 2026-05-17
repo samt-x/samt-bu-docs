@@ -4,3 +4,14 @@ compatibility_date = "2026-04-24"
 routes = [
   { pattern = "auth.samt-bu.no", custom_domain = true }
 ]
+
+# KV-namespace for presence-systemet (redigeringsdialogene)
+# Aktiver ved deploy:
+#   1. Opprett namespace i Cloudflare-dashbordet: Workers & Pages → KV → Create namespace → "samt-bu-presence"
+#   2. Kopier namespace-ID og lim inn under
+#   3. Sett PRESENCE_ENABLED = true i custom-footer.html (linje ~70)
+#   4. Deploy worker: CLOUDFLARE_API_TOKEN=<token> npx wrangler deploy cloudflare-worker/oauth-worker.js --config cloudflare-worker/wrangler.toml
+#
+# [[kv_namespaces]]
+# binding = "PRESENCE"
+# id = "<namespace-id-her>"

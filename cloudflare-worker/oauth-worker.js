@@ -6,11 +6,17 @@
  *   CLIENT_SECRET – GitHub App Client Secret (kryptert)
  *   WORKER_PAT    – Fine-grained PAT (samt-x org, Contents+Issues+PRs R/W)
  *
+ * KV-namespace (settes i Cloudflare-dashboardet + wrangler.toml):
+ *   PRESENCE      – Tilstedeværelsessignaler for presence-systemet
+ *
  * Endepunkter:
  *   GET  /auth?provider=github&site_id=...  → redirect til GitHub OAuth
  *   GET  /callback?code=...                 → bytt kode mot token, lukk popup
  *   GET  /build-status?url=<side-url>       → hent samtu-build-tag uten CDN-cache
  *   POST /suggest                           → opprett branch+commit+PR på vegne av ekstern bruker
+ *   GET  /presence?page=<sti>              → hent aktive brukere på siden
+ *   POST /presence                          → registrer/oppdater tilstedeværelse
+ *   DELETE /presence                        → fjern tilstedeværelse
  */
 
 export default {
@@ -37,6 +43,13 @@ export default {
         return new Response(null, { status: 204, headers: suggestCors() });
       }
       return handleSuggest(request, env);
+    }
+
+    if (url.pathname === "/presence") {
+      if (request.method === "OPTIONS") {
+        return new Response(null, { status: 204, headers: presenceCors() });
+      }
+      return handlePresence(request, env);
     }
 
     return new Response("Not found", { status: 404 });
@@ -361,4 +374,91 @@ function errorPage(message) {
       headers: { "Content-Type": "text/html;charset=UTF-8" },
     }
   );
+}
+
+// --- /presence – tilstedeværelsessystem for redigeringsdialogene ---
+
+async function handlePresence(request, env) {
+  const cors = presenceCors();
+
+  // Mangler KV-binding → returnér tom liste (graceful degradation)
+  if (!env.PRESENCE) {
+    return new Response(JSON.stringify({ entries: [] }), {
+      headers: { "Content-Type": "application/json", ...cors },
+    });
+  }
+
+  const url = new URL(request.url);
+
+  if (request.method === "GET") {
+    const page = url.searchParams.get("page");
+    if (!page) {
+      return new Response(JSON.stringify({ entries: [] }), {
+        headers: { "Content-Type": "application/json", ...cors },
+      });
+    }
+    const prefix = "presence:" + page + ":";
+    const list = await env.PRESENCE.list({ prefix });
+    const entries = [];
+    for (const key of list.keys) {
+      const val = await env.PRESENCE.get(key.name);
+      if (val) {
+        try { entries.push(JSON.parse(val)); } catch (_) {}
+      }
+    }
+    return new Response(JSON.stringify({ entries }), {
+      headers: { "Content-Type": "application/json", ...cors },
+    });
+  }
+
+  if (request.method === "POST") {
+    let body;
+    try { body = await request.json(); } catch (_) {
+      return new Response(JSON.stringify({ error: "Ugyldig JSON" }), { status: 400, headers: { "Content-Type": "application/json", ...cors } });
+    }
+    const { page, user, login, state } = body;
+    if (!page || !login) {
+      return new Response(JSON.stringify({ error: "Mangler page eller login" }), { status: 400, headers: { "Content-Type": "application/json", ...cors } });
+    }
+    const key = "presence:" + page + ":" + login;
+    await env.PRESENCE.put(
+      key,
+      JSON.stringify({ user: user || login, login, state: state || "open", ts: Date.now(), page }),
+      { expirationTtl: 45 }
+    );
+    return new Response(JSON.stringify({ ok: true }), {
+      headers: { "Content-Type": "application/json", ...cors },
+    });
+  }
+
+  if (request.method === "DELETE") {
+    let body;
+    try { body = await request.json(); } catch (_) {
+      return new Response(JSON.stringify({ error: "Ugyldig JSON" }), { status: 400, headers: { "Content-Type": "application/json", ...cors } });
+    }
+    const { page, login } = body;
+    if (!page || !login) {
+      return new Response(JSON.stringify({ error: "Mangler page eller login" }), { status: 400, headers: { "Content-Type": "application/json", ...cors } });
+    }
+    const key = "presence:" + page + ":" + login;
+    await env.PRESENCE.delete(key);
+    return new Response(JSON.stringify({ ok: true }), {
+      headers: { "Content-Type": "application/json", ...cors },
+    });
+  }
+
+  return new Response(JSON.stringify({ error: "Method not allowed" }), {
+    status: 405,
+    headers: { "Content-Type": "application/json", ...cors },
+  });
+}
+
+function presenceCors() {
+  return {
+    "Access-Control-Allow-Origin": "https://docs.samt-bu.no",
+    "Access-Control-Allow-Methods": "GET, POST, DELETE, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    "Access-Control-Max-Age": "86400",
+    "Cache-Control": "no-store",
+  };
 }
