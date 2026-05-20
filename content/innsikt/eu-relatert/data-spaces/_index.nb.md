@@ -4,4 +4,4 @@ title: Data Spaces
 weight: 10
 ---
 
-Her kommer ...
+Common European Data Spaces er EUs sektorvise og horisontale infrastrukturer for sikker og tillitsbasert deling av data på tvers av virksomheter og landegrenser. Denne seksjonen samler oversikter og analyser av norsk deltakelse og relevante initiativer.
