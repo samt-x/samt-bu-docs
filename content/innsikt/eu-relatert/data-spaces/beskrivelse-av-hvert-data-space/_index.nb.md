@@ -4,7 +4,7 @@ title: "Beskrivelse av hvert data space"
 weight: 5
 ---
 
-Dette kapittelet gir en kort ingress og en utdypende beskrivelse av hvert data space i oversikten. Rekkefølgen følger hovedtabellen i [Oversikt over norsk deltakelse](../oversikt-over-norsk-deltakelse/). For de tilstøtende initiativene (DestinE, DTO) og forsvar er det tatt med en merknad om status og avgrensning.
+Dette kapittelet gir en kort ingress og en utdypende beskrivelse av hvert data space i oversikten. Rekkefølgen følger hovedtabellen i [Norsk deltakelse](../norsk-deltakelse/). For de tilstøtende initiativene (DestinE, DTO) og forsvar er det tatt med en merknad om status og avgrensning.
 
 ---
 

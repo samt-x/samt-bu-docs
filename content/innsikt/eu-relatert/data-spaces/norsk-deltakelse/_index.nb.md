@@ -1,19 +1,17 @@
 ---
 id: 243a675d-9f6c-458c-b9b5-f9d023f007de
-title: "Common European Data Spaces — oversikt med norske aktører"
-linkTitle: "Oversikt over norsk deltakelse"
+title: "Norsk deltakelse i europeiske data spaces"
+linkTitle: "Norsk deltakelse"
 weight: 20
 ---
 
 *Utarbeidet mai 2026. Bygger på en kombinasjon av EU-kommisjonens oversikter, prosjektenes egne sider, IDSAs Data Spaces Radar og en intern Digdir-kartlegging. Se [Kilder](#kilder) til slutt for fullstendig oversikt.*
 
-## Om oversikten
+## Oversikt
 
 Tabellen dekker EU-kommisjonens Common European Data Spaces (de 14 sektorvise/horisontale domenene under den europeiske datastrategien), supplert med forsvar (nytt tillegg fra Data Union Strategy, november 2025) og to tilstøtende initiativer (DestinE og DTO) som ikke formelt er en del av data space-lista, men som er nært beslektet og har norsk deltakelse.
 
 Kolonnen **Type/status** skiller mellom Kommisjonens egne data spaces og tilstøtende initiativer, slik at lista kan inkludere de relevante nabosatsingene uten å fremstille dem som likestilte med de sektorvise data spaces.
-
-## Hovedtabell
 
 | # | Data Space | Type/status | Ansvarlig initiativ | Norsk aktør | Hjemmeside |
 |---|---|---|---|---|---|
