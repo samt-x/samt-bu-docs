@@ -12,11 +12,25 @@ weight: 30
 
 Det finnes ikke én felles påmeldingsmekanisme for data spaces. Hvilken vei som gjelder, avhenger av det enkelte initiativets modenhet og finansieringstype. Grovt sett finnes det følgende innganger:
 
-1. **Open calls i deployment-prosjekter:** for prosjekter i aktiv utrulling som tar inn nye piloter eller bruksområder gjennom utlysninger.
-2. **Stakeholder-fora og communities:** for å delta, få innsyn og påvirke uten å være formell konsortiepartner.
-3. **Medlemskap i governance-/standardiseringsorganisasjoner:** for de mer rammeverks- og standardnære initiativene.
-4. **Nasjonal tilknytning / dataleveranse:** særlig for de rettslig forankrede eller forvaltningsdrevne datarommene, der «påmelding» egentlig handler om å koble nasjonale systemer på.
-5. **Delta i en EDIC:** det mest forpliktende engasjementsnivået, der man er med å eie og styre felleseuropeisk digital infrastruktur på statsnivå.
+1. **Open calls i deployment-prosjekter:**
+
+   for prosjekter i aktiv utrulling som tar inn nye piloter eller bruksområder gjennom utlysninger.
+
+2. **Stakeholder-fora og communities:**
+
+   for å delta, få innsyn og påvirke uten å være formell konsortiepartner.
+
+3. **Medlemskap i governance-/standardiseringsorganisasjoner:**
+
+   for de mer rammeverks- og standardnære initiativene.
+
+4. **Nasjonal tilknytning / dataleveranse:**
+
+   særlig for de rettslig forankrede eller forvaltningsdrevne datarommene, der «påmelding» egentlig handler om å koble nasjonale systemer på.
+
+5. **Delta i en EDIC:**
+
+   det mest forpliktende engasjementsnivået, der man er med å eie og styre felleseuropeisk digital infrastruktur på statsnivå.
 
 De ulike inngangene er ikke gjensidig utelukkende. En naturlig strategi kan være å starte lavterskel (community/forum), og deretter vurdere tyngre engasjement (pilot, dataleveranse) der det er strategisk begrunnet.
 
