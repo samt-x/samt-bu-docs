@@ -1,10 +1,9 @@
 ---
 id: da0085bd-99f6-48d0-8243-ec6438dfcc51
-title: "Beskrivelse av hvert data space"
+title: Beskrivelse av hvert data space
 weight: 5
 ---
-
-Dette kapittelet gir en kort ingress og en utdypende beskrivelse av hvert data space i oversikten. Rekkefølgen følger hovedtabellen i [Norsk deltakelse](../norsk-deltakelse/). For de tilstøtende initiativene (DestinE, DTO) og forsvar er det tatt med en merknad om status og avgrensning.
+Dette kapittelet gir overordnede beskrivelser av Common Data Spaces definert av EU-kommisjonen og utvalgte andre initiativ som er viktige sett med norske øyne. Se også: [Norsk deltakelse](../norsk-deltakelse/). 
 
 ---
 
