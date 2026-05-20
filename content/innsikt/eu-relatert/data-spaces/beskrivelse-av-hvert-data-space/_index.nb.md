@@ -1,7 +1,5 @@
 ---
-# id: auto-generert – kopierte verdier overskrives automatisk ved push
 id: da0085bd-99f6-48d0-8243-ec6438dfcc51
-# id: auto-generert – kopierte verdier overskrives automatisk ved push
 title: "Beskrivelse av hvert data space"
 weight: 5
 ---
