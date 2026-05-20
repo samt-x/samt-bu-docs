@@ -2,7 +2,7 @@
 id: 243a675d-9f6c-458c-b9b5-f9d023f007de
 title: "Common European Data Spaces — oversikt med norske aktører"
 linkTitle: "Oversikt over norsk deltakelse"
-weight: 10
+weight: 20
 ---
 
 *Utarbeidet mai 2026. Bygger på en kombinasjon av EU-kommisjonens oversikter, prosjektenes egne sider, IDSAs Data Spaces Radar og en intern Digdir-kartlegging. Se [Kilder](#kilder) til slutt for fullstendig oversikt.*

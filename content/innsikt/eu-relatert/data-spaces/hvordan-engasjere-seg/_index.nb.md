@@ -1,7 +1,7 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
 title: "Hvordan engasjere seg?"
-weight: 20
+weight: 30
 ---
 
 *Dette kapittelet skisserer hvilke mekanismer som finnes for norske aktører som vil engasjere seg i europeiske data spaces — både i de pågående prosjektene og gjennom forum, communities og direkte innspill. EØS-adgang er ikke et hinder; norske aktører deltar allerede i flere av initiativene.*
