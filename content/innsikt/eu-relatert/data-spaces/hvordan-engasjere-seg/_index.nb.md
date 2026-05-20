@@ -8,16 +8,17 @@ weight: 30
 
 *Dette kapittelet skisserer hvilke mekanismer som finnes for norske aktører som vil engasjere seg i europeiske data spaces — både i de pågående prosjektene og gjennom forum, communities og direkte innspill. EØS-adgang er ikke et hinder; norske aktører deltar allerede i flere av initiativene.*
 
-## Fire ulike «dører» inn
+## Dører inn
 
-Det finnes ikke én felles påmeldingsmekanisme for data spaces. Hvilken vei som gjelder, avhenger av det enkelte initiativets modenhet og finansieringstype. Grovt sett er det fire ulike innganger:
+Det finnes ikke én felles påmeldingsmekanisme for data spaces. Hvilken vei som gjelder, avhenger av det enkelte initiativets modenhet og finansieringstype. Grovt sett finnes det følgende innganger:
 
 1. **Open calls i deployment-prosjekter** — for prosjekter i aktiv utrulling som tar inn nye piloter eller bruksområder gjennom utlysninger.
 2. **Stakeholder-fora og communities** — for å delta, få innsyn og påvirke uten å være formell konsortiepartner.
 3. **Medlemskap i governance-/standardiseringsorganisasjoner** — for de mer rammeverks- og standardnære initiativene.
 4. **Nasjonal tilknytning / dataleveranse** — særlig for de rettslig forankrede eller forvaltningsdrevne datarommene, der «påmelding» egentlig handler om å koble nasjonale systemer på.
+5. **Delta i en EDIC** — det mest forpliktende engasjementsnivået, der man er med å eie og styre felleseuropeisk digital infrastruktur på statsnivå.
 
-De fire er ikke gjensidig utelukkende. En naturlig strategi kan være å starte lavterskel (community/forum), og deretter vurdere tyngre engasjement (pilot, dataleveranse) der det er strategisk begrunnet.
+De ulike inngangene er ikke gjensidig utelukkende. En naturlig strategi kan være å starte lavterskel (community/forum), og deretter vurdere tyngre engasjement (pilot, dataleveranse) der det er strategisk begrunnet.
 
 ## Åpne muligheter nå
 
@@ -42,6 +43,10 @@ Et generelt forbehold om DIGITAL-finansiering: de fleste utlysningene har 50 % s
 **SEMIC / Interoperable Europe.** For det semantiske interoperabilitetslaget. SEMIC Support Centre er et fellesskap for offentlige (og private) aktører som vil samskape, dele beste praksis og bidra til praktisk gjennomføring av interoperabilitet på tvers av EU, i tråd med Interoperable Europe Act. Det er særlig rettet mot policy-medarbeidere og tekniske eksperter som jobber med datadeling og gjenbruk. SEMIC arrangerer også tematiske workshops (bl.a. om personlige data spaces) der bidragsytere blir medforfattere av resultatene.
 
 **IDSA / Gaia-X / DSBA-hubene.** For de governance- og teknologinære rammeverkene. Her skjer deltakelse via medlemskap i organisasjonen snarere enn i et enkeltprosjekt. De fire associasjonene (Gaia-X, BDVA, FIWARE, IDSA) driver et nettverk på nær 90 nasjonale/regionale «hubs» i 34 land. Det finnes allerede norske miljøer rundt Gaia-X Hub Norway og FIWARE iHub Norway, som kan være en naturlig norsk inngang.
+
+**Delta i en EDIC.** Det mest forpliktende engasjementsnivået — der man er med å eie og styre felleseuropeisk digital infrastruktur, ikke bare koble seg på den. Et European Digital Infrastructure Consortium (EDIC) er et juridisk rammeverk som lar medlemsland gå sammen om å etablere og drifte flerlandsprosjekter (Multi-Country Projects) innen digital infrastruktur. Enkelte data spaces og tilhørende infrastruktur kan realiseres og forvaltes gjennom en EDIC, og EU-kommisjonen peker på EDIC-er som relevante deltakere i kommende Multi-Country Project-utlysninger. Det finnes også egne støttetiltak for EDIC-er, blant annet en «EDIC Support Hub» under DIGITAL-programmet.
+
+Til forskjell fra de øvrige inngangene er en EDIC et bredere instrument enn data spaces alene — det brukes til mange former for digital infrastruktur, og data spaces er bare én av dem. Deltakelse skjer på statsnivå og krever politisk forankring, og er dermed et tyngre løp enn å melde seg inn i et stakeholder-forum eller svare på en open call. For aktører som vurderer langsiktig, strategisk posisjonering i europeisk datainfrastruktur er EDIC likevel den mest substansielle døren. Digdir har en egen oversikt over EDIC og norsk deltakelse: digdir.no/…/european-digital-infrastructure-consortium-edic.
 
 ## Deltakelse utenom de pågående prosjektene
 
