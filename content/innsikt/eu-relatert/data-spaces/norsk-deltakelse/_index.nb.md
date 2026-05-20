@@ -110,7 +110,7 @@ Norske miljøer er tungt involvert, særlig SINTEF Ocean, gjennom flere DTO-rela
 
 ---
 
-## Kilder
+## Kilder og forbehold
 
 Oversikten bygger på flere kildelag som kombineres for å gi et så fullstendig bilde som mulig. Hjemmesidene for hvert enkelt data space står oppført i hovedtabellen og gjentas ikke her.
 
@@ -159,9 +159,7 @@ For kapittelet om engasjement er det brukt følgende kilder:
 - IDSA, Gaia-X, BDVA og FIWARE — de fire data sharing associations og deres nasjonale hubs, inkludert Gaia-X Hub Norway og FIWARE iHub Norway
 - DIGITAL-programmets utlysninger og frister — [digdir.no](https://www.digdir.no/internasjonalt-arbeid/er-du-klar-de-siste-rundene-med-digital-utlysninger/7831), kontakt: [digitaleuropa@digdir.no](mailto:digitaleuropa@digdir.no)
 
----
-
-## Forbehold
+### Forbehold
 
 **Avgrensning mot tilstøtende initiativer.** DestinE og DTO er ikke formelt blant Kommisjonens Common European Data Spaces — de er egne flaggskipsinitiativer (henholdsvis under DG CNECT og EU Mission «Restore our Ocean and Waters»). De er tatt med fordi de er nært beslektet og har konkret norsk deltakelse, men er merket som tilstøtende i Type/status-kolonnen.
 
