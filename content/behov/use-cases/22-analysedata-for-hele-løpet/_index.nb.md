@@ -3,7 +3,7 @@
 id: e0d42db3-b997-4bcc-9bf5-4da622c18429
 title: 22. Analysedata fra barnehage til voksenopplæring
 linkTitle: "22. Analysedata for \"hele løpet\""
-weight: 260
+weight: 270
 toc: true
 status: Tidlig utkast
 # Gyldige statusverdier: Ny | Tidlig utkast | Pågår | Til QA | Godkjent | Avbrutt

@@ -3,7 +3,7 @@
 id: "4e26e8c0-2028-4b1d-ba28-db5c8e88eca4"
 title: "12. Changing Educational Pathway or Study Programme"
 linkTitle: "12. Changing Educational Pathway"
-weight: 160
+weight: 170
 toc: true
 # Valid status values:
 # ◍ New

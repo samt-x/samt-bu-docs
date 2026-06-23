@@ -3,7 +3,7 @@
 id: "682c6c84-e8ef-4dd4-9004-66a124576a5e"
 title: "11. Digital Dialogue Between Kindergarten/School and Home"
 linkTitle: "11. Digital Home Dialogue"
-weight: 150
+weight: 160
 toc: true
 # Valid status values:
 # ◍ New
