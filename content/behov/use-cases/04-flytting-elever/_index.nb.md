@@ -12,7 +12,7 @@ toc: true
 # ◕ Til QA
 # ⏺ Godkjent
 # ⨂ Avbrutt
-status: Tidlig utkast
+status: Pågår
 
 ---
 ## 1. Mål
