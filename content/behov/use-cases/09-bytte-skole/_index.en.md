@@ -3,7 +3,7 @@
 id: "e1e9b02b-5967-41b4-b7e0-a10e557f75d8"
 title: "9. Changing School or Place of Study"
 linkTitle: "9. Changing School"
-weight: 110
+weight: 120
 toc: true
 status: "New"
 

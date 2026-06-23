@@ -1,7 +1,7 @@
 ---
 id: 9640be7b-4f87-47f1-ac11-06ce01db5007
 title: 25. Nasjonale prøver og kartlegginger
-weight: 270
+weight: 280
 status: Ny
 # Gyldige verdier: Ny | Tidlig utkast | Pågår | Til QA | Godkjent | Avbrutt
 ---
