@@ -5,7 +5,7 @@ title: 2. Sømløs overgang fra grunnskole til videregående opplæring
 linkTitle: 2. Overgang grunnskole–VGO
 weight: 70
 toc: true
-status: Pågår
+status: Godkjent
 
 ---
 ### *Casen/Piloten vurderes videreført fra august 2026*\\
