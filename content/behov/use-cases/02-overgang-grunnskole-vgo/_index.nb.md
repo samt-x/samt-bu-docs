@@ -8,7 +8,9 @@ toc: true
 status: Tidlig utkast
 
 ---
-## Kort beskrivelse
+### *Casen/Piloten vurderes videreført fra august 2026*\
+\
+Kort beskrivelse
 
 Dette caset tar for seg overgangen fra ungdomsskole til videregående opplæring -- en av de mest sentrale overgangene i barn og unges livsløp. Overgangen innebærer både et skifte i skolehverdag og et formelt ansvarsskifte fra kommune til fylkeskommune, og berører mange aktører, tjenester og systemer.
 
