@@ -1,7 +1,7 @@
 ---
 id: c5a7665a-4b66-4f63-9034-6c9cb6dbaaac
 title: 26. Nasjonal tjeneste for identifikasjon av personer i utdanning (utdanningspersonregister)
-weight: 10
+weight: 20
 ---
 
 *English translation TBD.*
