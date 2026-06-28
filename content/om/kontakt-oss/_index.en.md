@@ -1,6 +1,6 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
-id:
+id: b545cba7-d73f-4efb-8150-325d0cb230e0
 title: "Contact us"
 linkTitle: "Contact us"
 weight: 10
