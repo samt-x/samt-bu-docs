@@ -75,3 +75,11 @@ For veiledning om hvordan du bidrar, se [Hvordan bidra](/hvordan-bidra/) og [Bru
 ## Se også
 
 - [Prosjektbeskrivelse SAMT Barn og unge](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FSAMT-X%2Fsamt-bu-files%2Fmain%2Fdrafts%2FProsjektbeskrivelse%20SAMT%20Barn%20og%20unge.docx&ui=nb-NO&rs=nb-NO) – foreløpig prosjektbeskrivelse ([last ned](https://github.com/SAMT-X/samt-bu-files/raw/main/drafts/Prosjektbeskrivelse%20SAMT%20Barn%20og%20unge.docx))
+
+## Kontakt oss
+
+Har du spørsmål om SAMT-BU-prosjektet, markedsdialogen eller dette nettstedet, ta kontakt på e-post:
+
+**postmottak@digdir.no**
+
+Merk gjerne e-posten «SAMT-BU» i emnefeltet. Prosjektet ledes av Digitaliseringsdirektoratet (Digdir), inntil videre er postmottaket der riktig adresse.
