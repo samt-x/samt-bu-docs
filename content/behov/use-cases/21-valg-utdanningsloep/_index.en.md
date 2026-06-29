@@ -3,7 +3,7 @@
 id: ff2fd115-ae18-4459-9af6-1ea2a9d4041b
 title: "21. Choosing the Next Educational Pathway"
 linkTitle: "21. Choosing the next educational pathway"
-weight: 260
+weight: 270
 toc: true
 status: "Early draft"
 draft: false

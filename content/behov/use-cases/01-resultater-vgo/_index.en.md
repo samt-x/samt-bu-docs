@@ -3,7 +3,7 @@
 id: "7f4fa7c1-c0f4-43da-a053-b0d38bff43e8"
 title: 1. Making Results from Upper Secondary Education Accessible
 linkTitle: 1. Results from Upper Secondary
-weight: 60
+weight: 70
 toc: true
 status: In progress
 

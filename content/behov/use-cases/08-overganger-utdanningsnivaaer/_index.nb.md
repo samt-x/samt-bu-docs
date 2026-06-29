@@ -3,7 +3,7 @@
 id: "8f30b4d8-ddc6-427f-8682-9451db93d72f"
 title: "8. Overganger mellom utdanningsnivåer"
 linkTitle: "8. Overganger utdanningsnivåer"
-weight: 130
+weight: 140
 toc: true
 # Gyldige statusverdier:
 # ◍ Ny
