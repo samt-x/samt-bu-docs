@@ -3,7 +3,7 @@
 id: "f3c85e96-d5c9-4cd7-b29b-f05bda058448"
 title: 17. Modernisert rapportering kommune-stat
 linkTitle: 17. Modernisert rapportering
-weight: 230
+weight: 240
 toc: true
 # Gyldige statusverdier:
 # ◍ Ny

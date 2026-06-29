@@ -3,7 +3,7 @@
 id: "6d076c0e-d83d-4590-945b-e8695201138e"
 title: "3. Handling of D-numbers and Identity Number Changes"
 linkTitle: "3. D-number Management"
-weight: 90
+weight: 100
 toc: true
 # Valid status values:
 # ◍ New
