@@ -2,7 +2,7 @@
 id: 243a675d-9f6c-458c-b9b5-f9d023f007de
 title: "Norsk deltakelse i europeiske data spaces"
 linkTitle: "Norsk deltakelse"
-weight: 20
+weight: 30
 ---
 
 *Utarbeidet mai 2026. Bygger på en kombinasjon av EU-kommisjonens oversikter, prosjektenes egne sider, IDSAs Data Spaces Radar og en intern Digdir-kartlegging. Se [Kilder](#kilder) til slutt for fullstendig oversikt.*
