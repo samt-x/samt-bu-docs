@@ -7,3 +7,13 @@ weight: 120
 
 ---
 Foreløpig mappe for test av av denne CMS-løsningen...
+
+```text
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+```
