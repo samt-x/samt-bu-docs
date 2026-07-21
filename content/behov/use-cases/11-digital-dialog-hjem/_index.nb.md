@@ -27,7 +27,7 @@ Caset dreier seg om å lage en enkel og felles kanal for løpende dialog mellom 
 
 ### Hvilket problem adresserer caset/Hva fungerer dårlig i dag?
 
-Det finnes mange gode løsninger for kommunikasjon mellom barnehage/SFO og skole på den ene siden og de foresatte på den andre. Forskjellige apper som Transponder, IST Home, Visma InSchool/Flyt og Showbie har i og for seg god funksjonalitet. I tillegg brukes kanaler som SMS, e-post og tradisjonell ranselpost.
+Det finnes mange gode løsninger for kommunikasjon mellom barnehage/SFO og skole på den ene siden og de foresatte på den andre. Forskjellige apper som Transponder, IST Home, Visma Min Skole, Visma Min barnehage og Showbie har i og for seg god funksjonalitet. I tillegg brukes kanaler som SMS, e-post og tradisjonell ranselpost.
 
 Problemet for foreldrene er å holde styr på antall kanaler. Har du flere barn risikerer du å måtte forholde deg til mange ulike apper som gjør omtrent det samme. Det er ikke en gang nødvendigvis slik at SFO/AKS og skolen bruker samme løsning. I tillegg kan den enkelte lærer bruke egne kanaler. Foruten at dette er uoversiktlig gjør det også at historikken går tapt.
 
@@ -77,6 +77,8 @@ Av SAMT-BUs målsetninger treffer det:
 Det finnes allerede gode løsninger som rent teknisk og funksjonelt dekker behovene som er beskrevet over, og det er derfor ikke noe godt alternativ at det offentlige setter i gang og lager konkurrerende løsninger. Vi tror at dette er en utfordring som markedet vil kunne løse på en god måte, og ser for oss et økosystem der ulike leverandører og startups kan lage ulike «foreldre-apper» som høster kommunikasjonsdata fra kommunens og frivillighetens fagsystemer. Hvilke forretningsmodeller leverandørene velger er naturligvis opp til dem, men det er et hovedpoeng at løsningene skal være uavhengig av kommunegrenser og fagsystem i den enkelte kommune. Det er foreldrene og ikke kommunen som velger løsning og det er foreldrenes gunst leverandørene skal konkurrere om.
 
 SAMT-BUs oppgave vil bli å legge til rette for at kommunikasjonsdataene blir tilgjengelige. I en pilot vil vi derfor måtte kartlegge hvilke løsninger og formater som eksisterer og hvilke avtale- eller regelverksmessige endringer som må til for å «frigjøre» dataene. Det bør også vurderes om data skal gjøre tilgjengelig f eks gjennom Min Kommune eller dataplattformen til KS Digital.
+
+I KSs arbeid med "Tilnærming felles anskaffelse oppvekstadministrativt system", vil krav om samlet kommunikasjon og dialog stå sterkt, uavhengig av leverandør og løsning. SAMT-BU kan bidra her. 
 
 For å initiere utvikling av relevante løsninger tenker vi å se hen til StartOff-programmet. StartOff var et program for innovative anskaffelser, hvor offentlige oppdragsgivere fikk utviklet løsninger på sine behov, gjennom en prosess spesialtilpasset oppstartsselskaper. Programmet er nå avsluttet, men denne innovative anskaffelsesmetodikken kan fortsatt benyttes. (<https://www.anskaffelser.no/innovasjon/startoff>).
 
