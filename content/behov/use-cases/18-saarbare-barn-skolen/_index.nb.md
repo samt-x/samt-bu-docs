@@ -1,8 +1,8 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
 id: "dce94c9d-bb6b-4b3d-b307-fe30880632ad"
-title: "18. Innspill fra Utdanningsetaten i Oslo kommune"
-linkTitle: "18. UDE Oslo"
+title: 18. Innspill fra Utdanningsetaten i Oslo kommune
+linkTitle: 18. UDE Oslo
 weight: 250
 toc: true
 # Gyldige statusverdier:
@@ -12,9 +12,10 @@ toc: true
 # ◕ Til QA
 # ⏺ Godkjent
 # ⨂ Avbrutt
-status: "Tidlig utkast"
+status: Tidlig utkast
 
 ---
+***Denne dekkes av case 10***
 
 ## Kort beskrivelse
 
