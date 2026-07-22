@@ -1,8 +1,8 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
 id: "6d076c0e-d83d-4590-945b-e8695201138e"
-title: "3. Håndtering av D-nummer og ID-bytte"
-linkTitle: "3. Håndtering av Dnr"
+title: 3. Håndtering av D-nummer og ID-bytte
+linkTitle: 3. Håndtering av Dnr
 weight: 100
 toc: true
 # Gyldige statusverdier:
@@ -12,9 +12,10 @@ toc: true
 # ◕ Til QA
 # ⏺ Godkjent
 # ⨂ Avbrutt
-status: "Tidlig utkast"
+status: Tidlig utkast
 
 ---
+***Dette caset dekkes også av case 26 - Nasjonal tjeneste for identifikasjon av personer i utdanning (utdanningspersonregister)***
 
 ## Kort beskrivelse
 
@@ -53,8 +54,7 @@ ID-nummeret er som regel den primære nøkkelen for personobjekter. Så uten aut
 
 Fiktive nummer gir heller ikke tilgang til innlogging i offentlige IT-systemer med ID-porten.
 
-Helse har kommet lenger i en fellesløsning her, slik vi forstår det, og har noe som heter Hjelpenummer. Les mer om det her, samt utfordringene de beskriver som godt kan sammenlignes med andre offentlige sektorer:
-https://www.nrk.no/norge/darlig-id-system-en-pasientfare-1.11425318
+Helse har kommet lenger i en fellesløsning her, slik vi forstår det, og har noe som heter Hjelpenummer. Les mer om det her, samt utfordringene de beskriver som godt kan sammenlignes med andre offentlige sektorer: https://www.nrk.no/norge/darlig-id-system-en-pasientfare-1.11425318
 
 ## Ønskesituasjon
 
