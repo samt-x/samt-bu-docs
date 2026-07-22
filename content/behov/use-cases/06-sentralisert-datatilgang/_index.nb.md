@@ -12,7 +12,7 @@ toc: true
 # ◕ Til QA
 # ⏺ Godkjent
 # ⨂ Avbrutt
-status: Ny
+status: Tidlig utkast
 
 ---
 ## Beskrivelse av case
@@ -29,7 +29,7 @@ Conexus har en kjøpeløsning for deler av dette. De heter «Engage» og «Insig
 
 ### Hvilket problem adresserer caset/Hva fungerer dårlig i dag?
 
-Det finnes i dag ikke noe sentralt «sted» hvor foresatte kan finne all relevant informasjon om barnets faglige utvikling. Dette innebærer at foreldre som ønsker slik oversikt må lete mange steder og sette sammen informasjonen selv. 
+Det finnes i dag ikke noe sentralt «sted» hvor foresatte kan finne all relevant informasjon om barnets faglige utvikling. Dette innebærer at foreldre som ønsker slik oversikt må lete mange steder og sette sammen informasjonen selv.
 
 I en slik prosess er det alltid fare for at informasjon går tapt. Det gjør også at lista for å engasjere seg i barnets faglige utvikling ligger høyere. En samlet, total oversikt vil trolig gjøre det enklere for foresatte å følge med og engasjere seg, også for foresatte som har mindre ressurser.
 
@@ -72,6 +72,6 @@ Av SAMT-BUs målsetninger treffer det:
 
 ### Litt om gjennomføring
 
-En pilot som tar for seg dette caset, vil i første omgang måtte fokusere på å kartlegge hvilke datakilder som er aktuelle, hvem aktørene er og hvordan man eventuelt kan hente ut data. 
+En pilot som tar for seg dette caset, vil i første omgang måtte fokusere på å kartlegge hvilke datakilder som er aktuelle, hvem aktørene er og hvordan man eventuelt kan hente ut data.
 
 Parallelt bør man se på hva som finnes av brukerinnsikt og se om det er tilstrekkelig til å tegne opp en drømmereise og eventuelt kvalitetssikre det gjennom intervjuer med foresatte med barn i grunnskolen.
