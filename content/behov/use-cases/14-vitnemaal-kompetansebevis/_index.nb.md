@@ -15,6 +15,8 @@ toc: true
 status: Ny
 
 ---
+***Denne dekkes av case 1***
+
 ## Foreløpig beskrivelse
 
 Dokumentasjon og deling av vitnemål og kompetansebevis.
