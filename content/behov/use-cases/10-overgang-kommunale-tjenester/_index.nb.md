@@ -12,7 +12,7 @@ toc: true
 # ◕ Til QA
 # ⏺ Godkjent
 # ⨂ Avbrutt
-status: Til QA
+status: Tidlig utkast
 
 ---
 ## Beskrivelse av innspill av case til prosjektet SAMT-BU
@@ -32,13 +32,13 @@ Caset grenser opp mot mange liknende case, for eksempel behov for overføring av
 I dag oppleves det at tjenestenes juridiske plikter og brukernes rettigheter kan stå i motsetning til hverandre (eks. lovpålagt plikt til forebygging og tidlig innsats, helhetlig og samordnet oppfølging vs retten til personvern med tilhørende regler for informasjonsdeling). De juridiske bestemmelsene for informasjonsdeling, taushetsplikt og brukers selvstendige «samtykkealder» varierer også mellom tjenestene og oppvekstløpet. Det er et stort behov for mer klarhet og enklere oversikt. Det blir ikke gode praksiser av usikkerhet.
 
 Samtykkebasert informasjonsdeling er en selvsagt og viktig forutsetning for god oppfølging, men mangler i motivasjon, språklig-, kulturell- og digital kompetanse hos brukere kan være til hinder for nødvendige samtykker.\
-Data som danner grunnlag for helhetlig oppfølging ligger i dag i ulike fagsystemer. Det finnes samspilløsninger, for eksempel VISMA Samspill, men det fordrer at kommunen holder seg til VISMA som leverandør av alle fagsystemer.  (Visma samspill: <https://minflyt.no/samhandlingsverktoy> )
+Data som danner grunnlag for helhetlig oppfølging ligger i dag i ulike fagsystemer. Det finnes samspilløsninger, for eksempel VISMA Samspill, men det fordrer at kommunen holder seg til VISMA som leverandør av alle fagsystemer. (Visma samspill: <https://minflyt.no/samhandlingsverktoy> )
 
 En annen utfordring med tverrfaglige samhandlingsverktøy som eksisterer i dag (slik som DIPS samspill, BTI stafettlogg m.fl.) er at tilganger er avgrenset til person (MinID), ikke rolle. Det muliggjør tilgang på tvers av tjeneste/organisasjon, men hindrer ledernes mulighet til å fordele og omfordele, samt godkjenne (funksjoner som f.eks websak har). Leder/rektor har ansvaret for at tiltak og oppgaver tilhørende egen virksomhet følges opp og at lovpålagt tverrfaglig samordning ivaretas. Leder/rektor må derfor ha nødvendige tilganger som gjør det mulig å ha oversikt, fordele, omfordele og godkjenne. Tilgang/tilgangsstyring må ligge til roller, ikke bare personer.
 
 ### Hvor oppstår brudd i informasjonsflyt eller ansvar?
 
-Bruddene skjer i overgangen mellom systemer. Ofte er dette også sammenfallende med overgang mellom aktører (f eks PPT og Skole), men det omfatter også overføringer av informasjon mellom systemer innad hos aktørene  (for eksempel mellom arkivsystem og fagsystem).
+Bruddene skjer i overgangen mellom systemer. Ofte er dette også sammenfallende med overgang mellom aktører (f eks PPT og Skole), men det omfatter også overføringer av informasjon mellom systemer innad hos aktørene (for eksempel mellom arkivsystem og fagsystem).
 
 \
 At data ikke flyter fritt innebærer at det må gjøres mye manuelt arbeid, noe som i tillegg til å være en direkte sløsing med ressurser, også bidrar til at faren for feil øker. I tillegg er det alltid en fare for at viktige opplysninger aldri blir delt, når systemene ikke prater godt sammen.
@@ -61,7 +61,7 @@ Varierende/manglende kompetanse i tjenestene om muligheter og begrensninger for 
 
 ### Innsiktsarbeid
 
-Oslo kommune v/UDE har gjennomført et prosjekt «Helhetlig elevoppfølging/elevflyt (skole–PPT)». Forprosjektet har gjort et omfattende innsiktsarbeid for å belyse hvordan det kan skapes sammenhengende tjenester, overganger og bedre datakvalitet og effektivisering. 
+Oslo kommune v/UDE har gjennomført et prosjekt «Helhetlig elevoppfølging/elevflyt (skole–PPT)». Forprosjektet har gjort et omfattende innsiktsarbeid for å belyse hvordan det kan skapes sammenhengende tjenester, overganger og bedre datakvalitet og effektivisering.
 
 De sier:\
 *Gjennom innsiktsfasen har vi utarbeidet en anbefaling for hva som bør ligge til grunn for en ny digital løsning for å støtte skolens og PPTs felles arbeid med å sikre elevenes tilfredsstillende utbytte av opplæringen.*
