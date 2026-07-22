@@ -1,8 +1,8 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
 id: "8f30b4d8-ddc6-427f-8682-9451db93d72f"
-title: "8. Overganger mellom utdanningsnivåer"
-linkTitle: "8. Overganger utdanningsnivåer"
+title: 8. Overganger mellom utdanningsnivåer
+linkTitle: 8. Overganger utdanningsnivåer
 weight: 150
 toc: true
 # Gyldige statusverdier:
@@ -12,12 +12,11 @@ toc: true
 # ◕ Til QA
 # ⏺ Godkjent
 # ⨂ Avbrutt
-status: "Ny"
+status: Ny
 
 ---
-
+***Denne dekkes delvis av case 2., case 29 og case 30.***
 
 ## Foreløpig beskrivelse
 
-Overganger mellom utdanningsnivåer – fra barnehage til grunnskole, videre til videregående og høyere utdanning.     For eksempel utveksling av elevinformasjon ved skolebytte.
-
+Overganger mellom utdanningsnivåer – fra barnehage til grunnskole, videre til videregående og høyere utdanning. For eksempel utveksling av elevinformasjon ved skolebytte.
