@@ -4,4 +4,6 @@ title: "28. Kommunikasjon og deling av data mellom foreldre, barnehage og helses
 weight: 350
 status: Ny
 ---
+***Denne dekkes delvis av case 11***
+
 Dette ble spilt inn under leverandørdialogen. Trenger utdyping (men dekkes muligens av andre case)
