@@ -1,7 +1,7 @@
 ---
 id: bdc35cb3-9778-4a05-a29a-b3609f817db2
 title: 31. Elevdata i kollektivapper
-weight: 10
+weight: 380
 status: Ny
 # Gyldige verdier: Ny | Tidlig utkast | Pågår | Til QA | Godkjent | Avbrutt
 ---
