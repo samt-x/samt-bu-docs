@@ -12,7 +12,7 @@ toc: true
 # ◕ Til QA
 # ⏺ Godkjent
 # ⨂ Avbrutt
-status: Ny
+status: Tidlig utkast
 
 ---
 ## Beskrivelse av caset
@@ -78,7 +78,7 @@ Det finnes allerede gode løsninger som rent teknisk og funksjonelt dekker behov
 
 SAMT-BUs oppgave vil bli å legge til rette for at kommunikasjonsdataene blir tilgjengelige. I en pilot vil vi derfor måtte kartlegge hvilke løsninger og formater som eksisterer og hvilke avtale- eller regelverksmessige endringer som må til for å «frigjøre» dataene. Det bør også vurderes om data skal gjøre tilgjengelig f eks gjennom Min Kommune eller dataplattformen til KS Digital.
 
-I KSs arbeid med "Tilnærming felles anskaffelse oppvekstadministrativt system", vil krav om samlet kommunikasjon og dialog stå sterkt, uavhengig av leverandør og løsning. SAMT-BU kan bidra her. 
+I KSs arbeid med "Tilnærming felles anskaffelse oppvekstadministrativt system", vil krav om samlet kommunikasjon og dialog stå sterkt, uavhengig av leverandør og løsning. SAMT-BU kan bidra her.
 
 For å initiere utvikling av relevante løsninger tenker vi å se hen til StartOff-programmet. StartOff var et program for innovative anskaffelser, hvor offentlige oppdragsgivere fikk utviklet løsninger på sine behov, gjennom en prosess spesialtilpasset oppstartsselskaper. Programmet er nå avsluttet, men denne innovative anskaffelsesmetodikken kan fortsatt benyttes. (<https://www.anskaffelser.no/innovasjon/startoff>).
 
