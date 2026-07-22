@@ -3,7 +3,7 @@
 id: "6d076c0e-d83d-4590-945b-e8695201138e"
 title: 3. Håndtering av D-nummer og ID-bytte
 linkTitle: 3. Håndtering av Dnr
-weight: 100
+weight: 110
 toc: true
 # Gyldige statusverdier:
 # ◍ Ny
