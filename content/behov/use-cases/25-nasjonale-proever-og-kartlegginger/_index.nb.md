@@ -13,9 +13,9 @@ Caset er spilt inn av Stavanger kommune (Stine Randa, Pedagogisk IKT-rådgiver, 
 
 ### Kort beskrivelse av caset
 
-Når det er gjennomført nasjonale prøver og eventuelt andre frivillige kartlegginger fra UDIR i skolen, er disse tilgjengelige i PAS (den digitale plattformen som brukes for å planlegge, administrere og gjennomføre sentralt gitt eksamen og prøver i grunnskolen og videregående opplæring) i ett år, men så må skolen selv håndtere dem. Dette gjelder også kartlegginger av språk for barn i både barnehage og skole. Etter ett år er ikke dataene lenger tilgjengelige for kommunene, men man er henvist til et marked der det kun finnes en leverandør som leverer noen tjenester. For mange kommuner betyr det at man ikke har tilgang til dataene lenger.
+Når det er gjennomført nasjonale prøver og eventuelt andre frivillige kartlegginger fra UDIR i skolen, er disse tilgjengelige i PAS (Utdanningsdirektoratets digitale plattform som brukes for å planlegge, administrere og gjennomføre sentralt gitt eksamen og prøver i grunnskolen og videregående opplæring - <https://www.udir.no/eksamen-og-prover/prover/>) i ett år, men så må kommunene selv håndtere dem. Dette gjelder også kartlegginger av språk for barn i både barnehage og skole. Etter ett år er ikke dataene lenger tilgjengelige for kommunene, men man er henvist til et marked der det kun finnes én leverandør som leverer noen tjenester. For mange kommuner betyr det at man ikke har tilgang til dataene lenger. 
 
-Dette caset omfatter kommunenes analysebehov og ikke data på individnivå. Det er behandlet i andre case.
+Dette caset omfatter kommunenes og skolenes *analysebehov* og ikke data på individnivå. Det er behandlet i andre case. 
 
 ### Hvilket problem adresserer caset/Hva fungerer dårlig i dag?
 
@@ -38,7 +38,7 @@ Analysene som gjennomføres ved den enkelte kommune av resultater av opplæring 
 
 ### Hvordan kan en ønskesituasjon (drømmereise) se ut?
 
-Det må uansett være et mål i seg selv at kommunen har fri tilgang til egne data, også historiske. Om datasettene frigis og gjøres tilgjengelige kan kommunene selv kjøre analyser, gjerne sammen med andre data kommunen har. Datasettene kan også gjøres tilgjengelig for andre aktører slik at markedet fortsatt kan utvikle ferdige analyser som kan selges til kommuner som ønsker det.
+Det må uansett være et mål i seg selv at kommunen har fri tilgang til egne data og kan laste de ned, også historiske. Om datasettene frigis og gjøres tilgjengelige kan kommunene selv kjøre analyser, gjerne sammen med andre data kommunen har. Datasettene kan også gjøres tilgjengelig for andre aktører slik at markedet fortsatt kan utvikle ferdige analyser som kan selges til kommuner som ønsker det. 
 
 ### Det er gjort følgende innsiktsarbeid
 
@@ -59,8 +59,8 @@ Caset berører:
 
 ### Litt om gjennomføringen
 
-Det er helt avgjørende å få avklart hvorfor data slettes etter ett år. Hvorvidt dette har en juridisk eller en teknisk begrunnelse, er avgjørende for hva en pilot skal arbeide med. En pilot bør derfor starte med å kartlegge dagens situasjon og hvorfor det er slik. Eierskap til data vil være et nøkkelbegrep her.
+Det er helt avgjørende å få avklart hvorfor data slettes etter ett år. Hvorvidt dette har en juridisk eller en teknisk begrunnelse, er avgjørende for hva en pilot skal arbeide med. En pilot bør derfor starte med å kartlegge dagens situasjon og hvorfor det er slik. Eierskap til data vil være et nøkkelbegrep her. 
 
-Fordi det allerede finnes en aktør som har markedsmonopol på sluttbrukerløsninger, er det naturligvis også viktig å få oversikt over hva som leveres, hvilken forretningsmodell de har og i hvilken grad brukerne er fornøyde. Og ikke minst – hvorfor har de monopol?
+Fordi det allerede finnes en aktør som har markedsmonopol på sluttbrukerløsninger, er det naturligvis også viktig å få oversikt over hva som leveres, hvilken forretningsmodell de har og om det er behov som ikke er dekket. Og ikke minst – hvorfor har de monopol? 
 
-Piloten må også se på hvordan rådata skal gjøres tilgjengelig. Er det mulig å gjøre det direkte fra UDIRs løsning, eller er det behov for bearbeiding som gjør det mer relevant å tilby data via f eks KS Digitals dataplattform.
+Piloten må også se på hvordan rådata skal gjøres tilgjengelig. Kan kommunene laste ned egne data? Er det mulig å gjøre det direkte fra UDIRs løsning, eller er det behov for bearbeiding som gjør det mer relevant å tilby data via f eks KS Digitals dataplattform?
