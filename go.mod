@@ -5,10 +5,10 @@ go 1.25.6
 require (
 	github.com/SAMT-X/samt-bu-drafts v0.0.0-20260530211903-337914479d3d // indirect
 	github.com/SAMT-X/samt-bu-market-engagement v0.0.0-20260517212721-bd1ecae97cae // indirect
-	github.com/SAMT-X/samt-bu-pilot-1 v0.0.0-20260428234552-fb8f3a903d17 // indirect
-	github.com/SAMT-X/samt-bu-pilot-2 v0.0.0-20260429113412-121a30a506c6 // indirect
+	github.com/SAMT-X/samt-bu-pilot-1 v0.0.0-20260728194440-041e11eb0a45 // indirect
+	github.com/SAMT-X/samt-bu-pilot-2 v0.0.0-20260728194442-fa2f42da1596 // indirect
 	github.com/SAMT-X/samt-bu-pilot-3 v0.0.0-20260728193204-0de031baecab // indirect
-	github.com/SAMT-X/samt-bu-pilot-4 v0.0.0-20260429113415-99337c536292 // indirect
+	github.com/SAMT-X/samt-bu-pilot-4 v0.0.0-20260728194445-9ec92f90003e // indirect
 	github.com/SAMT-X/solution-samt-bu-docs v0.0.0-20260308200706-ef199a1101e4 // indirect
 	github.com/SAMT-X/team-architecture v0.0.0-20260423145752-c6d715909724 // indirect
 	github.com/SAMT-X/team-semantics v0.0.0-20260423155808-7607ed08de8b // indirect
