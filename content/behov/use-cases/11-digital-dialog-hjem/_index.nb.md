@@ -48,6 +48,10 @@ En forutsetning for god og fruktbar involvering fra hjemmet gjennom utdanningsl�
 
 Det uoversiktlige bildet gjør det også mer komplisert å håndtere den enkelte foresattes krav til å motta informasjon, spesielt når de foresatte ikke bor sammen og kanskje kommuniserer dårlig seg i mellom.
 
+### En egen juridisk utfordring: dialog mellom foreldre
+
+Det meste av regelverket og praksis handler om samarbeidet mellom hjem og skole. En dialogløsning vil imidlertid også bli brukt til samhandling **mellom foreldrene til forskjellige barn** – klassekontakter, dugnader, bursdagsinvitasjoner, foreldregrupper. Ansvaret for denne delen av dialogen er ikke like godt avklart som ansvaret for hjem–skole-samarbeidet, og må vurderes særskilt i en pilot.
+
 ### Hvordan kan en ønskesituasjon (drømmereise) se ut?
 
 Det er ganske åpenbart at for foreldre vil det aller beste være at all kommunikasjon som berører barnet går gjennom en kanal. Løsningen må ha lav brukerterskel og egne seg til å bruke på mobile enheter og må kunne integreres med standard kalender-løsninger.\

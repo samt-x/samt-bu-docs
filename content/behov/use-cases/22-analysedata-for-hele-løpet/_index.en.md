@@ -113,6 +113,12 @@ In an extended solution, equivalent data from kindergarten and primary school co
 
 ![Example of student flow in upper secondary education in Vestland FK](elevflyt-vestland.png)
 
+### The data probably already exists at Statistics Norway
+
+In the workshop where pilots were selected, this case was discussed. Based on Statistics Norway's (SSB) presentation and the conversations during the workshop, the impression is that **most of the data needed to meet the analysis need already exists at SSB**. The challenge is therefore less about collecting new data, and more about making existing data available in a form municipalities can use.
+
+There is a need for a dashboard, but no one delivers this today.
+
 ### Shared municipal data platform – KS Digital / Azure Databricks
 
 KS Digital is working on a shared municipal data platform based on Azure Databricks. Such a platform could give municipalities and county municipalities access to a shared infrastructure for storing, processing and analysing data across services and sectors – without each municipality having to build and operate this independently.
@@ -120,6 +126,12 @@ KS Digital is working on a shared municipal data platform based on Azure Databri
 > **⚠ Note:** The details of KS Digital's specific plans, progress and scope for this platform have not been verified in this document. This section should be updated with references to official sources and clarification of what is planned versus decided.
 
 If such a platform is realised, it would be a natural foundation for this case on analysis data across the full pathway – allowing data from kindergarten, primary school, upper secondary and beyond to be consolidated in a shared infrastructure with common access control and privacy mechanisms.
+
+## Possible pilot
+
+One candidate pilot for this case is to **retrieve data from Statistics Norway (SSB) and present it in a dashboard on KS Digital's data platform**, so that municipalities can analyse data about their own municipality and county municipality. Such a pilot builds on the assumption that the data foundation largely already exists, and shifts the effort towards making it available and presenting it.
+
+**Asker municipality has volunteered** as a candidate municipality for such a pilot.
 
 ## Insight Work
 

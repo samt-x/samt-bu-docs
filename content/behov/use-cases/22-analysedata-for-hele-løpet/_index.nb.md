@@ -110,13 +110,27 @@ Vestland FK har etablert en løsning der data fra blant annet VIGO analyseres og
 
 I en utvidet løsning kan tilsvarende data fra barnehage og grunnskole plasseres til venstre i dette bildet, og eventuell høyere utdanning/jobbstatus til høyre – slik at hele livsløpet er synlig i én sammenhengende analyse.
 
-![Eksempel på elevflyt i videregående utdanning i Vestland FK](elevflyt-vestland.png)### Felles kommunal dataplattform – KS Digital / Azure Databricks
+![Eksempel på elevflyt i videregående utdanning i Vestland FK](elevflyt-vestland.png)
+
+### Dataene finnes trolig allerede hos SSB
+
+I workshopen der piloter ble valgt, ble dette caset diskutert. Ut fra SSBs presentasjon og samtalene underveis er inntrykket at **de fleste dataene som trengs for å møte analysebehovet, allerede finnes hos SSB**. Utfordringen er dermed i mindre grad å samle inn nye data, og i større grad å gjøre eksisterende data tilgjengelige i en form kommunene kan bruke.
+
+Det er behov for et dashboard, men ingen leverer dette i dag.
+
+### Felles kommunal dataplattform – KS Digital / Azure Databricks
 
 KS Digital arbeider med en felles kommunal dataplattform basert på Azure Databricks. En slik plattform vil kunne gi kommuner og fylkeskommuner tilgang til en felles infrastruktur for lagring, prosessering og analyse av data på tvers av tjenester og sektorer – uten at den enkelte kommune må bygge og drifte dette selv.
 
 > **⚠ Merknad:** Detaljene om KS Digitals konkrete planer, fremdrift og omfang for denne plattformen er ikke verifisert i dette dokumentet. Avsnittet bør oppdateres med referanse til offisielle kilder og avklaring av hva som er planlagt vs. besluttet.
 
 Dersom en slik plattform realiseres, vil den være et naturlig fundament for caset om analysedata for hele løpet – ved at data fra barnehage, grunnskole, videregående og videre kan sammenstilles i én felles infrastruktur med felles tilgangsstyring og personvernmekanismer.
+
+## Mulig pilot
+
+En aktuell pilot for dette caset er å **hente data fra SSB og vise dem fram i et dashboard på KS Digitals dataplattform**, slik at kommunene kan analysere data om egen kommune og fylkeskommune. En slik pilot bygger på at datagrunnlaget i hovedsak allerede finnes, og flytter innsatsen over på tilgjengeliggjøring og presentasjon.
+
+**Asker kommune har meldt seg** som aktuell kommune for en slik pilot.
 
 ## Innsiktsarbeid
 

@@ -52,6 +52,10 @@ Utfordringen har stor politisk oppmerksomhet og det jobbes både innenfor forskn
   - BTI-modellen: Bruke modellen "Bedre Tverrfaglig Innsats" for å samordne tjenester som skole, PPT, barnevern og helse.
   - Overganger: Lage trygge rammer rundt overgangen fra barneskole til ungdomsskole og til videregående.
 
+### Andre initiativ caset berører
+
+Det pågår flere initiativ som grenser opp mot dette caset, blant annet arbeidet med et **nasjonalt fraværsregister** og **kjernegruppe for utsatte unge**. En pilot må kartlegge disse og avklare grensesnittene, slik at SAMT-BU ikke dublerer arbeid som allerede er i gang.
+
 ### Hvor oppstår brudd i informasjonsflyt eller ansvar?
 
 En gjennomgående utfordring gjennom hele løpet er manglende tilgang til data for de som skal vurdere og iverksette ulike tiltak. Det er både juridiske og tekniske barrierer som bidrar til at beslutninger tas på for tynt grunnlag og ofte for sent.
@@ -110,6 +114,8 @@ En pilot i SAMT-BU-regi vil derfor i første omgang bære preg av å være et ut
 1. Er det mulig å lage en prediksjonsmodell?
 2. Hvilke data trengs for at den blir treffsikker nok?
 3. Hvilke tekniske og juridiske hindre må eventuelt fjernes for at modellen skal kunne brukes i praksis?
+
+Jussen står sentralt i dette caset, og spørsmålet er ikke bare hvilke hindre som må fjernes. Like viktig er det å undersøke **hvordan dagens regelverk kan utnyttes** – hva er det faktisk mulig å få til innenfor gjeldende rammeverk? Erfaringsmessig er handlingsrommet større enn den utbredte usikkerheten i tjenestene skulle tilsi.
 
 I gjennomføringen bør vi vurdere å samarbeide med KI Norge og AI Learn og/eller AI Decisions, eventuelt andre forskningsmiljøer innenfor kommunesektoren.
 

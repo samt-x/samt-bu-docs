@@ -99,3 +99,5 @@ Det bør derfor gjennomføres en innledende kartleggingsfase med følgende aktiv
 - Kartlegge aktører, løsninger og leverandører
 - Kartlegge regelverk som regulerer forholdet mellom aktørene
 - Velge fokusområde for videre pilot, finne samarbeidspartnere og anslå ressursbehov for neste fase.
+
+Selv om caset er et juridisk minefelt, er det et godt SAMT-BU-case nettopp fordi det er mulig å fokusere på **formatet dataene skal utveksles på** framfor å løse hele det juridiske spørsmålet først. Et konkret spor å undersøke er om **videreutvikling av FIKS-protokollen** kan være en løsning.
