@@ -5,8 +5,7 @@ title: "17. Event-Driven and Automated Reporting"
 linkTitle: "17. Automated Reporting"
 weight: 250
 toc: true
-status: "New"
-
+status: Early draft
 ---
 
 

@@ -12,8 +12,7 @@ toc: true
 # ◕ For QA
 # ⏺ Approved
 # ⨂ Cancelled
-status: "New"
-
+status: In progress
 ---
 
 

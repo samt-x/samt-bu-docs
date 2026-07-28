@@ -5,8 +5,7 @@ title: 2. Seamless Transition from Primary to Upper Secondary Education
 linkTitle: 2. Primary to Upper Secondary
 weight: 100
 toc: true
-status: New
-
+status: For QA
 ---
 
 ## Brief description

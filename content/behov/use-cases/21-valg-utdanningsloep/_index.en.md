@@ -5,7 +5,7 @@ title: "21. Choosing the Next Educational Pathway"
 linkTitle: "21. Choosing the next educational pathway"
 weight: 290
 toc: true
-status: "Early draft"
+status: In progress
 draft: false
 # Valid status values: New | Early draft | In progress | For QA | Approved | Cancelled
 
