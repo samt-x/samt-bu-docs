@@ -1,5 +1,7 @@
 ---
 # id: auto-generated – copied values are overwritten automatically on push
+id: 120f7343-e0ca-4d41-ba6b-310ed580d779
+# id: auto-generated – copied values are overwritten automatically on push
 title: Pilot candidates
 linkTitle: Pilot candidates
 weight: 10

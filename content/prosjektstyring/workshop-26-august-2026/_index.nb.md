@@ -1,5 +1,7 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
+id: 68393da9-3d46-4a92-8cb2-eacb98511ef0
+# id: auto-generert – kopierte verdier overskrives automatisk ved push
 title: Workshop 26. august 2026
 linkTitle: Workshop 26. august 2026
 weight: 30

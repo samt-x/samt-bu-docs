@@ -1,5 +1,7 @@
 ---
 # id: auto-generated – copied values are overwritten automatically on push
+id: 68393da9-3d46-4a92-8cb2-eacb98511ef0
+# id: auto-generated – copied values are overwritten automatically on push
 title: Workshop 26 August 2026
 linkTitle: Workshop 26 August 2026
 weight: 30

@@ -1,5 +1,7 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
+id: 120f7343-e0ca-4d41-ba6b-310ed580d779
+# id: auto-generert – kopierte verdier overskrives automatisk ved push
 title: Pilotkandidater
 linkTitle: Pilotkandidater
 weight: 10

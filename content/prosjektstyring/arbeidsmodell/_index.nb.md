@@ -1,5 +1,7 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
+id: 93229e72-4a63-467c-8171-175d413d1275
+# id: auto-generert – kopierte verdier overskrives automatisk ved push
 title: Arbeidsmodell
 weight: 20
 toc: true
