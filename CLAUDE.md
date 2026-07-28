@@ -34,37 +34,38 @@ CI/CD: GitHub Actions (`.github/workflows/hugo.yml`) bygger og deployer automati
 
 ## Filstruktur – det viktigste
 
+> **Verifisert 2026-07-28 (sesjon 65).** Ved tvil: sjekk repoet, ikke denne listen.
+
 ```
 hugo.toml                          # Hugo-konfigurasjon (baseURL, språk, tema)
 content/                           # Alt innhold (Markdown med YAML frontmatter)
-  om/                              # «Om SAMT-BU» – intro-seksjon (weight 1)
-    om-samt-bu/                    # Om prosjektet SAMT-BU (weight 1)
-    om-dette-nettstedet/           # Om dette nettstedet (weight 2)
-    hvordan-bidra/                 # Hvordan bidra (weight 3) – tre målgrupper: CMS, GitHub, lokal
-  behov/                           # Behov (weight 10)
-    use-cases/                     # 20 nummererte use cases (01–20)
-    annet/                         # Annet (foreløpig)
-  pilotering/                      # Piloter (weight 20)
-    pilot-1/                       # 6 undermapper: overordnet-arkitektur, loesningsarkitektur, informasjonsarkitektur, juss, brukerreiser, annet
-  arkitektur/                      # Arkitektur (weight 30)
-    maalbildet/                    # Målbilde (weight 1)
-    veikart/                       # Veikart (weight 2)
-    informasjonsarkitektur/        # Informasjonsarkitektur (weight 30, tidligere egen toppnivå-seksjon)
-  prosjektleveranser/              # Prosjektleveranser (weight 40)
-    loesninger/                    # Løsninger
-      cms-loesninger/              # CMS-løsninger
-        samt-bu-docs/              # ← montert fra Hugo Module solution-samt-bu-docs
-  rammeverk/                       # Rammeverk (weight 50)
-    metodikk/                      # Metodikk (weight 30)
-    juss/                          # Juss (weight 40)
-    styring/                       # Styring (weight 50)
-    begrepsapparat/                # Begrepsapparat (weight 10)
-    standarder/                    # Standarder (weight 20)
-  innsikt/                         # Felles innsikt – lokal placeholder (weight 70)
-  teams/                           # Teams (weight 80) – lokalt seksjonshode
-    team-architecture/             # ← montert fra Hugo Module team-architecture
-    team-semantics/                # ← montert fra Hugo Module team-semantics
-  utkast/                          # Utkast og innspill (weight 90) – ← montert fra Hugo Module samt-bu-drafts
+  om/                              # Om SAMT-BU (weight 1)
+  hvordan-bidra/                   # Hvordan bidra (weight 5)
+  prosjektstyring/                 # Prosjektstyring (weight 20) – het «administrasjon-og-styring» før sesjon 65
+    beslutningslogg/               # Kronologisk beslutningslogg
+    arbeidsmodell/                 # Case vs. pilot, forenklet behovsformat – erklærer seg foreløpig
+    samlinger/                     # Workshops og arbeidsmøter
+      workshop-26-august-2026/     # Opplegg og datoer
+        pilotkandidater/           # De åtte kandidatene + case 22
+  behov/                           # Behov (weight 30)
+    use-cases/                     # 31 nummererte use cases
+    annet/
+  pilotering/                      # Piloter (weight 40) – kun ingress + Seksjonsinnhold
+    pilot-1/ … pilot-4/            # ← montert fra Hugo Modules samt-bu-pilot-1..4
+  arkitektur/                      # Arkitektur (weight 50)
+    overordnet-arkitektur/         # ← montert fra Hugo Module team-architecture
+    informasjonsarkitektur/        # ← montert fra Hugo Module team-semantics
+    loesningslandskap/
+  prosjektleveranser/              # Prosjektleveranser (weight 60)
+    loesninger/cms-loesninger/samt-bu-docs/   # ← montert fra solution-samt-bu-docs
+    rammeverk/                     # metodikk, juss, styring, standarder, referansearkitekturer
+  ekstern-markedsdialog/           # (weight 75) – ← montert fra samt-bu-market-engagement, ingen lokal mappe
+  innsikt/                         # Kilder til felles innsikt (weight 90)
+    begrepsapparat-og-konsepter/   # ⭐ Eneste hjem for begreper (duplikat under rammeverk/ slettet i sesjon 65)
+    aktuelle-medieoppslag/, eu-relatert/, fou-rapporter/
+  utkast/                          # Utkast og innspill (weight 90) – ← montert fra samt-bu-drafts, ingen lokal mappe
+  hva-skjer/                       # Hva skjer (weight 100) – eksterne arrangementstips
+  test-samt-bu-docs/               # ⚠ Testinnhold, synlig i produksjon – se issue #53
 themes/hugo-theme-samt-bu/         # ⭐ Git submodule – all presentasjonslogikk ligger her
   layouts/partials/
     custom-head.html               # ⭐ HOVEDDELEN – all tilpasset CSS
@@ -75,7 +76,7 @@ themes/hugo-theme-samt-bu/         # ⭐ Git submodule – all presentasjonslogi
     footer-content.html            # Footer-innhold (misjonserklæring)
     custom-footer.html             # JS for tema-switcher, edit-switcher og språkvelger
     tema-switcher.html             # Innhold/Content-dropdown (10 seksjoner)
-    edit-switcher.html             # Endre/Edit-dropdown (deep-link til Decap CMS)
+    edit-switcher.html             # Endre/Edit-dropdown (deep-link til redigering av gjeldende side)
     lang-switcher.html             # Språkvelger (flaggikoner nb/en)
     search.html                    # Søkefelt-integrasjon
     status-symbol.html             # Slår opp statussymbol fra .Params.status
@@ -85,22 +86,29 @@ static/
   images/SAMT-BU-logo.png          # Logo (vises invertert i header)
   images/nb.svg, en.svg            # Flaggikoner for språkvelger
   js/search.js                     # Lunr.js søkeimplementasjon
-  edit/                            # Decap CMS – innholdsredigering
-    index.html                     # Norsk portalside («English →»-lenke i header)
-    en/index.html                  # Engelsk portalside («Norsk →»-lenke i header)
-    docs-nb/, arkitektur-nb/, utkast-nb/     # Norske CMS-portaler (locales: [nb], locale: nb)
-    docs-en/, arkitektur-en/, utkast-en/     # Engelske CMS-portaler (locales: [en])
+  _redirects                       # Cloudflare Pages-redirects – VIRKER (bekreftet sesjon 65)
+  js/tiptap-bundle.js              # Selvhostet TipTap – aldri tilbake til esm.sh
 .github/
-  workflows/hugo.yml               # CI/CD: bygg og deploy til GitHub Pages
-  workflows/ensure-uuids.yml       # ⭐ UUID-workflow: sikrer id-felt i all frontmatter automatisk
-  scripts/ensure-uuids.py          # Python-skript brukt av UUID-workflow
+  workflows/hugo.yml               # CI/CD: bygg og deploy. Kjører også UUID-sikring
+  workflows/gh-pages-redirect.yml
+  scripts/ensure-uuids.py          # Kalles fra hugo.yml (egen ensure-uuids.yml er SLETTET)
   scripts/inject-lastmod.py        # Injiserer lastmod i modulinnhold fra git-historikk (kjøres i CI før hugo)
 cloudflare-worker/
   oauth-worker.js                  # GitHub OAuth-proxy (deployet på Cloudflare Workers)
 i18n/nb.toml, en.toml              # Oversettelser (navSwitcher-etiketter, seksjonstitler, «Sist endret»)
 ```
 
-## Decap CMS – innholdsredigering
+## ⛔ UTDATERT: Decap CMS – innholdsredigering
+
+> **IKKE FØLG DETTE AVSNITTET.** Decap CMS ble fjernet 2026-03-11. Mappen `static/edit/` finnes **ikke** i repoet – ingen av de åtte portalene under eksisterer, og prosedyren «Legge til ny CMS-portal» kan ikke gjennomføres.
+>
+> Redigering skjer nå i nettleseren via TipTap-editoren med GitHub-token (`getStoredToken()` / `doGitHubLogin()`, token i localStorage-nøkkelen `samt-bu-gh-token`). Logikken ligger i `custom-footer.html` i temaet.
+>
+> Avsnittet er beholdt som historikk fordi `edit-switcher.html` fortsatt ruter per repo etter samme mønster – **rutingtabellen nedenfor er altså fortsatt relevant, portalene er det ikke.**
+>
+> Skal skrives om – se [issue #56](https://github.com/SAMT-X/solution-samt-bu-docs/issues/56). Verifiser mot `custom-footer.html` før du dokumenterer den nye flyten.
+
+### Historikk (Decap-tiden)
 
 - **OAuth-proxy:** Cloudflare Worker `https://auth.samt-bu.no`
 - **Header-dropdown («Endre»/«Edit»):** Erstatter gammel statisk knapp. Implementert i `edit-switcher.html`.
@@ -154,8 +162,8 @@ i18n/nb.toml, en.toml              # Oversettelser (navSwitcher-etiketter, seksj
 - Alle seksjoner har `_index.nb.md` og `_index.en.md`
 - Frontmatter-felter: `id` (UUID, delt mellom nb/en), `weight` (sorteringsrekkefølge), `status`, `draft: true` for upublisert innhold
 - **`id`-felt:** UUID v4, samme verdi i `_index.nb.md` og `_index.en.md` for samme side. Aldri endres.
-  Håndteres automatisk av GitHub Actions-workflow (`.github/workflows/ensure-uuids.yml`) i alle tre repoer –
-  aldri sett manuelt. `widget: hidden` i Decap CMS (skjult fra redaktøren).
+  Håndteres automatisk i CI (`hugo.yml` kaller `.github/scripts/ensure-uuids.py`; egen `ensure-uuids.yml` er slettet) –
+  aldri sett manuelt. Skjult for redaktøren i redigeringsgrensesnittet.
 - `editURL` i `hugo.toml` genererer "Rediger på GitHub"-lenker: `https://github.com/SAMT-X/samt-bu-docs/edit/main/content/`
 - **Commit-meldinger skrives på norsk** (se git-historikken for stil)
 
@@ -239,19 +247,19 @@ Dropdown i headeren for å navigere direkte til en av de 10 seksjonene.
 
 - Hugo-oppsett med tema (submodule), tospråklig konfigurasjon, søk
 - 3-kolonne layout med uavhengig scroll
-- Header med logo, tittel, Innhold/Content-dropdown, søk, språkvelger, Endre/Edit-dropdown (deep-link til Decap)
+- Header med logo, tittel, Innhold/Content-dropdown, søk, språkvelger, Endre/Edit-dropdown
 - Scroll-fade, scroll-spy i TOC, collapsible sidebars med localStorage-persistens
 - Barn-liste på seksjonssider (midt- og høyrekolonne)
 - «Om SAMT-BU» som første seksjon med tre underkapitler (Om prosjektet, Om dette nettstedet, Hvordan bidra)
-- 10 seksjoner i flat struktur direkte under `content/`
-- Hugo Module-integrasjon: team-architecture, team-semantics og samt-bu-drafts montert
+- 12 seksjoner i flat struktur direkte under `content/` (10 lokale + `utkast/` og `ekstern-markedsdialog/` fra moduler)
+- Hugo Module-integrasjon: 9 modulrepoer montert (se modultabellen)
 - Nettsted omdøpt til «SAMT-BU Docs», `loesning/` omdøpt til `loesninger/`
 - Ny dokumentasjonsstruktur: `prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/` (teknisk dok. + administrasjonsveiledning)
-- 20 use cases under Behov (inkl. Kommuneforlaget brukstilfelle-analyse)
-- Decap CMS med norsk og engelsk portal, tospråklig redigering bekreftet
-- «Denne siden»/«This page» deep-link i Endre-dropdown for alle sider inkl. modul-sider (teams/team-architecture, utkast)
-- UUID-workflow (`.github/workflows/ensure-uuids.yml`) i alle tre repoer – sikrer id-felt i frontmatter automatisk
-- `widget: hidden` for id-felt i alle 6 Decap-portaler – UUID er usynlig for redaktøren
+- 31 use cases under Behov (inkl. Kommuneforlaget brukstilfelle-analyse)
+- Nettleserbasert redigering (TipTap + GitHub-token) – Decap CMS fjernet 2026-03-11
+- «Denne siden»/«This page» deep-link i Endre-dropdown for alle sider, inkl. modul-sider
+- UUID-sikring kjøres som del av `hugo.yml` i alle modulrepoer – sikrer id-felt i frontmatter automatisk
+- UUID er skjult for redaktøren i redigeringsgrensesnittet
 - «Sist endret»-tidsstempler for modulinnhold via `inject-lastmod.py` + `HUGO_MODULE_REPLACEMENTS` i CI
 - Sidebar-ikon fikset: aktiv seksjon viser sort-down (åpen) i stedet for caret-right (lukket)
 
@@ -266,10 +274,18 @@ Innhold fra eksterne repoer monteres inn via Hugo Module-systemet (`go.mod` + `h
 
 | Modul | Repo | Montert under | Tittel |
 |-------|------|---------------|--------|
-| `github.com/SAMT-X/team-architecture` | [team-architecture](https://github.com/SAMT-X/team-architecture) | `content/teams/team-architecture/` | Team arkitektur |
-| `github.com/SAMT-X/team-semantics` | [team-semantics](https://github.com/SAMT-X/team-semantics) | `content/teams/team-semantics/` | Team semantikk |
-| `github.com/SAMT-X/samt-bu-drafts` | [samt-bu-drafts](https://github.com/SAMT-X/samt-bu-drafts) | `content/utkast/` | Utkast og innspill |
-| `github.com/SAMT-X/solution-samt-bu-docs` | [solution-samt-bu-docs](https://github.com/SAMT-X/solution-samt-bu-docs) | `content/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/` | SAMT-BU Docs (teknisk dok.) |
+*Verifisert mot `hugo.toml` 2026-07-28 (sesjon 65).*
+
+| Modul | Montert under |
+|-------|---------------|
+| `team-architecture` | `content/arkitektur/overordnet-arkitektur/` |
+| `team-semantics` | `content/arkitektur/informasjonsarkitektur/` |
+| `samt-bu-drafts` | `content/utkast/` |
+| `samt-bu-pilot-1` … `samt-bu-pilot-4` | `content/pilotering/pilot-1/` … `pilot-4/` |
+| `solution-samt-bu-docs` | `content/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/` |
+| `samt-bu-market-engagement` | `content/ekstern-markedsdialog/` |
+
+Alle med prefikset `github.com/SAMT-X/`. **`content/teams/` finnes ikke** – team-modulene ble flyttet inn under `arkitektur/`.
 
 **Konfigurert i `hugo.toml`** under `[module] [[module.imports]]` med `source = "content"` og `target = "content/<sti>/"`.
 
