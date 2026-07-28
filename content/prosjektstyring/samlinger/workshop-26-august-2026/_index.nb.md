@@ -8,7 +8,7 @@ weight: 10
 toc: true
 ---
 
-På workshopen 26. august skal det velges nye piloter. Denne siden samler det praktiske opplegget og forberedelsene.
+På workshopen 26. august skal det arbeides med valg av nye piloter. Selve beslutningen tas av prosjektledelsen, med innspill fra workshopen. Denne siden samler det praktiske opplegget og forberedelsene.
 
 > **⚠ Arbeidsutkast per 28. juli 2026.** Innholdet er satt sammen fra materialet til workshopen og er **ikke besluttet**. Sammenstillingen er redaksjonell. Innspill og korreksjoner mottas gjerne.
 

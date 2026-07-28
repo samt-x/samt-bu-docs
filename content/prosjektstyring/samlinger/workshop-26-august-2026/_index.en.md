@@ -8,7 +8,7 @@ weight: 10
 toc: true
 ---
 
-New pilots will be selected at the workshop on 26 August. This page gathers the practical arrangements and the preparations.
+The workshop on 26 August will work on the selection of new pilots. The decision itself is taken by the project management, with input from the workshop. This page gathers the practical arrangements and the preparations.
 
 > **⚠ Working draft as of 28 July 2026.** The content is compiled from the workshop material and has **not been decided**. The compilation is editorial. Input and corrections are welcome.
 
