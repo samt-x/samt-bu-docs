@@ -25,6 +25,9 @@ other = "Needs"
 [pilotering]
 other = "Pilots"
 
+[prosjektstyring]
+other = "Project governance"
+
 [arkitektur]
 other = "Architecture"
 

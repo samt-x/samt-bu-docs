@@ -51,6 +51,12 @@ enableGitInfo = true
   icon = "fa-flask"
 
 [[params.navSwitcher]]
+  id = "prosjektstyring"
+  title = "Prosjektstyring"
+  url = "prosjektstyring/"
+  icon = "fa-gavel"
+
+[[params.navSwitcher]]
   id = "arkitektur"
   title = "Arkitektur"
   url = "arkitektur/"

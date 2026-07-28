@@ -1,1 +1,9 @@
 # Redirects håndteres via Cloudflare Redirect Rules for samt-bu.no
+
+# Seksjonen «Administrasjon og styring» ble omdøpt til «Prosjektstyring» (juli 2026),
+# og skrivefeilen «belutningslogg» ble rettet samtidig.
+# Mest spesifikke regel først – første treff vinner.
+/administrasjon-og-styring/belutningslogg/*     /prosjektstyring/beslutningslogg/:splat     301
+/en/administrasjon-og-styring/belutningslogg/*  /en/prosjektstyring/beslutningslogg/:splat  301
+/administrasjon-og-styring/*                    /prosjektstyring/:splat                     301
+/en/administrasjon-og-styring/*                 /en/prosjektstyring/:splat                  301
