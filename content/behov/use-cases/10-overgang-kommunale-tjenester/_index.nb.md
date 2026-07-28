@@ -74,7 +74,7 @@ De sier:\
 
 *Skoler, foresatte og ulike avdelinger i PPT har medvirket aktivt i arbeidet. Vi har hatt tett dialog for å sikre at løsningen gir en helhetlig og sammenhengende tjeneste. Resultatet er et grunnlag som viser muligheter for å fjerne tidstyver, forbedre styringsdata og styrke kvaliteten i elevens læringsutbytte gjennom tettere og mer sømløst samarbeid. Prosjektets leveranser kan også legge grunnlag for videre arbeid i andre prosjekter. Helhetlig elevoppfølging (skole-PPT) kan brukes både underveis og i etterkant.*
 
-I juni 2026 gjennomførte prosjektet en markedsdialog. Presentasjonen fra dialogen finnes her: [Dialogkonferanse Elevflyt 180626 - presentasjon.pdf](https://digdir.sharepoint.com/:b:/r/sites/Prosjekt_Medfinsknad2025/Delte%20dokumenter/03.%20Prosjektgjennomf%C3%B8ring%20SAMT-BU/Caser/Dialogkonferanse%20Elevflyt%20180626%20-%20presentasjon.pdf?csf=1&web=1&e=gAfSUh)
+I juni 2026 gjennomførte prosjektet en markedsdialog – dialogkonferansen «Elevflyt», 18. juni 2026. Presentasjonen derfra går gjennom behovsbildet, anbefalt retning for en ny digital løsning og innspillene fra leverandørene. Den er foreløpig ikke publisert på dette nettstedet; ta kontakt med prosjektet for tilgang.
 
 Deling av data på tvers av fagsystemer er også et tema i arbeidet som er i gang i KS Digital rundt felles anskaffelse av oppvekstadministrative systemer.
 
