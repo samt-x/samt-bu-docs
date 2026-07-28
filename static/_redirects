@@ -7,3 +7,7 @@
 /en/administrasjon-og-styring/belutningslogg/*  /en/prosjektstyring/beslutningslogg/:splat  301
 /administrasjon-og-styring/*                    /prosjektstyring/:splat                     301
 /en/administrasjon-og-styring/*                 /en/prosjektstyring/:splat                  301
+
+# Workshop-sidene fikk mellomnivået «Samlinger» kort tid etter publisering.
+/prosjektstyring/workshop-26-august-2026/*      /prosjektstyring/samlinger/workshop-26-august-2026/:splat     301
+/en/prosjektstyring/workshop-26-august-2026/*   /en/prosjektstyring/samlinger/workshop-26-august-2026/:splat  301

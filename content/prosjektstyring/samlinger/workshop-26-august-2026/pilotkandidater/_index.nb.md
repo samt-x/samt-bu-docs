@@ -8,7 +8,7 @@ weight: 10
 toc: true
 ---
 
-Åtte kandidater er sendt ut til deltakerne på [workshopen 26. august](https://docs.samt-bu.no/prosjektstyring/workshop-26-august-2026/). Kandidatene er caser fra [behovsoversikten](https://docs.samt-bu.no/behov/use-cases/) – se [Arbeidsmodell](https://docs.samt-bu.no/prosjektstyring/arbeidsmodell/) for skillet mellom case og pilot.
+Åtte kandidater er sendt ut til deltakerne på [workshopen 26. august](https://docs.samt-bu.no/prosjektstyring/samlinger/workshop-26-august-2026/). Kandidatene er caser fra [behovsoversikten](https://docs.samt-bu.no/behov/use-cases/) – se [Arbeidsmodell](https://docs.samt-bu.no/prosjektstyring/arbeidsmodell/) for skillet mellom case og pilot.
 
 > **⚠ Arbeidsutkast per 28. juli 2026.** Oversikten er satt sammen fra workshopmaterialet og er **ikke besluttet**. Særlig koblingen mellom case og pilot må kvalitetssikres.
 

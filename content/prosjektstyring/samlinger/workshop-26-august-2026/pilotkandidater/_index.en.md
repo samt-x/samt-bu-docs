@@ -8,7 +8,7 @@ weight: 10
 toc: true
 ---
 
-Eight candidates have been sent to the participants at the [workshop on 26 August](https://docs.samt-bu.no/en/prosjektstyring/workshop-26-august-2026/). The candidates are cases from the [needs overview](https://docs.samt-bu.no/en/behov/use-cases/) – see [Working model](https://docs.samt-bu.no/en/prosjektstyring/arbeidsmodell/) for the distinction between cases and pilots.
+Eight candidates have been sent to the participants at the [workshop on 26 August](https://docs.samt-bu.no/en/prosjektstyring/samlinger/workshop-26-august-2026/). The candidates are cases from the [needs overview](https://docs.samt-bu.no/en/behov/use-cases/) – see [Working model](https://docs.samt-bu.no/en/prosjektstyring/arbeidsmodell/) for the distinction between cases and pilots.
 
 > **⚠ Working draft as of 28 July 2026.** The overview is compiled from the workshop material and has **not been decided**. The mapping between cases and pilots in particular needs to be quality assured.
 

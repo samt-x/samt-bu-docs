@@ -4,7 +4,7 @@ id: 68393da9-3d46-4a92-8cb2-eacb98511ef0
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
 title: Workshop 26. august 2026
 linkTitle: Workshop 26. august 2026
-weight: 30
+weight: 10
 toc: true
 ---
 
@@ -36,4 +36,4 @@ Det viktigste å få på plass er **hvem som tar lead** på det enkelte caset.
 
 Utvelgelsen legger denne gangen mer vekt på **gjennomførbarhet og partnernes mulighet til å bidra** enn på å finne det «riktige» caset – hovedutfordringen har vært kapasitet til å gjennomføre, ikke mangel på gode behov.
 
-Se [Pilotkandidater](https://docs.samt-bu.no/prosjektstyring/workshop-26-august-2026/pilotkandidater/) for kandidatene som er sendt ut.
+Se [Pilotkandidater](https://docs.samt-bu.no/prosjektstyring/samlinger/workshop-26-august-2026/pilotkandidater/) for kandidatene som er sendt ut.

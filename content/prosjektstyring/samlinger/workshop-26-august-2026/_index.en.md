@@ -4,7 +4,7 @@ id: 68393da9-3d46-4a92-8cb2-eacb98511ef0
 # id: auto-generated – copied values are overwritten automatically on push
 title: Workshop 26 August 2026
 linkTitle: Workshop 26 August 2026
-weight: 30
+weight: 10
 toc: true
 ---
 
@@ -36,4 +36,4 @@ The most important thing to settle is **who will take the lead** on each case.
 
 This time the selection places more weight on **feasibility and the partners' ability to contribute** than on finding the "right" case – the main constraint has been capacity to carry pilots out, not a shortage of good needs.
 
-See [Pilot candidates](https://docs.samt-bu.no/en/prosjektstyring/workshop-26-august-2026/pilotkandidater/) for the candidates that have been sent out.
+See [Pilot candidates](https://docs.samt-bu.no/en/prosjektstyring/samlinger/workshop-26-august-2026/pilotkandidater/) for the candidates that have been sent out.
