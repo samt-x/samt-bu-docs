@@ -1,5 +1,5 @@
 /**
- * Cloudflare Worker – GitHub OAuth-proxy + CF Pages build-status proxy
+ * Cloudflare Worker – GitHub OAuth-proxy, PR-forslag og tilstedeværelse
  *
  * Miljøvariabler som må settes i Cloudflare-dashboardet:
  *   CLIENT_ID     – GitHub App Client ID
@@ -12,7 +12,6 @@
  * Endepunkter:
  *   GET  /auth?provider=github&site_id=...  → redirect til GitHub OAuth
  *   GET  /callback?code=...                 → bytt kode mot token, lukk popup
- *   GET  /build-status?url=<side-url>       → hent samtu-build-tag uten CDN-cache
  *   POST /suggest                           → opprett branch+commit+PR på vegne av ekstern bruker
  *   GET  /presence?page=<sti>              → hent aktive brukere på siden
  *   POST /presence                          → registrer/oppdater tilstedeværelse
@@ -29,13 +28,6 @@ export default {
 
     if (url.pathname === "/callback") {
       return handleCallback(url, env);
-    }
-
-    if (url.pathname === "/build-status") {
-      if (request.method === "OPTIONS") {
-        return new Response(null, { status: 204, headers: buildStatusCors() });
-      }
-      return handleBuildStatus(url);
     }
 
     if (url.pathname === "/suggest") {
@@ -56,46 +48,13 @@ export default {
   },
 };
 
-// --- Build-status proxy (omgår CF CDN-cache ved hjelp av cf.bypassCache) ---
-
-async function handleBuildStatus(url) {
-  const cors = buildStatusCors();
-  const pageUrl = url.searchParams.get("url");
-
-  if (!pageUrl || !pageUrl.startsWith("https://docs.samt-bu.no/")) {
-    return new Response(JSON.stringify({ error: "ugyldig url" }), {
-      status: 400,
-      headers: { "Content-Type": "application/json", ...cors },
-    });
-  }
-
-  try {
-    const resp = await fetch(pageUrl, {
-      cf: { bypassCache: true },
-      headers: { Accept: "text/html" },
-    });
-    const html = await resp.text();
-    const m = html.match(/<meta name="samtu-build" content="([^"]+)"/);
-    const buildTag = m ? m[1] : null;
-    return new Response(JSON.stringify({ buildTag }), {
-      headers: { "Content-Type": "application/json", ...cors },
-    });
-  } catch (e) {
-    return new Response(JSON.stringify({ error: e.message }), {
-      status: 500,
-      headers: { "Content-Type": "application/json", ...cors },
-    });
-  }
-}
-
-function buildStatusCors() {
-  return {
-    "Access-Control-Allow-Origin": "https://docs.samt-bu.no",
-    "Access-Control-Allow-Methods": "GET, OPTIONS",
-    "Access-Control-Max-Age": "86400",
-    "Cache-Control": "no-store",
-  };
-}
+/* Fjernet 2026-08-01: /build-status og handleBuildStatus.
+   Endepunktet leste en <meta name="samtu-build">-tag ut av sidekilden for å
+   oppdage ferdige bygg uten CDN-cache. Metataggen ble innført i 86e06b8 og tatt
+   i bruk her i 019367a, men hele tilnærmingen ble reversert i 3ba0c6b til fordel
+   for ETag-polling + startGhPoll. Taggen har ikke vært emittert siden, så
+   endepunktet returnerte alltid {"buildTag":null}, og ingen klientkode kalte det.
+   Gjenopprett fra git-historikken hvis CDN-cache-omgåelse trengs igjen. */
 
 // --- GitHub OAuth ---
 
