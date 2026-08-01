@@ -47,7 +47,10 @@ try:
 except ImportError:
     pass
 
-BASE_URL    = os.environ.get("SAMTU_BASE_URL", "https://samt-bu-docs.pages.dev")
+# SAMTU_BASE_URL er det gamle navnet – leses fortsatt så eksisterende .env virker
+BASE_URL    = (os.environ.get("SAMTBU_BASE_URL")
+               or os.environ.get("SAMTU_BASE_URL")
+               or "https://samt-bu-docs.pages.dev")
 GH_TOKEN    = os.environ.get("GITHUB_TOKEN", "")
 GH_USER     = os.environ.get("GITHUB_USER", "")
 TEST_PAGE   = os.environ.get("TEST_PAGE",   "/test-samt-bu-docs/test-1/")
@@ -260,7 +263,7 @@ async def inject_credentials(page: Page):
     print(f"  🔑 Token injisert for bruker: {GH_USER or '(ikke satt)'}")
 
 async def get_pending_state(page: Page) -> dict:
-    raw = await page.evaluate("localStorage.getItem('samtu-build-pending')")
+    raw = await page.evaluate("localStorage.getItem('samt-bu-build-pending')")
     if not raw:
         return {}
     try:

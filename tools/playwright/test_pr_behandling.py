@@ -61,7 +61,7 @@ try:
 except ImportError:
     pass
 
-# Egen variabel, ikke SAMTU_BASE_URL: den peker i .env på samt-bu-docs.pages.dev,
+# Egen variabel, ikke SAMTBU_BASE_URL/SAMTU_BASE_URL: den peker i .env på samt-bu-docs.pages.dev,
 # som er det gamle Direct Upload-prosjektet og ikke lenger blir bygget av CI.
 # Denne testen må kjøre mot produksjonsnettstedet CI faktisk deployer til.
 BASE_URL    = os.environ.get("PR_TEST_BASE_URL", "https://docs.samt-bu.no")
@@ -148,8 +148,8 @@ async def main():
 
         # Finnes elementet i det hele tatt? Hvis ikke, kjører vi mot et nettsted
         # uten funksjonen – nesten alltid feil BASE_URL, ikke en ekte feil.
-        if not await page.query_selector("#samtu-admin-group"):
-            print(f"\n  ⚠ Fant ikke #samtu-admin-group i DOM-en på {BASE_URL}.")
+        if not await page.query_selector("#samt-bu-admin-group"):
+            print(f"\n  ⚠ Fant ikke #samt-bu-admin-group i DOM-en på {BASE_URL}.")
             print("    Nettstedet har ikke funksjonen. Sjekk PR_TEST_BASE_URL –")
             print("    samt-bu-docs.pages.dev er det gamle prosjektet og bygges ikke lenger.")
             await browser.close()
@@ -160,7 +160,7 @@ async def main():
         # så den er per definisjon usynlig helt til menyen åpnes.
         async def group_enabled():
             d = await page.eval_on_selector(
-                "#samtu-admin-group", "el => el.style.display")
+                "#samt-bu-admin-group", "el => el.style.display")
             return d == "block"
 
         check("Rettighetssjekken slår på admin-gruppen",
@@ -171,16 +171,16 @@ async def main():
         await page.wait_for_timeout(400)
 
         check("Admin-gruppen «Prosjekt» vises i åpen meny",
-              await page.is_visible("#samtu-admin-group"))
+              await page.is_visible("#samt-bu-admin-group"))
         check("Menyvalget «Behandle forslag» vises",
-              await page.is_visible("#samtu-admin-prs"))
+              await page.is_visible("#samt-bu-admin-prs"))
 
-        # Telleren fylles av samtuPrList() – ti parallelle kall, kan ta et par
+        # Telleren fylles av samtbuPrList() – ti parallelle kall, kan ta et par
         # sekunder ved kald start. Parentesen skal mangle når det er null forslag.
         label_base = "Handle suggestions" if "/en/" in TEST_PAGE else "Behandle forslag"
 
         async def label_ready():
-            t = await page.text_content("#samtu-admin-prs-label")
+            t = await page.text_content("#samt-bu-admin-prs-label")
             return t if (t and t.strip().startswith(label_base)) else None
 
         label = ((await wait_for(page, label_ready)) or "").strip()
@@ -197,7 +197,7 @@ async def main():
 
         # -------------------------------------------------------------------
         print("\n=== 2. Dialogen ===")
-        await page.click("#samtu-admin-prs a")
+        await page.click("#samt-bu-admin-prs a")
         opened = await wait_for(page, lambda: page.is_visible("#pr-overlay"))
         check("Dialogen åpnes", opened)
 
