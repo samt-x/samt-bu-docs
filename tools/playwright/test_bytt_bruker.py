@@ -209,12 +209,30 @@ async def main():
             check("Forklarer at neste innlogging bruker samme konto",
                   ("samme GitHub-konto" in txt) or ("same GitHub account" in txt),
                   txt[:60] + "…")
-            check("Peker på «Bytt bruker» for kontobytte",
-                  ("Bytt bruker" in txt) or ("Switch user" in txt))
+            check("Peker på pilen ved «Logg inn» for kontobytte",
+                  ("pilen ved" in txt) or ("arrow next to" in txt))
             check("Tilbyr lenke til github.com/logout",
                   (await page.get_attribute("#samt-bu-logout-notice a", "href"))
                   == "https://github.com/logout")
         await page.screenshot(path=str(SCREENSHOTS / "3-utlogging.png"))
+
+        print("\n=== 6. Utlogget: «Logg inn som …» via pilen ===")
+        # «Bytt bruker» finnes bare i avatar-menyen (krever innlogging). Pilen ved
+        # «Logg inn» er den ENESTE veien til kontovalg fra utlogget tilstand.
+        check("Pilen ved «Logg inn» vises når man er utlogget",
+              await page.is_visible("#samt-bu-login-caret"))
+        await page.click("#samt-bu-login-caret")
+        await page.wait_for_timeout(300)
+        check("Skjemaet «Logg inn som» åpnes", await page.is_visible("#samt-bu-login-menu"))
+
+        popup_url["v"] = None          # popup-lytteren fra steg 4 er fortsatt aktiv
+        await page.fill("#samt-bu-login-input", TARGET_USER)
+        await page.click("#samt-bu-login-go")
+        await page.wait_for_timeout(3000)
+        u2 = popup_url["v"] or ""
+        check("Innlogging fra utlogget tilstand sender login=<brukernavn>",
+              ("login=" + TARGET_USER) in u2, u2[:90])
+        await page.screenshot(path=str(SCREENSHOTS / "4-logg-inn-som.png"))
 
         await browser.close()
 
