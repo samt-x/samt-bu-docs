@@ -15,6 +15,7 @@ Test D. Sikrer at kontobytte faktisk ber GitHub om en ANNEN konto:
   4. Gyldig brukernavn sender login=<navn> på authorize-URL-en
   5. GitHub svarer med å sende brukeren til innloggingsskjemaet
   6. force=true brukes ikke når brukernavn er oppgitt
+  7. Utlogging forklarer at GitHub-sesjonen består, med lenke til github.com/logout
 
 Bakgrunn: a38f7fb fjernet inputfeltet i troen på at GitHubs egen kontobytter
 holdt. Det gjør den ikke – med aktiv github.com-sesjon og godkjent app får du
@@ -33,6 +34,7 @@ Kjøring:
 import asyncio
 import os
 import json
+import time
 from datetime import datetime
 from pathlib import Path
 from playwright.async_api import async_playwright
@@ -98,7 +100,11 @@ async def main():
                 'https://avatars.githubusercontent.com/u/1?v=4');
         """)
 
-        await page.goto(BASE_URL + TEST_PAGE, wait_until="domcontentloaded")
+        # Unik cache-buster: CDN-en henger etter en deploy i et par minutter, og
+        # en gjenbrukt ?cb-verdi serverer den gamle siden på nytt. Det ser ut som
+        # en ekte feil og har lurt oss flere ganger.
+        await page.goto(BASE_URL + TEST_PAGE + "?cb=" + str(int(time.time())),
+                        wait_until="domcontentloaded")
         await page.wait_for_timeout(2000)
 
         if not await page.query_selector("#samt-bu-switch-form-row"):
@@ -160,6 +166,38 @@ async def main():
               "github.com/login?" in u,
               "GitHub omdirigerte selv dit – dette er hele poenget")
         check("force=true brukes ikke når brukernavn er oppgitt", "force=true" not in u)
+
+        print("\n=== 5. Utlogging forklarer GitHub-sesjonen ===")
+        # «Bytt bruker» logger allerede ut lokalt før popup-en åpnes, så avataren
+        # er borte nå. Last siden på nytt – init-skriptet setter tokenet tilbake –
+        # slik at vi tester utloggingen fra en ekte innlogget tilstand.
+        await page.goto(BASE_URL + TEST_PAGE + "?cb=" + str(int(time.time())),
+                        wait_until="domcontentloaded")
+        await page.wait_for_timeout(2000)
+        check("Innlogget tilstand gjenopprettet før utloggingstesten",
+              await page.is_visible("#samt-bu-user-avatar"))
+
+        await page.click("#samt-bu-user-avatar")
+        await page.wait_for_timeout(250)
+        await page.click("#samt-bu-logout-btn")
+        await page.wait_for_timeout(700)
+
+        check("Tokenet er fjernet",
+              (await page.evaluate("localStorage.getItem('samt-bu-gh-token')")) is None)
+        check("«Logg inn»-knappen er tilbake", await page.is_visible("#samt-bu-login-btn"))
+        # Uten denne meldingen ser utloggingen ut som en feil: neste innlogging
+        # gir samme konto, fordi GitHub-sesjonen består.
+        shown = check("Melding vises etter utlogging",
+                      await page.is_visible("#samt-bu-logout-notice"))
+        if shown:
+            txt = ((await page.text_content("#samt-bu-logout-notice")) or "").strip()
+            check("Forklarer at GitHub-sesjonen består",
+                  ("fortsatt innlogget p" in txt) or ("still signed in to GitHub" in txt),
+                  txt[:60] + "…")
+            check("Tilbyr lenke til github.com/logout",
+                  (await page.get_attribute("#samt-bu-logout-notice a", "href"))
+                  == "https://github.com/logout")
+        await page.screenshot(path=str(SCREENSHOTS / "3-utlogging.png"))
 
         await browser.close()
 
