@@ -184,14 +184,18 @@ async def main():
             return t if (t and t.strip().startswith(label_base)) else None
 
         label = ((await wait_for(page, label_ready)) or "").strip()
-        menu_count = None
-        if "(" in label:
-            try:
-                menu_count = int(label.split("(")[1].split(")")[0])
-            except ValueError:
-                pass
         check("Etiketten er korrekt", label.startswith(label_base),
               f"etikett = «{label}»")
+
+        async def menu_count():
+            """Tallet i parentes, eller None hvis parentesen ikke er der (ennå)."""
+            t = ((await page.text_content("#samt-bu-admin-prs-label")) or "").strip()
+            if "(" not in t:
+                return None
+            try:
+                return int(t.split("(")[1].split(")")[0])
+            except (ValueError, IndexError):
+                return None
 
         await page.screenshot(path=str(SCREENSHOTS / "1-meny.png"))
 
@@ -213,13 +217,22 @@ async def main():
         rows = await page.query_selector_all(".pr-row")
         print(f"  ({len(rows)} forslag i lista)")
 
-        # Krysspeiling: tallet i menyen skal stemme med antall rader
-        if menu_count is None:
-            check("Teller i menyen stemmer med lista", len(rows) == 0,
-                  "ingen parentes i etiketten – forventer tom liste")
+        # Krysspeiling: tallet i menyen skal stemme med antall rader.
+        # Telleren og lista hentes uavhengig av hverandre, så les etiketten på
+        # NYTT her – i steg 1 kan den ha vært lest før tallet rakk å komme.
+        expected = len(rows) if len(rows) else None
+
+        async def count_matches():
+            return (await menu_count()) == expected
+
+        await wait_for(page, count_matches, timeout=10000)
+        found = await menu_count()
+        if expected is None:
+            check("Teller i menyen stemmer med lista", found is None,
+                  "tom liste – etiketten skal være uten parentes")
         else:
-            check("Teller i menyen stemmer med lista", menu_count == len(rows),
-                  f"meny={menu_count}, liste={len(rows)}")
+            check("Teller i menyen stemmer med lista", found == expected,
+                  f"meny={found}, liste={len(rows)}")
 
         repos = await page.eval_on_selector_all(
             ".pr-repo", "els => els.map(e => e.textContent)")
