@@ -6,22 +6,19 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 Playwright E2E-test: Bytt bruker (avatar-menyen)
 =================================================
 
-Test D. Sikrer at kontobytte faktisk ber GitHub om en ANNEN konto:
+Test D. Sikrer at kontobytte gir GitHubs egen kontovelger:
 
   1. Avatar-menyen åpnes
-  2. Brukernavnskjemaet er skjult til «Bytt bruker» klikkes
-  3. Ugyldig brukernavn avvises med synlig melding
-     (fanger regresjon av line-height:0-arven fra #samt-bu-avatar-wrap)
-  4. Gyldig brukernavn sender login=<navn> på authorize-URL-en
-  5. GitHub svarer med å sende brukeren til innloggingsskjemaet
-  6. force=true brukes ikke når brukernavn er oppgitt
-  7. Utlogging kaller /revoke (trekker tilbake godkjenningen = ekte utlogging)
+  2. «Bytt bruker» logger ut lokalt og sender prompt=select_account
+     (GitHubs nøytrale kontovelger – ingen skriving av brukernavn)
+  3. Utlogging kaller /revoke (ugyldiggjør tokenet = ekte utlogging)
      og viser melding med lenke til github.com/logout
+  4. Pilen ved «Logg inn» gir kontovelgeren også fra UTLOGGET tilstand
 
-Bakgrunn: a38f7fb fjernet inputfeltet i troen på at GitHubs egen kontobytter
-holdt. Det gjør den ikke – med aktiv github.com-sesjon og godkjent app får du
-samme bruker tilbake. login=<brukernavn> er den dokumenterte måten å be om en
-bestemt konto. Denne testen finnes for at den ikke skal forsvinne igjen.
+Bakgrunn: GitHub bytter aldri konto av seg selv med aktiv sesjon, og
+login=<navn> ga bare et «suggested»-banner med feil konto som standard.
+prompt=select_account er GitHubs dokumenterte kontovelger. Testen finnes
+for at mekanismen ikke skal forsvinne igjen (det skjedde i a38f7fb).
 
 TRYGG Å KJØRE: testen fullfører aldri en innlogging, og /revoke-kallet fanges
 opp lokalt (page.route) i stedet for å slippes ut – ingenting trekkes tilbake
@@ -54,9 +51,6 @@ GH_USER   = os.environ.get("GITHUB_USER", "")
 TEST_PAGE = os.environ.get("TEST_PAGE", "/test-samt-bu-docs/test-1/")
 HEADLESS  = os.environ.get("HEADLESS", "false").lower() == "true"
 
-# Navnet trenger ikke finnes på GitHub – vi fullfører aldri innloggingen.
-TARGET_USER = os.environ.get("SWITCH_TO_USER", "testbruker-uten-tilgang")
-
 SCREENSHOTS = Path(__file__).parent / "screenshots" / (
     "bytt-bruker_" + datetime.now().strftime("%Y%m%d_%H%M%S"))
 
@@ -84,7 +78,6 @@ async def main():
     SCREENSHOTS.mkdir(parents=True, exist_ok=True)
     print(f"\nNettsted   : {BASE_URL}")
     print(f"Bruker     : {GH_USER}")
-    print(f"Bytter til : {TARGET_USER}  (innloggingen fullføres aldri)")
     print()
 
     async with async_playwright() as pw:
@@ -108,8 +101,8 @@ async def main():
                         wait_until="domcontentloaded")
         await page.wait_for_timeout(2000)
 
-        if not await page.query_selector("#samt-bu-switch-form-row"):
-            print(f"  ⚠ Fant ikke #samt-bu-switch-form-row på {BASE_URL}.")
+        if not await page.query_selector("#samt-bu-login-caret"):
+            print(f"  ⚠ Fant ikke #samt-bu-login-caret på {BASE_URL}.")
             print("    Nettstedet mangler funksjonen – sjekk PR_TEST_BASE_URL,")
             print("    eller vent litt: CDN-en henger etter en deploy i et par minutter.")
             await browser.close()
@@ -119,29 +112,10 @@ async def main():
         await page.click("#samt-bu-user-avatar")
         await page.wait_for_timeout(300)
         check("Avatar-menyen åpnes", await page.is_visible("#samt-bu-avatar-menu"))
-        check("Skjemaet er skjult i utgangspunktet",
-              not await page.is_visible("#samt-bu-switch-form-row"))
+        check("«Bytt bruker» finnes i menyen",
+              await page.is_visible("#samt-bu-switch-row"))
 
-        print("\n=== 2. «Bytt bruker» åpner skjemaet ===")
-        await page.click("#samt-bu-switch-btn")
-        await page.wait_for_timeout(300)
-        check("Brukernavnfeltet vises", await page.is_visible("#samt-bu-switch-form-row"))
-        check("Lenken skjules mens skjemaet er åpent",
-              not await page.is_visible("#samt-bu-switch-row"))
-        await page.screenshot(path=str(SCREENSHOTS / "1-skjema.png"))
-
-        print("\n=== 3. Validering ===")
-        await page.fill("#samt-bu-switch-input", "ikke gyldig!!")
-        await page.click("#samt-bu-switch-confirm")
-        await page.wait_for_timeout(300)
-        # is_visible fanger line-height:0-regresjonen: teksten finnes, men
-        # elementet får null høyde og er reelt sett usynlig for brukeren.
-        check("Ugyldig brukernavn avvises synlig",
-              await page.is_visible("#samt-bu-switch-msg"),
-              ((await page.text_content("#samt-bu-switch-msg")) or "").strip())
-        await page.screenshot(path=str(SCREENSHOTS / "2-validering.png"))
-
-        print("\n=== 4. Gyldig brukernavn → authorize-URL ===")
+        print("\n=== 2. «Bytt bruker» → GitHubs kontovelger ===")
         popup_url = {"v": None}
 
         async def on_popup(pg):
@@ -153,22 +127,29 @@ async def main():
 
         page.on("popup", lambda pg: asyncio.create_task(on_popup(pg)))
 
-        await page.fill("#samt-bu-switch-input", TARGET_USER)
-        await page.click("#samt-bu-switch-confirm")
+        # «Bytt bruker» logger ut lokalt (inkl. /revoke) FØR popup-en åpnes –
+        # fang revoke-kallet nå, så ingenting trekkes tilbake på ekte.
+        revoke_req = {"body": None}
+
+        async def handle_revoke(route):
+            revoke_req["body"] = route.request.post_data
+            await route.fulfill(status=200, content_type="application/json",
+                                body='{"revoked":true}')
+
+        await page.route("**/revoke", handle_revoke)
+
+        await page.click("#samt-bu-switch-btn")
         await page.wait_for_timeout(3000)
 
         u = popup_url["v"] or ""
-        # Workeren svarer 302, så popup-en rekker som regel videre til GitHub
-        # før vi leser URL-en. Begge stasjonene er riktige.
-        check("Popup går til worker eller videre til GitHub",
-              ("auth.samt-bu.no/auth" in u) or ("github.com/login" in u), u[:95])
-        check("login=<brukernavn> er med", ("login=" + TARGET_USER) in u)
-        check("GitHub sender til innloggingsskjema for kontoen",
-              "github.com/login?" in u,
-              "GitHub omdirigerte selv dit – dette er hele poenget")
-        check("force=true brukes ikke når brukernavn er oppgitt", "force=true" not in u)
+        # Popup fanges enten hos workeren (select=true) eller etter redirect
+        # videre til GitHub (prompt=select_account) – begge beviser mekanismen.
+        check("Kontovelgeren etterspørres (select_account)",
+              ("select_account" in u) or ("select=true" in u), u[:95])
+        check("Ingen login=-forslag (nøytral velger)", "login=" not in u)
+        await page.screenshot(path=str(SCREENSHOTS / "1-bytt-bruker.png"))
 
-        print("\n=== 5. Utlogging: revoke-kall + melding ===")
+        print("\n=== 3. Utlogging: revoke-kall + melding ===")
         # «Bytt bruker» logger allerede ut lokalt før popup-en åpnes, så avataren
         # er borte nå. Last siden på nytt – init-skriptet setter tokenet tilbake –
         # slik at vi tester utloggingen fra en ekte innlogget tilstand.
@@ -178,17 +159,7 @@ async def main():
         check("Innlogget tilstand gjenopprettet før utloggingstesten",
               await page.is_visible("#samt-bu-user-avatar"))
 
-        # Fang opp /revoke lokalt i stedet for å slippe det ut på nettet.
-        # Utlogging trekker nå tilbake godkjenningen hos GitHub PÅ EKTE – en test
-        # skal bevise at kallet fyres med token, ikke faktisk drepe et token.
-        revoke_req = {"body": None}
-
-        async def handle_revoke(route):
-            revoke_req["body"] = route.request.post_data
-            await route.fulfill(status=200, content_type="application/json",
-                                body='{"revoked":true}')
-
-        await page.route("**/revoke", handle_revoke)
+        revoke_req["body"] = None   # ruten fra steg 2 er fortsatt aktiv
 
         await page.click("#samt-bu-user-avatar")
         await page.wait_for_timeout(250)
@@ -216,23 +187,19 @@ async def main():
                   == "https://github.com/logout")
         await page.screenshot(path=str(SCREENSHOTS / "3-utlogging.png"))
 
-        print("\n=== 6. Utlogget: «Logg inn som …» via pilen ===")
-        # «Bytt bruker» finnes bare i avatar-menyen (krever innlogging). Pilen ved
-        # «Logg inn» er den ENESTE veien til kontovalg fra utlogget tilstand.
+        print("\n=== 4. Utlogget: kontovelger via pilen ved «Logg inn» ===")
+        # «Bytt bruker» finnes bare i avatar-menyen (krever innlogging). Pilen er
+        # den ENESTE veien til kontovalg fra utlogget tilstand.
         check("Pilen ved «Logg inn» vises når man er utlogget",
               await page.is_visible("#samt-bu-login-caret"))
-        await page.click("#samt-bu-login-caret")
-        await page.wait_for_timeout(300)
-        check("Skjemaet «Logg inn som» åpnes", await page.is_visible("#samt-bu-login-menu"))
 
-        popup_url["v"] = None          # popup-lytteren fra steg 4 er fortsatt aktiv
-        await page.fill("#samt-bu-login-input", TARGET_USER)
-        await page.click("#samt-bu-login-go")
+        popup_url["v"] = None          # popup-lytteren fra steg 2 er fortsatt aktiv
+        await page.click("#samt-bu-login-caret")
         await page.wait_for_timeout(3000)
         u2 = popup_url["v"] or ""
-        check("Innlogging fra utlogget tilstand sender login=<brukernavn>",
-              ("login=" + TARGET_USER) in u2, u2[:90])
-        await page.screenshot(path=str(SCREENSHOTS / "4-logg-inn-som.png"))
+        check("Pilen gir kontovelgeren (select_account)",
+              ("select_account" in u2) or ("select=true" in u2), u2[:95])
+        await page.screenshot(path=str(SCREENSHOTS / "4-kontovelger.png"))
 
         await browser.close()
 

@@ -76,7 +76,14 @@ function handleAuth(url, env) {
   githubUrl.searchParams.set("client_id", env.CLIENT_ID);
   githubUrl.searchParams.set("state", url.searchParams.get("site_id") ?? "");
 
-  // login=<brukernavn>: tvinger GitHub til å vise innloggingsskjema for den angitte brukeren
+  // select=true → prompt=select_account: GitHubs egen kontovelger. Foretrukket
+  // for kontobytte – login=<navn> ga bare et «suggested»-banner med den aktive
+  // sesjonen som standard, som opplevdes som at valget ble ignorert (2026-08-01).
+  if (url.searchParams.get("select") === "true") {
+    githubUrl.searchParams.set("prompt", "select_account");
+  }
+
+  // login=<brukernavn>: foreslår en bestemt konto (beholdt for ev. senere bruk)
   const loginHint = url.searchParams.get("login");
   if (loginHint) githubUrl.searchParams.set("login", loginHint);
 
