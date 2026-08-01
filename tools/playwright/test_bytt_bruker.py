@@ -11,8 +11,9 @@ Test D. Sikrer at kontobytte gir GitHubs egen kontovelger:
   1. Avatar-menyen åpnes
   2. «Bytt bruker» logger ut lokalt og sender prompt=select_account
      (GitHubs nøytrale kontovelger – ingen skriving av brukernavn)
-  3. Utlogging kaller /revoke (ugyldiggjør tokenet = ekte utlogging)
-     og viser melding med lenke til github.com/logout
+  3. Utlogging er KUN lokal (ingen /revoke – GitHub Apps mister hele
+     godkjenningen ved revokering, som tvinger frem Authorize-skjermen
+     ved hver innlogging) og viser melding med lenke til github.com/logout
   4. Pilen ved «Logg inn» gir kontovelgeren også fra UTLOGGET tilstand
 
 Bakgrunn: GitHub bytter aldri konto av seg selv med aktiv sesjon, og
@@ -127,8 +128,8 @@ async def main():
 
         page.on("popup", lambda pg: asyncio.create_task(on_popup(pg)))
 
-        # «Bytt bruker» logger ut lokalt (inkl. /revoke) FØR popup-en åpnes –
-        # fang revoke-kallet nå, så ingenting trekkes tilbake på ekte.
+        # Sikkerhetsnett: skulle /revoke noen gang gjeninnføres i utloggingen,
+        # fanges kallet her i stedet for å slippes ut – og steg 3 slår alarm.
         revoke_req = {"body": None}
 
         async def handle_revoke(route):
@@ -169,9 +170,11 @@ async def main():
         check("Tokenet er fjernet lokalt",
               (await page.evaluate("localStorage.getItem('samt-bu-gh-token')")) is None)
         check("«Logg inn»-knappen er tilbake", await page.is_visible("#samt-bu-login-btn"))
-        check("/revoke kalles med tokenet",
-              bool(revoke_req["body"]) and "userToken" in (revoke_req["body"] or ""),
-              "godkjenningen trekkes tilbake hos GitHub – ekte utlogging")
+        # GitHub Apps: revokering ⇒ Authorize-skjerm ved hver innlogging
+        # (empirisk verifisert 2026-08-01). Utlogging skal derfor være KUN lokal.
+        check("/revoke kalles IKKE (lokal utlogging)",
+              revoke_req["body"] is None,
+              "revokering ville tvunget frem Authorize-skjermen hver gang")
 
         shown = check("Melding vises etter utlogging",
                       await page.is_visible("#samt-bu-logout-notice"))
