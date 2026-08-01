@@ -14,7 +14,6 @@ Test D. Sikrer at kontobytte gir GitHubs egen kontovelger:
   3. Utlogging er KUN lokal (ingen /revoke – GitHub Apps mister hele
      godkjenningen ved revokering, som tvinger frem Authorize-skjermen
      ved hver innlogging) og viser melding med lenke til github.com/logout
-  4. Pilen ved «Logg inn» gir kontovelgeren også fra UTLOGGET tilstand
 
 Bakgrunn: GitHub bytter aldri konto av seg selv med aktiv sesjon, og
 login=<navn> ga bare et «suggested»-banner med feil konto som standard.
@@ -102,8 +101,8 @@ async def main():
                         wait_until="domcontentloaded")
         await page.wait_for_timeout(2000)
 
-        if not await page.query_selector("#samt-bu-login-caret"):
-            print(f"  ⚠ Fant ikke #samt-bu-login-caret på {BASE_URL}.")
+        if not await page.query_selector("#samt-bu-switch-btn"):
+            print(f"  ⚠ Fant ikke #samt-bu-switch-btn på {BASE_URL}.")
             print("    Nettstedet mangler funksjonen – sjekk PR_TEST_BASE_URL,")
             print("    eller vent litt: CDN-en henger etter en deploy i et par minutter.")
             await browser.close()
@@ -183,26 +182,12 @@ async def main():
             check("Forklarer at neste innlogging bruker samme konto",
                   ("samme GitHub-konto" in txt) or ("same GitHub account" in txt),
                   txt[:60] + "…")
-            check("Peker på pilen ved «Logg inn» for kontobytte",
-                  ("pilen ved" in txt) or ("arrow next to" in txt))
+            check("Peker på GitHub-utlogging for kontobytte",
+                  ("logg ut av GitHub" in txt) or ("sign out of GitHub" in txt))
             check("Tilbyr lenke til github.com/logout",
                   (await page.get_attribute("#samt-bu-logout-notice a", "href"))
                   == "https://github.com/logout")
         await page.screenshot(path=str(SCREENSHOTS / "3-utlogging.png"))
-
-        print("\n=== 4. Utlogget: kontovelger via pilen ved «Logg inn» ===")
-        # «Bytt bruker» finnes bare i avatar-menyen (krever innlogging). Pilen er
-        # den ENESTE veien til kontovalg fra utlogget tilstand.
-        check("Pilen ved «Logg inn» vises når man er utlogget",
-              await page.is_visible("#samt-bu-login-caret"))
-
-        popup_url["v"] = None          # popup-lytteren fra steg 2 er fortsatt aktiv
-        await page.click("#samt-bu-login-caret")
-        await page.wait_for_timeout(3000)
-        u2 = popup_url["v"] or ""
-        check("Pilen gir kontovelgeren (select_account)",
-              ("select_account" in u2) or ("select=true" in u2), u2[:95])
-        await page.screenshot(path=str(SCREENSHOTS / "4-kontovelger.png"))
 
         await browser.close()
 
