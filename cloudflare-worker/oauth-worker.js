@@ -12,6 +12,7 @@
  * Endepunkter:
  *   GET  /auth?provider=github&site_id=...  → redirect til GitHub OAuth
  *   GET  /callback?code=...                 → bytt kode mot token, lukk popup
+ *   POST /revoke                            → trekk tilbake brukerens godkjenning (ekte utlogging)
  *   POST /suggest                           → opprett branch+commit+PR på vegne av ekstern bruker
  *   GET  /presence?page=<sti>              → hent aktive brukere på siden
  *   POST /presence                          → registrer/oppdater tilstedeværelse
@@ -28,6 +29,13 @@ export default {
 
     if (url.pathname === "/callback") {
       return handleCallback(url, env);
+    }
+
+    if (url.pathname === "/revoke") {
+      if (request.method === "OPTIONS") {
+        return new Response(null, { status: 204, headers: revokeCors() });
+      }
+      return handleRevoke(request, env);
     }
 
     if (url.pathname === "/suggest") {
@@ -153,6 +161,85 @@ async function handleCallback(url, env) {
   });
 }
 
+/* --- /revoke – ekte utlogging ---------------------------------------------
+
+   Å slette tokenet i nettleseren er ikke utlogging, bare glemsel: tokenet
+   lever videre hos GitHub og virker om det lekker. Her trekker vi tilbake
+   hele godkjenningen, slik at tokenet faktisk blir ugyldig.
+
+   Sidegevinsten er den brukeren merker: uten godkjenning kan ikke GitHub
+   slippe deg stille inn igjen, så neste innlogging viser autoriseringsskjermen
+   med kontonavnet – i stedet for å logge deg rett inn som samme bruker.
+
+   Må ligge i workeren fordi kallet krever Basic-auth med CLIENT_SECRET, som
+   aldri skal befinne seg i en nettleser.                                      */
+
+async function handleRevoke(request, env) {
+  const cors = revokeCors();
+  const reply = (status, body) => new Response(JSON.stringify(body), {
+    status, headers: { "Content-Type": "application/json", ...cors },
+  });
+
+  if (request.method !== "POST") return reply(405, { error: "Method not allowed" });
+  if (!env.CLIENT_ID || !env.CLIENT_SECRET) {
+    return reply(500, { error: "Server ikke konfigurert (mangler CLIENT_ID/CLIENT_SECRET)" });
+  }
+
+  let body;
+  try { body = await request.json(); } catch { return reply(400, { error: "Ugyldig JSON" }); }
+
+  const token = body && body.userToken;
+  // gho_ = OAuth-token, ghu_ = GitHub App user-to-server, ghp_/github_pat_ = PAT
+  if (!token || typeof token !== "string" ||
+      !/^(gho_|ghu_|ghp_|github_pat_)[A-Za-z0-9_]{20,}$/.test(token)) {
+    return reply(400, { error: "Ugyldig token" });
+  }
+
+  const basic = btoa(`${env.CLIENT_ID}:${env.CLIENT_SECRET}`);
+
+  let res;
+  try {
+    res = await fetch(
+      `https://api.github.com/applications/${encodeURIComponent(env.CLIENT_ID)}/grant`,
+      {
+        method: "DELETE",
+        headers: {
+          "Authorization": `Basic ${basic}`,
+          "Accept": "application/vnd.github+json",
+          "Content-Type": "application/json",
+          "X-GitHub-Api-Version": "2022-11-28",
+          "User-Agent": "samt-bu-docs-worker/1.0",
+        },
+        body: JSON.stringify({ access_token: token }),
+        cache: "no-store",
+      }
+    );
+  } catch (e) {
+    return reply(502, { error: `Kunne ikke nå GitHub: ${e.message}` });
+  }
+
+  // 204 = trukket tilbake. 404 = fantes ikke, altså allerede ugyldig – like bra
+  // for oss. Begge betyr at brukeren er ute.
+  if (res.status === 204) return reply(200, { revoked: true });
+  if (res.status === 404) return reply(200, { revoked: false, alreadyGone: true });
+
+  const detail = await res.text().catch(() => "");
+  return reply(502, {
+    error: `GitHub svarte ${res.status}`,
+    detail: detail.slice(0, 200),
+  });
+}
+
+function revokeCors() {
+  return {
+    "Access-Control-Allow-Origin": "https://docs.samt-bu.no",
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
+    "Access-Control-Max-Age": "86400",
+    "Cache-Control": "no-store",
+  };
+}
+
 // --- /suggest – Worker-proxy for eksterne bidragsytere (branch + commit + PR) ---
 
 async function handleSuggest(request, env) {
@@ -182,9 +269,13 @@ async function handleSuggest(request, env) {
   }
 
   // Verifiser at kallet har et token fra vår OAuth-flyt.
-  // GitHub App user-tokens starter med ghu_, klassiske med ghp_.
+  // gho_ = OAuth-token, ghu_ = GitHub App user-to-server, ghp_/github_pat_ = PAT.
+  // gho_ manglet her tidligere. Sjekken er uansett bare en formkontroll: selve
+  // arbeidet gjøres med WORKER_PAT, og brukertokenet brukes til å bekrefte at
+  // kalleren er innlogget og til å tilskrive commiten. Et manglende prefiks ga
+  // «Mangler gyldig brukertoken – logg inn først» til en bruker som VAR innlogget.
   if (!userToken || typeof userToken !== "string" ||
-      !(/^(ghu_|ghp_|github_pat_)[A-Za-z0-9_]{20,}$/.test(userToken))) {
+      !(/^(gho_|ghu_|ghp_|github_pat_)[A-Za-z0-9_]{20,}$/.test(userToken))) {
     return suggestError(401, "Mangler gyldig brukertoken – logg inn først");
   }
 
