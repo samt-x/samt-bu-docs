@@ -15,16 +15,17 @@ Test D. Sikrer at kontobytte faktisk ber GitHub om en ANNEN konto:
   4. Gyldig brukernavn sender login=<navn> på authorize-URL-en
   5. GitHub svarer med å sende brukeren til innloggingsskjemaet
   6. force=true brukes ikke når brukernavn er oppgitt
-  7. Utlogging forklarer at GitHub-sesjonen består, med lenke til github.com/logout
+  7. Utlogging kaller /revoke (trekker tilbake godkjenningen = ekte utlogging)
+     og viser melding med lenke til github.com/logout
 
 Bakgrunn: a38f7fb fjernet inputfeltet i troen på at GitHubs egen kontobytter
 holdt. Det gjør den ikke – med aktiv github.com-sesjon og godkjent app får du
 samme bruker tilbake. login=<brukernavn> er den dokumenterte måten å be om en
 bestemt konto. Denne testen finnes for at den ikke skal forsvinne igjen.
 
-TRYGG Å KJØRE: testen fullfører aldri en innlogging. Den leser bare URL-en
-popup-vinduet sendes til, og lukker det. Ingenting endres, verken lokalt eller
-på GitHub. Kan kjøres så ofte du vil.
+TRYGG Å KJØRE: testen fullfører aldri en innlogging, og /revoke-kallet fanges
+opp lokalt (page.route) i stedet for å slippes ut – ingenting trekkes tilbake
+på ekte. Kan kjøres så ofte du vil.
 
 Kjøring:
   py test_bytt_bruker.py
@@ -167,7 +168,7 @@ async def main():
               "GitHub omdirigerte selv dit – dette er hele poenget")
         check("force=true brukes ikke når brukernavn er oppgitt", "force=true" not in u)
 
-        print("\n=== 5. Utlogging forklarer GitHub-sesjonen ===")
+        print("\n=== 5. Utlogging: revoke-kall + melding ===")
         # «Bytt bruker» logger allerede ut lokalt før popup-en åpnes, så avataren
         # er borte nå. Last siden på nytt – init-skriptet setter tokenet tilbake –
         # slik at vi tester utloggingen fra en ekte innlogget tilstand.
@@ -177,23 +178,39 @@ async def main():
         check("Innlogget tilstand gjenopprettet før utloggingstesten",
               await page.is_visible("#samt-bu-user-avatar"))
 
+        # Fang opp /revoke lokalt i stedet for å slippe det ut på nettet.
+        # Utlogging trekker nå tilbake godkjenningen hos GitHub PÅ EKTE – en test
+        # skal bevise at kallet fyres med token, ikke faktisk drepe et token.
+        revoke_req = {"body": None}
+
+        async def handle_revoke(route):
+            revoke_req["body"] = route.request.post_data
+            await route.fulfill(status=200, content_type="application/json",
+                                body='{"revoked":true}')
+
+        await page.route("**/revoke", handle_revoke)
+
         await page.click("#samt-bu-user-avatar")
         await page.wait_for_timeout(250)
         await page.click("#samt-bu-logout-btn")
         await page.wait_for_timeout(700)
 
-        check("Tokenet er fjernet",
+        check("Tokenet er fjernet lokalt",
               (await page.evaluate("localStorage.getItem('samt-bu-gh-token')")) is None)
         check("«Logg inn»-knappen er tilbake", await page.is_visible("#samt-bu-login-btn"))
-        # Uten denne meldingen ser utloggingen ut som en feil: neste innlogging
-        # gir samme konto, fordi GitHub-sesjonen består.
+        check("/revoke kalles med tokenet",
+              bool(revoke_req["body"]) and "userToken" in (revoke_req["body"] or ""),
+              "godkjenningen trekkes tilbake hos GitHub – ekte utlogging")
+
         shown = check("Melding vises etter utlogging",
                       await page.is_visible("#samt-bu-logout-notice"))
         if shown:
             txt = ((await page.text_content("#samt-bu-logout-notice")) or "").strip()
-            check("Forklarer at GitHub-sesjonen består",
-                  ("fortsatt innlogget p" in txt) or ("still signed in to GitHub" in txt),
+            check("Forklarer at tilgangen er trukket tilbake",
+                  ("trukket tilbake" in txt) or ("has been revoked" in txt),
                   txt[:60] + "…")
+            check("Nevner at GitHub-sesjonen i nettleseren er urørt",
+                  ("urørt" in txt) or ("untouched" in txt))
             check("Tilbyr lenke til github.com/logout",
                   (await page.get_attribute("#samt-bu-logout-notice a", "href"))
                   == "https://github.com/logout")
