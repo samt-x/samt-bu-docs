@@ -5,7 +5,7 @@ title: Test 1
 weight: 10
 
 ---
-Test 1 mandag morgen\
+Test 1 lørdag kveld\
 \
 Beslutningslogg
 
