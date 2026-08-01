@@ -206,11 +206,11 @@ async def main():
                       await page.is_visible("#samt-bu-logout-notice"))
         if shown:
             txt = ((await page.text_content("#samt-bu-logout-notice")) or "").strip()
-            check("Forklarer at tilgangen er trukket tilbake",
-                  ("trukket tilbake" in txt) or ("has been revoked" in txt),
+            check("Forklarer at neste innlogging bruker samme konto",
+                  ("samme GitHub-konto" in txt) or ("same GitHub account" in txt),
                   txt[:60] + "…")
-            check("Nevner at GitHub-sesjonen i nettleseren er urørt",
-                  ("urørt" in txt) or ("untouched" in txt))
+            check("Peker på «Bytt bruker» for kontobytte",
+                  ("Bytt bruker" in txt) or ("Switch user" in txt))
             check("Tilbyr lenke til github.com/logout",
                   (await page.get_attribute("#samt-bu-logout-notice a", "href"))
                   == "https://github.com/logout")

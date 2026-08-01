@@ -12,7 +12,7 @@
  * Endepunkter:
  *   GET  /auth?provider=github&site_id=...  → redirect til GitHub OAuth
  *   GET  /callback?code=...                 → bytt kode mot token, lukk popup
- *   POST /revoke                            → trekk tilbake brukerens godkjenning (ekte utlogging)
+ *   POST /revoke                            → ugyldiggjør brukerens token hos GitHub (ekte utlogging)
  *   POST /suggest                           → opprett branch+commit+PR på vegne av ekstern bruker
  *   GET  /presence?page=<sti>              → hent aktive brukere på siden
  *   POST /presence                          → registrer/oppdater tilstedeværelse
@@ -164,12 +164,18 @@ async function handleCallback(url, env) {
 /* --- /revoke – ekte utlogging ---------------------------------------------
 
    Å slette tokenet i nettleseren er ikke utlogging, bare glemsel: tokenet
-   lever videre hos GitHub og virker om det lekker. Her trekker vi tilbake
-   hele godkjenningen, slik at tokenet faktisk blir ugyldig.
+   lever videre hos GitHub og virker om det lekker. Her ugyldiggjør vi selve
+   tokenet hos GitHub (DELETE /applications/{client_id}/token).
 
-   Sidegevinsten er den brukeren merker: uten godkjenning kan ikke GitHub
-   slippe deg stille inn igjen, så neste innlogging viser autoriseringsskjermen
-   med kontonavnet – i stedet for å logge deg rett inn som samme bruker.
+   Bevisst TOKEN, ikke GRANT: å slette hele godkjenningen (…/grant) tvinger
+   GitHubs autoriseringsskjerm («act on your behalf») frem ved hver eneste
+   ny innlogging – prøvd 2026-08-01 og opplevd som skremmende og forvirrende.
+   Skjermen er GitHubs faste ordlyd og ser langt bredere ut enn realiteten:
+   appen er en GitHub App som kun har tilgang til SAMT-X-repoene den er
+   installert på. Med token-revokering er utloggingen reell (tokenet dør),
+   neste innlogging går stille til samme konto, og kontobytte gjøres med
+   «Bytt bruker» (login-hint). Autoriseringsskjermen vises dermed bare den
+   aller første gangen en bruker godkjenner appen.
 
    Må ligge i workeren fordi kallet krever Basic-auth med CLIENT_SECRET, som
    aldri skal befinne seg i en nettleser.                                      */
@@ -200,7 +206,7 @@ async function handleRevoke(request, env) {
   let res;
   try {
     res = await fetch(
-      `https://api.github.com/applications/${encodeURIComponent(env.CLIENT_ID)}/grant`,
+      `https://api.github.com/applications/${encodeURIComponent(env.CLIENT_ID)}/token`,
       {
         method: "DELETE",
         headers: {
