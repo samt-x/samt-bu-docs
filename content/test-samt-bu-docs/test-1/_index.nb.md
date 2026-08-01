@@ -7,9 +7,9 @@ weight: 10
 ---
 Test 1 mandag morgen\
 \
-Belutningslogg
+Beslutningslogg
 
-Sist endret: 2026-04-21 08:58av bruker: Erik HagenID: 7c9c9755-bae1-492c-9a84-8e4a136c38fc[SAMT-X/samt-bu-docs](https://github.com/SAMT-X/samt-bu-docs)
+Sist endret: 2026-04-21 08:58 av bruker: Erik HagenID: 7c9c9755-bae1-492c-9a84-8e4a136c38fc[SAMT-X/samt-bu-docs](https://github.com/SAMT-X/samt-bu-docs)
 
 **Kronologisk beslutningslogg**
 
