@@ -28,3 +28,7 @@ tools/playwright/screenshots/
 .idea/
 .vscode/
 .wrangler/
+
+# Python-cache fra tools/playwright
+__pycache__/
+*.pyc
