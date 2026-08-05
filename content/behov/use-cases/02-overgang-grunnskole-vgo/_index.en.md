@@ -77,6 +77,7 @@ Breakdowns occur in particular:
 * **KS Digital** – Operational actor for shared municipal digital solutions and interoperability.
 * **Sikt** – Delivers and manages shared services in the education sector, particularly at interfaces with further education.
 * **SSB** – Uses educational data for statistics, analysis, and insight.
+* **Novari** - Takes care of the county municipalities' need for digital services and develops, among other things, shared services for upper secondary education for all county municipalities.
 
 ## Consequences of the current situation
 
@@ -103,7 +104,7 @@ The consequences are felt at both individual and system level. Pupils may experi
 
 ## Desired situation
 
-In a desired situation, young people and their parents and guardians experience a coherent transition in which relevant information is available to the right actors at the right time. Staff have better overview and a stronger basis for decision-making, and can more quickly provide the right follow-up. Collaboration between the municipality, county authority, and the state is clearer, and information flows in a way that supports coherent services – without placing unnecessary burden on users.
+In a desired situation, young people and their parents and guardians experience a coherent transition in which relevant information is available to the right actors at the right time. Staff have better overview and a stronger basis for decision-making, and can more quickly provide the right follow-up. Collaboration between the municipality, county authority, and the state is clearer, and information flows in a way that supports coherent services – without placing unnecessary burden on users. The privacy of the citizens is well protected.
 
 ## Insight work
 
