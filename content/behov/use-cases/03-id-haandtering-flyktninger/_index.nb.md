@@ -33,14 +33,14 @@ Innen oppvekst er det ingen fellesløsning for tildeling av ID-nummer for person
 
 ### Hvor oppstår brudd i informasjonsflyt eller ansvar?
 
-Kommunene gir tjenester til personer som ikke er registrert i folkeregisteret med D-nummer, eller F-nummer. Dermed blir kommuner tvunget, i hver sine sektorer, å opprette en eller mange fiktive versjoner av disse personobjektene i påvente av at disse personene får et ID-nummer i folkeregisteret. Det er ingen samkjøring av slike fiktive numre mellom sektorer eller mellom de ulike kommuner og fylkeskommuner.
+Kommunene gir tjenester til personer som ikke er registrert i folkeregisteret med D-nummer, eller F-nummer. Dermed blir kommuner tvunget, i hver sine sektorer, å opprette en eller mange fiktive versjoner av disse personobjektene i påvente av at disse personene får et ID-nummer i folkeregisteret. Det er ingen samkjøring av slike fiktive numre mellom sektorer eller mellom de ulike kommuner og fylkeskommuner. Udir har beskrevet regler for hvordan fiktive nummer skal uttrykkes i videregående skole, men vi er ikke kjent med at dette mønsteret brukes av andre utdanningsnivåer. 
 
 ## Aktører
 
 ### Berørte aktører
 
-- Foreldre som mister tilganger, eller mister data
-- Barn og elever som mister data
+- Foresatte til barn som mangler en offisiell identifikator, som D-nummer eller Fnr.
+- Barn som mangler som mangler en offisiell identifikator, som D-nummer eller Fnr.
 
 ## Konsekvenser av dagens situasjon
 
