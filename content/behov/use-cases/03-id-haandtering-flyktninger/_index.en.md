@@ -32,14 +32,14 @@ Within the childhood and education sector, there is no shared solution for assig
 
 ### Where do breakdowns in information flow or responsibility occur?
 
-Municipalities provide services to persons who are not yet registered with a D-number or national identity number (F-number) in the National Population Register. Municipalities are therefore compelled, within their respective sectors, to create one or more fictitious versions of these person objects while awaiting the assignment of an identity number in the National Population Register. There is no coordination of such fictitious numbers between sectors or between different municipalities and county authorities.
+Municipalities provide services to persons who are not yet registered with a D-number or national identity number (F-number) in the National Population Register. Municipalities are therefore compelled, within their respective sectors, to create one or more fictitious versions of these person objects while awaiting the assignment of an identity number in the National Population Register. There is no coordination of such fictitious numbers between sectors or between different municipalities and county authorities. Udir has described rules for how fictitious identity numbers should be expressed in upper secondary school, but we are not aware of this pattern being used at other educational levels.
 
 ## Actors
 
 ### Affected actors
 
-- Parents who lose access or lose data
-- Children and pupils who lose data
+- Parents and guardians of children without an official identification number, such as D-number and F-number.
+- Children without an official identification number, such as D-number and F-number.
 
 ## Consequences of the current situation
 
