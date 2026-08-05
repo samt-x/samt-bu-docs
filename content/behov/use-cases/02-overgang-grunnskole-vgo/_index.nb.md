@@ -80,6 +80,7 @@ Brudd oppstår særlig:
 - **KS Digital** -- Operativ aktør for felles kommunale digitale løsninger og samhandling.
 - **Sikt** -- Leverer og forvalter fellestjenester i utdanningssektoren, særlig i grenseflater mot videre utdanning.
 - **SSB** -- Bruker utdanningsdata til statistikk, analyse og innsikt.
+- **Novari** -- Ivaretar fylkeskommunenes behov for digitale tjenester og utvikler blant annet felleskomponenter for videregående opplæring for alle fylkeskommuner. 
 
 ## Konsekvenser av dagens situasjon
 
@@ -106,7 +107,7 @@ Konsekvensene merkes både på individnivå og systemnivå. Elever kan oppleve b
 
 ## Ønskesituasjon
 
-I en ønsket situasjon opplever ungdom og foresatte en helhetlig overgang der relevant informasjon er tilgjengelig for riktige aktører til rett tid. Ansatte har bedre oversikt og beslutningsgrunnlag, og kan raskere gi riktig oppfølging. Samhandlingen mellom kommune, fylkeskommune og stat er tydeligere, og informasjon flyter på en måte som støtter sammenhengende tjenester -- uten unødvendig belastning på brukerne.
+I en ønsket situasjon opplever ungdom og foresatte en helhetlig overgang der relevant informasjon er tilgjengelig for riktige aktører til rett tid. Ansatte har bedre oversikt og beslutningsgrunnlag, og kan raskere gi riktig oppfølging. Samhandlingen mellom kommune, fylkeskommune og stat er tydeligere, og informasjon flyter på en måte som støtter sammenhengende tjenester -- uten unødvendig belastning på brukerne. Personvernet til innbyggerne er godt ivaretatt. 
 
 ## Innsiktsarbeid
 
