@@ -64,7 +64,9 @@ Denne ID'en etableres som ett fullverdig medlem av ID-håndtering og gir tilgang
 
 ## Innsiktsarbeid
 
-Enklere brukerreiser for ansatte, foresatte, elever og studenter gjennom læringsløpet - fra barnehage til grunnskole, videregående og høyere utdanning.
+Helsesektorens erfaring med Hjelpenummeret (H-nummer) og personidentifikasjonstjenesten, som er en etablert parallell i en annen sektor og en viktig kilde til læring om både gevinster og utfordringer
+
+Ny nasjonal digitaliseringsstrategi, som tydelig peker på behovet for felles identitets- og tilgangsstyring på tvers av sektorer.
 
 ## Berørte prosjektmål
 
