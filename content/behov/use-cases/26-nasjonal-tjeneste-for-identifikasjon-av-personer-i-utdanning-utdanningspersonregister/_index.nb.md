@@ -102,7 +102,7 @@ Konsekvensene merkes på individnivå, tjenestenivå og systemnivå.
 
 For den enkelte – enten det er et barn i barnehage, en elev i videregående eller en utenlandsk student i høyere utdanning – betyr situasjonen reell risiko for tap av data, tilganger og rettigheter i overganger mellom systemer eller ID-numre. Dette er ikke bare upraktisk, men kan i ytterste konsekvens bety at vedtak og rettigheter ikke lar seg spore og gjennomføre.
 
-For kommunene og fylkeskommunene er situasjonen en daglig administrativ utfordring. Lærere, saksbehandlere og IT-ansatte bruker tid på å løse problemer som burde vært løst på nasjonalt nivå. Fraværet av en felles standard gjør at hvert system og hver kommune har utviklet egne arbeidsmåter, noe som fører til fragmentering og lav datakvalitet.
+For kommunene og fylkeskommunene er situasjonen en daglig administrativ utfordring. Lærere, saksbehandlere og IT-ansatte bruker tid på å løse problemer som burde vært løst på nasjonalt nivå. Fraværet av en felles standard gjør at hvert system og hver kommune har utviklet egne arbeidsmåter, noe som fører til fragmentering og lav datakvalitet. Når man ikke har entydig identifikasjon av alle elever i systemene, vil det bli vanskeligere å etterleve GDPR, ved f.eks. innsynsbegjæring fra personen det gjelder, og å sikre at man ikke utleverer informasjon til feil person.
 
 For de nasjonale registrene for utdanning og kompetanse er dette en strukturell forutsetning: uten entydig identifikasjon av alle personer i utdanning, er det ikke mulig å bygge en nasjonal infrastruktur med høy datakvalitet. Data vil ikke kunne kobles på tvers av nivåer, institusjoner og sektorer.
 
