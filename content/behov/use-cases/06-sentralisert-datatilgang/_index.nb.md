@@ -12,14 +12,14 @@ toc: true
 # ◕ Til QA
 # ⏺ Godkjent
 # ⨂ Avbrutt
-status: Tidlig utkast
+status: Pågår
 
 ---
 ## Beskrivelse av case
 
 ### Hvem har spilt inn dette som et case?
 
-Caset ble spilt inn i forbindelse med søknad om MedFin-midler. Det har også kommet opp som et case gjennom Fag- og prioriteringsutvalget.
+Caset ble spilt inn i forbindelse med søknad om MedFin-midler. Det har også kommet opp som et case gjennom Fag- og prioriteringsutvalget for oppvekst og utdanning.
 
 ### Kort beskrivelse av caset
 
@@ -42,7 +42,7 @@ Conexus har en kjøpeløsning for deler av dette. De heter «Engage» og «Insig
 ### Hvem er de primære aktørene som berøres
 
 - Foresatte
-- Elever (Viktig å ta hensyn til elevens rett til å medvirke slik den er nedfeldt i utdannigsloven)
+- Elever (Viktig å ta hensyn til elevens rett til å medvirke slik den er nedfeldt i utdanningsloven)
 - Skoler/kommuner (fortrinnsvis grunnskoler)
 - Systemleverandører
 - UDir
@@ -52,6 +52,8 @@ Conexus har en kjøpeløsning for deler av dette. De heter «Engage» og «Insig
 Det er nærliggende å se for seg en portal der foresatte kan logge seg inn og se relevante data for sitt barn. Løsningen bør også ha et «elev-modus» som gjør det mulig for barnet selv å se «sin» informasjon i den grad hen skal ha tilgang til opplysningene.
 
 Vi må altså ha noe som kan hente, sammenstille og presentere relevante data. Løsningen kan realiseres som en frittstående løsning, eller den kan integreres i eksisterende løsninger, for eksempel i **Min Kommune** der det allerde foregår mye kommunikasjon mellom kommune og foreldre.
+
+Det er også mulig å se for seg at det etableres et grensesnitt/API hvor sammenstilte data kan hentes, og la det være opp til markedet å presentere disse i eksisterende grensesnitt og/eller utvikle nye portaler hvor informasjonen kan presenteres. 
 
 ### Innsiktsarbeide
 
