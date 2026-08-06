@@ -64,7 +64,9 @@ This identity is established as a fully valid member of the identity management 
 
 ## Insight work
 
-Simpler user journeys for staff, parents and guardians, pupils, and students throughout the educational pathway – from nursery to primary school, upper secondary education, and higher education.
+The health sector's experience with the Help Number (H-number) and the personal identification service, which is an established parallel in another sector and an important source of learning regarding both benefits and challenges. 
+
+The new national digitalization strategy, which clearly points to the need for joint identity and access management across sectors.
 
 ## Project objectives addressed
 
