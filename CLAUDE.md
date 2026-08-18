@@ -392,6 +392,33 @@ Malen skal: bekrefte at forslaget er godkjent og tatt inn, opplyse om at nettste
   - Eksempel: `"/c/Program Files/GitHub CLI/gh.exe" repo rename nytt-navn --repo org/gammelt-navn`
   - **Slette repos krever ekstra scope:** Kjør `gh auth refresh -h github.com -s delete_repo` og fullfør nettleserflyt før sletting
 
+## Arbeidsregler – kontroller som fanger de vanlige feilene
+
+Lagt inn 2026-08-18 etter en sesjon der fire feil slapp gjennom og ble fanget
+av Erik, ikke av Claude. Alle er formet som **noe som skal skrives ned**, ikke
+som en holdning: «vær grundig» treffer ikke, fordi feilene ikke føles som feil
+i øyeblikket.
+
+1. **Oppgi hva du søkte i** når du melder et funn fra et søk. «Fant ingen X» er
+   ubrukelig uten «søkte i Y». Skriver du det, ser du selv om søket var for smalt.
+2. **Sier du at noe mangler** – sjekk først om det finnes under et annet navn.
+   («Kommune → fylkeskommune mangler» var feil: den het «Overgang grunnskole →
+   videregående».)
+3. **Overrasker en sjekk deg** – noe er «borte», «tomt», «mangler» – så
+   verifiser sjekken før du melder resultatet. Overraskelsen er signalet om at
+   sjekken kan være gal, ikke virkeligheten.
+4. **Før en større oppgave:** si i én setning hva premisset er, og om det er
+   testet. Er det utestet, si det. Da kan Erik stoppe deg før arbeidet, ikke etter.
+5. **Nytt ord = nytt begrep.** Før et ord tas i bruk i modellen eller på
+   nettstedet: sjekk at det står i kildene (`content/behov/use-cases/`,
+   `project-samt-bu/kilder/`). Står det ikke der, si at det er vårt. Og lag ikke
+   substantiv av regler – beskriv dem som handlinger, så de ikke kan forveksles
+   med etablerte begreper.
+
+For Archi-modellene finnes en mekanisk utgave av det samme:
+`project-samt-bu/test_lagring.py` erstatter «ser riktig ut» med tall fra Archis
+egen kontroll. Kjør den før en modelljobb meldes ferdig.
+
 ## Viktige tips for ny sesjon
 
 1. **All tilpasset CSS er i `themes/hugo-theme-samt-bu/layouts/partials/custom-head.html`** – dette er filen du oftest redigerer for layout/styling
