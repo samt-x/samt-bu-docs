@@ -98,64 +98,42 @@ cloudflare-worker/
 i18n/nb.toml, en.toml              # Oversettelser (navSwitcher-etiketter, seksjonstitler, «Sist endret»)
 ```
 
-## ⛔ UTDATERT: Decap CMS – innholdsredigering
+## Innholdsredigering i nettleseren
 
-> **IKKE FØLG DETTE AVSNITTET.** Decap CMS ble fjernet 2026-03-11. Mappen `static/edit/` finnes **ikke** i repoet – ingen av de åtte portalene under eksisterer, og prosedyren «Legge til ny CMS-portal» kan ikke gjennomføres.
->
-> Redigering skjer nå i nettleseren via TipTap-editoren med GitHub-token (`getStoredToken()` / `doGitHubLogin()`, token i localStorage-nøkkelen `samt-bu-gh-token`). Logikken ligger i `custom-footer.html` i temaet.
->
-> Avsnittet er beholdt som historikk fordi `edit-switcher.html` fortsatt ruter per repo etter samme mønster – **rutingtabellen nedenfor er altså fortsatt relevant, portalene er det ikke.**
->
-> Skal skrives om – se [issue #56](https://github.com/SAMT-X/solution-samt-bu-docs/issues/56). Verifiser mot `custom-footer.html` før du dokumenterer den nye flyten.
+Redigering skjer med **TipTap-editoren og GitHub-token** – ikke Decap CMS, som
+ble fjernet 2026-03-11. Mappen `static/edit/` finnes ikke lenger, og de åtte
+portalene som en gang lå der er borte.
 
-### Historikk (Decap-tiden)
+- **Logikken** ligger i `custom-footer.html` i temaet: `getStoredToken()` /
+  `doGitHubLogin()`, token i localStorage-nøkkelen `samt-bu-gh-token`.
+- **OAuth-proxy:** Cloudflare Worker på `https://auth.samt-bu.no` – fortsatt i
+  bruk, både for innlogging og for `/presence`.
+- **Frontmatter:** YAML (`---`), ikke TOML.
 
-- **OAuth-proxy:** Cloudflare Worker `https://auth.samt-bu.no`
-- **Header-dropdown («Endre»/«Edit»):** Erstatter gammel statisk knapp. Implementert i `edit-switcher.html`.
-  - «Denne siden»/«This page» → deep-link til gjeldende side i riktig portal
-  - «Andre valg»/«Other options» → CMS-oversikt (`/edit/` eller `/edit/en/`)
-  - **Rutinglogikk (tre grener)** basert på `$dir = path.Dir .File.Path`:
-    - `hasPrefix $dir "teams/"` → arkitektur-portal, collection `arkitektur`
-    - `eq/hasPrefix $dir "utkast"` → utkast-portal, collection `utkast`
-    - `eq/hasPrefix $dir "prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs"` → loesninger-portal, collection `loesninger`
-    - alt annet → docs-portal, collection `docs`
-  - **Entry-slug:** Full relativ sti inkl. `/_index` (f.eks. `kommuneforlaget/_index`). Rot-sider i moduler bruker `_index` alene. Docs-rot forblir deaktivert (tom slug). URL: `<portal>#/collections/<collection>/entries/<slug>`
-  - **Windows-fallgruve:** `.File.Path` bruker backslash – bruk alltid `path.Dir .File.Path` (normaliserer) fremfor rå `.File.Path` for hasPrefix-sjekker
-- **Frontmatter-format:** YAML (`---`) – ikke TOML.
-- **OBS:** CMS-sesjoner kan legge igjen testinnhold – sjekk `git diff` før push.
+### Ruting per repo – `edit-switcher.html`
 
-### Aktive CMS-portaler
+Nettstedet monterer innhold fra ni repoer, og «Endre denne siden» må treffe det
+repoet filen faktisk ligger i. Ruting skjer på `$dir = path.Dir .File.Path`:
 
-| Mappe | Repo | Språk | Portalkorttittel | CMS-samlingsnavn |
-|-------|------|-------|------------------|-----------------|
-| `static/edit/docs-nb/` | `SAMT-X/samt-bu-docs` | nb | Gjeldende dokumentasjon | Sider |
-| `static/edit/docs-en/` | `SAMT-X/samt-bu-docs` | en | Current documentation | Pages |
-| `static/edit/arkitektur-nb/` | `SAMT-X/team-architecture` | nb | Team arkitektur | Team arkitektur |
-| `static/edit/arkitektur-en/` | `SAMT-X/team-architecture` | en | Team architecture | Team architecture |
-| `static/edit/utkast-nb/` | `SAMT-X/samt-bu-drafts` | nb | Innspill og utkast | Innspill og utkast |
-| `static/edit/utkast-en/` | `SAMT-X/samt-bu-drafts` | en | Inputs and drafts | Inputs and drafts |
-| `static/edit/loesninger-nb/` | `SAMT-X/solution-samt-bu-docs` | nb | Løsningsdokumentasjon | Løsningsdokumentasjon |
-| `static/edit/loesninger-en/` | `SAMT-X/solution-samt-bu-docs` | en | Solution documentation | Solution documentation |
+| Sti | Repo |
+|-----|------|
+| `utkast/` | `samt-bu-drafts` |
+| `prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/` | `solution-samt-bu-docs` |
+| `arkitektur/overordnet-arkitektur/` | `team-architecture` |
+| `arkitektur/informasjonsarkitektur/` | `team-semantics` |
+| `pilotering/pilot-1/` … `pilot-4/` | `samt-bu-pilot-1` … `-4` |
+| `ekstern-markedsdialog/` | `samt-bu-market-engagement` |
+| alt annet | `samt-bu-docs` |
 
-**Kritisk:** Hvert Hugo-modulrepo som monterer innhold **må ha sin egen CMS-portal** pekende på det repoet. Feilruting til `docs`-portalen → CMS viser tomme felter uten feilmelding (filene finnes ikke i `samt-bu-docs`-repoet).
+⚠ **Unntak:** `arkitektur/overordnet-arkitektur/maalbildet/` og `.../veikart/`
+er LOKALE filer i `samt-bu-docs`, selv om de ligger under en modulmontert sti.
+Lokal fil vinner alltid over modulinnhold i Hugo, og rutingen må følge det.
 
-**NB-portaler har i tillegg:**
-- `locale: nb` i `config.yml`
-- Inline JS-lokale i `index.html` som oversetter `«Collections» → «Samlinger»` og `«New» → «Ny»`
-- Risiko ved Decap-oppgradering dokumentert i [issue #66](https://github.com/SAMT-X/samt-bu-docs/issues/66)
+⚠ **`footer.html` har samme rutinglogikk** for «Endre denne siden i GitHub».
+Legges det til en modul, må BEGGE filene oppdateres – ellers gir lenken 404.
 
-**Alle portaler har:**
-- `sortable_fields: ['weight', 'title']` – sorterer etter Hugo `weight` (matcher sidebar-rekkefølge)
-
-### Legge til ny CMS-portal
-
-1. Opprett mappe `static/edit/<seksjon>-nb/` med:
-   - `index.html` (← Portal-lenke → `../` + JS-lokale-blokk for NB)
-   - `config.yml` (`locales: [nb]`, `locale: nb`, `repo: SAMT-X/<repo>`, `sortable_fields: ['weight', 'title']`)
-2. Legg til kort i `static/edit/index.html` og `static/edit/en/index.html`
-3. Gjenta for `-en/` uten `locale: nb` og uten JS-lokale, lenke → `../en/`
-4. Legg til nytt grein i `edit-switcher.html` (i temaet) *før* `{{ else }}`-blokken
-5. Commit temaendring → push → oppdater submodule-peker i samt-bu-docs
+⚠ **Windows-fallgruve:** bruk alltid `path.Dir .File.Path`, aldri rå
+`.File.Path`. Sistnevnte gir backslash på Windows, og `hasPrefix`-sjekkene feiler.
 
 ## Innholdskonvensjoner
 
