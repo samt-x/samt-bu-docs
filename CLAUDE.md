@@ -16,7 +16,11 @@ Publiseres til Cloudflare Pages på `https://docs.samt-bu.no/`.
   - Go-modul (`go.mod`/`go.sum`) styrer også tema-avhengigheten
 - **Konfigurasjon:** `hugo.toml` (baseURL, språk, tema, outputs, editURL)
 - **Språk:** Tospråklig – norsk bokmål (standard) og engelsk. Innhold i `_index.nb.md` / `_index.en.md`
-- **Søk:** Lunr.js med Horsey.js autocomplete (`static/js/search.js`), generert fra Hugo JSON-output
+- **Søk:** Lunr.js med Horsey.js autocomplete (`themes/hugo-theme-samt-bu/static/js/search.js`), generert fra Hugo JSON-output.
+  ⚠ Indeksmalen `themes/hugo-theme-samt-bu/layouts/index.json` itererer `.Site.Pages` **uten filter** og skriver
+  `{{$page.Plain}}` – altså hele brødteksten på hver side – til `public/index.json` (500 KB, 164 poster),
+  som serveres åpent på `docs.samt-bu.no/index.json`. **Skal innhold noen gang skjermes, må denne malen filtreres først** –
+  tilgangskontroll på sti alene lekker via søkeindeksen.
 - **Git-info:** `enableGitInfo = true` – sist-endret-datoer hentes fra commit-historikk
 
 ### Bygge og forhåndsvise
@@ -82,10 +86,11 @@ themes/hugo-theme-samt-bu/         # ⭐ Git submodule – all presentasjonslogi
     status-symbol.html             # Slår opp statussymbol fra .Params.status
   layouts/_default/list.html       # Override for listesider
   layouts/shortcodes/              # children.html, header.html, relref.html
-static/
-  images/SAMT-BU-logo.png          # Logo (vises invertert i header)
-  images/nb.svg, en.svg            # Flaggikoner for språkvelger
-  js/search.js                     # Lunr.js søkeimplementasjon
+  layouts/index.json               # ⚠ Søkeindeks-mal – dumper HELE brødteksten på ALLE sider
+  static/images/SAMT-BU-logo.png   # Logo (vises invertert i header)
+  static/images/nb.svg, en.svg     # Flaggikoner for språkvelger
+  static/js/search.js              # Lunr.js søkeimplementasjon
+static/                            # ⚠ Rotens static/ – IKKE det samme som temaets static/
   _redirects                       # Cloudflare Pages-redirects – VIRKER (bekreftet sesjon 65)
   js/tiptap-bundle.js              # Selvhostet TipTap – aldri tilbake til esm.sh
 .github/
