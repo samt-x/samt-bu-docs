@@ -394,12 +394,12 @@ i øyeblikket.
    testet. Er det utestet, si det. Da kan Erik stoppe deg før arbeidet, ikke etter.
 5. **Nytt ord = nytt begrep.** Før et ord tas i bruk i modellen eller på
    nettstedet: sjekk at det står i kildene (`content/behov/use-cases/`,
-   `project-samt-bu/kilder/`). Står det ikke der, si at det er vårt. Og lag ikke
+   `samt-bu-archi-models/kilder/`). Står det ikke der, si at det er vårt. Og lag ikke
    substantiv av regler – beskriv dem som handlinger, så de ikke kan forveksles
    med etablerte begreper.
 
 For Archi-modellene finnes en mekanisk utgave av det samme:
-`project-samt-bu/test_lagring.py` erstatter «ser riktig ut» med tall fra Archis
+`samt-bu-archi-models/test_lagring.py` erstatter «ser riktig ut» med tall fra Archis
 egen kontroll. Kjør den før en modelljobb meldes ferdig.
 
 ## Viktige tips for ny sesjon
