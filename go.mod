@@ -12,6 +12,7 @@ require (
 	github.com/SAMT-X/samt-bu-pilot-5 v0.0.0-20261010124115-c75a2433ea3e // indirect
 	github.com/SAMT-X/samt-bu-pilot-6 v0.0.0-20261010124118-a34c71631552 // indirect
 	github.com/SAMT-X/solution-samt-bu-docs v0.0.0-20260308200706-ef199a1101e4 // indirect
+	github.com/SAMT-X/solution-task-management v0.0.0-20261010202729-6af0574e1fbe // indirect
 	github.com/SAMT-X/team-architecture v0.0.0-20260423145752-c6d715909724 // indirect
 	github.com/SAMT-X/team-semantics v0.0.0-20260423155808-7607ed08de8b // indirect
 )

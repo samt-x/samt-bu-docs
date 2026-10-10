@@ -77,6 +77,7 @@ jobs:
           hugo mod get github.com/SAMT-X/team-architecture@latest
           hugo mod get github.com/SAMT-X/samt-bu-drafts@latest
           hugo mod get github.com/SAMT-X/solution-samt-bu-docs@latest
+          hugo mod get github.com/SAMT-X/solution-task-management@latest
           hugo mod get github.com/SAMT-X/samt-bu-pilot-1@latest
           hugo mod get github.com/SAMT-X/samt-bu-pilot-2@latest
           hugo mod get github.com/SAMT-X/samt-bu-pilot-3@latest
