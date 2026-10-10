@@ -16,6 +16,7 @@ Translation of project-specific terms and technical expressions used in SAMT-BU 
 | forvaltningsnivå | administrative level | |
 | mellomlag | middleware layer | |
 | felles informasjonsmodell | common information model | |
+| overordnet arkitektur | high-level architecture | Ikke «overall architecture». Som tittel: «High-level architecture» |
 | fellesløsning | common solution | |
 | tjenestekatalog | service catalogue | |
 | datadrevet | data-driven | Brukes om generell tilnærming, ikke som synonym for «datasentrisk» |
