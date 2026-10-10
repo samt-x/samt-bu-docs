@@ -1,4 +1,6 @@
 ---
+# id: auto-generated – copied values are overwritten automatically on push
+id: 56182250-feb1-41ce-ae7f-711183e1c981
 title: "Governance solutions"
 linkTitle: "Governance solutions"
 weight: 20
