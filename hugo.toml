@@ -147,13 +147,13 @@ enableGitInfo = true
     path = "github.com/SAMT-X/solution-samt-bu-docs"
     [[module.imports.mounts]]
       source = "content"
-      target = "content/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs"
+      target = "content/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs"
 
   [[module.imports]]
     path = "github.com/SAMT-X/solution-task-management"
     [[module.imports.mounts]]
       source = "content"
-      target = "content/prosjektleveranser/loesninger/styringsloesninger/oppgavestyring"
+      target = "content/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring"
 
   [[module.imports]]
     path = "github.com/SAMT-X/samt-bu-market-engagement"

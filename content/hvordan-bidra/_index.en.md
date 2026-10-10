@@ -17,4 +17,4 @@ SAMT-BU Docs is open for contributions from everyone – subject-matter experts,
 
 **Local setup** provides a full working environment with live preview, and is recommended for structural changes and technical development.
 
-→ [Detailed user guide for all three methods](/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/brukerveiledning/)
+→ [Detailed user guide for all three methods](/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/brukerveiledning/)

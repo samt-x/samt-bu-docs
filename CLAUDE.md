@@ -123,7 +123,8 @@ repoet filen faktisk ligger i. Ruting skjer på `$dir = path.Dir .File.Path`:
 | Sti | Repo |
 |-----|------|
 | `utkast/` | `samt-bu-drafts` |
-| `prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/` | `solution-samt-bu-docs` |
+| `prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/` | `solution-samt-bu-docs` |
+| `prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/` | `solution-task-management` |
 | `arkitektur/overordnet-arkitektur/` | `team-architecture` |
 | `arkitektur/informasjonsarkitektur/` | `team-semantics` |
 | `pilotering/pilot-1/` … `pilot-6/` | `samt-bu-pilot-1` … `-6` |
@@ -237,7 +238,7 @@ Dropdown i headeren for å navigere direkte til en av de 10 seksjonene.
 - 12 seksjoner i flat struktur direkte under `content/` (10 lokale + `utkast/` og `ekstern-markedsdialog/` fra moduler)
 - Hugo Module-integrasjon: 9 modulrepoer montert (se modultabellen)
 - Nettsted omdøpt til «SAMT-BU Docs», `loesning/` omdøpt til `loesninger/`
-- Ny dokumentasjonsstruktur: `prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/` (teknisk dok. + administrasjonsveiledning)
+- Ny dokumentasjonsstruktur: `prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/` (teknisk dok. + administrasjonsveiledning)
 - 31 use cases under Behov (inkl. Kommuneforlaget brukstilfelle-analyse)
 - Nettleserbasert redigering (TipTap + GitHub-token) – Decap CMS fjernet 2026-03-11
 - «Denne siden»/«This page» deep-link i Endre-dropdown for alle sider, inkl. modul-sider
@@ -265,7 +266,8 @@ Innhold fra eksterne repoer monteres inn via Hugo Module-systemet (`go.mod` + `h
 | `team-semantics` | `content/arkitektur/informasjonsarkitektur/` |
 | `samt-bu-drafts` | `content/utkast/` |
 | `samt-bu-pilot-1` … `samt-bu-pilot-6` | `content/pilotering/pilot-1/` … `pilot-6/` |
-| `solution-samt-bu-docs` | `content/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/` |
+| `solution-samt-bu-docs` | `content/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/` |
+| `solution-task-management` | `content/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/` |
 | `samt-bu-market-engagement` | `content/ekstern-markedsdialog/` |
 
 Alle med prefikset `github.com/SAMT-X/`. **`content/teams/` finnes ikke** – team-modulene ble flyttet inn under `arkitektur/`.

@@ -11,3 +11,16 @@
 # Workshop-sidene fikk mellomnivået «Samlinger» kort tid etter publisering.
 /prosjektstyring/workshop-26-august-2026/*      /prosjektstyring/samlinger/workshop-26-august-2026/:splat     301
 /en/prosjektstyring/workshop-26-august-2026/*   /en/prosjektstyring/samlinger/workshop-26-august-2026/:splat  301
+
+# «Samhandlingsplattform» (oktober 2026) samlet SAMT-BU Docs, Oppgavestyring og
+# Plattformvalg; mellomnivåene «CMS-løsninger» og «Styringsløsninger» ble fjernet.
+/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/*          /prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/:splat     301
+/en/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/*       /en/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/:splat  301
+/prosjektleveranser/loesninger/cms-loesninger/*                       /prosjektleveranser/loesninger/samhandlingsplattform/                        301
+/en/prosjektleveranser/loesninger/cms-loesninger/*                    /en/prosjektleveranser/loesninger/samhandlingsplattform/                     301
+/prosjektleveranser/loesninger/styringsloesninger/oppgavestyring/*    /prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/:splat   301
+/en/prosjektleveranser/loesninger/styringsloesninger/oppgavestyring/* /en/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/:splat 301
+/prosjektleveranser/loesninger/styringsloesninger/*                   /prosjektleveranser/loesninger/samhandlingsplattform/                        301
+/en/prosjektleveranser/loesninger/styringsloesninger/*                /en/prosjektleveranser/loesninger/samhandlingsplattform/                     301
+/prosjektleveranser/loesninger/plattformvalg/*                        /prosjektleveranser/loesninger/samhandlingsplattform/plattformvalg/:splat    301
+/en/prosjektleveranser/loesninger/plattformvalg/*                     /en/prosjektleveranser/loesninger/samhandlingsplattform/plattformvalg/:splat 301

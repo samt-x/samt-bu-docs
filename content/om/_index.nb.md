@@ -70,7 +70,7 @@ SAMT-BU Docs er prosjektets felles dokumentasjonsplattform. Innhold versjonshån
 
 Nettstedet er tospråklig (norsk og engelsk) for å støtte internasjonalt samarbeid, blant annet om initiativ som Skills Dataspace i EU.
 
-For veiledning om hvordan du bidrar, se [Hvordan bidra](/hvordan-bidra/) og [Brukerveiledning](/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/brukerveiledning/). For detaljer om den tekniske løsningen, se [løsningsdokumentasjonen](/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/).
+For veiledning om hvordan du bidrar, se [Hvordan bidra](/hvordan-bidra/) og [Brukerveiledning](/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/brukerveiledning/). For detaljer om den tekniske løsningen, se [løsningsdokumentasjonen](/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/).
 
 ## Se også
 

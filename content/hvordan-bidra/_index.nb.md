@@ -17,4 +17,4 @@ SAMT-BU Docs er åpent for bidrag fra alle – fagpersoner, redaktører, arkitek
 
 **Lokalt oppsett** gir et fullt arbeidsmiljø med forhåndsvisning, og er anbefalt for strukturelle endringer og teknisk utvikling.
 
-→ [Detaljert brukerveiledning for alle tre metoder](/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/brukerveiledning/)
+→ [Detaljert brukerveiledning for alle tre metoder](/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/brukerveiledning/)

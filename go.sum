@@ -2,6 +2,8 @@ github.com/SAMT-X/samt-bu-drafts v0.0.0-20260305124447-1b3b16686b14 h1:b5NpMA3C3
 github.com/SAMT-X/samt-bu-drafts v0.0.0-20260305124447-1b3b16686b14/go.mod h1:DSWTYGYc0Gdp9/uUD33suYZHwaCzxtWsXX9loG2ohyE=
 github.com/SAMT-X/samt-bu-drafts v0.0.0-20260530211903-337914479d3d h1:af2r+bif4a1Vd6+dznm73FBR5o3m4gLwkCsTpwc9KAk=
 github.com/SAMT-X/samt-bu-drafts v0.0.0-20260530211903-337914479d3d/go.mod h1:DSWTYGYc0Gdp9/uUD33suYZHwaCzxtWsXX9loG2ohyE=
+github.com/SAMT-X/samt-bu-drafts v0.0.0-20261010231912-e1b1cf70da4b h1:oTWFpt+4C1YWEW6Nf7YKFfljugIQ2b8M2iFqglX5XUU=
+github.com/SAMT-X/samt-bu-drafts v0.0.0-20261010231912-e1b1cf70da4b/go.mod h1:DSWTYGYc0Gdp9/uUD33suYZHwaCzxtWsXX9loG2ohyE=
 github.com/SAMT-X/samt-bu-market-engagement v0.0.0-20260517212721-bd1ecae97cae h1:WA805hXk6iAdF5giaF5h5lkvLNP174asnKo6r6cadcE=
 github.com/SAMT-X/samt-bu-market-engagement v0.0.0-20260517212721-bd1ecae97cae/go.mod h1:HUhSAhNNxS/kl5+tT4n/E2HZq8gi62RsrfYY57G2xrk=
 github.com/SAMT-X/samt-bu-pilot-1 v0.0.0-20260428234552-fb8f3a903d17 h1:rCLNYeQfPCU+wztx1Lf+OMFlj3XdtKuWgzIXn2+PLVs=
@@ -34,8 +36,12 @@ github.com/SAMT-X/samt-bu-pilot-6 v0.0.0-20261010124118-a34c71631552 h1:sRpYj1tT
 github.com/SAMT-X/samt-bu-pilot-6 v0.0.0-20261010124118-a34c71631552/go.mod h1:OHWJX8bSnzf881OVJ3yQuF7QY7OuNLsn0AlX98FqPjY=
 github.com/SAMT-X/solution-samt-bu-docs v0.0.0-20260308200706-ef199a1101e4 h1:lda1hExJnOmr5YgeDYy7oN8YHsU9y0pXj+VCHhCMmSY=
 github.com/SAMT-X/solution-samt-bu-docs v0.0.0-20260308200706-ef199a1101e4/go.mod h1:tfkaCWHf85mWvul6ze9NJlAvxHtE6dQmBOlzoogTUec=
+github.com/SAMT-X/solution-samt-bu-docs v0.0.0-20261010231909-7086d9051ee6 h1:P9nez/1FVmsnTkaOtb9++8774egAnvc/oBVilEIyIwI=
+github.com/SAMT-X/solution-samt-bu-docs v0.0.0-20261010231909-7086d9051ee6/go.mod h1:tfkaCWHf85mWvul6ze9NJlAvxHtE6dQmBOlzoogTUec=
 github.com/SAMT-X/solution-task-management v0.0.0-20261010202729-6af0574e1fbe h1:9twku6avh5lgT0YSQZPP3BZNpSQHBv3PCowGxZWLVxQ=
 github.com/SAMT-X/solution-task-management v0.0.0-20261010202729-6af0574e1fbe/go.mod h1:lA9SLwD1Hn6TVoKDR1vjne9tfOM6e2riSlbk4bRI6JA=
+github.com/SAMT-X/solution-task-management v0.0.0-20261010231902-8462ed828538 h1:KcFhkvqBXutWMspT3OO3Nl3qXVnb6etmDOnEd7rvSv4=
+github.com/SAMT-X/solution-task-management v0.0.0-20261010231902-8462ed828538/go.mod h1:lA9SLwD1Hn6TVoKDR1vjne9tfOM6e2riSlbk4bRI6JA=
 github.com/SAMT-X/team-architecture v0.0.0-20260423145752-c6d715909724 h1:N6V0xs/F1rJ8bfGLTfh6AKVnl4JbiwrgT4NkOzKgeO4=
 github.com/SAMT-X/team-architecture v0.0.0-20260423145752-c6d715909724/go.mod h1:UMJNBAbXIv7kSfQXQYVxsyRW0rjkbIY4t0A8LSHPh/w=
 github.com/SAMT-X/team-semantics v0.0.0-20260423155808-7607ed08de8b h1:Hko33RGKMYOHbYrczLhsZEI544qRdQ26QeO3wbmVS3s=

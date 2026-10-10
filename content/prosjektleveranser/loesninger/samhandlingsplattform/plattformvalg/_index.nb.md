@@ -16,8 +16,8 @@ SAMT-BU bruker GitHub til innhold, oppgaver og samarbeid. Denne siden forklarer 
 | Bruk | Eksempel |
 |---|---|
 | Innhold | Alle sidene på docs.samt-bu.no ligger som tekstfiler i repoer i organisasjonen samt-x |
-| Oppgaver | Issues og prosjektbrett, se [Oppgavestyring](/prosjektleveranser/loesninger/styringsloesninger/oppgavestyring/) |
-| Redigering på nettstedet | Innlogging, lagring og forslag til endring går mot GitHub, se [SAMT-BU Docs](/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/) |
+| Oppgaver | Issues og prosjektbrett, se [Oppgavestyring](/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/) |
+| Redigering på nettstedet | Innlogging, lagring og forslag til endring går mot GitHub, se [SAMT-BU Docs](/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/) |
 | Bygging og publisering | GitHub Actions bygger nettstedet ved hver endring, og Cloudflare Pages publiserer det |
 | Tilgang | Team i organisasjonen styrer hvem som kan endre hva |
 
@@ -55,7 +55,7 @@ Nettstedet docs.samt-bu.no er den delen av prosjektet som er tettest knyttet til
 | Innlogging | GitHub App og en Cloudflare Worker | **Må skrives om.** Med GitLab trengs Workeren trolig ikke. |
 | Publisering | Cloudflare Pages | **Eget valg**, kan byttes uavhengig av git-plattformen |
 
-Den innebygde redigeringen er bygget for prosjektet og gjør at deltakere uten Git-kunnskap kan bidra. Den er også den største bindingen. Se [SAMT-BU Docs](/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/) for hvordan løsningen er bygget.
+Den innebygde redigeringen er bygget for prosjektet og gjør at deltakere uten Git-kunnskap kan bidra. Den er også den største bindingen. Se [SAMT-BU Docs](/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/) for hvordan løsningen er bygget.
 
 ## Alternativer
 
@@ -109,4 +109,4 @@ Et bytte er altså fortsatt et større tiltak, men flaskehalsen er ikke lenger k
 ## Mer om temaet
 
 - [Samskaping → Oppgavestyring](/utkast/temaer/samskaping/oppgavestyring/) drøfter hvorfor git-baserte plattformer passer for samarbeid mellom likeverdige organisasjoner
-- [Konsept for GitHub-organisasjoner og repoer](/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/teknisk-dokumentasjon/github-struktur/) beskriver hvordan organisasjonen samt-x er satt opp, og hvordan valget påvirket teknikken bak docs.samt-bu.no
+- [Konsept for GitHub-organisasjoner og repoer](/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/teknisk-dokumentasjon/github-struktur/) beskriver hvordan organisasjonen samt-x er satt opp, og hvordan valget påvirket teknikken bak docs.samt-bu.no
