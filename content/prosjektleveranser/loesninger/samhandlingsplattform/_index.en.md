@@ -1,4 +1,6 @@
 ---
+# id: auto-generated – copied values are overwritten automatically on push
+id: e42a29a0-4916-44de-85c2-12fb053f95e2
 title: "Collaboration platform"
 linkTitle: "Collaboration platform"
 weight: 10
