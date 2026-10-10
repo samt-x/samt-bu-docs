@@ -55,7 +55,7 @@ content/                           # Alt innhold (Markdown med YAML frontmatter)
     use-cases/                     # 31 nummererte use cases
     annet/
   pilotering/                      # Piloter (weight 40) – kun ingress + Seksjonsinnhold
-    pilot-1/ … pilot-4/            # ← montert fra Hugo Modules samt-bu-pilot-1..4
+    pilot-1/ … pilot-6/            # ← montert fra Hugo Modules samt-bu-pilot-1..6
   arkitektur/                      # Arkitektur (weight 50)
     overordnet-arkitektur/         # ← montert fra Hugo Module team-architecture
     informasjonsarkitektur/        # ← montert fra Hugo Module team-semantics
@@ -126,7 +126,7 @@ repoet filen faktisk ligger i. Ruting skjer på `$dir = path.Dir .File.Path`:
 | `prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/` | `solution-samt-bu-docs` |
 | `arkitektur/overordnet-arkitektur/` | `team-architecture` |
 | `arkitektur/informasjonsarkitektur/` | `team-semantics` |
-| `pilotering/pilot-1/` … `pilot-4/` | `samt-bu-pilot-1` … `-4` |
+| `pilotering/pilot-1/` … `pilot-6/` | `samt-bu-pilot-1` … `-6` |
 | `ekstern-markedsdialog/` | `samt-bu-market-engagement` |
 | alt annet | `samt-bu-docs` |
 
@@ -264,7 +264,7 @@ Innhold fra eksterne repoer monteres inn via Hugo Module-systemet (`go.mod` + `h
 | `team-architecture` | `content/arkitektur/overordnet-arkitektur/` |
 | `team-semantics` | `content/arkitektur/informasjonsarkitektur/` |
 | `samt-bu-drafts` | `content/utkast/` |
-| `samt-bu-pilot-1` … `samt-bu-pilot-4` | `content/pilotering/pilot-1/` … `pilot-4/` |
+| `samt-bu-pilot-1` … `samt-bu-pilot-6` | `content/pilotering/pilot-1/` … `pilot-6/` |
 | `solution-samt-bu-docs` | `content/prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/` |
 | `samt-bu-market-engagement` | `content/ekstern-markedsdialog/` |
 
@@ -282,7 +282,16 @@ hugo mod get github.com/SAMT-X/team-architecture@latest
 1. Opprett repo, `hugo mod init github.com/SAMT-X/<navn>`, lag `content/_index.nb.md` + `_index.en.md`, push
 2. Legg til `[[module.imports]]`-blokk i `hugo.toml`
 3. Kjør `hugo mod get github.com/SAMT-X/<navn>@latest`
-4. Verifiser med `hugo`, commit `hugo.toml` + `go.mod` + `go.sum`
+4. Legg til en `hugo mod get …@latest`-linje i `.github/workflows/hugo.yml`
+5. **Legg modulen inn i temaet.** Temaet har koblingen mellom sti og repo skrevet inn direkte, på sju steder i fire filer i
+   `themes/hugo-theme-samt-bu/layouts/partials/`: `edit-switcher.html` (fire steder), `header.html` (kildelenken),
+   `menu.html` (ny side) og `custom-footer.html` (`SAMTBU_REPOS`, forslagslisten). Kopier blokken for en eksisterende
+   modul med samme type sti (f.eks. pilot-4). **Glemmes dette, peker «Endre» og kildelenken på `samt-bu-docs`**, og
+   redigering på nettstedet virker ikke for modulen (oppdaget for pilot 5 og 6, 2026-10-10).
+6. Verifiser med `hugo`: sjekk at modulens sider har `data-repo="<navn>"` og lenker til eget repo.
+   Commit og push temaet, oppdater submodule-pekeren, og commit `hugo.toml` + `go.mod` + `go.sum` + `hugo.yml`
+7. I modulrepoet: kopier `.github/` (workflow + skript) fra et eksisterende modulrepo, bytt reponavnet i workflowen,
+   og legg inn secret `DOCS_REBUILD_TOKEN`. Gi team-tilgang som for de andre modulrepoene.
 
 **Repo-navnekonvensjon:**
 - `samt-bu-`-prefiks = publisert innhold/produkt (montert i nettstedet)
