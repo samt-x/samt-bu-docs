@@ -1,4 +1,6 @@
 ---
+# id: auto-generert – kopierte verdier overskrives automatisk ved push
+id: c240eba3-8e7f-49cb-974e-be2074e03e5f
 title: "Plattformvalg: GitHub"
 linkTitle: "Plattformvalg: GitHub"
 weight: 5

@@ -1,4 +1,6 @@
 ---
+# id: auto-generated – copied values are overwritten automatically on push
+id: 72f79e53-dce2-4cd0-bc7d-15ad9a7e3c4a
 title: 2026-10-11 Platform choice – GitHub (provisional)
 weight: 20
 ---
