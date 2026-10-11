@@ -1,17 +1,27 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
 id: c240eba3-8e7f-49cb-974e-be2074e03e5f
-title: "Plattformvalg: GitHub"
-linkTitle: "Plattformvalg: GitHub"
+title: "Introduksjon"
+linkTitle: "Introduksjon"
 weight: 5
 
 ---
 
-SAMT-BU bruker GitHub til innhold, oppgaver og samarbeid. Denne siden forklarer hvorfor, hva valget koster med tanke på digital suverenitet, og hva som skal til for å velge annerledes. Andre sider i dokumentasjonen henviser hit i stedet for å gjenta begrunnelsen.
+## Generelt
+
+Samhandlingsplattformen er de digitale verktøyene SAMT-BU bruker for å samarbeide på tvers av organisasjoner: dokumentasjonsnettstedet docs.samt-bu.no og oppgavestyringen.
+
+SAMT-BU skal levere et [rammeverk for datadrevet tjenesteutvikling](/om/#prosjektets-produkter) som andre kan bygge videre på. En god samhandlingsplattform hører med, fordi måten vi samarbeider på også er noe andre kan ha nytte av. Verktøyene er derfor dokumentert med tanke på andre enn prosjektet selv. I beste fall kan de gjenbrukes og skaleres direkte. Ellers bør de i det minste kunne tjene som eksempler til inspirasjon og videreutvikling.
+
+## Valg av git og git-plattform
+
+Løsningene bygger på git, et åpent og utbredt system for versjonskontroll. Innhold ligger som tekstfiler, oppgaver føres som saker, og endringer foreslås og behandles før de tas inn. Denne arbeidsformen er ikke knyttet til én leverandør.
+
+Git trenger en plattform som lagrer repoene og tilbyr saker, tilgangsstyring og bygging. Løsningene så langt er bygget på **GitHub**. Resten av siden forklarer hvorfor, hva valget koster med tanke på digital suverenitet, og hva som skal til for å velge annerledes. Andre sider i dokumentasjonen henviser hit i stedet for å gjenta begrunnelsen.
 
 **Status: foreløpig valg.** GitHub har vært brukt siden dokumentasjonsarbeidet startet i februar 2026. Valget er ført i [beslutningsloggen](/prosjektstyring/beslutningslogg/2026-10-11-plattformvalg-github/) og kan tas opp igjen.
 
-## Hva GitHub brukes til
+### Hva GitHub brukes til
 
 | Bruk | Eksempel |
 |---|---|
@@ -21,7 +31,7 @@ SAMT-BU bruker GitHub til innhold, oppgaver og samarbeid. Denne siden forklarer 
 | Bygging og publisering | GitHub Actions bygger nettstedet ved hver endring, og Cloudflare Pages publiserer det |
 | Tilgang | Team i organisasjonen styrer hvem som kan endre hva |
 
-## Hvorfor GitHub
+### Hvorfor GitHub
 
 - **Der samarbeidspartnerne er.** GitHub er mest brukt i Digdir og blant samarbeidspartnerne. Altinn, Felles datakatalog og de fleste synlige prosjekter med åpen kildekode i norsk offentlig sektor ligger der.
 - **Ingen terskel for å komme i gang.** Mange deltakere har allerede konto, og bruken er gratis for åpne repoer.
@@ -29,7 +39,7 @@ SAMT-BU bruker GitHub til innhold, oppgaver og samarbeid. Denne siden forklarer 
 
 Valget er pragmatisk, ikke nødvendigvis det arkitektonisk sterkeste.
 
-## Hva valget koster: digital suverenitet
+### Hva valget koster: digital suverenitet
 
 GitHub eies av Microsoft og er underlagt amerikansk lov, blant annet CLOUD Act. GitHub er ikke åpen kildekode, og kan ikke driftes i egen regi i en norsk eller europeisk infrastruktur uten lisens fra Microsoft.
 
@@ -43,7 +53,7 @@ Det samme gjelder **Cloudflare**, som publiserer nettstedet og håndterer innlog
 
 Så lenge innholdet er åpent og kan flyttes, vurderer vi risikoen som akseptabel. Det er grunnen til at valget er foreløpig.
 
-## Docs-løsningen og plattformvalget
+### Docs-løsningen og plattformvalget
 
 Nettstedet docs.samt-bu.no er den delen av prosjektet som er tettest knyttet til plattformvalget. Den er satt sammen av lag med svært ulik binding:
 
@@ -57,9 +67,9 @@ Nettstedet docs.samt-bu.no er den delen av prosjektet som er tettest knyttet til
 
 Den innebygde redigeringen er bygget for prosjektet og gjør at deltakere uten Git-kunnskap kan bidra. Den er også den største bindingen. Se [SAMT-BU Docs](/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/) for hvordan løsningen er bygget.
 
-## Alternativer
+### Alternativer
 
-Arbeidsformen – innhold som tekst i git, oppgaver som saker, endringer som forslag – er ikke knyttet til GitHub. Den samme arbeidsformen finnes i andre git-baserte løsninger:
+Den samme arbeidsformen finnes i andre git-baserte løsninger:
 
 | Løsning | Kjennetegn |
 |---|---|
@@ -69,7 +79,7 @@ Arbeidsformen – innhold som tekst i git, oppgaver som saker, endringer som for
 
 For lignende prosjekter i offentlig sektor bør en løsning som kan driftes i egen regi vurderes som førstevalg.
 
-## Hva som skal til for å bytte
+### Hva som skal til for å bytte
 
 | Del | Kan flyttes? |
 |---|---|
@@ -81,7 +91,7 @@ For lignende prosjekter i offentlig sektor bør en løsning som kan driftes i eg
 
 Innholdet, som er det viktigste, er altså ikke låst. Det som er låst, er verktøyene rundt.
 
-### Hvor stort er et bytte?
+#### Hvor stort er et bytte?
 
 Et bytte har to deler, og de har endret seg ulikt.
 
@@ -98,7 +108,7 @@ Et bytte er altså fortsatt et større tiltak, men flaskehalsen er ikke lenger k
 
 **Slik kan anslaget gjøres pålitelig:** Et avgrenset forsøk på to–tre dager, der ett innholdsrepo speiles til GitLab og innlogging og lagring porteres for det repoet. Da har vi et tall vi kan stå inne for, i stedet for et anslag.
 
-## Når valget bør tas opp igjen
+### Når valget bør tas opp igjen
 
 - Prosjektet skal håndtere ikke-offentlig eller sensitivt innhold
 - Oppdragsgiver eller Digdir stiller krav til digital suverenitet eller drift i Norge eller EU
@@ -106,7 +116,7 @@ Et bytte er altså fortsatt et større tiltak, men flaskehalsen er ikke lenger k
 - En felles offentlig git-plattform blir tilgjengelig
 - GitHub endrer vilkår eller priser vesentlig
 
-## Mer om temaet
+### Mer om temaet
 
 - [Samskaping → Oppgavestyring](/utkast/temaer/samskaping/oppgavestyring/) drøfter hvorfor git-baserte plattformer passer for samarbeid mellom likeverdige organisasjoner
 - [Konsept for GitHub-organisasjoner og repoer](/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/teknisk-dokumentasjon/github-struktur/) beskriver hvordan organisasjonen samt-x er satt opp, og hvordan valget påvirket teknikken bak docs.samt-bu.no

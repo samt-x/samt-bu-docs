@@ -15,4 +15,4 @@ GitHub has been used since the documentation work started in February 2026, with
 
 ## Rationale and trade-offs
 
-Described in full under [Platform choice: GitHub](/en/prosjektleveranser/loesninger/samhandlingsplattform/plattformvalg/): why GitHub, what the choice costs in terms of digital sovereignty, the alternatives, what it would take to switch, and when the choice should be revisited.
+Described in full under [Introduction → Choice of git and git platform](/en/prosjektleveranser/loesninger/samhandlingsplattform/introduksjon/#choice-of-git-and-git-platform): why GitHub, what the choice costs in terms of digital sovereignty, the alternatives, what it would take to switch, and when the choice should be revisited.

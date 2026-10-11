@@ -1,17 +1,27 @@
 ---
 # id: auto-generated – copied values are overwritten automatically on push
 id: c240eba3-8e7f-49cb-974e-be2074e03e5f
-title: "Platform choice: GitHub"
-linkTitle: "Platform choice: GitHub"
+title: "Introduction"
+linkTitle: "Introduction"
 weight: 5
 
 ---
 
-SAMT-BU uses GitHub for content, tasks and collaboration. This page explains why, what the choice costs in terms of digital sovereignty, and what it would take to choose differently. Other pages in the documentation refer here instead of repeating the rationale.
+## General
+
+The collaboration platform is the set of digital tools SAMT-BU uses to collaborate across organisations: the documentation website docs.samt-bu.no and task management.
+
+SAMT-BU is to deliver a [framework for data-driven service development](/en/om/) that others can build on. A good collaboration platform is part of that, because the way we collaborate is also something others can benefit from. The tools are therefore documented with others than the project itself in mind. At best they can be reused and scaled directly. Otherwise they should at least serve as examples for inspiration and further development.
+
+## Choice of git and git platform
+
+The solutions build on git, an open and widely used version control system. Content is stored as text files, tasks are tracked as issues, and changes are proposed and reviewed before they are accepted. This way of working is not tied to any one vendor.
+
+Git needs a platform that hosts the repositories and provides issues, access control and builds. The solutions so far are built on **GitHub**. The rest of this page explains why, what the choice costs in terms of digital sovereignty, and what it would take to choose differently. Other pages in the documentation refer here instead of repeating the rationale.
 
 **Status: provisional choice.** GitHub has been used since the documentation work started in February 2026. The choice is recorded in the [decision log](/en/prosjektstyring/beslutningslogg/2026-10-11-plattformvalg-github/) and can be revisited.
 
-## What GitHub is used for
+### What GitHub is used for
 
 | Use | Example |
 |---|---|
@@ -21,7 +31,7 @@ SAMT-BU uses GitHub for content, tasks and collaboration. This page explains why
 | Building and publishing | GitHub Actions builds the website on every change, and Cloudflare Pages publishes it |
 | Access | Teams in the organisation control who can change what |
 
-## Why GitHub
+### Why GitHub
 
 - **That is where the partners are.** GitHub is the most widely used platform in Digdir and among the partners. Altinn, the National Data Catalogue and most visible open source projects in the Norwegian public sector are there.
 - **No barrier to getting started.** Many participants already have an account, and use is free for public repositories.
@@ -29,7 +39,7 @@ SAMT-BU uses GitHub for content, tasks and collaboration. This page explains why
 
 The choice is pragmatic, not necessarily the architecturally strongest.
 
-## What the choice costs: digital sovereignty
+### What the choice costs: digital sovereignty
 
 GitHub is owned by Microsoft and subject to US law, including the CLOUD Act. GitHub is not open source, and cannot be self-hosted on Norwegian or European infrastructure without a licence from Microsoft.
 
@@ -43,7 +53,7 @@ The same applies to **Cloudflare**, which publishes the website and handles logi
 
 As long as the content is open and can be moved, we consider the risk acceptable. That is why the choice is provisional.
 
-## The docs solution and the platform choice
+### The docs solution and the platform choice
 
 The website docs.samt-bu.no is the part of the project most closely tied to the platform choice. It consists of layers with very different degrees of lock-in:
 
@@ -57,9 +67,9 @@ The website docs.samt-bu.no is the part of the project most closely tied to the 
 
 The built-in editor was made for the project and lets participants without Git knowledge contribute. It is also the biggest lock-in. See [SAMT-BU Docs](/en/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/) for how the solution is built.
 
-## Alternatives
+### Alternatives
 
-The way of working – content as text in git, tasks as issues, changes as suggestions – is not tied to GitHub. The same way of working exists in other git-based solutions:
+The same way of working exists in other git-based solutions:
 
 | Solution | Characteristics |
 |---|---|
@@ -69,7 +79,7 @@ The way of working – content as text in git, tasks as issues, changes as sugge
 
 For similar projects in the public sector, a solution that can be self-hosted should be considered the first choice.
 
-## What it would take to switch
+### What it would take to switch
 
 | Part | Can it be moved? |
 |---|---|
@@ -81,7 +91,7 @@ For similar projects in the public sector, a solution that can be self-hosted sh
 
 The content, which is what matters most, is not locked in. What is locked in is the tooling around it.
 
-### How big would a switch be?
+#### How big would a switch be?
 
 A switch has two parts, and they have changed differently.
 
@@ -98,7 +108,7 @@ A switch is therefore still a major undertaking, but the bottleneck is no longer
 
 **How the estimate can be made reliable:** A bounded trial of two to three days, in which one content repository is mirrored to GitLab and login and saving are ported for that repository. That would give us a figure we can stand behind, instead of an estimate.
 
-## When the choice should be revisited
+### When the choice should be revisited
 
 - The project is to handle non-public or sensitive content
 - The commissioning body or Digdir sets requirements for digital sovereignty or hosting in Norway or the EU
@@ -106,7 +116,7 @@ A switch is therefore still a major undertaking, but the bottleneck is no longer
 - A shared public sector git platform becomes available
 - GitHub changes its terms or prices significantly
 
-## More on the topic
+### More on the topic
 
 - [Co-creation → Task management](/en/utkast/temaer/samskaping/oppgavestyring/) discusses why git-based platforms suit collaboration between equal organisations
 - [Concept for GitHub Organizations and Repositories](/en/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/teknisk-dokumentasjon/github-struktur/) describes how the samt-x organisation is set up

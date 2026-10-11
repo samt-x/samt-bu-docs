@@ -15,4 +15,4 @@ GitHub har vært brukt siden dokumentasjonsarbeidet startet i februar 2026, uten
 
 ## Begrunnelse og avveininger
 
-Beskrevet i sin helhet under [Plattformvalg: GitHub](/prosjektleveranser/loesninger/samhandlingsplattform/plattformvalg/): hvorfor GitHub, hva valget koster med tanke på digital suverenitet, alternativene, hva som skal til for å bytte, og når valget bør tas opp igjen.
+Beskrevet i sin helhet under [Introduksjon → Valg av git og git-plattform](/prosjektleveranser/loesninger/samhandlingsplattform/introduksjon/#valg-av-git-og-git-plattform): hvorfor GitHub, hva valget koster med tanke på digital suverenitet, alternativene, hva som skal til for å bytte, og når valget bør tas opp igjen.

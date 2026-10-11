@@ -22,5 +22,7 @@
 /en/prosjektleveranser/loesninger/styringsloesninger/oppgavestyring/* /en/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/:splat 301
 /prosjektleveranser/loesninger/styringsloesninger/*                   /prosjektleveranser/loesninger/samhandlingsplattform/                        301
 /en/prosjektleveranser/loesninger/styringsloesninger/*                /en/prosjektleveranser/loesninger/samhandlingsplattform/                     301
-/prosjektleveranser/loesninger/plattformvalg/*                        /prosjektleveranser/loesninger/samhandlingsplattform/plattformvalg/:splat    301
-/en/prosjektleveranser/loesninger/plattformvalg/*                     /en/prosjektleveranser/loesninger/samhandlingsplattform/plattformvalg/:splat 301
+/prosjektleveranser/loesninger/samhandlingsplattform/plattformvalg/*    /prosjektleveranser/loesninger/samhandlingsplattform/introduksjon/:splat     301
+/en/prosjektleveranser/loesninger/samhandlingsplattform/plattformvalg/* /en/prosjektleveranser/loesninger/samhandlingsplattform/introduksjon/:splat  301
+/prosjektleveranser/loesninger/plattformvalg/*                        /prosjektleveranser/loesninger/samhandlingsplattform/introduksjon/:splat     301
+/en/prosjektleveranser/loesninger/plattformvalg/*                     /en/prosjektleveranser/loesninger/samhandlingsplattform/introduksjon/:splat  301
