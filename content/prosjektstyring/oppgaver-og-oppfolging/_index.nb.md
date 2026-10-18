@@ -6,7 +6,7 @@ linkTitle: "Oppgaver og oppfølging"
 weight: 25
 ---
 
-Her finner du lenkene du trenger for å følge opp arbeidet i SAMT-BU: dine egne oppgaver, brettene til delprosjektene, og etter hvert porteføljen for hele prosjektet. Oppgavene ligger i GitHub, og du må være logget inn for å se dem.
+Her finner du lenkene du trenger for å følge opp arbeidet i SAMT-BU: dine egne oppgaver, brettene til delprosjektene, og etter hvert porteføljen for hele prosjektet. Oppgavene og brettene ligger i GitHub og er åpne for alle. Bare søkene etter dine egne oppgaver krever at du er logget inn, fordi GitHub må vite hvem du er.
 
 Hvordan oppgavestyringen er bygd opp, og reglene vi følger, står under [Oppgavestyring](https://docs.samt-bu.no/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/).
 
@@ -19,9 +19,9 @@ Ferdige søk på tvers av alle repoer og brett i SAMT-BU. Legg gjerne de du bruk
 | [Mine åpne oppgaver](https://github.com/issues?q=is%3Aissue%20is%3Aopen%20assignee%3A%40me%20org%3Asamt-x) | Åpne oppgaver som er tildelt deg |
 | [Oppgaver jeg har opprettet](https://github.com/issues?q=is%3Aissue%20is%3Aopen%20author%3A%40me%20org%3Asamt-x) | Åpne oppgaver du har opprettet, også de som er tildelt andre |
 | [Oppgaver der jeg er nevnt](https://github.com/issues?q=is%3Aissue%20is%3Aopen%20mentions%3A%40me%20org%3Asamt-x) | Åpne oppgaver der noen har nevnt deg med @ |
-| [Åpne oppgaver uten ansvarlig](https://github.com/issues?q=is%3Aissue%20is%3Aopen%20no%3Aassignee%20org%3Asamt-x) | Oppgaver som ingen er tildelt, og som kan falle mellom to stoler |
+| [Åpne oppgaver uten ansvarlig](https://github.com/search?q=is%3Aissue%20is%3Aopen%20no%3Aassignee%20org%3Asamt-x&type=issues) | Oppgaver som ingen er tildelt, og som kan falle mellom to stoler |
 
-Søkene viser bare oppgaver der du står som **Assignee**, forfatter eller er nevnt. Det er derfor viktig at oppgaver tildeles.
+De tre første søkene krever at du er logget inn på GitHub. De viser bare oppgaver der du står som **Assignee**, forfatter eller er nevnt, og derfor er det viktig at oppgaver tildeles. Det siste søket virker for alle.
 
 ## Brettene
 
@@ -35,7 +35,7 @@ Hvert delprosjekt har sitt eget brett, med egne statuser og felt.
 | Pilot 4 – Vitnemål | [Project 3](https://github.com/orgs/samt-x/projects/3) |
 | Pilot 5 – Id-er i utdanning | [Project 9](https://github.com/orgs/samt-x/projects/9) |
 | Pilot 6 – Foreldres tilgang til data | [Project 10](https://github.com/orgs/samt-x/projects/10) |
-| Rammeverk og generisk arkitektur (arkitekturgruppa) | [Project 5](https://github.com/orgs/samt-x/projects/5), med visningen [My tasks](https://github.com/orgs/samt-x/projects/5/views/7) |
+| Rammeverk og generisk arkitektur (arkitekturgruppa) | [Project 5](https://github.com/orgs/samt-x/projects/5), med visningen [My tasks](https://github.com/orgs/samt-x/projects/5/views/7) (krever innlogging) |
 | Informasjonsmodeller | [Project 6](https://github.com/orgs/samt-x/projects/6) |
 
 Brettene har i dag ulike statuser og visninger. Det arbeides med felles maler, slik at alle brettene kan rapporteres samlet. Se [veikartet for oppgavestyringen](https://docs.samt-bu.no/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/veikart/felles-oppsett/).

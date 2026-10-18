@@ -6,7 +6,7 @@ linkTitle: "Tasks and follow-up"
 weight: 25
 ---
 
-This page has the links you need to follow up the work in SAMT-BU: your own tasks, the boards of the sub-projects, and eventually the portfolio for the whole project. The tasks live in GitHub, and you must be signed in to see them.
+This page has the links you need to follow up the work in SAMT-BU: your own tasks, the boards of the sub-projects, and eventually the portfolio for the whole project. The tasks and boards live in GitHub and are open to everyone. Only the searches for your own tasks require you to be signed in, because GitHub needs to know who you are.
 
 How task management is set up, and the rules we follow, are described under [Task management](https://docs.samt-bu.no/en/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/).
 
@@ -19,9 +19,9 @@ Ready-made searches across all repositories and boards in SAMT-BU. Consider book
 | [My open tasks](https://github.com/issues?q=is%3Aissue%20is%3Aopen%20assignee%3A%40me%20org%3Asamt-x) | Open tasks assigned to you |
 | [Tasks I created](https://github.com/issues?q=is%3Aissue%20is%3Aopen%20author%3A%40me%20org%3Asamt-x) | Open tasks you created, including those assigned to others |
 | [Tasks mentioning me](https://github.com/issues?q=is%3Aissue%20is%3Aopen%20mentions%3A%40me%20org%3Asamt-x) | Open tasks where someone has mentioned you with @ |
-| [Open tasks without an owner](https://github.com/issues?q=is%3Aissue%20is%3Aopen%20no%3Aassignee%20org%3Asamt-x) | Tasks nobody is assigned to, which may fall between the cracks |
+| [Open tasks without an owner](https://github.com/search?q=is%3Aissue%20is%3Aopen%20no%3Aassignee%20org%3Asamt-x&type=issues) | Tasks nobody is assigned to, which may fall between the cracks |
 
-The searches only list tasks where you are an **Assignee**, the author or mentioned. That is why assigning tasks matters.
+The first three searches require you to be signed in to GitHub. They only list tasks where you are an **Assignee**, the author or mentioned, which is why assigning tasks matters. The last search works for everyone.
 
 ## The boards
 
@@ -35,7 +35,7 @@ Each sub-project has its own board, with its own statuses and fields.
 | Pilot 4 – Diplomas | [Project 3](https://github.com/orgs/samt-x/projects/3) |
 | Pilot 5 – IDs in education | [Project 9](https://github.com/orgs/samt-x/projects/9) |
 | Pilot 6 – Parents' access to data | [Project 10](https://github.com/orgs/samt-x/projects/10) |
-| Framework and generic architecture (the architecture group) | [Project 5](https://github.com/orgs/samt-x/projects/5), with the view [My tasks](https://github.com/orgs/samt-x/projects/5/views/7) |
+| Framework and generic architecture (the architecture group) | [Project 5](https://github.com/orgs/samt-x/projects/5), with the view [My tasks](https://github.com/orgs/samt-x/projects/5/views/7) (requires sign-in) |
 | Information models | [Project 6](https://github.com/orgs/samt-x/projects/6) |
 
 The boards currently have different statuses and views. Shared templates are being developed so that all boards can be reported together. See the [task management roadmap](https://docs.samt-bu.no/en/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/veikart/felles-oppsett/).
