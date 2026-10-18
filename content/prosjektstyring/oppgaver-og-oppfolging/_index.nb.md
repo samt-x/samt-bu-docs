@@ -23,9 +23,17 @@ Ferdige søk på tvers av alle repoer og brett i SAMT-BU. Legg gjerne de du bruk
 
 De tre første søkene krever at du er logget inn på GitHub. De viser bare oppgaver der du står som **Assignee**, forfatter eller er nevnt, og derfor er det viktig at oppgaver tildeles. Det siste søket virker for alle.
 
-## Brettene
+## Prosjektbrettene
 
-Hvert delprosjekt har sitt eget brett, med egne statuser og felt.
+Et **prosjektbrett** er et prosjekt i GitHub (GitHub Projects): en samling oppgaver med felles felt, som status, ansvarlig og frist. Samme brett kan vises på flere måter, og hver visning ligger i en egen fane på brettet:
+
+- **Kanban-brett** (i GitHub: Board): én kolonne per steg i arbeidsflyten, for eksempel Ny, Pågår og Ferdig. Hver oppgave er et kort som flyttes fra venstre mot høyre etter hvert som arbeidet går framover. Kolonnene kan også deles inn etter et annet felt, for eksempel ansvarlig eller prioritet.
+- **Tabell** (Table): én rad per oppgave, med feltene som kolonner. Egner seg til å sortere og filtrere.
+- **Tidslinje** (Roadmap): oppgavene plassert langs en tidsakse etter dato.
+
+Flytter du et kort til en annen kolonne, endres feltet kolonnene bygger på, som oftest status. Endringen vises i alle visningene, fordi det er den samme oppgaven.
+
+Hvert delprosjekt har sitt eget prosjektbrett, med egne statuser og felt.
 
 | Delprosjekt | Brett |
 |---|---|
