@@ -28,6 +28,7 @@ If you are **responsible** for tasks in the architecture group, you can see them
 | Search | Shows |
 |---|---|
 | [Open tasks assigned to nobody](https://github.com/search?q=is%3Aissue%20is%3Aopen%20no%3Aassignee%20org%3Asamt-x&type=issues) | Tasks without an Assignee, which may fall between the cracks. Works without signing in. |
+| [Blocked tasks](https://github.com/search?q=is%3Aissue%20is%3Aopen%20label%3Ablocked%20org%3Asamt-x&type=issues) | Open tasks with the label blocked, waiting for something outside the task. What they are waiting for is stated in a comment. Works without signing in. |
 
 ## The project boards
 

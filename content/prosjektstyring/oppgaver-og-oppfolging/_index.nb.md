@@ -28,6 +28,7 @@ Er du **ansvarlig** for oppgaver i arkitekturgruppa, ser du dem i visningen [By 
 | Søk | Viser |
 |---|---|
 | [Åpne oppgaver som ingen er tildelt](https://github.com/search?q=is%3Aissue%20is%3Aopen%20no%3Aassignee%20org%3Asamt-x&type=issues) | Oppgaver uten Assignee, som kan falle mellom to stoler. Virker uten innlogging. |
+| [Blokkerte oppgaver](https://github.com/search?q=is%3Aissue%20is%3Aopen%20label%3Ablocked%20org%3Asamt-x&type=issues) | Åpne oppgaver med merkelappen blocked, som venter på noe utenfor oppgaven. Hva de venter på, står i en kommentar. Virker uten innlogging. |
 
 ## Prosjektbrettene
 
