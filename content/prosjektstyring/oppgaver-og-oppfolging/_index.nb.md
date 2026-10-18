@@ -12,16 +12,22 @@ Hvordan oppgavestyringen er bygd opp, og reglene vi følger, står under [Oppgav
 
 ## Mine oppgaver
 
-Ferdige søk på tvers av alle repoer og brett i SAMT-BU. Legg gjerne de du bruker mest inn som bokmerker.
+Ferdige søk på tvers av alle repoer og brett i SAMT-BU. Legg dem gjerne inn som bokmerker. Begge krever at du er logget inn på GitHub.
 
 | Søk | Viser |
 |---|---|
-| [Mine åpne oppgaver](https://github.com/issues?q=is%3Aissue%20is%3Aopen%20assignee%3A%40me%20org%3Asamt-x) | Åpne oppgaver som er tildelt deg |
-| [Oppgaver jeg har opprettet](https://github.com/issues?q=is%3Aissue%20is%3Aopen%20author%3A%40me%20org%3Asamt-x) | Åpne oppgaver du har opprettet, også de som er tildelt andre |
+| [Mine åpne oppgaver](https://github.com/issues?q=is%3Aissue%20is%3Aopen%20assignee%3A%40me%20org%3Asamt-x) | Åpne oppgaver som er tildelt deg (Assignee) |
 | [Oppgaver der jeg er nevnt](https://github.com/issues?q=is%3Aissue%20is%3Aopen%20mentions%3A%40me%20org%3Asamt-x) | Åpne oppgaver der noen har nevnt deg med @ |
-| [Åpne oppgaver uten ansvarlig](https://github.com/search?q=is%3Aissue%20is%3Aopen%20no%3Aassignee%20org%3Asamt-x&type=issues) | Oppgaver som ingen er tildelt, og som kan falle mellom to stoler |
 
-De tre første søkene krever at du er logget inn på GitHub. De viser bare oppgaver der du står som **Assignee**, forfatter eller er nevnt, og derfor er det viktig at oppgaver tildeles. Det siste søket virker for alle.
+Søkene viser bare oppgaver der du står som **Assignee** eller er nevnt. Derfor er det viktig at oppgaver tildeles.
+
+Er du **ansvarlig** for oppgaver i arkitekturgruppa, ser du dem i visningen [By responsible](https://github.com/orgs/samt-x/projects/5/views/3) i Project 5. Et søk etter ansvar på tvers av alle brett er ikke mulig ennå, fordi GitHubs søk ikke ser feltene på brettene. Det kommer med samlebrettet, se [veikartet](https://docs.samt-bu.no/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/veikart/oversikt-for-den-enkelte/).
+
+## Oppgaver som trenger oppfølging
+
+| Søk | Viser |
+|---|---|
+| [Åpne oppgaver som ingen er tildelt](https://github.com/search?q=is%3Aissue%20is%3Aopen%20no%3Aassignee%20org%3Asamt-x&type=issues) | Oppgaver uten Assignee, som kan falle mellom to stoler. Virker uten innlogging. |
 
 ## Prosjektbrettene
 
@@ -43,7 +49,7 @@ Hvert delprosjekt har sitt eget prosjektbrett, med egne statuser og felt.
 | Pilot 4 – Vitnemål | [Project 3](https://github.com/orgs/samt-x/projects/3) |
 | Pilot 5 – Id-er i utdanning | [Project 9](https://github.com/orgs/samt-x/projects/9) |
 | Pilot 6 – Foreldres tilgang til data | [Project 10](https://github.com/orgs/samt-x/projects/10) |
-| Rammeverk og generisk arkitektur (arkitekturgruppa) | [Project 5](https://github.com/orgs/samt-x/projects/5), med visningen [My tasks](https://github.com/orgs/samt-x/projects/5/views/7) (krever innlogging) |
+| Rammeverk og generisk arkitektur (arkitekturgruppa) | [Project 5](https://github.com/orgs/samt-x/projects/5), med visningene [By responsible](https://github.com/orgs/samt-x/projects/5/views/3) og [My tasks](https://github.com/orgs/samt-x/projects/5/views/7) (krever innlogging) |
 | Informasjonsmodeller | [Project 6](https://github.com/orgs/samt-x/projects/6) |
 
 Brettene har i dag ulike statuser og visninger. Det arbeides med felles maler, slik at alle brettene kan rapporteres samlet. Se [veikartet for oppgavestyringen](https://docs.samt-bu.no/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/veikart/felles-oppsett/).
