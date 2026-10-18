@@ -1,4 +1,6 @@
 ---
+# id: auto-generert – kopierte verdier overskrives automatisk ved push
+id: 5c5afb34-e520-461e-813b-5de086478937
 title: "Oppgaver og oppfølging"
 linkTitle: "Oppgaver og oppfølging"
 weight: 25
