@@ -21,7 +21,7 @@ Ferdige søk på tvers av alle repoer og brett i SAMT-BU. Legg dem gjerne inn so
 
 Søkene viser bare oppgaver der du står som **Assignee** eller er nevnt. Derfor er det viktig at oppgaver tildeles.
 
-Er du **ansvarlig** for oppgaver i arkitekturgruppa, ser du dem i visningen [By responsible](https://github.com/orgs/samt-x/projects/5/views/3) i Project 5. Et søk etter ansvar på tvers av alle brett er ikke mulig ennå, fordi GitHubs søk ikke ser feltene på brettene. Det kommer med samlebrettet, se [veikartet](https://docs.samt-bu.no/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/veikart/oversikt-for-den-enkelte/).
+Er du **ansvarlig** for oppgaver i arkitekturgruppa, ser du dem i visningen [By responsible](https://github.com/orgs/samt-x/projects/5/views/3) i Project 5. På tvers av alle brett finner du ansvaret ditt i samlebrettet, se under. GitHubs søk ser ikke feltene på brettene.
 
 ## Oppgaver som trenger oppfølging
 
@@ -29,6 +29,20 @@ Er du **ansvarlig** for oppgaver i arkitekturgruppa, ser du dem i visningen [By 
 |---|---|
 | [Åpne oppgaver som ingen er tildelt](https://github.com/search?q=is%3Aissue%20is%3Aopen%20no%3Aassignee%20org%3Asamt-x&type=issues) | Oppgaver uten Assignee, som kan falle mellom to stoler. Virker uten innlogging. |
 | [Blokkerte oppgaver](https://github.com/search?q=is%3Aissue%20is%3Aopen%20label%3Ablocked%20org%3Asamt-x&type=issues) | Åpne oppgaver med merkelappen blocked, som venter på noe utenfor oppgaven. Hva de venter på, står i en kommentar. Virker uten innlogging. |
+
+## Alle oppgaver samlet
+
+[SAMT-BU All tasks](https://github.com/orgs/samt-x/projects/12) samler alle oppgavene i de offentlige repoene på ett brett, med en felles status: Not started, In progress eller Done. Brettet fylles automatisk hver time fra prosjektbrettene, og viser også ansvarlig, prioritet og datoer derfra.
+
+Endre oppgavene på prosjektbrettet de hører til. Endringer på samlebrettet overskrives ved neste oppdatering.
+
+| Visning | Viser |
+|---|---|
+| [My tasks](https://github.com/orgs/samt-x/projects/12/views/1) | Dine åpne oppgaver, som kanban per status (krever innlogging) |
+| [By responsible](https://github.com/orgs/samt-x/projects/12/views/2) | Åpne oppgaver, én kolonne per ansvarlig |
+| [By board](https://github.com/orgs/samt-x/projects/12/views/3) | Åpne oppgaver, gruppert per repo |
+| [Blocked](https://github.com/orgs/samt-x/projects/12/views/4) | Åpne oppgaver med merkelappen blocked |
+| [Timeline](https://github.com/orgs/samt-x/projects/12/views/5) | Åpne oppgaver langs en tidsakse |
 
 ## Prosjektbrettene
 
@@ -53,7 +67,7 @@ Hvert delprosjekt har sitt eget prosjektbrett, med egne statuser og felt.
 | Rammeverk og generisk arkitektur (arkitekturgruppa) | [Project 5](https://github.com/orgs/samt-x/projects/5), med visningene [By responsible](https://github.com/orgs/samt-x/projects/5/views/3) og [My tasks](https://github.com/orgs/samt-x/projects/5/views/7) (krever innlogging) |
 | Informasjonsmodeller | [Project 6](https://github.com/orgs/samt-x/projects/6) |
 
-Brettene har i dag ulike statuser og visninger. Det arbeides med felles maler, slik at alle brettene kan rapporteres samlet. Se [veikartet for oppgavestyringen](https://docs.samt-bu.no/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/veikart/felles-oppsett/).
+Brettene bygger på to felles maler, og alle statusene kan rapporteres inn i det felles nivået på samlebrettet. Se [Konvensjoner](https://docs.samt-bu.no/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/konvensjoner/).
 
 ## SAMT-BU-porteføljen
 
