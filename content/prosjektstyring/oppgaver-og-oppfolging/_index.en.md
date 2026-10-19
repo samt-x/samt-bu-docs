@@ -10,6 +10,8 @@ This page has the links you need to follow up the work in SAMT-BU: your own task
 
 How task management is set up, and the rules we follow, are described under [Task management](https://docs.samt-bu.no/en/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/).
 
+Use the links on this page to find your way. The list of all boards in GitHub, under Projects in the organisation, also shows the overview boards. They are called «SAMT-BU Overview – …» and are not sub-projects.
+
 ## My tasks
 
 Ready-made searches across all repositories and boards in SAMT-BU. Consider bookmarking them. Both require you to be signed in to GitHub.
@@ -32,7 +34,7 @@ If you are **responsible** for tasks in the architecture group, you can see them
 
 ## All tasks in one place
 
-[SAMT-BU All tasks](https://github.com/orgs/samt-x/projects/12) collects all tasks in the public repositories on one board, with a shared status: Not started, In progress or Done. The board is filled automatically every hour from the project boards, and also shows the responsible person, priority and dates from there.
+[SAMT-BU Overview – All tasks](https://github.com/orgs/samt-x/projects/12) collects all tasks in the public repositories on one board, with a shared status: Not started, In progress or Done. The board is filled automatically every hour from the project boards, and also shows the responsible person, priority and dates from there.
 
 Change tasks on the project board they belong to. Changes made on the aggregate board are overwritten on the next update.
 
@@ -71,7 +73,7 @@ The boards are based on two shared templates, and all their statuses can be repo
 
 ## The SAMT-BU portfolio
 
-The portfolio gives an overview of the whole project, with one card per pilot, product and work area: who owns it, what phase it is in, and how it is going. The portfolio board is [SAMT-BU Portfolio](https://github.com/orgs/samt-x/projects/13).
+The portfolio gives an overview of the whole project, with one card per pilot, product and work area: who owns it, what phase it is in, and how it is going. The portfolio board is [SAMT-BU Overview – Portfolio](https://github.com/orgs/samt-x/projects/13).
 
 | Field | Meaning |
 |---|---|

@@ -10,6 +10,8 @@ Her finner du lenkene du trenger for å følge opp arbeidet i SAMT-BU: dine egne
 
 Hvordan oppgavestyringen er bygd opp, og reglene vi følger, står under [Oppgavestyring](https://docs.samt-bu.no/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/).
 
+Bruk lenkene på denne siden for å finne fram. Listen over alle brett i GitHub, under Projects i organisasjonen, viser også oversiktsbrettene. De heter «SAMT-BU Overview – …» og er ikke delprosjekter.
+
 ## Mine oppgaver
 
 Ferdige søk på tvers av alle repoer og brett i SAMT-BU. Legg dem gjerne inn som bokmerker. Begge krever at du er logget inn på GitHub.
@@ -32,7 +34,7 @@ Er du **ansvarlig** for oppgaver i arkitekturgruppa, ser du dem i visningen [By 
 
 ## Alle oppgaver samlet
 
-[SAMT-BU All tasks](https://github.com/orgs/samt-x/projects/12) samler alle oppgavene i de offentlige repoene på ett brett, med en felles status: Not started, In progress eller Done. Brettet fylles automatisk hver time fra prosjektbrettene, og viser også ansvarlig, prioritet og datoer derfra.
+[SAMT-BU Overview – All tasks](https://github.com/orgs/samt-x/projects/12) samler alle oppgavene i de offentlige repoene på ett brett, med en felles status: Not started, In progress eller Done. Brettet fylles automatisk hver time fra prosjektbrettene, og viser også ansvarlig, prioritet og datoer derfra.
 
 Endre oppgavene på prosjektbrettet de hører til. Endringer på samlebrettet overskrives ved neste oppdatering.
 
@@ -71,7 +73,7 @@ Brettene bygger på to felles maler, og alle statusene kan rapporteres inn i det
 
 ## SAMT-BU-porteføljen
 
-Porteføljen gir oversikt over hele prosjektet, med ett kort per pilot, produkt og arbeidsområde: hvem som eier det, hvilken fase det er i, og hvordan det går. Porteføljebrettet er [SAMT-BU Portfolio](https://github.com/orgs/samt-x/projects/13).
+Porteføljen gir oversikt over hele prosjektet, med ett kort per pilot, produkt og arbeidsområde: hvem som eier det, hvilken fase det er i, og hvordan det går. Porteføljebrettet er [SAMT-BU Overview – Portfolio](https://github.com/orgs/samt-x/projects/13).
 
 | Felt | Betydning |
 |---|---|
