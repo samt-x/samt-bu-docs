@@ -6,7 +6,7 @@ linkTitle: "Tasks and follow-up"
 weight: 25
 ---
 
-This page has the links you need to follow up the work in SAMT-BU: your own tasks, the boards of the sub-projects, and eventually the portfolio for the whole project. The tasks and boards live in GitHub and are open to everyone. Only the searches for your own tasks require you to be signed in, because GitHub needs to know who you are.
+This page has the links you need to follow up the work in SAMT-BU: your own tasks, the boards of the sub-projects, and the portfolio for the whole project. The tasks and boards live in GitHub and are open to everyone. Only the searches for your own tasks require you to be signed in, because GitHub needs to know who you are.
 
 How task management is set up, and the rules we follow, are described under [Task management](https://docs.samt-bu.no/en/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/).
 
@@ -71,6 +71,16 @@ The boards are based on two shared templates, and all their statuses can be repo
 
 ## The SAMT-BU portfolio
 
-The portfolio gives an overview of the whole project, with one card per pilot, product and work area: who owns it, what phase it is in, and how it is going. The portfolio board has not been created yet. See the [roadmap](https://docs.samt-bu.no/en/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/veikart/portefoljestyring/).
+The portfolio gives an overview of the whole project, with one card per pilot, product and work area: who owns it, what phase it is in, and how it is going. The portfolio board is [SAMT-BU Portfolio](https://github.com/orgs/samt-x/projects/13).
 
-Once the board is in place, the governance itself will be described here: what is in the portfolio, who owns what, and how often the portfolio is reviewed.
+| Field | Meaning |
+|---|---|
+| Status | The phase: Idea, Exploring, In progress, Paused or Done |
+| Category | Pilot, Product or Work area |
+| Owner | Who owns the card |
+| Health | On track, At risk or Off track |
+| Target date | When it is due to finish, or the next important date |
+
+The hypothesis and MVP are in the description of each card. The cards are issues in the repository [samt-bu-portfolio](https://github.com/samt-x/samt-bu-portfolio).
+
+Owner, health and dates have not been filled in yet. The governance itself will be described here once the project management has decided on it: what is in the portfolio, who owns what, and how often the portfolio is reviewed.

@@ -6,7 +6,7 @@ linkTitle: "Oppgaver og oppfølging"
 weight: 25
 ---
 
-Her finner du lenkene du trenger for å følge opp arbeidet i SAMT-BU: dine egne oppgaver, brettene til delprosjektene, og etter hvert porteføljen for hele prosjektet. Oppgavene og brettene ligger i GitHub og er åpne for alle. Bare søkene etter dine egne oppgaver krever at du er logget inn, fordi GitHub må vite hvem du er.
+Her finner du lenkene du trenger for å følge opp arbeidet i SAMT-BU: dine egne oppgaver, brettene til delprosjektene, og porteføljen for hele prosjektet. Oppgavene og brettene ligger i GitHub og er åpne for alle. Bare søkene etter dine egne oppgaver krever at du er logget inn, fordi GitHub må vite hvem du er.
 
 Hvordan oppgavestyringen er bygd opp, og reglene vi følger, står under [Oppgavestyring](https://docs.samt-bu.no/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/).
 
@@ -71,6 +71,16 @@ Brettene bygger på to felles maler, og alle statusene kan rapporteres inn i det
 
 ## SAMT-BU-porteføljen
 
-Porteføljen gir oversikt over hele prosjektet, med ett kort per pilot, produkt og arbeidsområde: hvem som eier det, hvilken fase det er i, og hvordan det går. Porteføljebrettet er ikke laget ennå. Se [veikartet](https://docs.samt-bu.no/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/veikart/portefoljestyring/).
+Porteføljen gir oversikt over hele prosjektet, med ett kort per pilot, produkt og arbeidsområde: hvem som eier det, hvilken fase det er i, og hvordan det går. Porteføljebrettet er [SAMT-BU Portfolio](https://github.com/orgs/samt-x/projects/13).
 
-Når brettet er på plass, beskrives selve styringen her: hva som er i porteføljen, hvem som eier hva, og hvor ofte porteføljen gjennomgås.
+| Felt | Betydning |
+|---|---|
+| Status | Fasen: Idea, Exploring, In progress, Paused eller Done |
+| Category | Pilot, Product eller Work area |
+| Owner | Hvem som eier kortet |
+| Health | On track, At risk eller Off track |
+| Target date | Når det skal være ferdig, eller neste viktige dato |
+
+Hypotesen og MVP-en står i beskrivelsen på hvert kort. Kortene er issues i repoet [samt-bu-portfolio](https://github.com/samt-x/samt-bu-portfolio).
+
+Eier, helse og datoer er ikke fylt ut ennå. Selve styringen beskrives her når prosjektledelsen har bestemt den: hva som er i porteføljen, hvem som eier hva, og hvor ofte porteføljen gjennomgås.
