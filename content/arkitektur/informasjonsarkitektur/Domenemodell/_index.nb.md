@@ -1,6 +1,6 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
-id: b25bad4d-7cd6-4eab-82ec-272a560f0b1e
+id: 7ca293bd-e883-4d16-9c5b-cfc52d773ae4
 title: "Domenemodell"
 linkTitle: "Domenemodell"
 weight: 20
