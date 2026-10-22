@@ -1,8 +1,8 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
 id: 53e789c4-fd06-4c39-8911-b2ef05fba7d6
-title: Overordnet arkitektur
-linkTitle: Overordnet arkitektur
+title: Lovpålagte oppgaver innen opplæringsområdet
+linkTitle: Lovpålagte oppgaver innen opplæringsområdet
 weight: 10
 lastmod: 2026-04-23T16:57:52+02:00
 last_editor: Erik Hagen
