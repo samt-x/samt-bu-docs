@@ -8,9 +8,6 @@ status: ""
 draft: false
 
 ---
-
-# Oversikt over Tjenester og hendelser innen opplæringsområdet
-
 Oversikten er generert med Claude Opus 5.5, basert på oversiktene over Lovpålagte oppgaver og Innbyggeres rettigheter og plikter. Oversikten er ikke gjennomgått manuelt. Det anbefales at man sjekker innholdet mot oppgitte kilder før man bruker oversikten til noe. 
 
 Claudes kommentarer til filen: Filen tjenester_og_hendelser_opplaeringslopet.csv har 101 rader. Den samler 78 tjenester, 62 enkelthendelser og 12 livshendelser og virksomhetshendelser. Hver rad er én kobling mellom en hendelse og en tjeneste. Den er lagret med semikolon som skilletegn og UTF-8, slik at æøå vises riktig når du åpner den i norsk Excel.	
