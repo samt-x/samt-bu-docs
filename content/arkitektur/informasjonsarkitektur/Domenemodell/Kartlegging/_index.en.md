@@ -1,6 +1,6 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
-id: 7ca293bd-e883-4d16-9c5b-cfc52d773ae4
+id: 466785c0-dc62-4540-90e8-3da86f0a02c5
 title: "Domain analysis"
 linkTitle: "Domain analysis"
 weight: 20
