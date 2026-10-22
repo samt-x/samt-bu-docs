@@ -1,6 +1,6 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
-id: 91f84e61-de6a-401a-99cd-82c106fddb7e
+id: 955de140-f59c-4afb-8c1a-28fb938e5300
 title: "Innbyggeres rettigheter og plikter"
 linkTitle: "Innbyggeres rettigheter og plikter"
 weight: 20

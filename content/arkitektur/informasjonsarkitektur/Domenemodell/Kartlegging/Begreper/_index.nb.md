@@ -1,6 +1,6 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
-id: c485a60c-1e25-4bc6-a5e1-93f2b03cfca1
+id: 36da2939-58a4-4c7e-aefe-adec1e74ddb5
 title: "Begreper"
 linkTitle: "Begreper"
 weight: 20
