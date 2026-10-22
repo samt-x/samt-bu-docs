@@ -7,8 +7,6 @@ weight: 10
 
 ---
 
-# Oversikt over lovpålagte oppgaver innen opplæringsområdet
-
 Innholdet i filen er generert med Claude Opus 5.5 med bruk av Digdirs MCP-server mot Lovdatas API. 
 Filen inneholder lovpålagte oppgaver (og noen frivillige oppgaver) fordelt på utdanningsnivå og hvem som har ansvar for oppgavene. Alle oppgaver er knyttet til loven eller forskriften de er omtalt i, og paragrafen der oppgaven er omtalt. Dokumentet inneholder oppgaver som tilhører offentlige virksomheter og utdanningsinstitusjoner.
 Det har blitt gjort en manuell sjekk av kommunens oppgaver knyttet til barnehage. Her har det vært behov for å justere litt, og legge til noen oppgaver som ikke var med, men det er ikke noe som tyder på hallusinasjoner og ingenting som har måttet bli fjernet fordi det ikke fantes omtalt i loven.Disse endringene er merket i kolonnen "manuell gjennomgang" 
