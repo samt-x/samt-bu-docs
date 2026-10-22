@@ -1,6 +1,6 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
-id: fddb8de9-ff44-43d1-a201-8b27602becd3
+id: c9cb7342-ee9c-4d3d-a798-3bff7c2036a4
 title: Lovpålagte oppgaver innen opplæringsområdet
 linkTitle: Lovpålagte oppgaver innen opplæringsområdet
 weight: 10
