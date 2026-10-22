@@ -1,6 +1,6 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
-id: 45db8736-5545-4918-8533-9d8b8546e102
+id: 53e789c4-fd06-4c39-8911-b2ef05fba7d6
 title: Overordnet arkitektur
 linkTitle: Overordnet arkitektur
 weight: 10
