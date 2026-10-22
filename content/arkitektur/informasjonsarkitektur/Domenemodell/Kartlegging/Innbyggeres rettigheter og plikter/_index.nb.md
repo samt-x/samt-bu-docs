@@ -8,7 +8,6 @@ status: ""
 draft: false
 
 ---
-# Innbyggeres rettigheter og plikter
 
 Innholdet i oversikten er generert med Claude Opus 5.5 med bruk av Digdirs MCP-server mot Lovdatas API. Oversikten inneholder innbyggeres rettigheter og plikter, fordelt på utdanningsnivå, innbyggerkategori, om det er en 
 rettighet eller en plikt og tema. Alle rettigheter og plikter er knyttet til loven eller forskriften der de er omtalt. Det har ikke blitt gjort manuell sjekk av innholdet i oversikten, det er derfor en sjanse for at noe i oversikten er feil eller upresist. 
