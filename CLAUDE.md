@@ -135,8 +135,13 @@ repoet filen faktisk ligger i. Ruting skjer på `$dir = path.Dir .File.Path`:
 er LOKALE filer i `samt-bu-docs`, selv om de ligger under en modulmontert sti.
 Lokal fil vinner alltid over modulinnhold i Hugo, og rutingen må følge det.
 
-⚠ **`footer.html` har samme rutinglogikk** for «Endre denne siden i GitHub».
-Legges det til en modul, må BEGGE filene oppdateres – ellers gir lenken 404.
+⚠ **`footer.html` har IKKE lenger egen ruting** (sjekket 2026-10-24). Kildelenken
+øverst på siden ligger i `header.html`, som har sin egen kopi av tabellen over.
+Legges det til en modul, se steg 5 under «Legge til ny modul».
+
+⚠ **Ingen andre lokale filer under modulstier** enn unntaket over. Lokale sider
+under `informasjonsarkitektur/` skygget for `team-semantics` til 2026-10-24
+(solution-samt-bu-docs#78). En sjekk i CI er foreslått i #81.
 
 ⚠ **Windows-fallgruve:** bruk alltid `path.Dir .File.Path`, aldri rå
 `.File.Path`. Sistnevnte gir backslash på Windows, og `hasPrefix`-sjekkene feiler.
