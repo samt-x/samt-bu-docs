@@ -27,7 +27,7 @@ Skal du være med i mer enn ett arbeid, legges du i flere team.
 
 ## Hvem bestemmer
 
-Ordningen gjelder inntil videre:
+Ordningen gjelder inntil videre, se [beslutningen 24. oktober 2026](/prosjektstyring/beslutningslogg/2026-10-24-deltakere-og-tilgang/):
 
 - **Alle kan foreslå nye deltakere.** Send forslaget til noen i kjerneteamet
 - **Kjerneteamet godkjenner** nye deltakere og tar ut dem som ikke lenger er med i arbeidet. Alle i kjerneteamet kan gjøre det

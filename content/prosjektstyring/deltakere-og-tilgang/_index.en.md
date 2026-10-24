@@ -27,7 +27,7 @@ If you take part in more than one piece of work, you are added to several teams.
 
 ## Who decides
 
-This arrangement applies for the time being:
+This arrangement applies for the time being, see [the decision of 24 October 2026](/en/prosjektstyring/beslutningslogg/2026-10-24-deltakere-og-tilgang/):
 
 - **Anyone can propose new participants.** Send the proposal to someone in the core team
 - **The core team approves** new participants and removes those who are no longer part of the work. Anyone in the core team can do this
