@@ -5,4 +5,4 @@ title: test 10
 weight: 150
 
 ---
-Test av byggdeteksjon via build.json (#77), s95.
+
