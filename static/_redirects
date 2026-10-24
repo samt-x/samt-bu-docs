@@ -26,3 +26,10 @@
 /en/prosjektleveranser/loesninger/samhandlingsplattform/plattformvalg/* /en/prosjektleveranser/loesninger/samhandlingsplattform/introduksjon/:splat  301
 /prosjektleveranser/loesninger/plattformvalg/*                        /prosjektleveranser/loesninger/samhandlingsplattform/introduksjon/:splat     301
 /en/prosjektleveranser/loesninger/plattformvalg/*                     /en/prosjektleveranser/loesninger/samhandlingsplattform/introduksjon/:splat  301
+
+# Sidene under Informasjonsarkitektur flyttet fra samt-bu-docs til team-semantics (oktober 2026,
+# solution-samt-bu-docs#78). Bare siden med æøå i mappenavnet fikk ny adresse. Både kodet og ukodet form.
+/arkitektur/informasjonsarkitektur/domenemodell/kartlegging/lovp%C3%A5lagte-oppgaver-i-oppl%C3%A6ringsomr%C3%A5det/*     /arkitektur/informasjonsarkitektur/domenemodell/kartlegging/lovpaalagte-oppgaver-i-opplaeringsomraadet/:splat     301
+/en/arkitektur/informasjonsarkitektur/domenemodell/kartlegging/lovp%C3%A5lagte-oppgaver-i-oppl%C3%A6ringsomr%C3%A5det/*  /en/arkitektur/informasjonsarkitektur/domenemodell/kartlegging/lovpaalagte-oppgaver-i-opplaeringsomraadet/:splat  301
+/arkitektur/informasjonsarkitektur/domenemodell/kartlegging/lovpålagte-oppgaver-i-opplæringsområdet/*                    /arkitektur/informasjonsarkitektur/domenemodell/kartlegging/lovpaalagte-oppgaver-i-opplaeringsomraadet/:splat     301
+/en/arkitektur/informasjonsarkitektur/domenemodell/kartlegging/lovpålagte-oppgaver-i-opplæringsområdet/*                 /en/arkitektur/informasjonsarkitektur/domenemodell/kartlegging/lovpaalagte-oppgaver-i-opplaeringsomraadet/:splat  301

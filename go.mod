@@ -14,5 +14,5 @@ require (
 	github.com/SAMT-X/solution-samt-bu-docs v0.0.0-20261010231909-7086d9051ee6 // indirect
 	github.com/SAMT-X/solution-task-management v0.0.0-20261010231902-8462ed828538 // indirect
 	github.com/SAMT-X/team-architecture v0.0.0-20260423145752-c6d715909724 // indirect
-	github.com/SAMT-X/team-semantics v0.0.0-20260423155808-7607ed08de8b // indirect
+	github.com/SAMT-X/team-semantics v0.0.0-20261024144739-1f5affbe5a4c // indirect
 )
