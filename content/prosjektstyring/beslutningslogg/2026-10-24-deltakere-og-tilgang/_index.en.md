@@ -1,4 +1,6 @@
 ---
+# id: auto-generated – copied values are overwritten automatically on push
+id: 5d9cd0fb-c067-4c95-b6a7-5fcac38fd012
 title: 2026-10-24 Participants and access – who proposes and approves (provisional)
 weight: 30
 ---

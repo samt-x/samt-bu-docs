@@ -1,6 +1,6 @@
 ---
 # id: auto-generert – kopierte verdier overskrives automatisk ved push
-id: b8fd7b9e-b0d3-4394-90b6-b5a538f9273a
+id: 17023eac-7fa5-4ad2-bf4e-db306a77eda6
 title: "Tjenester og hendelser innen opplæringsområdet"
 linkTitle: "Tjenester og hendelser innen opplæringsområdet"
 weight: 20

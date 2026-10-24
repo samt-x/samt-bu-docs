@@ -1,4 +1,6 @@
 ---
+# id: auto-generert – kopierte verdier overskrives automatisk ved push
+id: 5d9cd0fb-c067-4c95-b6a7-5fcac38fd012
 title: 2026-10-24 Deltakere og tilgang – hvem foreslår og godkjenner (midlertidig)
 weight: 30
 ---
