@@ -75,6 +75,7 @@ jobs:
           GOPROXY: "direct"
         run: |
           hugo mod get github.com/SAMT-X/team-architecture@latest
+          hugo mod get github.com/SAMT-X/team-semantics@latest
           hugo mod get github.com/SAMT-X/samt-bu-drafts@latest
           hugo mod get github.com/SAMT-X/solution-samt-bu-docs@latest
           hugo mod get github.com/SAMT-X/solution-task-management@latest
