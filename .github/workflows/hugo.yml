@@ -99,6 +99,13 @@ jobs:
             --minify \
             --baseURL "https://docs.samt-bu.no/"
 
+      # Kvittering for nettleserens byggdeteksjon (solution-samt-bu-docs#77)
+      - name: Skriv build.json
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/write-build-info.py
+
       - name: Deploy to Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
