@@ -1,4 +1,6 @@
 ---
+# id: auto-generated – copied values are overwritten automatically on push
+id: 6e2a2857-9ae4-4a39-80f8-028395d40069
 title: "Participants and access"
 linkTitle: "Participants and access"
 weight: 27

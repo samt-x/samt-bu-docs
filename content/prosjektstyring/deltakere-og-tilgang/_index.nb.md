@@ -1,4 +1,6 @@
 ---
+# id: auto-generert – kopierte verdier overskrives automatisk ved push
+id: 6e2a2857-9ae4-4a39-80f8-028395d40069
 title: "Deltakere og tilgang"
 linkTitle: "Deltakere og tilgang"
 weight: 27
