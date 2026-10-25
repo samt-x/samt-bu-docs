@@ -135,6 +135,8 @@ jobs:
       # Kommentar på solution-samt-bu-docs#83 når filer ble satt til side. Krever secret
       # BUILD_REPORT_TOKEN (fine-grained, bare Issues: write på solution-samt-bu-docs).
       # Uten den står rapporten bare i jobbsammendraget og i build.json.
+      # Én kommentar per fil, ikke per bygg: en skjult markør (repo:sti@commit) i
+      # kommentaren gjør at samme sak ikke meldes igjen mens feilen står.
       - name: Meld fra om filer satt til side
         continue-on-error: true
         env:
@@ -150,10 +152,20 @@ jobs:
             echo "BUILD_REPORT_TOKEN mangler – rapporten står i jobbsammendraget."
             exit 0
           fi
+          gh api repos/samt-x/solution-samt-bu-docs/issues/83/comments --paginate --jq '.[].body' > earlier.txt
+          jq -c '.[] | . + {marker: "<!-- set-aside \(.repo):\(.path)@\(.published_sha) -->"}' "$REPORT" > entries.jsonl
+          : > new.jsonl
+          while read -r entry; do
+            grep -qF "$(jq -r .marker <<< "$entry")" earlier.txt || echo "$entry" >> new.jsonl
+          done < entries.jsonl
+          if [ ! -s new.jsonl ]; then
+            echo "Alle filene er meldt fra om før."
+            exit 0
+          fi
           {
-            echo "**Bygget feilet på en innholdsfil, men resten av nettstedet er publisert.** Fila under er erstattet med forrige publiserte versjon (eller holdt utenfor) til feilen er rettet."
+            echo "**Bygget feilet på en innholdsfil, men resten av nettstedet er publisert.** Fila under er erstattet med forrige publiserte versjon (eller holdt utenfor) til feilen er rettet. Den meldes ikke på nytt i senere bygg."
             echo
-            jq -r '.[] | "- [\(.path)](https://github.com/SAMT-X/\(.repo)/blob/main/\(.path)) i `\(.repo)`: \(.action)\n  ```\n  \(.error)\n  ```"' "$REPORT"
+            jq -r '"- [\(.path)](https://github.com/SAMT-X/\(.repo)/blob/main/\(.path)) i `\(.repo)`: \(.action)\n  ```\n  \(.error)\n  ```\n  \(.marker)"' new.jsonl
             echo
             echo "Kjøring: $RUN_URL"
           } > body.md

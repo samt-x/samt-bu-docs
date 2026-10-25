@@ -61,7 +61,9 @@ def set_aside():
     if not path or not os.path.exists(path):
         return []
     with open(path, encoding='utf-8') as f:
-        return [{'repo': r['repo'], 'path': r['path']} for r in json.load(f)]
+        # published_sha: neste bygg henter fila derfra igjen, og nettleseren kjenner igjen saken
+        return [{'repo': r['repo'], 'path': r['path'], 'published_sha': r['published_sha']}
+                for r in json.load(f)]
 
 
 def main():

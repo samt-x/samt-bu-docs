@@ -67,16 +67,24 @@ def failing_file(output):
 
 
 def published_shas():
+    """({repo: publisert commit}, {(repo, sti): commit} for filer som alt er satt til side).
+
+    En fil som ble satt til side i forrige bygg, er ødelagt også i commiten som da
+    ble publisert. Den skal fortsatt hentes fra commiten versjonen opprinnelig kom fra.
+    """
     # Cloudflare avviser Pythons standard User-Agent med 403
     req = urllib.request.Request(SITE_BUILD_INFO + '?_=' + str(os.getpid()),
                                  headers={'User-Agent': 'samt-bu-docs-ci'})
     try:
         with urllib.request.urlopen(req, timeout=20) as r:
-            repos = json.load(r).get('repos', {})
-        return {k.lower(): v[0] for k, v in repos.items() if v}
+            info = json.load(r)
     except Exception as e:
         print('Advarsel: fant ikke publisert build.json: %s' % e)
-        return {}
+        return {}, {}
+    heads = {k.lower(): v[0] for k, v in info.get('repos', {}).items() if v}
+    earlier = {(s['repo'], s['path']): s['published_sha']
+               for s in info.get('set_aside', []) if s.get('published_sha')}
+    return heads, earlier
 
 
 def published_version(repo, rel, sha):
@@ -148,8 +156,8 @@ def main():
             print('\nFor mange filer feiler (%d satt til side) – gir opp.' % len(report))
             break
         if shas is None:
-            shas = published_shas()
-        sha = shas.get(repo)
+            shas, earlier = published_shas()
+        sha = earlier.get((repo, rel)) or shas.get(repo)
         if not sha:
             print('\nVet ikke hvilken commit som er publisert for %s – gir opp.' % repo)
             break
