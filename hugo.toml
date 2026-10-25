@@ -4,6 +4,8 @@ theme = "hugo-theme-samt-bu"
 defaultContentLanguage = "nb"
 defaultContentLanguageInSubdir = false
 enableGitInfo = true
+# Ødelagt relref skal ikke stoppe bygget for alle (solution-samt-bu-docs#83)
+refLinksErrorLevel = "WARNING"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

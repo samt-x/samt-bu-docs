@@ -74,27 +74,41 @@ jobs:
           GONOSUMDB: "*"
           GOPROXY: "direct"
         run: |
-          hugo mod get github.com/SAMT-X/team-architecture@latest
-          hugo mod get github.com/SAMT-X/team-semantics@latest
-          hugo mod get github.com/SAMT-X/samt-bu-drafts@latest
-          hugo mod get github.com/SAMT-X/solution-samt-bu-docs@latest
-          hugo mod get github.com/SAMT-X/solution-task-management@latest
-          hugo mod get github.com/SAMT-X/samt-bu-pilot-1@latest
-          hugo mod get github.com/SAMT-X/samt-bu-pilot-2@latest
-          hugo mod get github.com/SAMT-X/samt-bu-pilot-3@latest
-          hugo mod get github.com/SAMT-X/samt-bu-pilot-4@latest
-          hugo mod get github.com/SAMT-X/samt-bu-pilot-5@latest
-          hugo mod get github.com/SAMT-X/samt-bu-pilot-6@latest
-          hugo mod get github.com/SAMT-X/samt-bu-market-engagement@latest
+          # Tre forsøk per modul – forbigående nettverksfeil skal ikke stoppe bygget (solution-samt-bu-docs#83)
+          hent() {
+            for i in 1 2 3; do
+              hugo mod get "$1" && return 0
+              echo "hugo mod get $1: forsøk $i feilet, prøver igjen om $((i * 5)) sek..."
+              sleep $((i * 5))
+            done
+            return 1
+          }
+          hent github.com/SAMT-X/team-architecture@latest
+          hent github.com/SAMT-X/team-semantics@latest
+          hent github.com/SAMT-X/samt-bu-drafts@latest
+          hent github.com/SAMT-X/solution-samt-bu-docs@latest
+          hent github.com/SAMT-X/solution-task-management@latest
+          hent github.com/SAMT-X/samt-bu-pilot-1@latest
+          hent github.com/SAMT-X/samt-bu-pilot-2@latest
+          hent github.com/SAMT-X/samt-bu-pilot-3@latest
+          hent github.com/SAMT-X/samt-bu-pilot-4@latest
+          hent github.com/SAMT-X/samt-bu-pilot-5@latest
+          hent github.com/SAMT-X/samt-bu-pilot-6@latest
+          hent github.com/SAMT-X/samt-bu-market-engagement@latest
           hugo mod tidy
 
+      # Feiler bygget på én innholdsfil, legges forrige publiserte versjon tilbake og
+      # resten bygges (solution-samt-bu-docs#83)
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
           TZ: Europe/Oslo
+          BUILD_FALLBACK_REPORT: ${{ runner.temp }}/set-aside.json
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
-          hugo \
+          python3 .github/scripts/build-with-fallback.py \
+            hugo \
             --gc \
             --minify \
             --baseURL "https://docs.samt-bu.no/"
@@ -104,6 +118,7 @@ jobs:
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          BUILD_FALLBACK_REPORT: ${{ runner.temp }}/set-aside.json
         run: python3 .github/scripts/write-build-info.py
 
       - name: Deploy to Cloudflare Pages
@@ -116,3 +131,30 @@ jobs:
             echo "Deploy-forsøk $i feilet, prøver igjen om 15 sek..."
             sleep 15
           done
+
+      # Kommentar på solution-samt-bu-docs#83 når filer ble satt til side. Krever secret
+      # BUILD_REPORT_TOKEN (fine-grained, bare Issues: write på solution-samt-bu-docs).
+      # Uten den står rapporten bare i jobbsammendraget og i build.json.
+      - name: Meld fra om filer satt til side
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.BUILD_REPORT_TOKEN }}
+          REPORT: ${{ runner.temp }}/set-aside.json
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ ! -s "$REPORT" ] || [ "$(jq length "$REPORT")" = "0" ]; then
+            echo "Ingen filer satt til side."
+            exit 0
+          fi
+          if [ -z "$GH_TOKEN" ]; then
+            echo "BUILD_REPORT_TOKEN mangler – rapporten står i jobbsammendraget."
+            exit 0
+          fi
+          {
+            echo "**Bygget feilet på en innholdsfil, men resten av nettstedet er publisert.** Fila under er erstattet med forrige publiserte versjon (eller holdt utenfor) til feilen er rettet."
+            echo
+            jq -r '.[] | "- [\(.path)](https://github.com/SAMT-X/\(.repo)/blob/main/\(.path)) i `\(.repo)`: \(.action)\n  ```\n  \(.error)\n  ```"' "$REPORT"
+            echo
+            echo "Kjøring: $RUN_URL"
+          } > body.md
+          gh issue comment 83 --repo samt-x/solution-samt-bu-docs --body-file body.md

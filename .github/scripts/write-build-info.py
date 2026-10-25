@@ -14,7 +14,8 @@ Kjøres i CI etter hugo-bygget. Feiler aldri bygget: mangler historikken
 for en modul, får den en tom liste.
 
 Bruk: write-build-info.py [utfil]   (standard: public/build.json)
-Miljø: GITHUB_RUN_ID, GITHUB_TOKEN (valgfri, gir høyere API-grense)
+Miljø: GITHUB_RUN_ID, GITHUB_TOKEN (valgfri, gir høyere API-grense),
+       BUILD_FALLBACK_REPORT (valgfri, filer satt til side, gir set_aside)
 """
 import json
 import os
@@ -54,6 +55,15 @@ def remote_history(repo, sha):
         return [c['sha'] for c in json.load(r)]
 
 
+def set_aside():
+    """Filer som build-with-fallback.py satte til side i dette bygget (solution-samt-bu-docs#83)."""
+    path = os.environ.get('BUILD_FALLBACK_REPORT')
+    if not path or not os.path.exists(path):
+        return []
+    with open(path, encoding='utf-8') as f:
+        return [{'repo': r['repo'], 'path': r['path']} for r in json.load(f)]
+
+
 def main():
     out_path = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, 'public', 'build.json')
     repos = {MAIN_REPO: local_history()}
@@ -67,6 +77,7 @@ def main():
         'run_id': int(os.environ.get('GITHUB_RUN_ID') or 0),
         'built_at': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
         'repos': repos,
+        'set_aside': set_aside(),
     }
     with open(out_path, 'w', encoding='utf-8') as f:
         json.dump(info, f, indent=1)
