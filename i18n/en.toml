@@ -1,6 +1,9 @@
 [Last-modified]
 other = "Last modified"
 
+[Last-modified-by]
+other = "by"
+
 [sectionChildrenLabel]
 other = "Section contents:"
 
