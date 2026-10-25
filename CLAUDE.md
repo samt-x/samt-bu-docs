@@ -97,7 +97,9 @@ static/                            # ⚠ Rotens static/ – IKKE det samme som t
   workflows/hugo.yml               # CI/CD: bygg og deploy. Kjører også UUID-sikring
   workflows/gh-pages-redirect.yml
   scripts/ensure-uuids.py          # Kalles fra hugo.yml (egen ensure-uuids.yml er SLETTET)
-  scripts/inject-lastmod.py        # Injiserer lastmod i modulinnhold fra git-historikk (kjøres i CI før hugo)
+  scripts/build-with-fallback.py   # Bygger, setter feilende innholdsfil til side (#83)
+  scripts/write-build-info.py      # Skriver /build.json (byggkvitteringen)
+  scripts/inject-lastmod.py        # Kalles IKKE lenger herfra – lastmod settes i modulrepoene (solution-samt-bu-docs#84)
 cloudflare-worker/
   oauth-worker.js                  # GitHub OAuth-proxy (deployet på Cloudflare Workers)
 i18n/nb.toml, en.toml              # Oversettelser (navSwitcher-etiketter, seksjonstitler, «Sist endret»)
