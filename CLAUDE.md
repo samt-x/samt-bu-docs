@@ -249,7 +249,8 @@ Dropdown i headeren for å navigere direkte til en av de 10 seksjonene.
 - «Denne siden»/«This page» deep-link i Endre-dropdown for alle sider, inkl. modul-sider
 - UUID-sikring kjøres som del av `hugo.yml` i alle modulrepoer – sikrer id-felt i frontmatter automatisk
 - UUID er skjult for redaktøren i redigeringsgrensesnittet
-- «Sist endret»-tidsstempler for modulinnhold via `inject-lastmod.py` + `HUGO_MODULE_REPLACEMENTS` i CI
+- «Sist endret»-tidsstempler for modulinnhold via `inject-lastmod.py` i modulrepoene
+- Ett ødelagt bygg stopper ikke alle: fila settes til side, resten publiseres (solution-samt-bu-docs#83, 2026-10-25)
 - Sidebar-ikon fikset: aktiv seksjon viser sort-down (åpen) i stedet for caret-right (lukket)
 
 ### Hva gjenstår / pågår
@@ -306,28 +307,30 @@ hugo mod get github.com/SAMT-X/team-architecture@latest
 
 ## CI-workflow – hugo.yml (utover standard)
 
-`hugo.yml` gjør mer enn bare å bygge. Ekstra steg i `build`-jobben:
+*Oppdatert 2026-10-25 (s96, solution-samt-bu-docs#83). Full beskrivelse: siden «CI/CD-pipeline» i `solution-samt-bu-docs`
+(`content/teknisk-dokumentasjon/ci-cd-pipeline/`).*
 
-1. **Checkout modulrepoer med full historikk:**
-   ```yaml
-   - uses: actions/checkout@v4
-     with:
-       repository: SAMT-X/team-architecture
-       path: .hugo-modules/team-architecture
-       fetch-depth: 0
-   ```
-   (samme for `samt-bu-drafts`)
+Steg i `build`-jobben: installer Hugo → checkout med submodule → UUID-sikring (bare ved push) → `hugo mod get …@latest`
+per modul (funksjonen `hent()`, tre forsøk) → bygg via `build-with-fallback.py` → `write-build-info.py` (`/build.json`)
+→ deploy med `wrangler` → «Meld fra om filer satt til side».
 
-2. **Inject lastmod** (`.github/scripts/inject-lastmod.py`):
-   Leser `git log -1 --format=%cI` for hver `.md`-fil i modulrepoene og skriver `lastmod: <ISO-tidsstempel>` inn i frontmatter i CI-workspace. **Ingen commit** – kun midlertidig endring før bygg.
+**Modulrepoene** setter `lastmod` selv: `trigger-docs-rebuild.yml` kjører `inject-lastmod.py`, committer og sender
+`repository_dispatch` hit. Den gamle løsningen med utsjekking av modulrepoer og `HUGO_MODULE_REPLACEMENTS` er ikke i bruk lenger.
 
-3. **`HUGO_MODULE_REPLACEMENTS`** (env-var på Build-steget):
-   ```
-   github.com/SAMT-X/team-architecture -> ${{ github.workspace }}/.hugo-modules/team-architecture
-   ```
-   Gjør at Hugo bruker de lokale klonene (med injisert lastmod) i stedet for Go-modulcachen (zip uten historikk).
-
-**Kjent begrensning:** Lokalt (`hugo server`) vises ingen `lastmod` for modulinnhold – Hugo bruker modulcachen. Kun produksjonsbygg (CI) har korrekte tidsstempler for modul-sider.
+**Når et bygg feiler (#83):**
+- `build-with-fallback.py` leser Hugos `"fil:linje:kol"`. Er det en innholdsfil, legges forrige publiserte versjon inn
+  (SHA fra live `build.json`, eller `published_sha` hvis fila allerede var satt til side), eller fila fjernes hvis den er ny.
+  Høyst tre filer. Ingen commit. Feil i mal, tema eller config stopper bygget som før (#27).
+- `build.json` får `set_aside: [{repo, path, published_sha}]`. Temaet (`samtbuSetAsideFor`) viser «Endringen din kunne ikke
+  publiseres» til den som lagret fila.
+- `refLinksErrorLevel = "WARNING"` i `hugo.toml`: relref gir bare sidesti, ikke fil, og kan ikke settes til side.
+- Kommentarsteget bruker secret `BUILD_REPORT_TOKEN` (fine-grained, `samt-x-bot`, Issues r/w på solution-samt-bu-docs,
+  **utløper 2027-10-25**). Én kommentar per fil, med markøren `<!-- set-aside repo:sti@sha -->`.
+- Kvittering på kommentarer på #83: `build-report-receipt.yml` i `solution-samt-bu-docs`. Unntakslisten (boter og dem som
+  følger opp) står i `if:` i workflowen.
+- **Test** på en gren uten deploy-steget med en ødelagt fil: `gh workflow run hugo.yml --ref <gren>`. Kommentarsteget skriver
+  ekte kommentarer på #83. `BUILD_INFO_URL` (miljøvariabel, `file://` tillatt) lar `build-with-fallback.py` lese en falsk
+  `build.json` lokalt.
 
 ## PR-håndtering
 
@@ -413,6 +416,11 @@ i øyeblikket.
    `samt-bu-archi-models/kilder/`). Står det ikke der, si at det er vårt. Og lag ikke
    substantiv av regler – beskriv dem som handlinger, så de ikke kan forveksles
    med etablerte begreper.
+
+6. **Dokumentasjon følger endringen.** Endres funksjonalitet i nettstedet, temaet eller CI, skal løsningsdokumentasjonen
+   (`solution-samt-bu-docs/content/teknisk-dokumentasjon/`), brukerveiledningen (`…/brukerveiledning/`) og denne filen
+   vurderes og oppdateres i samme økt, på norsk og engelsk. Resultatet skrives som linjen «Dokumentasjon: …» i
+   sluttkommentaren på issuet. Regelen står i sin helhet i workspace-`CLAUDE.md` under Arbeidsregler.
 
 For Archi-modellene finnes en mekanisk utgave av det samme:
 `samt-bu-archi-models/test_lagring.py` erstatter «ser riktig ut» med tall fra Archis
