@@ -7,4 +7,6 @@ weight: 70
 
 ---
 
-This section documents the technical solutions developed and used in the SAMT-BU project – from platform choices and CMS setup to integrations and administration guides.
+This section documents the solutions the SAMT-BU project has developed or adopted.
+
+So far this is the collaboration platform, which consists of two solutions: the documentation site SAMT-BU Docs and task management in GitHub. Each solution has its own documentation with a user guide, technical documentation and a roadmap.

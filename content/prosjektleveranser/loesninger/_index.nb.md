@@ -7,4 +7,6 @@ weight: 70
 
 ---
 
-Denne seksjonen dokumenterer de tekniske løsningene som er utviklet og brukt i SAMT-BU-prosjektet – fra plattformvalg og CMS-oppsett til integrasjoner og administrasjonsveiledninger.
+Denne seksjonen dokumenterer løsningene som SAMT-BU-prosjektet har utviklet eller tatt i bruk.
+
+Foreløpig er det samhandlingsplattformen, som består av to løsninger: dokumentasjonsnettstedet SAMT-BU Docs og oppgavestyringen i GitHub. Hver løsning har sin egen dokumentasjon med brukerveiledning, teknisk dokumentasjon og veikart.
