@@ -99,7 +99,9 @@ static/                            # ⚠ Rotens static/ – IKKE det samme som t
   scripts/ensure-uuids.py          # Kalles fra hugo.yml (egen ensure-uuids.yml er SLETTET)
   scripts/build-with-fallback.py   # Bygger, setter feilende innholdsfil til side (#83)
   scripts/write-build-info.py      # Skriver /build.json (byggkvitteringen)
-  scripts/inject-lastmod.py        # Kalles IKKE lenger herfra – lastmod settes i modulrepoene (solution-samt-bu-docs#84)
+  # inject-lastmod.py og fire engangsskript (add-id-comment, fix-last-editor*, remove-last-editor) slettet
+  # 2026-10-25 (solution-samt-bu-docs#84). lastmod settes i modulrepoene; lokalt innhold bruker GitInfo.
+  workflows/gh-pages-redirect.yml  # Manuell: gammel GitHub Pages-adresse → docs.samt-bu.no
 cloudflare-worker/
   oauth-worker.js                  # GitHub OAuth-proxy (deployet på Cloudflare Workers)
 i18n/nb.toml, en.toml              # Oversettelser (navSwitcher-etiketter, seksjonstitler, «Sist endret»)

@@ -2,7 +2,9 @@ name: GitHub Pages – omdirigeringsside
 
 # Deployer en enkel omdirigeringsside til GitHub Pages som sender
 # alle besøkende fra det gamle nettstedet (samt-x.github.io/samt-bu-docs/)
-# til det nye (samt-bu-docs.pages.dev/) – med stipreservering.
+# til det nye (docs.samt-bu.no/) – med stipreservering.
+# Kjøres manuelt (workflow_dispatch). Byttet fra samt-bu-docs.pages.dev 2026-10-25
+# (solution-samt-bu-docs#84).
 
 on:
   workflow_dispatch:
@@ -38,7 +40,7 @@ jobs:
                 var prefix = '/samt-bu-docs';
                 var path = window.location.pathname;
                 if (path.startsWith(prefix)) { path = path.slice(prefix.length) || '/'; }
-                return 'https://samt-bu-docs.pages.dev' + path
+                return 'https://docs.samt-bu.no' + path
                   + window.location.search + window.location.hash;
               })();
             </script>
@@ -51,7 +53,7 @@ jobs:
             <h2>Siden er flyttet</h2>
             <p>
               SAMT-BU Docs har fått ny adresse:<br>
-              <strong><a id="link" href="https://samt-bu-docs.pages.dev/">https://samt-bu-docs.pages.dev/</a></strong>
+              <strong><a id="link" href="https://docs.samt-bu.no/">https://docs.samt-bu.no/</a></strong>
             </p>
             <p>Du videresendes automatisk om 4 sekunder.</p>
             <script>
