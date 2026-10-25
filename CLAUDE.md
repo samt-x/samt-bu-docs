@@ -303,7 +303,9 @@ hugo mod get github.com/SAMT-X/team-architecture@latest
 6. Verifiser med `hugo`: sjekk at modulens sider har `data-repo="<navn>"` og lenker til eget repo.
    Commit og push temaet, oppdater submodule-pekeren, og commit `hugo.toml` + `go.mod` + `go.sum` + `hugo.yml`
 7. I modulrepoet: kopier `.github/` (workflow + skript) fra et eksisterende modulrepo, bytt reponavnet i workflowen,
-   og legg inn secret `DOCS_REBUILD_TOKEN`. Gi team-tilgang som for de andre modulrepoene.
+   og huk av repoet i **org-secreten** `DOCS_REBUILD_TOKEN` (orgens Settings → Secrets → Actions). Ikke lag repo-secret med
+   samme navn – den går foran org-secreten. Gi team-tilgang som for de andre modulrepoene.
+   Full oppskrift: «Opprette nytt modulrepo» i `solution-samt-bu-docs/content/teknisk-dokumentasjon/nytt-modulrepo/`.
 
 **Repo-navnekonvensjon:**
 - `samt-bu-`-prefiks = publisert innhold/produkt (montert i nettstedet)
