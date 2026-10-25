@@ -34,7 +34,8 @@ import urllib.request
 MAX_SET_ASIDE = 3
 ORG = 'SAMT-X'
 MAIN_REPO = 'samt-bu-docs'
-SITE_BUILD_INFO = 'https://docs.samt-bu.no/build.json'
+# BUILD_INFO_URL kan peke på en lokal fil (file://…) ved testing
+SITE_BUILD_INFO = os.environ.get('BUILD_INFO_URL', 'https://docs.samt-bu.no/build.json')
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # "…/content/x/_index.nb.md:6:19": melding
@@ -73,8 +74,8 @@ def published_shas():
     ble publisert. Den skal fortsatt hentes fra commiten versjonen opprinnelig kom fra.
     """
     # Cloudflare avviser Pythons standard User-Agent med 403
-    req = urllib.request.Request(SITE_BUILD_INFO + '?_=' + str(os.getpid()),
-                                 headers={'User-Agent': 'samt-bu-docs-ci'})
+    url = SITE_BUILD_INFO + ('?_=' + str(os.getpid()) if SITE_BUILD_INFO.startswith('http') else '')
+    req = urllib.request.Request(url, headers={'User-Agent': 'samt-bu-docs-ci'})
     try:
         with urllib.request.urlopen(req, timeout=20) as r:
             info = json.load(r)
