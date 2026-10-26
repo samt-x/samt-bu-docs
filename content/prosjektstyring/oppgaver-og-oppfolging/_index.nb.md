@@ -14,7 +14,7 @@ Bruk lenkene på denne siden for å finne fram. Listen over alle brett i GitHub,
 
 ## Ny oppgave eller innspill
 
-Gå til repoet der saken hører hjemme, velg **Issues** og **New issue**, og velg skjemaet for typen sak: oppgave, løsningsforslag, spørsmål, beslutning, risiko eller feil. Skjemaene er like i alle repoene. Hvor saken skal ligge, og hvordan du fyller ut skjemaet, står i [Brukerveiledning for oppgavestyring](https://docs.samt-bu.no/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/brukerveiledning/).
+Gå til repoet der saken hører hjemme, velg **Issues** og **New issue**, og velg skjemaet for typen sak: oppgave, løsningsforslag, spørsmål, beslutning, risiko eller problem. Skjemaene er like i alle repoene. Hvor saken skal ligge, og hvordan du fyller ut skjemaet, står i [Brukerveiledning for oppgavestyring](https://docs.samt-bu.no/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/brukerveiledning/).
 
 ## Mine oppgaver
 

@@ -14,7 +14,7 @@ Use the links on this page to find your way. The list of all boards in GitHub, u
 
 ## New task or input
 
-Go to the repository where the issue belongs, choose **Issues** and **New issue**, and pick the form for the kind of issue: task, solution proposal, question, decision, risk or bug. The forms are the same in all repositories, and are in Norwegian. Where the issue belongs, and how to fill in the form, is described in the [User guide for task management](https://docs.samt-bu.no/en/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/brukerveiledning/).
+Go to the repository where the issue belongs, choose **Issues** and **New issue**, and pick the form for the kind of issue: task, solution proposal, question, decision, risk or problem. The forms are the same in all repositories, and are in Norwegian. Where the issue belongs, and how to fill in the form, is described in the [User guide for task management](https://docs.samt-bu.no/en/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/brukerveiledning/).
 
 ## My tasks
 
