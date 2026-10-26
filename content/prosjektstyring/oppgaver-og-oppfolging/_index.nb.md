@@ -12,6 +12,10 @@ Hvordan oppgavestyringen er bygd opp, og reglene vi følger, står under [Oppgav
 
 Bruk lenkene på denne siden for å finne fram. Listen over alle brett i GitHub, under Projects i organisasjonen, viser også oversiktsbrettene. De heter «SAMT-BU Overview – …» og er ikke delprosjekter.
 
+## Ny oppgave eller innspill
+
+Gå til repoet der saken hører hjemme, velg **Issues** og **New issue**, og velg skjemaet for typen sak: oppgave, løsningsforslag, spørsmål, beslutning, risiko eller feil. Skjemaene er like i alle repoene. Hvor saken skal ligge, og hvordan du fyller ut skjemaet, står i [Brukerveiledning for oppgavestyring](https://docs.samt-bu.no/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/brukerveiledning/).
+
 ## Mine oppgaver
 
 Ferdige søk på tvers av alle repoer og brett i SAMT-BU. Legg dem gjerne inn som bokmerker. Begge krever at du er logget inn på GitHub.

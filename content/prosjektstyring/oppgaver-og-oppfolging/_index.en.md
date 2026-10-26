@@ -12,6 +12,10 @@ How task management is set up, and the rules we follow, are described under [Tas
 
 Use the links on this page to find your way. The list of all boards in GitHub, under Projects in the organisation, also shows the overview boards. They are called «SAMT-BU Overview – …» and are not sub-projects.
 
+## New task or input
+
+Go to the repository where the issue belongs, choose **Issues** and **New issue**, and pick the form for the kind of issue: task, solution proposal, question, decision, risk or bug. The forms are the same in all repositories, and are in Norwegian. Where the issue belongs, and how to fill in the form, is described in the [User guide for task management](https://docs.samt-bu.no/en/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/brukerveiledning/).
+
 ## My tasks
 
 Ready-made searches across all repositories and boards in SAMT-BU. Consider bookmarking them. Both require you to be signed in to GitHub.
