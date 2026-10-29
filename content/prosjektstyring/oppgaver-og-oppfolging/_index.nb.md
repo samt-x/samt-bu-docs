@@ -70,6 +70,7 @@ Hvert delprosjekt har sitt eget prosjektbrett, med egne statuser og felt.
 | Pilot 4 – Vitnemål | [Project 3](https://github.com/orgs/samt-x/projects/3) |
 | Pilot 5 – Id-er i utdanning | [Project 9](https://github.com/orgs/samt-x/projects/9) |
 | Pilot 6 – Foreldres tilgang til data | [Project 10](https://github.com/orgs/samt-x/projects/10) |
+| Pilot 7 – Digital dialog mellom barnehage/skole og hjemmet | [Project 19](https://github.com/orgs/samt-x/projects/19) |
 | Rammeverk og generisk arkitektur (arkitekturgruppa) | [Project 5](https://github.com/orgs/samt-x/projects/5), med visningene [By responsible](https://github.com/orgs/samt-x/projects/5/views/3) og [My tasks](https://github.com/orgs/samt-x/projects/5/views/7) (krever innlogging) |
 | Informasjonsmodeller | [Project 6](https://github.com/orgs/samt-x/projects/6) |
 

@@ -94,6 +94,7 @@ jobs:
           hent github.com/SAMT-X/samt-bu-pilot-4@latest
           hent github.com/SAMT-X/samt-bu-pilot-5@latest
           hent github.com/SAMT-X/samt-bu-pilot-6@latest
+          hent github.com/SAMT-X/samt-bu-pilot-7@latest
           hent github.com/SAMT-X/samt-bu-market-engagement@latest
           hugo mod tidy
 

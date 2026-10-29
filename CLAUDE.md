@@ -55,7 +55,7 @@ content/                           # Alt innhold (Markdown med YAML frontmatter)
     use-cases/                     # 31 nummererte use cases
     annet/
   pilotering/                      # Piloter (weight 40) – kun ingress + Seksjonsinnhold
-    pilot-1/ … pilot-6/            # ← montert fra Hugo Modules samt-bu-pilot-1..6
+    pilot-1/ … pilot-7/            # ← montert fra Hugo Modules samt-bu-pilot-1..7
   arkitektur/                      # Arkitektur (weight 50)
     overordnet-arkitektur/         # ← montert fra Hugo Module team-architecture
     informasjonsarkitektur/        # ← montert fra Hugo Module team-semantics
@@ -131,7 +131,7 @@ repoet filen faktisk ligger i. Ruting skjer på `$dir = path.Dir .File.Path`:
 | `prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/` | `solution-task-management` |
 | `arkitektur/overordnet-arkitektur/` | `team-architecture` |
 | `arkitektur/informasjonsarkitektur/` | `team-semantics` |
-| `pilotering/pilot-1/` … `pilot-6/` | `samt-bu-pilot-1` … `-6` |
+| `pilotering/pilot-1/` … `pilot-7/` | `samt-bu-pilot-1` … `-7` |
 | `ekstern-markedsdialog/` | `samt-bu-market-engagement` |
 | alt annet | `samt-bu-docs` |
 
@@ -275,7 +275,7 @@ Innhold fra eksterne repoer monteres inn via Hugo Module-systemet (`go.mod` + `h
 | `team-architecture` | `content/arkitektur/overordnet-arkitektur/` |
 | `team-semantics` | `content/arkitektur/informasjonsarkitektur/` |
 | `samt-bu-drafts` | `content/utkast/` |
-| `samt-bu-pilot-1` … `samt-bu-pilot-6` | `content/pilotering/pilot-1/` … `pilot-6/` |
+| `samt-bu-pilot-1` … `samt-bu-pilot-7` | `content/pilotering/pilot-1/` … `pilot-7/` |
 | `solution-samt-bu-docs` | `content/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/` |
 | `solution-task-management` | `content/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/` |
 | `samt-bu-market-engagement` | `content/ekstern-markedsdialog/` |
