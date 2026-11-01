@@ -85,7 +85,7 @@ themes/hugo-theme-samt-bu/         # ⭐ Git submodule – all presentasjonslogi
     search.html                    # Søkefelt-integrasjon
     status-symbol.html             # Slår opp statussymbol fra .Params.status
   layouts/_default/list.html       # Override for listesider
-  layouts/shortcodes/              # children.html, header.html, relref.html, inline-svg.html (SVG rett inn i siden, klikkbar; issue-lenker åpnes i vinduet partials/issue-popup.html)
+  layouts/shortcodes/              # children.html, header.html, relref.html, inline-svg.html (SVG rett inn i siden, klikkbar; issue-lenker åpnes i vinduet partials/issue-popup.html; valgfritt 2. argument = sti til siden som har SVG-en, brukt av sidene «Oppgaver og framdrift»)
   layouts/index.json               # ⚠ Søkeindeks-mal – dumper HELE brødteksten på ALLE sider
   static/images/SAMT-BU-logo.png   # Logo (vises invertert i header)
   static/images/nb.svg, en.svg     # Flaggikoner for språkvelger
