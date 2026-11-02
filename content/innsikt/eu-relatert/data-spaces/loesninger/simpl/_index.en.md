@@ -4,4 +4,4 @@ title: SIMPL
 weight: 20
 ---
 
-*English translation TBD.*
+Content coming soon. In the meantime, see <https://linktr.ee/ec_simpl>.

@@ -45,6 +45,6 @@ På tvers av referansene ser vi en tydelig rød tråd: **Svikt skjer sjelden i �
 
 - [**Regjeringen.no**](http://Regjeringen.no)**:** [Prop. 141 L (2024–2025) – Barnevoldsundersøkelsesloven](https://www.regjeringen.no/no/dokumenter/prop.-141-l-20242025/id3099611/)
 
-- **SAMT-BU Docs:** [Innsikt i aktuelle medieoppslag](https://samt-bu-docs.pages.dev/innsikt/aktuelle-medieoppslag/)
+- **SAMT-BU Docs:** [Innsikt i aktuelle medieoppslag](https://docs.samt-bu.no/innsikt/aktuelle-medieoppslag/)
 
 - **NOU 2017:12:** *Svikt og svik – Gjennomgang av saker hvor barn har vært utsatt for vold, overgrep og omsorgssvikt.*

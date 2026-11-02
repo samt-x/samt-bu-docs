@@ -4,4 +4,4 @@ title: XRoad
 weight: 25
 ---
 
-*English translation TBD.*
+TBD

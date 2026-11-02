@@ -15,6 +15,7 @@ toc: true
 status: "Early draft"
 
 ---
+***This case is also covered by case 26 - National service for identification of persons in education (education person register)***
 
 ## Brief description
 
@@ -53,8 +54,7 @@ The identity number is generally the primary key for person objects. Without aut
 
 Fictitious numbers also do not provide access to log in to public IT systems via ID-porten.
 
-The health sector has progressed further towards a shared solution in this area, as we understand it, with something called a Help Number (Hjelpenummer). More about this can be read here, along with the challenges described, which are well comparable to those in other public sectors:
-https://www.nrk.no/norge/darlig-id-system-en-pasientfare-1.11425318
+The health sector has progressed further towards a shared solution in this area, as we understand it, with something called a Help Number (Hjelpenummer). More about this can be read here, along with the challenges described, which are well comparable to those in other public sectors: https://www.nrk.no/norge/darlig-id-system-en-pasientfare-1.11425318
 
 ## Desired situation
 
@@ -64,7 +64,7 @@ This identity is established as a fully valid member of the identity management 
 
 ## Insight work
 
-The health sector's experience with the Help Number (H-number) and the personal identification service, which is an established parallel in another sector and an important source of learning regarding both benefits and challenges. 
+The health sector's experience with the Help Number (H-number) and the personal identification service, which is an established parallel in another sector and an important source of learning regarding both benefits and challenges
 
 The new national digitalization strategy, which clearly points to the need for joint identity and access management across sectors.
 

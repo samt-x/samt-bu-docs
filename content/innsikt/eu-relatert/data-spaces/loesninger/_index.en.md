@@ -1,7 +1,7 @@
 ---
 id: 6f74e20e-fdb2-46fc-a2cf-ba7936f547ae
-title: Løsninger
+title: Solutions
 weight: 15
 ---
 
-*English translation TBD.*
+TBD

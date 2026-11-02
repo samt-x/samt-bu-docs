@@ -5,7 +5,7 @@ linkTitle: "Norsk deltakelse"
 weight: 40
 ---
 
-*Utarbeidet mai 2026. Bygger på en kombinasjon av EU-kommisjonens oversikter, prosjektenes egne sider, IDSAs Data Spaces Radar og en intern Digdir-kartlegging. Se [Kilder](#kilder) til slutt for fullstendig oversikt.*
+*Utarbeidet mai 2026. Bygger på en kombinasjon av EU-kommisjonens oversikter, prosjektenes egne sider, IDSAs Data Spaces Radar og en intern Digdir-kartlegging. Se [Kilder](#kilder-og-forbehold) til slutt for fullstendig oversikt.*
 
 ## Oversikt
 

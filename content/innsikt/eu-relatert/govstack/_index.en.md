@@ -4,4 +4,4 @@ title: Govstack
 weight: 30
 ---
 
-*English translation TBD.*
+TBD

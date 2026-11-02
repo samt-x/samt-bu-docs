@@ -4,4 +4,4 @@ title: EDICs
 weight: 20
 ---
 
-*English translation TBD.*
+TBD
