@@ -99,6 +99,9 @@ static/                            # ⚠ Rotens static/ – IKKE det samme som t
   scripts/ensure-uuids.py          # Kalles fra hugo.yml (egen ensure-uuids.yml er SLETTET)
   scripts/build-with-fallback.py   # Bygger, setter feilende innholdsfil til side (#83)
   scripts/write-build-info.py      # Skriver /build.json (byggkvitteringen)
+  workflows/translations.yml       # Oversettelsessjekk: kloner alle innholdsrepoene, holder solution-samt-bu-docs#91 oppdatert
+  scripts/check-translations.sh    # Sjekken (begge retninger); unntak i translation-ignore.txt
+  translation-ignore.txt
   # inject-lastmod.py og fire engangsskript (add-id-comment, fix-last-editor*, remove-last-editor) slettet
   # 2026-10-25 (solution-samt-bu-docs#84). lastmod settes i modulrepoene; lokalt innhold bruker GitInfo.
   workflows/gh-pages-redirect.yml  # Manuell: gammel GitHub Pages-adresse → docs.samt-bu.no
@@ -294,7 +297,8 @@ hugo mod get github.com/SAMT-X/team-architecture@latest
 1. Opprett repo, `hugo mod init github.com/SAMT-X/<navn>`, lag `content/_index.nb.md` + `_index.en.md`, push
 2. Legg til `[[module.imports]]`-blokk i `hugo.toml`
 3. Kjør `hugo mod get github.com/SAMT-X/<navn>@latest`
-4. Legg til en `hugo mod get …@latest`-linje i `.github/workflows/hugo.yml`
+4. Legg til en `hugo mod get …@latest`-linje i `.github/workflows/hugo.yml`, og reponavnet i lista «Hent innholdsrepoene»
+   i `.github/workflows/translations.yml` (oversettelsessjekken, solution-samt-bu-docs#91)
 5. **Legg modulen inn i temaet.** Temaet har koblingen mellom sti og repo skrevet inn direkte, på sju steder i fire filer i
    `themes/hugo-theme-samt-bu/layouts/partials/`: `edit-switcher.html` (fire steder), `header.html` (kildelenken),
    `menu.html` (ny side) og `custom-footer.html` (`SAMTBU_REPOS`, forslagslisten). Kopier blokken for en eksisterende

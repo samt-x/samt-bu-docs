@@ -1,0 +1,18 @@
+# Unntak for check-translations.sh (oversettelsessjekken).
+#
+#   <repo>/<sti til .nb.md> <commit>   gjelder til nb- eller en-fila får en ny menneskelig commit
+#   <repo>/<mappe>/ *                  gjelder alt under mappa
+#
+# <commit> er siste menneskelige commit på de to filene (kortform holder). Skriv grunnen på linja over.
+
+# Testsider, skal fjernes (solution-samt-bu-docs#53)
+samt-bu-docs/content/test-samt-bu-docs/ *
+
+# Bare statusen endret på norsk, engelsk hadde den allerede (s110)
+samt-bu-pilot-3/content/_index.nb.md 3f171ef
+
+# Norske tabeller har mye fyll med mellomrom i cellene. Like mange rader og kolonner (s110).
+team-semantics/content/domenemodell/kartlegging/begreper/_index.nb.md 6cb4cee
+team-semantics/content/domenemodell/kartlegging/innbyggeres-rettigheter-og-plikter/_index.nb.md 6cb4cee
+team-semantics/content/domenemodell/kartlegging/tjenester-og-hendelser/_index.nb.md 6cb4cee
+team-semantics/content/domenemodell/kartlegging/lovpaalagte-oppgaver-i-opplaeringsomraadet/_index.nb.md 801bb13

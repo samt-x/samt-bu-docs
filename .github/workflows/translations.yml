@@ -1,0 +1,89 @@
+name: Sjekk oversettelser
+
+# Holder solution-samt-bu-docs#91 oppdatert med sidene der norsk og engelsk ikke er i takt.
+# Oversettelsen gjøres inntil videre av Claude Code i Eriks sesjoner. Se siden «Oversettelse» i
+# solution-samt-bu-docs (teknisk-dokumentasjon/oversettelse/).
+
+on:
+  push:
+    branches: ["main"]
+    paths: ["content/**", ".github/scripts/check-translations.sh", ".github/translation-ignore.txt", ".github/workflows/translations.yml"]
+  repository_dispatch:
+    types: [module-updated]
+  schedule:
+    - cron: "23 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: translations
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          path: repos/samt-bu-docs
+
+      # Samme liste som modulene i hugo.yml. Full historikk trengs for å se hvem som endret hva når.
+      - name: Hent innholdsrepoene
+        run: |
+          git config --global core.quotepath false
+          cd repos
+          for r in team-architecture team-semantics samt-bu-drafts solution-samt-bu-docs solution-task-management \
+                   samt-bu-pilot-1 samt-bu-pilot-2 samt-bu-pilot-3 samt-bu-pilot-4 samt-bu-pilot-5 \
+                   samt-bu-pilot-6 samt-bu-pilot-7 samt-bu-market-engagement; do
+            for i in 1 2 3; do
+              git clone --quiet "https://github.com/SAMT-X/$r.git" && break
+              echo "Kloning av $r: forsøk $i feilet"
+              sleep $((i * 5))
+            done
+            [ -d "$r" ] || { echo "::error::Fikk ikke klonet $r"; exit 1; }
+          done
+
+      - name: Sjekk
+        run: |
+          bash repos/samt-bu-docs/.github/scripts/check-translations.sh --root repos
+          bash repos/samt-bu-docs/.github/scripts/check-translations.sh --root repos --markdown > list.md
+          cat list.md >> "$GITHUB_STEP_SUMMARY"
+
+      # BUILD_REPORT_TOKEN: fine-grained, samt-x-bot, Issues r/w på solution-samt-bu-docs (som i hugo.yml).
+      # Issuet endres bare når lista er endret.
+      - name: Oppdater solution-samt-bu-docs#91
+        env:
+          GH_TOKEN: ${{ secrets.BUILD_REPORT_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "BUILD_REPORT_TOKEN mangler – lista står i jobbsammendraget."
+            exit 0
+          fi
+          n=$(grep -c '^- \[' list.md || true)
+          {
+            echo "### Hva skal gjøres?"
+            echo
+            cat list.md
+            echo
+            echo "### Ferdig når"
+            echo
+            echo "Issuet står åpent og oppdateres løpende."
+            echo
+            echo "### Gjelder"
+            echo
+            echo "https://docs.samt-bu.no/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/teknisk-dokumentasjon/oversettelse/"
+          } > body.md
+          gh issue view 91 --repo samt-x/solution-samt-bu-docs --json body --jq .body > old.md
+          if diff -q <(tr -d '\r' < old.md) body.md > /dev/null; then
+            echo "Lista er uendret."
+          else
+            gh issue edit 91 --repo samt-x/solution-samt-bu-docs --title "Sider som må oversettes ($n)" --body-file body.md
+          fi
