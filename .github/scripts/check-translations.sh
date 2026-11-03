@@ -21,12 +21,13 @@
 #   - bot-commits («Auto: oppdater lastmod», uuid-commitene), som rører begge filene
 #   - oversettelser, merket med linjen «Oversatt-fra: nb» eller «Oversatt-fra: en» i commit-meldingen.
 #     Uten merket ville selve oversettelsen få kildesiden til å se utdatert ut.
-# Engelsk → norsk sjekkes bare for commits fra BASELINE. Før det var norsk alltid master, og
-# oversettelsene i s110 er ikke merket.
+# Engelsk → norsk sjekkes bare for commits fra BASELINE (2026-11-03 kl. 12). Før det var norsk alltid
+# master, og oversettelsene i s110 er ikke merket.
 #
 # Unntak står i ../translation-ignore.txt.
 
-BASELINE="2026-11-03 00:00"   # med klokkeslett: bare dato gir dagens klokkeslett i git
+# Med klokkeslett og sone: bare dato gir dagens klokkeslett i git. Etter siste oversettelse i s110 (01:42).
+BASELINE="2026-11-03 12:00 +0100"
 ROOT=""; DIFF=0; ONLY=""; MD=0
 IGNORE="$(cd "$(dirname "$0")/.." && pwd)/translation-ignore.txt"
 while [ $# -gt 0 ]; do
@@ -41,8 +42,10 @@ done
 [ -d "$ROOT" ] || { echo "Bruk: check-translations.sh --root <mappe med repoene>" >&2; exit 2; }
 ROOT="$(cd "$ROOT" && pwd)"
 
-PLACEHOLDER_EN='translation TBD|TODO english translation'
-PLACEHOLDER_NB='oversettelse TBD'
+# Plassholderen står alene på en linje (temaet skriver «*English translation TBD.*»). Sider som
+# omtaler plassholderen i en setning, skal ikke treffes.
+PLACEHOLDER_EN='^[[:space:]*_>]*(english translation TBD|TODO:? english translation)[^a-z]*$'
+PLACEHOLDER_NB='^[[:space:]*_>]*norsk oversettelse TBD[^a-z]*$'
 
 humans() { grep -v '\[bot\]'; }
 
