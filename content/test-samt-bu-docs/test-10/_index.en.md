@@ -5,5 +5,3 @@ title: test 10
 weight: 150
 
 ---
-
-*English translation TBD.*

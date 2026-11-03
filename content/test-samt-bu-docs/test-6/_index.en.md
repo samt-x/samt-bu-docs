@@ -5,5 +5,10 @@ title: Test 6
 weight: 100
 
 ---
+## Ch. 1 sdhgf hds
 
-*English translation TBD.*
+ssdasasd
+
+## Ch. 2 A figure
+
+![](bilde-1773391478152.png)
