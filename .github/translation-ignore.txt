@@ -5,9 +5,6 @@
 #
 # <commit> er siste menneskelige commit på de to filene (kortform holder). Skriv grunnen på linja over.
 
-# Testsider, skal fjernes (solution-samt-bu-docs#53)
-samt-bu-docs/content/test-samt-bu-docs/ *
-
 # Bare statusen endret på norsk, engelsk hadde den allerede (s110)
 samt-bu-pilot-3/content/_index.nb.md 3f171ef
 
