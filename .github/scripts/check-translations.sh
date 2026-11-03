@@ -25,6 +25,9 @@
 # master, og oversettelsene i s110 er ikke merket.
 #
 # Unntak står i ../translation-ignore.txt.
+#
+# Hastighet: én git log per repo, og all sammenligning i ett awk-program. Den første utgaven kjørte
+# flere git- og grep-kall per side, og brukte over 5 minutter i Git Bash på Windows (s110).
 
 # Med klokkeslett og sone: bare dato gir dagens klokkeslett i git. Etter siste oversettelse i s110 (01:42).
 BASELINE="2026-11-03 12:00 +0100"
@@ -41,44 +44,125 @@ while [ $# -gt 0 ]; do
 done
 [ -d "$ROOT" ] || { echo "Bruk: check-translations.sh --root <mappe med repoene>" >&2; exit 2; }
 ROOT="$(cd "$ROOT" && pwd)"
+SINCE=$(date -d "$BASELINE" +%s)
 
-# Plassholderen står alene på en linje (temaet skriver «*English translation TBD.*»). Sider som
-# omtaler plassholderen i en setning, skal ikke treffes.
-PLACEHOLDER_EN='^[[:space:]*_>]*(english translation TBD|TODO:? english translation)[^a-z]*$'
-PLACEHOLDER_NB='^[[:space:]*_>]*norsk oversettelse TBD[^a-z]*$'
+# Leser fire seksjoner fra stdin: unntakene, oversettelses-commitene, git log med filnavn
+# (nyeste først) og filene i content/. Skriver én linje per treff:
+#   gruppe <tab> sti <tab> grunn <tab> commit å vise diff fra <tab> sti å vise diff for
+# Bare POSIX-awk (mawk på GitHub, gawk i Git Bash).
+AWK='
+/^@@SECTION / { sec = $2; next }
 
-humans() { grep -v '\[bot\]'; }
-
-# Siste menneskelige commit på stiene (også oversettelser)
-last_human() {
-  local dir="$1"; shift
-  git -C "$dir" log --format='%H|%ae|%aN' -- "$@" 2>/dev/null | humans | head -1 | cut -d'|' -f1
+sec == "IGN" {
+  if ($0 ~ /^[ \t]*(#|$)/) next
+  ni++; ik[ni] = $1; ih[ni] = $2; next
 }
 
-# Menneskelige endringer på en sti etter en commit, oversettelser ikke medregnet. Valgfri dato.
-edits_after() {
-  local dir="$1" from="$2" path="$3" since="$4"
-  git -C "$dir" log --invert-grep --grep='^Oversatt-fra:' ${since:+--since="$since"} \
-    --format='%ae|%aN' "$from..HEAD" -- "$path" | humans | wc -l
+sec == "TR" { if ($0 != "") tr[$0] = 1; next }
+
+sec == "LOG" {
+  if ($0 == "") next
+  if (substr($0, 1, 4) == "@@C ") {
+    gi++; ch = $2; ct = $3; cs = $4
+    cbot = (index($0, "[bot]") > 0); ctr = (ch in tr)
+    next
+  }
+  f = $0; k = ++n[f]
+  G[f, k] = gi; B[f, k] = cbot; T[f, k] = ctr; CT[f, k] = ct
+  if (k == 1) lastdate[f] = cs
+  if (!cbot && !(f in lh)) { lh[f] = ch; lhg[f] = gi }
+  next
+}
+
+sec == "FILES" { nf++; F[nf] = substr($0, length(dir) + 2); exists[F[nf]] = 1; next }
+
+# Menneskelige endringer på f nyere enn commit nr. fromg, oversettelser ikke medregnet
+function edits_after(f, fromg, since,   k, c) {
+  c = 0
+  for (k = 1; k <= n[f]; k++) {
+    if (G[f, k] >= fromg) break
+    if (!B[f, k] && !T[f, k] && (since == 0 || CT[f, k] >= since)) c++
+  }
+  return c
+}
+
+function ignored(key, h,   i) {
+  for (i = 1; i <= ni; i++) {
+    if (ih[i] == "*" && index(key, ik[i]) == 1) return 1
+    if (ik[i] == key && h != "" && index(h, ih[i]) == 1) return 1
+  }
+  return 0
+}
+
+# Brødteksten (etter andre ---): tegn, overskrifter, plassholder alene på en linje
+function stats(path,   line, l, m) {
+  m = 0; S_c = 0; S_h = 0; S_pe = 0; S_pn = 0
+  while ((getline line < path) > 0) {
+    if (m >= 2) {
+      S_c += length(line) + 1
+      if (match(line, /^#+ /) && RLENGTH <= 7) S_h++
+      l = tolower(line)
+      if (l ~ /^[[:space:]*_>]*(english translation tbd|todo:? english translation)[^a-z]*$/) S_pe = 1
+      if (l ~ /^[[:space:]*_>]*norsk oversettelse tbd[^a-z]*$/) S_pn = 1
+    }
+    if (line ~ /^---[[:space:]]*$/) m++
+  }
+  close(path)
+}
+
+function out(g, p, r, h, dp) { print g "\t" p "\t" r "\t" h "\t" dp }
+
+END {
+  for (i = 1; i <= nf; i++) {
+    rel = F[i]
+    if (rel ~ /\.en\.md$/) {
+      nbr = substr(rel, 1, length(rel) - 6) ".nb.md"
+      if (!(nbr in exists) && !ignored(repo "/" rel, "")) out("nb", rel, "norsk mangler", "", "")
+      continue
+    }
+    enr = substr(rel, 1, length(rel) - 6) ".en.md"; key = repo "/" rel
+    if (!(enr in exists)) { if (!ignored(key, "")) out("en", rel, "engelsk mangler", "", ""); continue }
+
+    # Siste menneskelige commit på en av de to filene, for unntakene
+    last = ""
+    if (rel in lh) last = lh[rel]
+    if ((enr in lh) && (last == "" || lhg[enr] < lhg[rel])) last = lh[enr]
+    if (ignored(key, last)) continue
+
+    stats(dir "/" enr); ec = S_c; eh = S_h
+    if (S_pe) { out("en", enr, "plassholder", "", ""); continue }
+    stats(dir "/" rel); nc = S_c; nh = S_h
+    if (S_pn) { out("nb", rel, "plassholder", "", ""); continue }
+
+    if ((enr in lh) && edits_after(rel, lhg[enr], 0) > 0) {
+      out("en", rel, "norsk endret " lastdate[rel], lh[enr], rel); continue
+    }
+    if ((rel in lh) && edits_after(enr, lhg[rel], since) > 0) {
+      out("nb", enr, "engelsk endret " lastdate[enr], lh[rel], enr); continue
+    }
+    if (nh != eh || (nc > 300 && ec * 100 < nc * 60) || (ec > 300 && nc * 100 < ec * 60))
+      out("st", rel, "overskrifter nb " nh " / en " eh ", tegn nb " nc " / en " ec, "", "")
+  }
+}'
+
+scan() {
+  local dir="$1" repo="$2"
+  {
+    echo "@@SECTION IGN"
+    [ -f "$IGNORE" ] && cat "$IGNORE"
+    echo "@@SECTION TR"
+    git -C "$dir" log --no-merges --grep='^Oversatt-fra:' --format=%H -- content
+    echo "@@SECTION LOG"
+    git -C "$dir" -c core.quotepath=false log --no-merges --format='@@C %H %ct %cs %ae|%aN' --name-only -- content
+    echo "@@SECTION FILES"
+    find "$dir/content" \( -name '*.nb.md' -o -name '*.en.md' \) | LC_ALL=C sort
+  } | awk -v repo="$repo" -v dir="$dir" -v since="$SINCE" "$AWK"
 }
 
 # Endringene på kildesiden siden oversettelsen, uten frontmatter-støy
 show_diff() {
   git -C "$1" diff --no-color "$2..HEAD" -- "$3" | grep -E '^[-+]' \
     | grep -vE '^(\+\+\+|---)|^[-+](lastmod|last_editor|weight|id):' | sed 's/^/      /'
-}
-
-# Brødteksten uten frontmatter
-body() { awk 'n >= 2; /^---[[:space:]]*$/ { n++ }' "$1"; }
-
-# Unntak: «<repo>/<sti> <commit>» gjelder til en av filene får en ny menneskelig commit.
-# «<repo>/<mappe>/ *» gjelder alt under mappa.
-ignored() {
-  [ -f "$IGNORE" ] || return 1
-  awk -v k="$1" -v h="$2" '
-    /^[[:space:]]*(#|$)/ { next }
-    ($2 == "*" && index(k, $1) == 1) || ($1 == k && h != "" && index(h, $2) == 1) { f = 1 }
-    END { exit !f }' "$IGNORE"
 }
 
 to_en=""; to_nb=""; struct=""
@@ -104,59 +188,13 @@ for d in "$ROOT"/*/; do
   [ -e "$d.git" ] && [ -d "${d}content" ] || continue
   [ -n "$ONLY" ] && [ "$repo" != "$ONLY" ] && continue
   dir="${d%/}"
-
-  # Engelske sider uten norsk
-  while IFS= read -r en; do
-    rel="${en#$dir/}"
-    [ -f "$dir/${rel%.en.md}.nb.md" ] && continue
-    ignored "$repo/$rel" "" || add nb "$repo" "$rel" "norsk mangler"
-  done < <(find "$dir/content" -name '*.en.md' | sort)
-
-  while IFS= read -r nb; do
-    rel="${nb#$dir/}"
-    en_rel="${rel%.nb.md}.en.md"
-    en="$dir/$en_rel"
-    key="$repo/$rel"
-    if [ ! -f "$en" ]; then
-      ignored "$key" "" || add en "$repo" "$rel" "engelsk mangler"
-      continue
+  while IFS=$'\t' read -r group path reason from diffpath; do
+    details=""
+    if [ "$DIFF" = 1 ] && [ -n "$from" ]; then
+      details="$(show_diff "$dir" "$from" "$diffpath")"$'\n'
     fi
-    last=$(last_human "$dir" "$rel" "$en_rel")
-    ignored "$key" "$last" && continue
-
-    if grep -qiE "$PLACEHOLDER_EN" "$en"; then
-      add en "$repo" "$en_rel" "plassholder"
-      continue
-    fi
-    if grep -qiE "$PLACEHOLDER_NB" "$nb"; then
-      add nb "$repo" "$rel" "plassholder"
-      continue
-    fi
-
-    nb_commit=$(last_human "$dir" "$rel")
-    en_commit=$(last_human "$dir" "$en_rel")
-    if [ -n "$en_commit" ] && [ "$(edits_after "$dir" "$en_commit" "$rel")" -gt 0 ]; then
-      add en "$repo" "$rel" "norsk endret $(git -C "$dir" log -1 --format=%cs -- "$rel")" \
-        "$([ "$DIFF" = 1 ] && show_diff "$dir" "$en_commit" "$rel" && echo)"
-      continue
-    fi
-    if [ -n "$nb_commit" ] && [ "$(edits_after "$dir" "$nb_commit" "$en_rel" "$BASELINE")" -gt 0 ]; then
-      add nb "$repo" "$en_rel" "engelsk endret $(git -C "$dir" log -1 --format=%cs -- "$en_rel")" \
-        "$([ "$DIFF" = 1 ] && show_diff "$dir" "$nb_commit" "$en_rel" && echo)"
-      continue
-    fi
-
-    # Struktur: ulikt antall overskrifter, eller den ene under 60 % av den andre
-    nb_h=$(body "$nb" | grep -cE '^#{1,6} ')
-    en_h=$(body "$en" | grep -cE '^#{1,6} ')
-    nb_c=$(body "$nb" | wc -c)
-    en_c=$(body "$en" | wc -c)
-    if [ "$nb_h" != "$en_h" ] \
-      || { [ "$nb_c" -gt 300 ] && [ $((en_c * 100)) -lt $((nb_c * 60)) ]; } \
-      || { [ "$en_c" -gt 300 ] && [ $((nb_c * 100)) -lt $((en_c * 60)) ]; }; then
-      add st "$repo" "$rel" "overskrifter nb $nb_h / en $en_h, tegn nb $nb_c / en $en_c"
-    fi
-  done < <(find "$dir/content" -name '*.nb.md' | sort)
+    add "$group" "$repo" "$path" "$reason" "$details"
+  done < <(scan "$dir" "$repo")
 done
 
 if [ "$MD" = 1 ]; then
