@@ -8,6 +8,9 @@
 # Bare statusen endret på norsk, engelsk hadde den allerede (s110)
 samt-bu-pilot-3/content/_index.nb.md 3f171ef
 
+# Punktum lagt til i overskriften og fjernet igjen (c3550e1, 9b31308), ingen endring i sum (s116)
+samt-bu-pilot-6/content/om-pilot-6/_index.nb.md 9b31308
+
 # Norske tabeller har mye fyll med mellomrom i cellene. Like mange rader og kolonner (s110).
 team-semantics/content/domenemodell/kartlegging/begreper/_index.nb.md 6cb4cee
 team-semantics/content/domenemodell/kartlegging/innbyggeres-rettigheter-og-plikter/_index.nb.md 6cb4cee
