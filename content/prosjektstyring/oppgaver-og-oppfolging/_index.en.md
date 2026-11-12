@@ -73,6 +73,7 @@ Each sub-project has its own project board, with its own statuses and fields.
 | Pilot 7 – Digital dialogue between kindergarten/school and home | [Project 19](https://github.com/orgs/samt-x/projects/19) |
 | Framework and generic architecture (the architecture group) | [Project 5](https://github.com/orgs/samt-x/projects/5), with the views [By responsible](https://github.com/orgs/samt-x/projects/5/views/3) and [My tasks](https://github.com/orgs/samt-x/projects/5/views/7) (requires sign-in) |
 | Information models | [Project 6](https://github.com/orgs/samt-x/projects/6) |
+| Legal work across the pilots | [Project 21](https://github.com/orgs/samt-x/projects/21) |
 
 The boards are based on two shared templates, and all their statuses can be reported at the shared level on the aggregate board. See [Conventions](https://docs.samt-bu.no/en/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/konvensjoner/).
 

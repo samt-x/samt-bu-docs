@@ -73,6 +73,7 @@ Hvert delprosjekt har sitt eget prosjektbrett, med egne statuser og felt.
 | Pilot 7 – Digital dialog mellom barnehage/skole og hjemmet | [Project 19](https://github.com/orgs/samt-x/projects/19) |
 | Rammeverk og generisk arkitektur (arkitekturgruppa) | [Project 5](https://github.com/orgs/samt-x/projects/5), med visningene [By responsible](https://github.com/orgs/samt-x/projects/5/views/3) og [My tasks](https://github.com/orgs/samt-x/projects/5/views/7) (krever innlogging) |
 | Informasjonsmodeller | [Project 6](https://github.com/orgs/samt-x/projects/6) |
+| Juss på tvers av pilotene | [Project 21](https://github.com/orgs/samt-x/projects/21) |
 
 Brettene bygger på to felles maler, og alle statusene kan rapporteres inn i det felles nivået på samlebrettet. Se [Konvensjoner](https://docs.samt-bu.no/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/konvensjoner/).
 
