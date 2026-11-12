@@ -3,6 +3,7 @@ module github.com/samt-x/samt-bu-docs
 go 1.25.6
 
 require (
+	github.com/SAMT-X/content-legal v0.0.0-20261112100443-cf1c30cbde89 // indirect
 	github.com/SAMT-X/samt-bu-drafts v0.0.0-20261010231912-e1b1cf70da4b // indirect
 	github.com/SAMT-X/samt-bu-market-engagement v0.0.0-20260517212721-bd1ecae97cae // indirect
 	github.com/SAMT-X/samt-bu-pilot-1 v0.0.0-20260728201129-dbe073015dec // indirect

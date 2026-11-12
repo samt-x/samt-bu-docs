@@ -42,7 +42,7 @@ jobs:
           cd repos
           for r in team-architecture team-semantics samt-bu-drafts solution-samt-bu-docs solution-task-management \
                    samt-bu-pilot-1 samt-bu-pilot-2 samt-bu-pilot-3 samt-bu-pilot-4 samt-bu-pilot-5 \
-                   samt-bu-pilot-6 samt-bu-pilot-7 samt-bu-market-engagement; do
+                   samt-bu-pilot-6 samt-bu-pilot-7 samt-bu-market-engagement content-legal; do
             for i in 1 2 3; do
               git clone --quiet "https://github.com/SAMT-X/$r.git" && break
               echo "Kloning av $r: forsøk $i feilet"
