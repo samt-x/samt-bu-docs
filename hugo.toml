@@ -155,7 +155,7 @@ refLinksErrorLevel = "WARNING"
     path = "github.com/SAMT-X/content-legal"
     [[module.imports.mounts]]
       source = "content"
-      target = "content/prosjektleveranser/rammeverk/juss"
+      target = "content/arkitektur/juss"
 
   [[module.imports]]
     path = "github.com/SAMT-X/solution-samt-bu-docs"

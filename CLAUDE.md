@@ -136,7 +136,7 @@ repoet filen faktisk ligger i. Ruting skjer på `$dir = path.Dir .File.Path`:
 | `arkitektur/informasjonsarkitektur/` | `team-semantics` |
 | `pilotering/pilot-1/` … `pilot-7/` | `samt-bu-pilot-1` … `-7` |
 | `ekstern-markedsdialog/` | `samt-bu-market-engagement` |
-| `prosjektleveranser/rammeverk/juss/` | `content-legal` |
+| `arkitektur/juss/` | `content-legal` |
 | alt annet | `samt-bu-docs` |
 
 ⚠ **Unntak:** `arkitektur/overordnet-arkitektur/maalbildet/` og `.../veikart/`
@@ -283,7 +283,7 @@ Innhold fra eksterne repoer monteres inn via Hugo Module-systemet (`go.mod` + `h
 | `solution-samt-bu-docs` | `content/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/` |
 | `solution-task-management` | `content/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/` |
 | `samt-bu-market-engagement` | `content/ekstern-markedsdialog/` |
-| `content-legal` | `content/prosjektleveranser/rammeverk/juss/` (fra 2026-11-12, ingen lokal fil der lenger) |
+| `content-legal` | `content/arkitektur/juss/` (fra 2026-11-13; 2026-11-12 under `prosjektleveranser/rammeverk/juss/`, som nå er alias) |
 
 Alle med prefikset `github.com/SAMT-X/`. **`content/teams/` finnes ikke** – team-modulene ble flyttet inn under `arkitektur/`.
 
