@@ -53,9 +53,9 @@ refLinksErrorLevel = "WARNING"
   icon = "fa-flask"
 
 [[params.navSwitcher]]
-  id = "prosjektstyring"
-  title = "Prosjektstyring"
-  url = "prosjektstyring/"
+  id = "styring"
+  title = "Styring"
+  url = "styring/"
   icon = "fa-gavel"
 
 [[params.navSwitcher]]
@@ -168,6 +168,13 @@ refLinksErrorLevel = "WARNING"
     [[module.imports.mounts]]
       source = "content"
       target = "content/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring"
+
+  # Styring, flyttet fra content/prosjektstyring 2026-11-15 (solution-samt-bu-docs#82)
+  [[module.imports]]
+    path = "github.com/SAMT-X/samt-bu-governance"
+    [[module.imports.mounts]]
+      source = "content"
+      target = "content/styring"
 
   [[module.imports]]
     path = "github.com/SAMT-X/samt-bu-market-engagement"

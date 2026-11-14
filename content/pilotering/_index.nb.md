@@ -9,4 +9,4 @@ toc: true
 ---
 SAMT-BU prøver ut løsninger gjennom piloter. En pilot er et avgrenset, tidsbestemt arbeid med et eget team, egne leveranser og en definert slutt. Én pilot kan adressere flere behov, og ett behov kan bli berørt av flere piloter. Denne seksjonen dekker pilotene – hva de skal svare på, hvem som deltar og hva de har produsert.
 
-Se også [Arbeidsmodell](https://docs.samt-bu.no/prosjektstyring/arbeidsmodell/) for skillet mellom case og pilot, og [Behov](https://docs.samt-bu.no/behov/use-cases/) for case-beskrivelsene.
+Se også [Arbeidsmodell](https://docs.samt-bu.no/styring/arbeidsmodell/) for skillet mellom case og pilot, og [Behov](https://docs.samt-bu.no/behov/use-cases/) for case-beskrivelsene.

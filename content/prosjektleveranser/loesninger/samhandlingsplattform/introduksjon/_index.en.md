@@ -19,7 +19,7 @@ The solutions build on git, an open and widely used version control system. Cont
 
 Git needs a platform that hosts the repositories and provides issues, access control and builds. The solutions so far are built on **GitHub**. The rest of this page explains why, what the choice costs in terms of digital sovereignty, and what it would take to choose differently. Other pages in the documentation refer here instead of repeating the rationale.
 
-**Status: provisional choice.** GitHub has been used since the documentation work started in February 2026. The choice is recorded in the [decision log](/en/prosjektstyring/beslutningslogg/2026-10-11-plattformvalg-github/) and can be revisited.
+**Status: provisional choice.** GitHub has been used since the documentation work started in February 2026. The choice is recorded in the [decision log](/en/styring/beslutningslogg/2026-10-11-plattformvalg-github/) and can be revisited.
 
 ### What GitHub is used for
 

@@ -97,6 +97,7 @@ jobs:
           hent github.com/SAMT-X/samt-bu-pilot-7@latest
           hent github.com/SAMT-X/samt-bu-market-engagement@latest
           hent github.com/SAMT-X/content-legal@latest
+          hent github.com/SAMT-X/samt-bu-governance@latest
           hugo mod tidy
 
       # Feiler bygget på én innholdsfil, legges forrige publiserte versjon tilbake og

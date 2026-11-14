@@ -19,7 +19,7 @@ Løsningene bygger på git, et åpent og utbredt system for versjonskontroll. In
 
 Git trenger en plattform som lagrer repoene og tilbyr saker, tilgangsstyring og bygging. Løsningene så langt er bygget på **GitHub**. Resten av siden forklarer hvorfor, hva valget koster med tanke på digital suverenitet, og hva som skal til for å velge annerledes. Andre sider i dokumentasjonen henviser hit i stedet for å gjenta begrunnelsen.
 
-**Status: foreløpig valg.** GitHub har vært brukt siden dokumentasjonsarbeidet startet i februar 2026. Valget er ført i [beslutningsloggen](/prosjektstyring/beslutningslogg/2026-10-11-plattformvalg-github/) og kan tas opp igjen.
+**Status: foreløpig valg.** GitHub har vært brukt siden dokumentasjonsarbeidet startet i februar 2026. Valget er ført i [beslutningsloggen](/styring/beslutningslogg/2026-10-11-plattformvalg-github/) og kan tas opp igjen.
 
 ### Hva GitHub brukes til
 

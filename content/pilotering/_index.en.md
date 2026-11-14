@@ -9,4 +9,4 @@ toc: true
 ---
 SAMT-BU tests solutions through pilots. A pilot is a bounded, time-limited effort with its own team, its own deliverables and a defined end. One pilot can address several needs, and one need can be touched by several pilots. This section covers the pilots – what they set out to answer, who takes part and what they have produced.
 
-See also [Working model](https://docs.samt-bu.no/en/prosjektstyring/arbeidsmodell/) for the distinction between cases and pilots, and [Needs](https://docs.samt-bu.no/en/behov/use-cases/) for the case descriptions.
+See also [Working model](https://docs.samt-bu.no/en/styring/arbeidsmodell/) for the distinction between cases and pilots, and [Needs](https://docs.samt-bu.no/en/behov/use-cases/) for the case descriptions.

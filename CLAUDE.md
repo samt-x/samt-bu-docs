@@ -45,12 +45,10 @@ hugo.toml                          # Hugo-konfigurasjon (baseURL, språk, tema)
 content/                           # Alt innhold (Markdown med YAML frontmatter)
   om/                              # Om SAMT-BU (weight 1)
   hvordan-bidra/                   # Hvordan bidra (weight 5)
-  prosjektstyring/                 # Prosjektstyring (weight 20) – het «administrasjon-og-styring» før sesjon 65
-    beslutningslogg/               # Kronologisk beslutningslogg
-    arbeidsmodell/                 # Case vs. pilot, forenklet behovsformat – erklærer seg foreløpig
-    samlinger/                     # Workshops og arbeidsmøter
-      workshop-26-august-2026/     # Opplegg og datoer
-        pilotkandidater/           # De åtte kandidatene + case 22
+  styring/                         # Styring (weight 20) – ← montert fra samt-bu-governance, ingen lokal mappe.
+                                   # Var lokal content/prosjektstyring/ til 2026-11-15 (solution-samt-bu-docs#82),
+                                   # før det «administrasjon-og-styring». Gamle adresser i static/_redirects.
+                                   # beslutningslogg/, arbeidsmodell/, deltakere-og-tilgang/, oppgaver-og-oppfolging/, samlinger/
   behov/                           # Behov (weight 30)
     use-cases/                     # 31 nummererte use cases
     annet/
@@ -145,6 +143,7 @@ Tabellen under er derfor bare en oversikt over resultatet:
 | `pilotering/pilot-1/` … `pilot-7/` | `samt-bu-pilot-1` … `-7` |
 | `ekstern-markedsdialog/` | `samt-bu-market-engagement` |
 | `arkitektur/juss/` | `content-legal` |
+| `styring/` | `samt-bu-governance` |
 | alt annet | `samt-bu-docs` |
 
 ⚠ **Unntak:** `arkitektur/overordnet-arkitektur/maalbildet/` og `.../veikart/`
@@ -292,6 +291,7 @@ Innhold fra eksterne repoer monteres inn via Hugo Module-systemet (`go.mod` + `h
 | `solution-task-management` | `content/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring/` |
 | `samt-bu-market-engagement` | `content/ekstern-markedsdialog/` |
 | `content-legal` | `content/arkitektur/juss/` (fra 2026-11-13; 2026-11-12 under `prosjektleveranser/rammeverk/juss/`, som nå er alias) |
+| `samt-bu-governance` | `content/styring/` (fra 2026-11-15; var lokal `content/prosjektstyring/`, solution-samt-bu-docs#82) |
 
 Alle med prefikset `github.com/SAMT-X/`. **`content/teams/` finnes ikke** – team-modulene ble flyttet inn under `arkitektur/`.
 

@@ -6,4 +6,4 @@ weight: 30
 
 Her samles begreper og konsepter prosjektet har behov for å bruke presist – både faglige begreper i domenet og begreper vi bruker om selve arbeidet, som *behov*, *case*, *pilot* og *leveranse*.
 
-Arbeidet er så vidt påbegynt, og siden er foreløpig tom. Inntil videre er den forenklede arbeidsmåten beskrevet under [Arbeidsmodell](https://docs.samt-bu.no/prosjektstyring/arbeidsmodell/). Utkast og drøftinger legges under [Utkast og innspill](https://docs.samt-bu.no/utkast/temaer/konseptbeskrivelser/).
+Arbeidet er så vidt påbegynt, og siden er foreløpig tom. Inntil videre er den forenklede arbeidsmåten beskrevet under [Arbeidsmodell](https://docs.samt-bu.no/styring/arbeidsmodell/). Utkast og drøftinger legges under [Utkast og innspill](https://docs.samt-bu.no/utkast/temaer/konseptbeskrivelser/).
