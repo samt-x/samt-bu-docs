@@ -122,10 +122,18 @@ portalene som en gang lå der er borte.
   bruk, både for innlogging og for `/presence`.
 - **Frontmatter:** YAML (`---`), ikke TOML.
 
-### Ruting per repo – `edit-switcher.html`
+### Ruting per repo – `page-repo.html`
 
-Nettstedet monterer innhold fra ni repoer, og «Endre denne siden» må treffe det
-repoet filen faktisk ligger i. Ruting skjer på `$dir = path.Dir .File.Path`:
+Nettstedet monterer innhold fra mange repoer, og «Endre denne siden» må treffe det
+repoet filen faktisk ligger i. **Fra 2026-11-14 (solution-samt-bu-docs#82) er det én kilde:**
+partialen `layouts/partials/page-repo.html` i temaet leser stien til fila Hugo brukte
+(`.File.Filename`): `…/<repo>@<versjon>/content/<rel>/` for moduler (Go-modulcachen),
+`…/samt-bu-docs/content/<rel>/` for lokale sider. Den gir `repo`, `rel` og `isModule`, og brukes av
+`edit-switcher.html`, `header.html` (kildelenken) og `menu.html` (modulmerket). `SAMTBU_REPOS` i
+`custom-footer.html` bygges fra `hugo.Deps`. **Det finnes ingen tabell å vedlikeholde.** Finner
+partialen ikke mønsteret, stopper bygget med `errorf` i stedet for å rute stille til feil repo.
+
+Tabellen under er derfor bare en oversikt over resultatet:
 
 | Sti | Repo |
 |-----|------|
@@ -141,11 +149,11 @@ repoet filen faktisk ligger i. Ruting skjer på `$dir = path.Dir .File.Path`:
 
 ⚠ **Unntak:** `arkitektur/overordnet-arkitektur/maalbildet/` og `.../veikart/`
 er LOKALE filer i `samt-bu-docs`, selv om de ligger under en modulmontert sti.
-Lokal fil vinner alltid over modulinnhold i Hugo, og rutingen må følge det.
+Lokal fil vinner alltid over modulinnhold i Hugo. `page-repo.html` følger det av seg selv,
+fordi den leser stien til fila som faktisk ble brukt. (Før 2026-11-14 manglet unntaket i
+`header.html`, så kildelenken på de 32 sidene pekte på `team-architecture`.)
 
-⚠ **`footer.html` har IKKE lenger egen ruting** (sjekket 2026-10-24). Kildelenken
-øverst på siden ligger i `header.html`, som har sin egen kopi av tabellen over.
-Legges det til en modul, se steg 5 under «Legge til ny modul».
+⚠ **`footer.html` har IKKE egen ruting** (sjekket 2026-10-24).
 
 ⚠ **Ingen andre lokale filer under modulstier** enn unntaket over. Lokale sider
 under `informasjonsarkitektur/` skygget for `team-semantics` til 2026-10-24
@@ -301,13 +309,10 @@ hugo mod get github.com/SAMT-X/team-architecture@latest
 3. Kjør `hugo mod get github.com/SAMT-X/<navn>@latest`
 4. Legg til en `hugo mod get …@latest`-linje i `.github/workflows/hugo.yml`, og reponavnet i lista «Hent innholdsrepoene»
    i `.github/workflows/translations.yml` (oversettelsessjekken, solution-samt-bu-docs#91)
-5. **Legg modulen inn i temaet.** Temaet har koblingen mellom sti og repo skrevet inn direkte, på sju steder i fire filer i
-   `themes/hugo-theme-samt-bu/layouts/partials/`: `edit-switcher.html` (fire steder), `header.html` (kildelenken),
-   `menu.html` (ny side) og `custom-footer.html` (`SAMTBU_REPOS`, forslagslisten). Kopier blokken for en eksisterende
-   modul med samme type sti (f.eks. pilot-4). **Glemmes dette, peker «Endre» og kildelenken på `samt-bu-docs`**, og
-   redigering på nettstedet virker ikke for modulen (oppdaget for pilot 5 og 6, 2026-10-10).
-6. Verifiser med `hugo`: sjekk at modulens sider har `data-repo="<navn>"` og lenker til eget repo.
-   Commit og push temaet, oppdater submodule-pekeren, og commit `hugo.toml` + `go.mod` + `go.sum` + `hugo.yml`
+5. **Temaet: ingenting å gjøre** (fra 2026-11-14, solution-samt-bu-docs#82). `page-repo.html` finner repoet fra
+   modulcachen, og `SAMTBU_REPOS` kommer fra `hugo.Deps`. Før dette måtte modulen inn på sju steder i fire filer.
+6. Verifiser med `hugo`: sjekk at modulens sider har `"repo":"<navn>"` i `_samtbuThisPage` og kildelenke til eget repo.
+   Commit `hugo.toml` + `go.mod` + `go.sum` + `hugo.yml`
 7. I modulrepoet: kopier `.github/` (workflow + skript) fra et eksisterende modulrepo, bytt reponavnet i workflowen,
    og huk av repoet i **org-secreten** `DOCS_REBUILD_TOKEN` (orgens Settings → Secrets → Actions). Ikke lag repo-secret med
    samme navn – den går foran org-secreten. Gi team-tilgang som for de andre modulrepoene.
