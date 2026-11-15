@@ -56,9 +56,10 @@ content/                           # Alt innhold (Markdown med YAML frontmatter)
   pilotering/                      # Piloter (weight 40) – kun ingress + Seksjonsinnhold
     pilot-1/ … pilot-7/            # ← montert fra Hugo Modules samt-bu-pilot-1..7
   arkitektur/                      # Arkitektur (weight 50)
-    overordnet-arkitektur/         # ← montert fra Hugo Module team-architecture
+    overordnet-arkitektur/         # ← montert fra Hugo Module team-architecture (også Målbildet og Veikart fra 2026-11-15)
     informasjonsarkitektur/        # ← montert fra Hugo Module team-semantics
-    loesningslandskap/
+    juss/                          # ← montert fra content-legal
+    loesningslandskap/             # lokal («TBD»), blir i samt-bu-docs inntil den får eier (Erik, s119)
   prosjektleveranser/              # Prosjektleveranser (weight 60)
     loesninger/cms-loesninger/samt-bu-docs/   # ← montert fra solution-samt-bu-docs
     rammeverk/                     # metodikk, juss, styring, standarder, referansearkitekturer
@@ -150,17 +151,17 @@ Tabellen under er derfor bare en oversikt over resultatet:
 | `innsikt/` | `content-insight` |
 | alt annet | `samt-bu-docs` |
 
-⚠ **Unntak:** `arkitektur/overordnet-arkitektur/maalbildet/` og `.../veikart/`
-er LOKALE filer i `samt-bu-docs`, selv om de ligger under en modulmontert sti.
-Lokal fil vinner alltid over modulinnhold i Hugo. `page-repo.html` følger det av seg selv,
-fordi den leser stien til fila som faktisk ble brukt. (Før 2026-11-14 manglet unntaket i
-`header.html`, så kildelenken på de 32 sidene pekte på `team-architecture`.)
+⚠ **Ingen lokale filer under modulstier.** Lokal fil vinner alltid over modulinnhold i Hugo.
+Det siste unntaket, Målbildet og Veikart under `arkitektur/overordnet-arkitektur/`, ble flyttet
+inn i `team-architecture` 2026-11-15 (solution-samt-bu-docs#82, samme id og adresse). Lokale sider
+under `informasjonsarkitektur/` skygget for `team-semantics` til 2026-10-24 (solution-samt-bu-docs#78).
+En sjekk i CI er foreslått i #81.
 
 ⚠ **`footer.html` har IKKE egen ruting** (sjekket 2026-10-24).
 
-⚠ **Ingen andre lokale filer under modulstier** enn unntaket over. Lokale sider
-under `informasjonsarkitektur/` skygget for `team-semantics` til 2026-10-24
-(solution-samt-bu-docs#78). En sjekk i CI er foreslått i #81.
+⚠ **`go.mod` henger etter:** CI henter alltid `@latest`, men et lokalt bygg bruker versjonen i `go.mod`.
+Skal et lokalt bygg brukes som fasit (før/etter), kjør `go -C <samt-bu-docs> get github.com/SAMT-X/<modul>@latest`
+for de berørte modulene først. (s119: `team-architecture` sto på 23.04 og ga 14 falske «forsvunne» sider.)
 
 ⚠ **Windows-fallgruve:** bruk alltid `path.Dir .File.Path`, aldri rå
 `.File.Path`. Sistnevnte gir backslash på Windows, og `hasPrefix`-sjekkene feiler.

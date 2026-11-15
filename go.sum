@@ -58,6 +58,8 @@ github.com/SAMT-X/solution-task-management v0.0.0-20261101145423-17946ed7ef54 h1
 github.com/SAMT-X/solution-task-management v0.0.0-20261101145423-17946ed7ef54/go.mod h1:lA9SLwD1Hn6TVoKDR1vjne9tfOM6e2riSlbk4bRI6JA=
 github.com/SAMT-X/team-architecture v0.0.0-20260423145752-c6d715909724 h1:N6V0xs/F1rJ8bfGLTfh6AKVnl4JbiwrgT4NkOzKgeO4=
 github.com/SAMT-X/team-architecture v0.0.0-20260423145752-c6d715909724/go.mod h1:UMJNBAbXIv7kSfQXQYVxsyRW0rjkbIY4t0A8LSHPh/w=
+github.com/SAMT-X/team-architecture v0.0.0-20261115153230-ce2b51b1130f h1:od2703jZq2skVOv4zbGcFyPMstzFEZNAT4+MYqMRMmA=
+github.com/SAMT-X/team-architecture v0.0.0-20261115153230-ce2b51b1130f/go.mod h1:UMJNBAbXIv7kSfQXQYVxsyRW0rjkbIY4t0A8LSHPh/w=
 github.com/SAMT-X/team-semantics v0.0.0-20260423155808-7607ed08de8b h1:Hko33RGKMYOHbYrczLhsZEI544qRdQ26QeO3wbmVS3s=
 github.com/SAMT-X/team-semantics v0.0.0-20260423155808-7607ed08de8b/go.mod h1:+zrKTxt3zFZwqeB1ItyBB7Yw2XcFhL32m4MDqVk5GLw=
 github.com/SAMT-X/team-semantics v0.0.0-20261024144739-1f5affbe5a4c h1:vNfRI2LeoEjrWLLsZQIuFOSFY/08A5Rh7QCUQRF21sk=
