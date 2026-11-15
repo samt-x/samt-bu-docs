@@ -12,6 +12,8 @@ github.com/SAMT-X/samt-bu-governance v0.0.0-20261114230149-0e2dd583e7bb h1:iFx9+
 github.com/SAMT-X/samt-bu-governance v0.0.0-20261114230149-0e2dd583e7bb/go.mod h1:kTgkEr5ENVyqlJinLU+LsqnBmL1PZ+l12+st92tgozk=
 github.com/SAMT-X/samt-bu-market-engagement v0.0.0-20260517212721-bd1ecae97cae h1:WA805hXk6iAdF5giaF5h5lkvLNP174asnKo6r6cadcE=
 github.com/SAMT-X/samt-bu-market-engagement v0.0.0-20260517212721-bd1ecae97cae/go.mod h1:HUhSAhNNxS/kl5+tT4n/E2HZq8gi62RsrfYY57G2xrk=
+github.com/SAMT-X/samt-bu-needs v0.0.0-20261115003019-866e9c0bf8ba h1:q+15wWreAazNYTP1EOx6HWIOBrChvcueRU8sgoHT6ZE=
+github.com/SAMT-X/samt-bu-needs v0.0.0-20261115003019-866e9c0bf8ba/go.mod h1:oPEbN/p0KjJYkV7hIityCf9FTxlKBZOZu8SlHqgJcTM=
 github.com/SAMT-X/samt-bu-pilot-1 v0.0.0-20260428234552-fb8f3a903d17 h1:rCLNYeQfPCU+wztx1Lf+OMFlj3XdtKuWgzIXn2+PLVs=
 github.com/SAMT-X/samt-bu-pilot-1 v0.0.0-20260428234552-fb8f3a903d17/go.mod h1:7cPGceD7eGhlqdSk4Jq2ZzfC8rv4guziKQjA5m2DcUM=
 github.com/SAMT-X/samt-bu-pilot-1 v0.0.0-20260728194440-041e11eb0a45 h1:MR07BE5XHEGcZwybfI05UEm4SLnVxgRagt7cT70MMts=

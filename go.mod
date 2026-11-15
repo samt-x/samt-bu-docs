@@ -7,6 +7,7 @@ require (
 	github.com/SAMT-X/samt-bu-drafts v0.0.0-20261010231912-e1b1cf70da4b // indirect
 	github.com/SAMT-X/samt-bu-governance v0.0.0-20261114230149-0e2dd583e7bb // indirect
 	github.com/SAMT-X/samt-bu-market-engagement v0.0.0-20260517212721-bd1ecae97cae // indirect
+	github.com/SAMT-X/samt-bu-needs v0.0.0-20261115003019-866e9c0bf8ba // indirect
 	github.com/SAMT-X/samt-bu-pilot-1 v0.0.0-20260728201129-dbe073015dec // indirect
 	github.com/SAMT-X/samt-bu-pilot-2 v0.0.0-20260728201119-3bccb3af5a2e // indirect
 	github.com/SAMT-X/samt-bu-pilot-3 v0.0.0-20260728201131-be08c19b1d10 // indirect

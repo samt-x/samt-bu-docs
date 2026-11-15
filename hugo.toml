@@ -169,6 +169,13 @@ refLinksErrorLevel = "WARNING"
       source = "content"
       target = "content/prosjektleveranser/loesninger/samhandlingsplattform/oppgavestyring"
 
+  # Behov, flyttet fra lokal content/behov 2026-11-15, samme adresse (solution-samt-bu-docs#82)
+  [[module.imports]]
+    path = "github.com/SAMT-X/samt-bu-needs"
+    [[module.imports.mounts]]
+      source = "content"
+      target = "content/behov"
+
   # Styring, flyttet fra content/prosjektstyring 2026-11-15 (solution-samt-bu-docs#82)
   [[module.imports]]
     path = "github.com/SAMT-X/samt-bu-governance"

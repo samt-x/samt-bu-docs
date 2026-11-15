@@ -49,7 +49,8 @@ content/                           # Alt innhold (Markdown med YAML frontmatter)
                                    # Var lokal content/prosjektstyring/ til 2026-11-15 (solution-samt-bu-docs#82),
                                    # før det «administrasjon-og-styring». Gamle adresser i static/_redirects.
                                    # beslutningslogg/, arbeidsmodell/, deltakere-og-tilgang/, oppgaver-og-oppfolging/, samlinger/
-  behov/                           # Behov (weight 30)
+  behov/                           # Behov (weight 30) – ← montert fra samt-bu-needs (Write for samt-bu-alle), ingen lokal
+                                   # mappe fra 2026-11-15 (solution-samt-bu-docs#82). Adressene er uendret.
     use-cases/                     # 31 nummererte use cases
     annet/
   pilotering/                      # Piloter (weight 40) – kun ingress + Seksjonsinnhold
@@ -144,6 +145,7 @@ Tabellen under er derfor bare en oversikt over resultatet:
 | `ekstern-markedsdialog/` | `samt-bu-market-engagement` |
 | `arkitektur/juss/` | `content-legal` |
 | `styring/` | `samt-bu-governance` |
+| `behov/` | `samt-bu-needs` |
 | alt annet | `samt-bu-docs` |
 
 ⚠ **Unntak:** `arkitektur/overordnet-arkitektur/maalbildet/` og `.../veikart/`
@@ -292,6 +294,7 @@ Innhold fra eksterne repoer monteres inn via Hugo Module-systemet (`go.mod` + `h
 | `samt-bu-market-engagement` | `content/ekstern-markedsdialog/` |
 | `content-legal` | `content/arkitektur/juss/` (fra 2026-11-13; 2026-11-12 under `prosjektleveranser/rammeverk/juss/`, som nå er alias) |
 | `samt-bu-governance` | `content/styring/` (fra 2026-11-15; var lokal `content/prosjektstyring/`, solution-samt-bu-docs#82) |
+| `samt-bu-needs` | `content/behov/` (fra 2026-11-15; var lokal, samme adresse, solution-samt-bu-docs#82) |
 
 Alle med prefikset `github.com/SAMT-X/`. **`content/teams/` finnes ikke** – team-modulene ble flyttet inn under `arkitektur/`.
 
