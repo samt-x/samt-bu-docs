@@ -99,6 +99,7 @@ jobs:
           hent github.com/SAMT-X/content-legal@latest
           hent github.com/SAMT-X/samt-bu-governance@latest
           hent github.com/SAMT-X/samt-bu-needs@latest
+          hent github.com/SAMT-X/content-insight@latest
           hugo mod tidy
 
       # Feiler bygget på én innholdsfil, legges forrige publiserte versjon tilbake og

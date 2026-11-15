@@ -63,7 +63,8 @@ content/                           # Alt innhold (Markdown med YAML frontmatter)
     loesninger/cms-loesninger/samt-bu-docs/   # ← montert fra solution-samt-bu-docs
     rammeverk/                     # metodikk, juss, styring, standarder, referansearkitekturer
   ekstern-markedsdialog/           # (weight 75) – ← montert fra samt-bu-market-engagement, ingen lokal mappe
-  innsikt/                         # Kilder til felles innsikt (weight 90)
+  innsikt/                         # Kilder til felles innsikt (weight 90) – ← montert fra content-insight (Write for
+                                   # samt-bu-alle), ingen lokal mappe fra 2026-11-15 (solution-samt-bu-docs#82). Samme adresser.
     begrepsapparat-og-konsepter/   # ⭐ Eneste hjem for begreper (duplikat under rammeverk/ slettet i sesjon 65)
     aktuelle-medieoppslag/, eu-relatert/, fou-rapporter/
   utkast/                          # Utkast og innspill (weight 90) – ← montert fra samt-bu-drafts, ingen lokal mappe
@@ -146,6 +147,7 @@ Tabellen under er derfor bare en oversikt over resultatet:
 | `arkitektur/juss/` | `content-legal` |
 | `styring/` | `samt-bu-governance` |
 | `behov/` | `samt-bu-needs` |
+| `innsikt/` | `content-insight` |
 | alt annet | `samt-bu-docs` |
 
 ⚠ **Unntak:** `arkitektur/overordnet-arkitektur/maalbildet/` og `.../veikart/`
@@ -295,6 +297,7 @@ Innhold fra eksterne repoer monteres inn via Hugo Module-systemet (`go.mod` + `h
 | `content-legal` | `content/arkitektur/juss/` (fra 2026-11-13; 2026-11-12 under `prosjektleveranser/rammeverk/juss/`, som nå er alias) |
 | `samt-bu-governance` | `content/styring/` (fra 2026-11-15; var lokal `content/prosjektstyring/`, solution-samt-bu-docs#82) |
 | `samt-bu-needs` | `content/behov/` (fra 2026-11-15; var lokal, samme adresse, solution-samt-bu-docs#82) |
+| `content-insight` | `content/innsikt/` (fra 2026-11-15; var lokal, samme adresse, solution-samt-bu-docs#82) |
 
 Alle med prefikset `github.com/SAMT-X/`. **`content/teams/` finnes ikke** – team-modulene ble flyttet inn under `arkitektur/`.
 
