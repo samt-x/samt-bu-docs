@@ -420,12 +420,8 @@ async def step_06_save_and_observe_indicator(page: Page):
 
 async def step_07_navigate_away(page: Page):
     print("\n[7/9] Navigerer til annen side og sjekker at indikator gjenopprettes…")
-    # Finn «Test 2»-lenken i venstremenyen og klikk den (animert)
-    test2_link = page.locator("#sidebar a").filter(
-        has_text=re.compile(r"Test\s+2\b", re.IGNORECASE)
-    ).first
-    await test2_link.wait_for(state="visible", timeout=8000)
-    await move_and_click(page, test2_link)
+    # Testseksjonen er skjult fra venstremenyen (solution-samt-bu-docs#53), så vi går rett til adressen
+    await page.goto(BASE_URL + "/test-samt-bu-docs/test-2/", wait_until="networkidle")
     await page.wait_for_url("**/test-samt-bu-docs/test-2/**", timeout=10000)
     await inject_cursor_overlay(page)
     await page.wait_for_timeout(600)

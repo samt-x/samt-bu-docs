@@ -70,7 +70,8 @@ content/                           # Alt innhold (Markdown med YAML frontmatter)
     aktuelle-medieoppslag/, eu-relatert/, fou-rapporter/
   utkast/                          # Utkast og innspill (weight 90) – ← montert fra samt-bu-drafts, ingen lokal mappe
   hva-skjer/                       # Hva skjer (weight 100) – eksterne arrangementstips
-  test-samt-bu-docs/               # ⚠ Testinnhold, synlig i produksjon – se issue #53
+  test-samt-bu-docs/               # Testinnhold for Playwright-testene. Bygges med faste adresser, men er skjult fra
+                                   # meny, seksjonslister, søk og sitemap (build.list never/local, fra 2026-11-15, #53)
 themes/hugo-theme-samt-bu/         # ⭐ Git submodule – all presentasjonslogikk ligger her
   layouts/partials/
     custom-head.html               # ⭐ HOVEDDELEN – all tilpasset CSS

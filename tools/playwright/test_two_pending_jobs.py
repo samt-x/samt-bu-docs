@@ -514,21 +514,20 @@ async def step_07_wait_for_second_build(page: Page):
 
 
 async def step_08_verify_sidebar_titles(page: Page):
-    print("\n[8/9] Verifiserer at oppdaterte titler vises i venstremenyen…")
+    # Testseksjonen er skjult fra venstremenyen (solution-samt-bu-docs#53). Titlene leses fra
+    # barnelista på seksjonens forside, som fortsatt viser underkapitlene.
+    print("\n[8/9] Verifiserer at oppdaterte titler vises i barnelista på testseksjonen…")
+    await page.goto(BASE_URL + "/test-samt-bu-docs/", wait_until="networkidle")
     await page.wait_for_timeout(1000)
 
-    test1_link = page.locator("#sidebar a").filter(
-        has_text=re.compile(r"Test\s+1", re.IGNORECASE)
-    ).first
-    test2_link = page.locator("#sidebar a").filter(
-        has_text=re.compile(r"Test\s+2", re.IGNORECASE)
-    ).first
+    test1_link = page.locator('#body a[href$="/test-samt-bu-docs/test-1/"]').first
+    test2_link = page.locator('#body a[href$="/test-samt-bu-docs/test-2/"]').first
 
     t1_text = await test1_link.inner_text() if await test1_link.count() > 0 else "(ikke funnet)"
     t2_text = await test2_link.inner_text() if await test2_link.count() > 0 else "(ikke funnet)"
-    print(f"  Test 1 i sidebar: «{t1_text.strip()}»")
-    print(f"  Test 2 i sidebar: «{t2_text.strip()}»")
-    await screenshot(page, "08-sidebar-titler-oppdatert", "#sidebar")
+    print(f"  Test 1 i barnelista: «{t1_text.strip()}»")
+    print(f"  Test 2 i barnelista: «{t2_text.strip()}»")
+    await screenshot(page, "08-titler-oppdatert", "#body")
 
 
 async def step_09_final_state(page: Page):
