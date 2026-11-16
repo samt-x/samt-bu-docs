@@ -37,3 +37,7 @@
 /en/arkitektur/informasjonsarkitektur/domenemodell/kartlegging/lovp%C3%A5lagte-oppgaver-i-oppl%C3%A6ringsomr%C3%A5det/*  /en/arkitektur/informasjonsarkitektur/domenemodell/kartlegging/lovpaalagte-oppgaver-i-opplaeringsomraadet/:splat  301
 /arkitektur/informasjonsarkitektur/domenemodell/kartlegging/lovpålagte-oppgaver-i-opplæringsområdet/*                    /arkitektur/informasjonsarkitektur/domenemodell/kartlegging/lovpaalagte-oppgaver-i-opplaeringsomraadet/:splat     301
 /en/arkitektur/informasjonsarkitektur/domenemodell/kartlegging/lovpålagte-oppgaver-i-opplæringsområdet/*                 /en/arkitektur/informasjonsarkitektur/domenemodell/kartlegging/lovpaalagte-oppgaver-i-opplaeringsomraadet/:splat  301
+
+# XRoad flyttet inn under Løsninger i Data Spaces (content-insight, november 2026).
+/innsikt/eu-relatert/data-spaces/xroad/*     /innsikt/eu-relatert/data-spaces/loesninger/xroad/:splat     301
+/en/innsikt/eu-relatert/data-spaces/xroad/*  /en/innsikt/eu-relatert/data-spaces/loesninger/xroad/:splat  301
