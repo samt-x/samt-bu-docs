@@ -1,4 +1,6 @@
 ---
+# id: auto-generert – kopierte verdier overskrives automatisk ved push
+id: 625201ce-5dd3-4492-be69-e939b0bc6826
 title: Fellesløsninger og europeiske krav
 weight: 10
 ---

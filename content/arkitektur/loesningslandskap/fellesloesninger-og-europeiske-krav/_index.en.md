@@ -1,4 +1,6 @@
 ---
+# id: auto-generated – copied values are overwritten automatically on push
+id: 625201ce-5dd3-4492-be69-e939b0bc6826
 title: Shared solutions and European requirements
 weight: 10
 ---
