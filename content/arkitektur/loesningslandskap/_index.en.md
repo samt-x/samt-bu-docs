@@ -4,4 +4,8 @@ title: Solution landscape
 weight: 10
 ---
 
-TBD
+*The solution landscape describes the solutions that exist today, in particular the Norwegian shared national solutions, and what they must adapt to work together with European requirements.*
+
+The section is being built. The first page is a draft for discussion:
+
+- [Shared solutions and European requirements](fellesloesninger-og-europeiske-krav/): which Norwegian shared national solutions should be analysed for compliance with data spaces, eIDAS 2.0, Once-Only and other European regulation.
