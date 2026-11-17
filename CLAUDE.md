@@ -87,7 +87,8 @@ themes/hugo-theme-samt-bu/         # ⭐ Git submodule – all presentasjonslogi
     search.html                    # Søkefelt-integrasjon
     status-symbol.html             # Slår opp statussymbol fra .Params.status
   layouts/_default/list.html       # Override for listesider
-  layouts/shortcodes/              # children.html, header.html, relref.html, inline-svg.html (SVG rett inn i siden, klikkbar; issue-lenker åpnes i vinduet partials/issue-popup.html; valgfritt 2. argument = sti til siden som har SVG-en, brukt av sidene «Oppgaver og framdrift»; full størrelse i rullbar ramme med zoom-verktøylinje, Ctrl+hjul og lenke til SVG-fila alene)
+  layouts/shortcodes/              # kortrad.html + kort.html (grafiske kort, CSS i custom-head.html, brukerveiledningen «Grafiske kort», solution-samt-bu-docs#95),
+                                   # children.html, header.html, relref.html, inline-svg.html (SVG rett inn i siden, klikkbar; issue-lenker åpnes i vinduet partials/issue-popup.html; valgfritt 2. argument = sti til siden som har SVG-en, brukt av sidene «Oppgaver og framdrift»; full størrelse i rullbar ramme med zoom-verktøylinje, Ctrl+hjul og lenke til SVG-fila alene)
   layouts/index.json               # ⚠ Søkeindeks-mal – dumper HELE brødteksten på ALLE sider
   static/images/SAMT-BU-logo.png   # Logo (vises invertert i header)
   static/images/nb.svg, en.svg     # Flaggikoner for språkvelger
@@ -123,6 +124,10 @@ portalene som en gang lå der er borte.
 - **OAuth-proxy:** Cloudflare Worker på `https://auth.samt-bu.no` – fortsatt i
   bruk, både for innlogging og for `/presence`.
 - **Frontmatter:** YAML (`---`), ikke TOML.
+- **Kortkoder i editoren** (fra 2026-11-17, solution-samt-bu-docs#95): TipTap (`html: false`) gjør `<` til `&lt;` og slår
+  sammen linjer. `samtbuWrapShortcodes()` pakker hver blokk som starter med en kortkode inn i en kodeblokk (`hugo-kortkode`) før
+  innlasting, og `samtbuUnwrapShortcodes()` pakker ut ved lagring. Kortkoder midt i en linje dekkes ikke.
+  ⚠ `custom-footer.html` er en Go-mal: aldri to krøllparenteser etter hverandre i JS-en, heller ikke i kommentarer.
 
 ### Ruting per repo – `page-repo.html`
 
