@@ -16,6 +16,16 @@
 /prosjektstyring/*                              /styring/:splat                     301
 /en/prosjektstyring/*                           /en/styring/:splat                  301
 
+# Pilot 4: leveransene samlet under «Leveranser», informasjonspakken fordelt på andre sider (2026-11-20).
+/pilotering/pilot-4/arkitektur-og-informasjonsmodell/*     /pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/:splat     301
+/en/pilotering/pilot-4/arkitektur-og-informasjonsmodell/*  /en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/:splat  301
+/pilotering/pilot-4/juridiske-behov/*                      /pilotering/pilot-4/leveranser/juridiske-behov/:splat                      301
+/en/pilotering/pilot-4/juridiske-behov/*                   /en/pilotering/pilot-4/leveranser/juridiske-behov/:splat                   301
+/pilotering/pilot-4/systemleverandorer/*                   /pilotering/pilot-4/leveranser/systemleverandorer/:splat                   301
+/en/pilotering/pilot-4/systemleverandorer/*                /en/pilotering/pilot-4/leveranser/systemleverandorer/:splat                301
+/pilotering/pilot-4/informasjonspakke/*                    /pilotering/pilot-4/resultater-og-veien-videre/                            301
+/en/pilotering/pilot-4/informasjonspakke/*                 /en/pilotering/pilot-4/resultater-og-veien-videre/                         301
+
 # «Samhandlingsplattform» (oktober 2026) samlet SAMT-BU Docs, Oppgavestyring og
 # Plattformvalg; mellomnivåene «CMS-løsninger» og «Styringsløsninger» ble fjernet.
 /prosjektleveranser/loesninger/cms-loesninger/samt-bu-docs/*          /prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/:splat     301
