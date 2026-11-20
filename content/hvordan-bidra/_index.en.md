@@ -5,7 +5,7 @@ title: "How to Contribute"
 linkTitle: "How to Contribute"
 weight: 5
 aliases:
-  - /en/om/hvordan-bidra/
+  - /om/hvordan-bidra/
 
 ---
 

@@ -5,8 +5,8 @@ title: About SAMT-BU
 linkTitle: About SAMT-BU
 weight: 1
 aliases:
-  - /en/om/om-samt-bu/
-  - /en/om/om-dette-nettstedet/
+  - /om/om-samt-bu/
+  - /om/om-dette-nettstedet/
 
 ---
 SAMT-BU is a collaborative project on *data-centric service development* and seamless services for children and young people – from kindergarten to higher education.
