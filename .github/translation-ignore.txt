@@ -26,3 +26,11 @@ team-semantics/content/domenemodell/kartlegging/lovpaalagte-oppgaver-i-opplaerin
 # «Kort beskrivelse» står på norsk som fortsettelse av linja med ### (etter \\), engelsk har den som egen overskrift.
 # Feil i originalen, meldt til Erik (s124)
 samt-bu-needs/content/use-cases/02-overgang-grunnskole-vgo/_index.nb.md 6c34734
+
+# Bare engelske aliaser rettet (/en/ fjernet, ga /en/en/…), ingen tekst å oversette (s125)
+content-legal/content/_index.nb.md ae516ad
+samt-bu-docs/content/hvordan-bidra/_index.nb.md 00fd923
+samt-bu-docs/content/om/_index.nb.md 00fd923
+solution-samt-bu-docs/content/brukerveiledning/github-redigering/_index.nb.md cd37686
+solution-samt-bu-docs/content/brukerveiledning/innebygd-redigering/_index.nb.md cd37686
+solution-samt-bu-docs/content/brukerveiledning/lokal-oppsett/_index.nb.md cd37686
