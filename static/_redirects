@@ -17,6 +17,27 @@
 /en/prosjektstyring/*                           /en/styring/:splat                  301
 
 # Pilot 4: leveransene samlet under «Leveranser», informasjonspakken fordelt på andre sider (2026-11-20).
+# Arkitekturrapporten ble samme dag slått sammen til én side; de tidligere undersidene peker til kapitlet.
+/pilotering/pilot-4/arkitektur-og-informasjonsmodell/dagens-nvb-import/*                     /pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#dagens-prosess-for-nvb-import  301
+/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/dagens-nvb-import/*          /pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#dagens-prosess-for-nvb-import  301
+/en/pilotering/pilot-4/arkitektur-og-informasjonsmodell/dagens-nvb-import/*                  /en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#todays-process-for-nvb-import  301
+/en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/dagens-nvb-import/*       /en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#todays-process-for-nvb-import  301
+/pilotering/pilot-4/arkitektur-og-informasjonsmodell/maalbilde-og-anbefalt-arkitektur/*      /pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#m%C3%A5lbilde  301
+/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/maalbilde-og-anbefalt-arkitektur/*  /pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#m%C3%A5lbilde  301
+/en/pilotering/pilot-4/arkitektur-og-informasjonsmodell/maalbilde-og-anbefalt-arkitektur/*   /en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#target-picture  301
+/en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/maalbilde-og-anbefalt-arkitektur/*  /en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#target-picture  301
+/pilotering/pilot-4/arkitektur-og-informasjonsmodell/grunnskole/*                            /pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#grunnskole  301
+/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/grunnskole/*                 /pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#grunnskole  301
+/en/pilotering/pilot-4/arkitektur-og-informasjonsmodell/grunnskole/*                         /en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#primary-and-lower-secondary-school-grunnskole  301
+/en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/grunnskole/*              /en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#primary-and-lower-secondary-school-grunnskole  301
+/pilotering/pilot-4/arkitektur-og-informasjonsmodell/semantisk-arkitektur-og-begrepskatalog/*      /pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#semantisk-arkitektur  301
+/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/semantisk-arkitektur-og-begrepskatalog/*  /pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#semantisk-arkitektur  301
+/en/pilotering/pilot-4/arkitektur-og-informasjonsmodell/semantisk-arkitektur-og-begrepskatalog/*   /en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#semantic-architecture  301
+/en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/semantisk-arkitektur-og-begrepskatalog/*  /en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#semantic-architecture  301
+/pilotering/pilot-4/arkitektur-og-informasjonsmodell/konklusjon-og-veien-videre/*            /pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#konklusjon-og-veien-videre  301
+/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/konklusjon-og-veien-videre/* /pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#konklusjon-og-veien-videre  301
+/en/pilotering/pilot-4/arkitektur-og-informasjonsmodell/konklusjon-og-veien-videre/*         /en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#conclusion-and-the-way-forward  301
+/en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/konklusjon-og-veien-videre/*  /en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#conclusion-and-the-way-forward  301
 /pilotering/pilot-4/arkitektur-og-informasjonsmodell/*     /pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/:splat     301
 /en/pilotering/pilot-4/arkitektur-og-informasjonsmodell/*  /en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/:splat  301
 /pilotering/pilot-4/juridiske-behov/*                      /pilotering/pilot-4/leveranser/juridiske-behov/:splat                      301
