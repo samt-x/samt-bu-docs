@@ -55,11 +55,11 @@ The project will deliver seven main products, developed iteratively over the cou
 
 | Partner | Role |
 | --- | --- |
-| **Digdir** | Lead applicant and premise provider. Responsible for coordination, catalogue solutions and sharing of experience. |
+| **Digdir** | Lead applicant and sets premises for the work. Responsible for coordination, catalogue solutions and sharing of experience. |
 | **KS / KS Digital** | Partner and benefit owner. Promotes the needs of the municipal sector and contributes to a common architecture. |
-| **STAF** | Partner and needs owner. Gains better conditions for guidance, supervision and handling of appeals. |
-| **Udir** | Premise provider. Contributes to standardised reporting and data sharing between administrative levels. |
-| **HK-dir** | Premise provider. Develops the website [Utdanning.no](http://Utdanning.no), which gives everyone an overview of the education on offer and of the transitions between primary and secondary education, higher education and the labour market. |
+| **STAF** | Partner and needs owner. Gains a better basis for guidance, supervision and handling of appeals. |
+| **Udir** | Sets premises for the work. Contributes to standardised reporting and data sharing between administrative levels. |
+| **HK-dir** | Sets premises for the work. Develops the website [Utdanning.no](http://Utdanning.no), which gives everyone an overview of the education on offer and of the transitions between primary and secondary education, higher education and the labour market. |
 | **Sikt** | Partner. Contributes Feide, national registers and data-oriented services for the education sector. |
 | **SSB** | Partner. Contributes to efficient collection of statistical data and education statistics. |
 | **Novari IKS** | Partner. Looks after the county authorities' needs and contributes experience from FINT. |
@@ -82,4 +82,4 @@ If you have questions about the SAMT-BU project, the market dialogue or this web
 
 **postmottak@digdir.no**
 
-Please mark the email «SAMT-BU» in the subject line. The project is led by the Norwegian Digitalisation Agency (Digdir), and for the time being its central mailbox is the right address.
+Please write "SAMT-BU" in the subject line. The project is led by the Norwegian Digitalisation Agency (Digdir), and for the time being Digdir's central mailbox is the right address.
