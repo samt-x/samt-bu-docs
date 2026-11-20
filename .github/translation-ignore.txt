@@ -17,8 +17,12 @@ solution-task-management/content/veikart/portefoljestyring/_index.nb.md 59fed38
 # Bare en blank linje lagt til før overskriften på engelsk, norsk hadde den allerede (s122)
 samt-bu-pilot-4/content/leveranser/systemleverandorer/_index.nb.md a4a787f
 
-# Norske tabeller har mye fyll med mellomrom i cellene. Like mange rader og kolonner (s110).
-team-semantics/content/domenemodell/kartlegging/begreper/_index.nb.md 6cb4cee
-team-semantics/content/domenemodell/kartlegging/innbyggeres-rettigheter-og-plikter/_index.nb.md 6cb4cee
-team-semantics/content/domenemodell/kartlegging/tjenester-og-hendelser/_index.nb.md 6cb4cee
-team-semantics/content/domenemodell/kartlegging/lovpaalagte-oppgaver-i-opplaeringsomraadet/_index.nb.md 801bb13
+# Norske tabeller har mye fyll med mellomrom i cellene. Like mange rader og kolonner (s110, sjekket på nytt etter QA i s124).
+team-semantics/content/domenemodell/kartlegging/begreper/_index.nb.md 63a8553
+team-semantics/content/domenemodell/kartlegging/innbyggeres-rettigheter-og-plikter/_index.nb.md 63a8553
+team-semantics/content/domenemodell/kartlegging/tjenester-og-hendelser/_index.nb.md 63a8553
+team-semantics/content/domenemodell/kartlegging/lovpaalagte-oppgaver-i-opplaeringsomraadet/_index.nb.md 63a8553
+
+# «Kort beskrivelse» står på norsk som fortsettelse av linja med ### (etter \\), engelsk har den som egen overskrift.
+# Feil i originalen, meldt til Erik (s124)
+samt-bu-needs/content/use-cases/02-overgang-grunnskole-vgo/_index.nb.md 6c34734
