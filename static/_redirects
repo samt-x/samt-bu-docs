@@ -18,6 +18,11 @@
 
 # Pilot 4: leveransene samlet under «Leveranser», informasjonspakken fordelt på andre sider (2026-11-20).
 # Arkitekturrapporten ble samme dag slått sammen til én side; de tidligere undersidene peker til kapitlet.
+# Arbeidsmøtene ble eget kapittel «Møter» på pilotnivå.
+/pilotering/pilot-4/arkitektur-og-informasjonsmodell/arbeidsmoter/*               /pilotering/pilot-4/moter/     301
+/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/arbeidsmoter/*    /pilotering/pilot-4/moter/     301
+/en/pilotering/pilot-4/arkitektur-og-informasjonsmodell/arbeidsmoter/*            /en/pilotering/pilot-4/moter/  301
+/en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/arbeidsmoter/* /en/pilotering/pilot-4/moter/  301
 /pilotering/pilot-4/arkitektur-og-informasjonsmodell/dagens-nvb-import/*                     /pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#dagens-prosess-for-nvb-import  301
 /pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/dagens-nvb-import/*          /pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#dagens-prosess-for-nvb-import  301
 /en/pilotering/pilot-4/arkitektur-og-informasjonsmodell/dagens-nvb-import/*                  /en/pilotering/pilot-4/leveranser/arkitektur-og-informasjonsmodell/#todays-process-for-nvb-import  301
