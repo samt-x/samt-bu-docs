@@ -11,7 +11,7 @@ weight: 5
 
 The collaboration platform is the set of digital tools SAMT-BU uses to collaborate across organisations: the documentation website docs.samt-bu.no and task management.
 
-SAMT-BU is to deliver a [framework for data-driven service development](/en/om/) that others can build on. A good collaboration platform is part of that, because the way we collaborate is also something others can benefit from. The tools are therefore documented with others than the project itself in mind. At best they can be reused and scaled directly. Otherwise they should at least serve as examples for inspiration and further development.
+SAMT-BU is to deliver a [framework for data-driven service development](/en/om/#the-projects-products) that others can build on. A good collaboration platform is part of that, because the way we collaborate is also something others can benefit from. The tools are therefore documented with others than the project itself in mind. At best they can be reused and scaled directly. Otherwise they should at least serve as examples for inspiration and further development.
 
 ## Choice of git and git platform
 
@@ -73,7 +73,7 @@ The same way of working exists in other git-based solutions:
 
 | Solution | Characteristics |
 |---|---|
-| **GitLab** | Same model as GitHub. The Community Edition is open source and can be self-hosted. Has hierarchical access control (groups and subgroups) suited to projects with many sub-projects. The European Commission runs [code.europa.eu](https://code.europa.eu/) on GitLab. Note that the GitLab.com service is also run by a US company. The sovereignty benefit only comes with self-hosting or hosting by a European operator. |
+| **GitLab** | Same model as GitHub. The Community Edition is open source and can be self-hosted. Has hierarchical access control (groups and subgroups) suited to projects with many subprojects. The European Commission runs [code.europa.eu](https://code.europa.eu/) on GitLab. Note that the GitLab.com service is also run by a US company. The sovereignty benefit only comes with self-hosting or hosting by a European operator. |
 | **Forgejo** | A lighter open source solution, made for self-hosting and governed by a community. |
 | **Codeberg** | A European non-profit service built on Forgejo. |
 
@@ -119,4 +119,4 @@ A switch is therefore still a major undertaking, but the bottleneck is no longer
 ### More on the topic
 
 - [Co-creation → Task management](/en/utkast/temaer/samskaping/oppgavestyring/) discusses why git-based platforms suit collaboration between equal organisations
-- [Concept for GitHub Organizations and Repositories](/en/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/teknisk-dokumentasjon/github-struktur/) describes how the samt-x organisation is set up
+- [Concept for GitHub Organizations and Repositories](/en/prosjektleveranser/loesninger/samhandlingsplattform/samt-bu-docs/teknisk-dokumentasjon/github-struktur/) describes how the samt-x organisation is set up, and how the choice affected the technology behind docs.samt-bu.no
