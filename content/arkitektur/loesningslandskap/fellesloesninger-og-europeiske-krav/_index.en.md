@@ -13,7 +13,7 @@ The work is followed up in [samt-bu-architecture#37](https://github.com/samt-x/s
 
 ### Why this matters
 
-European data spaces, the EUDI wallet and Once-Only build on common standards and a federated architecture. Each participant can keep its own solutions, as long as they follow the common requirements. For Norwegian shared national solutions, this is an opportunity to become Norway's connection point, and to reach further than today. The precondition is compliance. The background is described under [Relevance for Norway](/en/innsikt/eu-relatert/data-spaces/loesninger/simpl/relevans-for-norge/) in the section on Simpl.
+European data spaces, the EUDI wallet and Once-Only build on common standards and a federated architecture. Each participant can keep its own solutions, as long as they follow the common requirements. For Norwegian shared national solutions, this is an opportunity to become Norway's connection point, and to reach further than today. The precondition is compliance. The background is described under [Relevance for Norwegian actors](/en/innsikt/eu-relatert/data-spaces/loesninger/simpl/relevans-for-norge/) in the section on Simpl.
 
 The legal aspects of the requirements belong under [Legal](/en/arkitektur/juss/). Here we look at the solutions.
 
