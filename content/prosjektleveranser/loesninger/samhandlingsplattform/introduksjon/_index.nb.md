@@ -11,7 +11,7 @@ weight: 5
 
 Samhandlingsplattformen er de digitale verktøyene SAMT-BU bruker for å samarbeide på tvers av organisasjoner: dokumentasjonsnettstedet docs.samt-bu.no og oppgavestyringen.
 
-SAMT-BU skal levere et [rammeverk for datadrevet tjenesteutvikling](/om/#prosjektets-produkter) som andre kan bygge videre på. En god samhandlingsplattform hører med, fordi måten vi samarbeider på også er noe andre kan ha nytte av. Verktøyene er derfor dokumentert med tanke på andre enn prosjektet selv. I beste fall kan de gjenbrukes og skaleres direkte. Ellers bør de i det minste kunne tjene som eksempler til inspirasjon og videreutvikling.
+SAMT-BU skal levere et [rammeverk for datasentrisk tjenesteutvikling](/om/#prosjektets-produkter) som andre kan bygge videre på. En god samhandlingsplattform hører med, fordi måten vi samarbeider på også er noe andre kan ha nytte av. Verktøyene er derfor dokumentert med tanke på andre enn prosjektet selv. I beste fall kan de gjenbrukes og skaleres direkte. Ellers bør de i det minste kunne tjene som eksempler til inspirasjon og videreutvikling.
 
 ## Valg av git og git-plattform
 

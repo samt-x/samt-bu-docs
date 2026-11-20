@@ -9,7 +9,7 @@ aliases:
   - /en/om/om-dette-nettstedet/
 
 ---
-SAMT-BU is a collaborative project on *data-driven service development* and seamless services for children and young people – from kindergarten to higher education.
+SAMT-BU is a collaborative project on *data-centric service development* and seamless services for children and young people – from kindergarten to higher education.
 
 The project's full title is *Felles løft: Sammenhengende tjenester for barn og unge* (Joint effort: Seamless services for children and young people), and it runs from October 2025 to December 2027.
 
@@ -25,7 +25,7 @@ The project is a direct response to the Digitalisation Strategy 2024–2030, whi
 
 ## Purpose and ambition
 
-The purpose is to establish a **common foundation for collaboration and knowledge about data-driven service development and seamless user journeys** across administrative levels and sectors, with piloting based in the area of children and young people.
+The purpose is to establish a **common foundation for collaboration and knowledge about data-centric service development and seamless user journeys** across administrative levels and sectors, with piloting based in the area of children and young people.
 
 The ambition is broad, systematic use and further development of the project's products for all services the public sector is responsible for – not only in childhood and education, but in time also in other sectors.
 
@@ -43,7 +43,7 @@ The project builds on established experience, in particular Novari's **FINT** (F
 
 The project will deliver seven main products, developed iteratively over the course of the project:
 
-1. **Framework for data-driven service development** – common concepts, a common language, standards and a governance model with roles and responsibilities.
+1. **Framework for data-centric service development** – common concepts, a common language, standards and a governance model with roles and responsibilities.
 2. **Common catalogue solutions** – continuation and extension of the national catalogues on data.norge.no.
 3. **Common information models** – describing key concepts and relationships in childhood and education, across municipal and state systems.
 4. **Improved shared solutions** – improvements to existing shared solutions and services, based on needs uncovered through MVPs and pilots.

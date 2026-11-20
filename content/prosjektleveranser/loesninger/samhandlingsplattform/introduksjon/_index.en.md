@@ -11,7 +11,7 @@ weight: 5
 
 The collaboration platform is the set of digital tools SAMT-BU uses to collaborate across organisations: the documentation website docs.samt-bu.no and task management.
 
-SAMT-BU is to deliver a [framework for data-driven service development](/en/om/#the-projects-products) that others can build on. A good collaboration platform is part of that, because the way we collaborate is also something others can benefit from. The tools are therefore documented with others than the project itself in mind. At best they can be reused and scaled directly. Otherwise they should at least serve as examples for inspiration and further development.
+SAMT-BU is to deliver a [framework for data-centric service development](/en/om/#the-projects-products) that others can build on. A good collaboration platform is part of that, because the way we collaborate is also something others can benefit from. The tools are therefore documented with others than the project itself in mind. At best they can be reused and scaled directly. Otherwise they should at least serve as examples for inspiration and further development.
 
 ## Choice of git and git platform
 

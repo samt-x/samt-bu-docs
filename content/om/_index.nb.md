@@ -9,7 +9,7 @@ aliases:
   - /om/om-dette-nettstedet/
 
 ---
-SAMT-BU er et samarbeidsprosjekt om *datadrevet tjenesteutvikling* og sammenhengende tjenester for barn og unge – fra barnehage til høyere utdanning.
+SAMT-BU er et samarbeidsprosjekt om *datasentrisk tjenesteutvikling* og sammenhengende tjenester for barn og unge – fra barnehage til høyere utdanning.
 
 Prosjektets fulle tittel er *Felles løft: Sammenhengende tjenester for barn og unge*, og løper fra oktober 2025 til desember 2027.
 
@@ -25,7 +25,7 @@ Prosjektet er et direkte svar på Digitaliseringsstrategien 2024–2030, som pek
 
 ## Formål og ambisjon
 
-Formålet er å etablere et **felles fundament for samarbeid og kunnskap om datadrevet tjenesteutvikling og sømløse brukerreiser** på tvers av forvaltningsnivåer og sektorer, med pilotering ut fra området barn og unge.
+Formålet er å etablere et **felles fundament for samarbeid og kunnskap om datasentrisk tjenesteutvikling og sømløse brukerreiser** på tvers av forvaltningsnivåer og sektorer, med pilotering ut fra området barn og unge.
 
 Ambisjonen er bred systematisk anvendelse og videreutvikling av prosjektets produkter for alle tjenester som det offentlige har ansvar for – ikke bare innen oppvekst og utdanning, men på sikt også andre sektorer.
 
@@ -43,7 +43,7 @@ Prosjektet bygger videre på etablerte erfaringer, særlig Novaris **FINT** (Fel
 
 Prosjektet skal levere sju hovedprodukter, utviklet iterativt gjennom prosjektløpet:
 
-1. **Rammeverk for datadrevet tjenesteutvikling** – felles konsepter, felles språk, standarder og styringsmodell med roller og ansvar.
+1. **Rammeverk for datasentrisk tjenesteutvikling** – felles konsepter, felles språk, standarder og styringsmodell med roller og ansvar.
 2. **Felles katalogløsninger** – videreføring og utvidelse av nasjonale kataloger på data.norge.no.
 3. **Felles informasjonsmodeller** – som beskriver sentrale begreper og sammenhenger i oppvekst og utdanning, på tvers av kommunale og statlige systemer.
 4. **Forbedrede fellesløsninger** – forbedringer i eksisterende fellesløsninger og -tjenester basert på behov avdekket gjennom MVP-er og piloter.
