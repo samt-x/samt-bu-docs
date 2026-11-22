@@ -34,3 +34,6 @@ samt-bu-docs/content/om/_index.nb.md 00fd923
 solution-samt-bu-docs/content/brukerveiledning/github-redigering/_index.nb.md cd37686
 solution-samt-bu-docs/content/brukerveiledning/innebygd-redigering/_index.nb.md cd37686
 solution-samt-bu-docs/content/brukerveiledning/lokal-oppsett/_index.nb.md cd37686
+
+# Bare /en/ fjernet fra stien i inline-svg på engelsk (figuren manglet), ingen tekst å oversette (s126)
+samt-bu-pilot-1/content/oppgaver-og-framdrift/_index.nb.md 6846d9f
