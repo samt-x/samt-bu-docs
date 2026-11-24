@@ -13,7 +13,7 @@ Arbeidet følges opp i [samt-bu-architecture#37](https://github.com/samt-x/samt-
 
 ### Hvorfor dette er viktig
 
-Europeiske data spaces, EUDI-lommeboken og Once-Only bygger på felles standarder og en føderert arkitektur. Hver deltaker kan beholde egne løsninger, så lenge de følger de felles kravene. For norske fellesløsninger er det en mulighet til å bli Norges tilkoblingspunkt, og til å nå lenger ut enn i dag. Forutsetningen er samsvar. Bakgrunnen står under [Relevans for norske aktører](/innsikt/eu-relatert/data-spaces/loesninger/simpl/relevans-for-norge/) i omtalen av Simpl.
+Europeiske data spaces, EUDI-lommeboken og Once-Only bygger på felles standarder og en føderert arkitektur. Hver deltaker kan beholde egne løsninger, så lenge de følger de felles kravene. For norske fellesløsninger er det en mulighet til å bli Norges tilkoblingspunkt, og til å nå lenger ut enn i dag. Forutsetningen er samsvar. Bakgrunnen står under [Relevans for norsk digital infrastruktur](/innsikt/eu-relatert/data-spaces/loesninger/simpl/relevans-for-norge/) i omtalen av Simpl.
 
 De rettslige sidene av kravene hører hjemme under [Juss](/arkitektur/juss/). Her ser vi på løsningene.
 
