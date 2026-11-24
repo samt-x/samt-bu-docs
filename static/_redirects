@@ -51,6 +51,17 @@
 /en/pilotering/pilot-4/systemleverandorer/*                /en/pilotering/pilot-4/leveranser/systemleverandorer/:splat                301
 /pilotering/pilot-4/informasjonspakke/*                    /pilotering/pilot-4/resultater-og-veien-videre/                            301
 /en/pilotering/pilot-4/informasjonspakke/*                 /en/pilotering/pilot-4/resultater-og-veien-videre/                         301
+# Pilot 5: alt unntatt Om fjernet 2026-11-24 etter ønske fra Sikt (dokumenterer i eget Teams-område).
+/pilotering/pilot-5/brukstilfeller-og-brukerbehov/*        /pilotering/pilot-5/om-pilot-5/      302
+/pilotering/pilot-5/naasituasjon/*                         /pilotering/pilot-5/om-pilot-5/      302
+/pilotering/pilot-5/loesningsvalg/*                        /pilotering/pilot-5/om-pilot-5/      302
+/pilotering/pilot-5/oppgaver-og-framdrift/*                /pilotering/pilot-5/om-pilot-5/      302
+/pilotering/pilot-5/resultater-og-veien-videre/*           /pilotering/pilot-5/om-pilot-5/      302
+/en/pilotering/pilot-5/brukstilfeller-og-brukerbehov/*     /en/pilotering/pilot-5/om-pilot-5/   302
+/en/pilotering/pilot-5/naasituasjon/*                      /en/pilotering/pilot-5/om-pilot-5/   302
+/en/pilotering/pilot-5/loesningsvalg/*                     /en/pilotering/pilot-5/om-pilot-5/   302
+/en/pilotering/pilot-5/oppgaver-og-framdrift/*             /en/pilotering/pilot-5/om-pilot-5/   302
+/en/pilotering/pilot-5/resultater-og-veien-videre/*        /en/pilotering/pilot-5/om-pilot-5/   302
 
 # «Samhandlingsplattform» (oktober 2026) samlet SAMT-BU Docs, Oppgavestyring og
 # Plattformvalg; mellomnivåene «CMS-løsninger» og «Styringsløsninger» ble fjernet.
