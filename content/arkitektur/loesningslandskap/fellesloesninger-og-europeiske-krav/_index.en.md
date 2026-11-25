@@ -42,7 +42,7 @@ The list is a starting point. If a solution is missing, or a question is wrongly
 
 Some of what Norway has built may also be a contribution to other countries, not just something that must be adapted. Candidates are Altinn Studio, as a tool for building digital services, and Designsystemet, the Norwegian design system, as a common basis for user interfaces in the public sector.
 
-*Our assessment:* This is a different question from compliance, and it should be kept separate from the table above. We have not mapped whether or where these solutions are used outside Norway.
+*Assessment:* This is a different question from compliance, and it should be kept separate from the table above. We have not mapped whether or where these solutions are used outside Norway.
 
 ---
 

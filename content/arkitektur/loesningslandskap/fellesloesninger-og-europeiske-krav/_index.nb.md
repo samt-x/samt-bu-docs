@@ -42,7 +42,7 @@ Lista er et utgangspunkt. Mangler en løsning, eller er et spørsmål feil stilt
 
 Noe av det Norge har bygd, kan også være et bidrag til andre land, ikke bare noe som må tilpasses. Kandidater er Altinn Studio, som verktøy for å lage digitale tjenester, og Designsystemet, som felles grunnlag for brukergrensesnitt i offentlig sektor.
 
-*Vår vurdering:* Dette er en annen problemstilling enn samsvar, og den bør holdes atskilt fra tabellen over. Vi har ikke kartlagt om eller hvor løsningene brukes utenfor Norge.
+*Vurdering:* Dette er en annen problemstilling enn samsvar, og den bør holdes atskilt fra tabellen over. Vi har ikke kartlagt om eller hvor løsningene brukes utenfor Norge.
 
 ---
 
